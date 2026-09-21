@@ -1,0 +1,16 @@
+{
+  "method": "plain_topk_score_distillation_not_DBGRME",
+  "api": "existing_user_id -> top_k_item_ids_and_raw_prediction_scores",
+  "query_users": "all 37388 overlapping users, including cold target users",
+  "k": 100,
+  "seen_item_filter": false,
+  "score_clipping": false,
+  "seed": 2020,
+  "epochs": 10,
+  "batch_size": 512,
+  "learning_rate": 0.01,
+  "embedding_dim": 10,
+  "weight_decay": 0,
+  "loss": "mean_squared_error_on_returned_scores",
+  "note": "Fixed exploratory baseline. No source logs, victim weights or victim embeddings are learner inputs. No claim of DBGRME reproduction or optimal extraction."
+}

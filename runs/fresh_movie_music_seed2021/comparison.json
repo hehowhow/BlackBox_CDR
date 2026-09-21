@@ -1,0 +1,20 @@
+{
+  "seed": 2021,
+  "wall_seconds": {
+    "wb": 417.84149767202325,
+    "list": 115.11578394501703
+  },
+  "speedup": 3.629749834059226,
+  "independently_retrained_source_weights_identical": true,
+  "identical_splits": true,
+  "metrics": {
+    "wb": {
+      "mae": 1.8706192332986562,
+      "rmse": 2.1533187198245933
+    },
+    "list": {
+      "mae": 0.7520577980336598,
+      "rmse": 1.0370971765286765
+    }
+  }
+}

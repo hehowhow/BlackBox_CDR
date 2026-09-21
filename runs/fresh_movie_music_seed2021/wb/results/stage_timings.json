@@ -1,0 +1,18 @@
+[
+  {
+    "stage": "parse_raw_and_split",
+    "seconds": 53.07948920602212
+  },
+  {
+    "stage": "base_train",
+    "seconds": 91.0368778630509
+  },
+  {
+    "stage": "wb_invert",
+    "seconds": 266.55466419801814
+  },
+  {
+    "stage": "wb_bridge",
+    "seconds": 7.045017059019301
+  }
+]

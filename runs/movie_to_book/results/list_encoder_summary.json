@@ -1,0 +1,24 @@
+{
+  "config": {
+    "seed": 2020,
+    "epochs": 10,
+    "dim": 32,
+    "hidden": 64,
+    "batch_size": 2048,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "dropout": 0.1,
+    "k": 100,
+    "pooling": "normalized 1/log2(rank+1)",
+    "scores": false,
+    "selection": "fixed final epoch; no test-based selection",
+    "training": "all target train ratings; no-list users update item parameters only"
+  },
+  "mae": 0.7991034274368614,
+  "rmse": 1.0340928211380789,
+  "references_mae": {},
+  "test_users": 7478,
+  "test_ratings": 252209,
+  "seconds": 105.73550827999134,
+  "scope": "single fixed run; different architecture and target training objective, not a controlled mechanism study"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "stage": "parse_raw_and_split",
+    "seconds": 48.20135881501483
+  },
+  {
+    "stage": "source_train",
+    "seconds": 49.81235838402063
+  },
+  {
+    "stage": "query_top100",
+    "seconds": 3.7287773519637994
+  },
+  {
+    "stage": "list_train",
+    "seconds": 13.249891622981522
+  }
+]

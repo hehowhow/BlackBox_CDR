@@ -1,0 +1,4 @@
+{
+  "k": 100,
+  "api": "existing_user_id -> top_k_item_ids_and_raw_prediction_scores"
+}

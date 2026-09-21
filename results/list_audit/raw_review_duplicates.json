@@ -1,0 +1,10 @@
+{
+  "2020": {
+    "same_user_item": 5577,
+    "identical_rating_timestamp_review_text_and_summary": 5577
+  },
+  "2021": {
+    "same_user_item": 5236,
+    "identical_rating_timestamp_review_text_and_summary": 5236
+  }
+}

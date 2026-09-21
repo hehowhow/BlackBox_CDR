@@ -1,0 +1,32 @@
+{
+  "task": "1",
+  "base_model": "MF",
+  "ratio": [
+    0.8,
+    0.2
+  ],
+  "seed": 2021,
+  "epoch": 10,
+  "lr": 0.01,
+  "lr_prototype": 0.005,
+  "emb_dim": 10,
+  "wd": 0,
+  "independent_domain_rng": true,
+  "src_tgt_pairs": {
+    "1": {
+      "src": "Movies_and_TV",
+      "tgt": "CDs_and_Vinyl",
+      "co_user_num": 18031,
+      "uid_src": 123960,
+      "iid_src": 50052,
+      "uid_tgt": 75258,
+      "iid_tgt": 64443,
+      "topk": 70000,
+      "batchsize_src": 512,
+      "batchsize_tgt": 512,
+      "batchsize_meta": 512,
+      "batchsize_map": 128,
+      "batchsize_test": 1024
+    }
+  }
+}

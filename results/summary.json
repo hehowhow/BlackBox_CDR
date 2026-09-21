@@ -1,0 +1,29 @@
+{
+  "mae": {
+    "tgt": 4.1788969583988385,
+    "wb": 0.9678690951343055,
+    "bb": 1.0498500323295201
+  },
+  "gain_wb": 3.211027863264533,
+  "gain_bb": 3.1290469260693183,
+  "gap": 0.0819809371952146,
+  "recovery_ratio": 0.9744689424426646,
+  "paired_user_bootstrap_95ci": {
+    "gain_wb": [
+      3.08639850795489,
+      3.321234104497595
+    ],
+    "gain_bb": [
+      3.0062299322753985,
+      3.238025729012937
+    ],
+    "gap": [
+      0.06532788532935273,
+      0.09754360568324748
+    ]
+  },
+  "seed": 2020,
+  "epoch": 10,
+  "scope": "single split and training seed; bootstrap excludes retraining uncertainty",
+  "bb_method": "plain Top-100 + score distillation; NOT DBGRME"
+}

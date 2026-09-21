@@ -1,0 +1,13 @@
+{
+  "PFCDR": {
+    "url": "https://github.com/walcheng/PFCDR.git",
+    "commit": "c88e6fe7bd52ea258e686d5850cf5422d2b35a44",
+    "required": true
+  },
+  "DBGRME": {
+    "url": "https://github.com/Vencent-Won/DBGRME.git",
+    "commit": "d0503d58abbe88962a052ade0579189b1d8758e4",
+    "required": false,
+    "role": "Interface investigation only, not used by the score-distillation baseline"
+  }
+}

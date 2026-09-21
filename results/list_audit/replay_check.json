@@ -1,0 +1,21 @@
+{
+  "replay_root": "/root/blackbox_cdr_babycheck/results/list_audit/replay_shuffled_0_6yzc07",
+  "control_root": "/root/blackbox_cdr_babycheck/results/list_audit/replay_control_y6c4o2dm",
+  "deterministic_audit_retraining": true,
+  "input_scope": "two fresh students on the same permitted target training data/API outputs; only test labels changed",
+  "changed_test_label_rows": 52259,
+  "checkpoint_tensor_max_abs_diff": 0.0,
+  "prediction_max_abs_diff": 0.0,
+  "real_label_mae": 0.747956722431547,
+  "shuffled_label_mae": 0.875387646487858,
+  "guard": {
+    "reads": [
+      "/root/blackbox_cdr_babycheck/results/list_audit/replay_shuffled_0_6yzc07/data/ready/_8_2/tgt_CDs_and_Vinyl_src_Movies_and_TV/test.csv",
+      "/root/blackbox_cdr_babycheck/runs/fresh_movie_music_seed2021/list/configs/first_round.json",
+      "/root/blackbox_cdr_babycheck/runs/fresh_movie_music_seed2021/list/data/ready/_8_2/tgt_CDs_and_Vinyl_src_Movies_and_TV/train_tgt.csv",
+      "/root/blackbox_cdr_babycheck/runs/fresh_movie_music_seed2021/list/queries/topk_scores.npz"
+    ],
+    "checkpoint_saved_before_test_read": true,
+    "torch_load_calls": 0
+  }
+}

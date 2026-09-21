@@ -1,0 +1,30 @@
+{
+  "config": {
+    "seed": 2020,
+    "epochs": 10,
+    "dim": 32,
+    "hidden": 64,
+    "batch_size": 2048,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "dropout": 0.1,
+    "k": 100,
+    "pooling": "normalized 1/log2(rank+1)",
+    "scores": false,
+    "selection": "fixed final epoch; no test-based selection",
+    "training": "all target train ratings; no-list users update item parameters only"
+  },
+  "mae": 0.8581370770145189,
+  "rmse": 1.123730871026866,
+  "references_mae": {
+    "tgt": 4.1788969583988385,
+    "wb": 0.9678690951343055,
+    "bb": 1.0498500323295201
+  },
+  "test_users": 7478,
+  "test_ratings": 156129,
+  "seconds": 18.97952482299297,
+  "scope": "single fixed run; different architecture and target training objective, not a controlled mechanism study",
+  "gap_to_wb": -0.10973201811978661,
+  "improvement_over_bb": 0.1917129553150012
+}

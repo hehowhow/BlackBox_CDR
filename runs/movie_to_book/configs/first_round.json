@@ -1,0 +1,39 @@
+{
+  "task": "1",
+  "base_model": "MF",
+  "ratio": [
+    0.8,
+    0.2
+  ],
+  "seed": 2020,
+  "epoch": 10,
+  "lr": 0.01,
+  "lr_prototype": 0.005,
+  "emb_dim": 10,
+  "wd": 0,
+  "inversion_iter": 300,
+  "inversion_batch": 200,
+  "inversion_lr": 0.0001,
+  "inversion_weight_decay": 0.0001,
+  "inversion_target_label": 5,
+  "voting_topk": 70000,
+  "voting_topk_note": "Official MF forward hardcodes 70000, overriding config.json topk=85000. Preserve executable behavior.",
+  "primary_reporting": "fixed final epoch; also report official minimum test MAE over epochs separately",
+  "src_tgt_pairs": {
+    "1": {
+      "src": "Movies_and_TV",
+      "tgt": "Books",
+      "co_user_num": 37388,
+      "uid_src": 123960,
+      "iid_src": 50052,
+      "uid_tgt": 603668,
+      "iid_tgt": 367982,
+      "topk": 70000,
+      "batchsize_src": 512,
+      "batchsize_tgt": 512,
+      "batchsize_meta": 512,
+      "batchsize_map": 128,
+      "batchsize_test": 1024
+    }
+  }
+}

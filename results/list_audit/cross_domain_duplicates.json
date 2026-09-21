@@ -1,0 +1,58 @@
+{
+  "duplicates": [
+    {
+      "root": "/root/blackbox_cdr_babycheck/runs/movie_to_music",
+      "test_rows": 93629,
+      "source_train_target_test_same_raw_user_item_rows": 5577,
+      "same_user_item_and_rating_rows": 5577,
+      "affected_test_users": 1603,
+      "contaminated_test_fraction": 0.05956487840305888,
+      "metrics": {
+        "list_encoder": {
+          "all_mae": 0.7613679436938389,
+          "overlapping_source_record_mae": 0.7502816443762216,
+          "nonoverlap_subset_mae": 0.7620701229889639
+        },
+        "wb": {
+          "all_mae": 1.6392271892639223,
+          "overlapping_source_record_mae": 1.9126057894865371,
+          "nonoverlap_subset_mae": 1.621912052146747
+        },
+        "emcdr": {
+          "all_mae": 1.6534223574398985,
+          "overlapping_source_record_mae": 1.9620330865056215,
+          "nonoverlap_subset_mae": 1.633875702781293
+        }
+      },
+      "note": "Subset metrics reuse the original trained model; not a clean retraining result."
+    },
+    {
+      "root": "/root/blackbox_cdr_babycheck/runs/fresh_movie_music_seed2021/list",
+      "test_rows": 90192,
+      "source_train_target_test_same_raw_user_item_rows": 5236,
+      "same_user_item_and_rating_rows": 5236,
+      "affected_test_users": 1537,
+      "contaminated_test_fraction": 0.0580539293950683,
+      "metrics": {
+        "list_encoder": {
+          "all_mae": 0.7520577980336598,
+          "overlapping_source_record_mae": 0.7659331052653019,
+          "nonoverlap_subset_mae": 0.751202636436305
+        },
+        "wb": {
+          "all_mae": 1.8706192332986562,
+          "overlapping_source_record_mae": 2.2480701370985794,
+          "nonoverlap_subset_mae": 1.8473562155918857
+        }
+      },
+      "note": "Subset metrics reuse the original trained model; not a clean retraining result."
+    }
+  ],
+  "fresh_benchmark_code_hashes_match_record": {
+    "benchmark_fresh_raw.py": true,
+    "experiment.py": true,
+    "run_list_encoder.py": true,
+    "export_api.py": true,
+    "batching.py": true
+  }
+}

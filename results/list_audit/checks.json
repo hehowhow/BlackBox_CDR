@@ -1,0 +1,204 @@
+[
+  {
+    "root": "/root/blackbox_cdr_babycheck",
+    "task": "Books->Movies_and_TV",
+    "seed": 2020,
+    "cold_users": 7478,
+    "test_ratings": 156129,
+    "train_ratings": 1541404,
+    "target_train_test_user_overlap": 0,
+    "target_pre_split_triplets_exact": true,
+    "overlapping_raw_item_ids": 0,
+    "overlap_examples": [],
+    "source_and_target_overlap_user_ids_aligned": true,
+    "api_sample_verified_users": 32,
+    "prediction_reconstruction_max_abs_diff": 7.152557373046875e-07,
+    "target_train_mean": 4.112283346870775,
+    "target_train_median": 5.0,
+    "target_test_fraction_rating5": 0.5172517597627603,
+    "metrics": {
+      "list": {
+        "mae": 0.8581370770145189,
+        "rmse": 1.123730871026866
+      },
+      "target_train_global_mean": {
+        "mae": 0.9361241640592531,
+        "rmse": 1.1828567988536818
+      },
+      "target_train_global_median": {
+        "mae": 0.9054948151848792,
+        "rmse": 1.4895485906391241
+      },
+      "target_train_item_mean": {
+        "mae": 0.8334280464924584,
+        "rmse": 1.0885900387412386
+      },
+      "list_learned_mean_plus_item_bias": {
+        "mae": 0.8576122920649932,
+        "rmse": 1.1075982654117036
+      },
+      "shuffle_cold_user_lists_inference_only": {
+        "mae": 0.8925788455645665,
+        "rmse": 1.167775535973714
+      }
+    },
+    "seconds": 7.925328868441284
+  },
+  {
+    "root": "/root/blackbox_cdr_babycheck/runs/movie_to_book",
+    "task": "Movies_and_TV->Books",
+    "seed": 2020,
+    "cold_users": 7478,
+    "test_ratings": 252209,
+    "train_ratings": 8645832,
+    "target_train_test_user_overlap": 0,
+    "target_pre_split_triplets_exact": true,
+    "overlapping_raw_item_ids": 0,
+    "overlap_examples": [],
+    "source_and_target_overlap_user_ids_aligned": true,
+    "api_sample_verified_users": 32,
+    "prediction_reconstruction_max_abs_diff": 1.1920928955078125e-06,
+    "target_train_mean": 4.251969156930183,
+    "target_train_median": 5.0,
+    "target_test_fraction_rating5": 0.5181535948360289,
+    "metrics": {
+      "list": {
+        "mae": 0.7991034274368614,
+        "rmse": 1.0340928211380789
+      },
+      "target_train_global_mean": {
+        "mae": 0.8470543019082996,
+        "rmse": 1.0712765168989822
+      },
+      "target_train_global_median": {
+        "mae": 0.8198954042084144,
+        "rmse": 1.3471070240903842
+      },
+      "target_train_item_mean": {
+        "mae": 0.7874479597862379,
+        "rmse": 1.0252572926922061
+      },
+      "list_learned_mean_plus_item_bias": {
+        "mae": 0.8099437709372882,
+        "rmse": 1.031194185632554
+      },
+      "shuffle_cold_user_lists_inference_only": {
+        "mae": 0.8119307803822368,
+        "rmse": 1.0491754497751171
+      }
+    },
+    "seconds": 21.576932959258556
+  },
+  {
+    "root": "/root/blackbox_cdr_babycheck/runs/movie_to_music",
+    "task": "Movies_and_TV->CDs_and_Vinyl",
+    "seed": 2020,
+    "cold_users": 3606,
+    "test_ratings": 93629,
+    "train_ratings": 1003963,
+    "target_train_test_user_overlap": 0,
+    "target_pre_split_triplets_exact": true,
+    "overlapping_raw_item_ids": 2441,
+    "overlap_examples": [
+      "0307141985",
+      "0738900370",
+      "0738900672",
+      "0738919039",
+      "0738920363",
+      "0738921475",
+      "0767804341",
+      "0767816641",
+      "076783822X",
+      "0769720226"
+    ],
+    "source_and_target_overlap_user_ids_aligned": true,
+    "api_sample_verified_users": 32,
+    "prediction_reconstruction_max_abs_diff": 4.76837158203125e-07,
+    "target_train_mean": 4.294759866648472,
+    "target_train_median": 5.0,
+    "target_test_fraction_rating5": 0.58489356930011,
+    "metrics": {
+      "list": {
+        "mae": 0.7613679436938389,
+        "rmse": 1.0527099437888772
+      },
+      "target_train_global_mean": {
+        "mae": 0.8292644629323098,
+        "rmse": 1.053172201069053
+      },
+      "target_train_global_median": {
+        "mae": 0.7095237586645163,
+        "rmse": 1.2698729463092888
+      },
+      "target_train_item_mean": {
+        "mae": 0.741995136226943,
+        "rmse": 0.9994786248770366
+      },
+      "list_learned_mean_plus_item_bias": {
+        "mae": 0.7700251485617225,
+        "rmse": 1.0036774240192983
+      },
+      "shuffle_cold_user_lists_inference_only": {
+        "mae": 0.7851944171912159,
+        "rmse": 1.076367665294682
+      }
+    },
+    "seconds": 2.7732668416574597
+  },
+  {
+    "root": "/root/blackbox_cdr_babycheck/runs/fresh_movie_music_seed2021/list",
+    "task": "Movies_and_TV->CDs_and_Vinyl",
+    "seed": 2021,
+    "cold_users": 3606,
+    "test_ratings": 90192,
+    "train_ratings": 1007400,
+    "target_train_test_user_overlap": 0,
+    "target_pre_split_triplets_exact": true,
+    "overlapping_raw_item_ids": 2441,
+    "overlap_examples": [
+      "0307141985",
+      "0738900370",
+      "0738900672",
+      "0738919039",
+      "0738920363",
+      "0738921475",
+      "0767804341",
+      "0767816641",
+      "076783822X",
+      "0769720226"
+    ],
+    "source_and_target_overlap_user_ids_aligned": true,
+    "api_sample_verified_users": 32,
+    "prediction_reconstruction_max_abs_diff": 9.5367431640625e-07,
+    "target_train_mean": 4.2939626761961485,
+    "target_train_median": 5.0,
+    "target_test_fraction_rating5": 0.5961726095440837,
+    "metrics": {
+      "list": {
+        "mae": 0.7520577980336598,
+        "rmse": 1.0370971765286765
+      },
+      "target_train_global_mean": {
+        "mae": 0.8365856782569321,
+        "rmse": 1.0600982332705533
+      },
+      "target_train_global_median": {
+        "mae": 0.7007827745254568,
+        "rmse": 1.2707781674890493
+      },
+      "target_train_item_mean": {
+        "mae": 0.7469916700603992,
+        "rmse": 1.00609401494447
+      },
+      "list_learned_mean_plus_item_bias": {
+        "mae": 0.777742601110302,
+        "rmse": 1.0115582503214542
+      },
+      "shuffle_cold_user_lists_inference_only": {
+        "mae": 0.7860123184789617,
+        "rmse": 1.0816046281835505
+      }
+    },
+    "seconds": 2.831283140927553
+  }
+]

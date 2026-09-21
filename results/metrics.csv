@@ -1,0 +1,4 @@
+setting,task,backbone,beta,seed,mae,run_id
+TGT,Book->Movie,MF,0.2,2020,4.1788969583988385,seed2020_final_epoch10
+PFCDR-WB,Book->Movie,MF,0.2,2020,0.9678690951343055,seed2020_final_epoch10
+PFCDR-BB-ScoreDistill,Book->Movie,MF,0.2,2020,1.0498500323295201,seed2020_final_epoch10

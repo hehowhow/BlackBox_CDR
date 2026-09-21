@@ -1,0 +1,16 @@
+{
+  "seed": 2021,
+  "beta": 0.2,
+  "epochs": 10,
+  "timing": "wall clock from worker launch before raw parsing to final predictions/checkpoint/log saving",
+  "reuse": "raw compressed input files and algorithm code only; no derived data, weights, lists or prototypes",
+  "os_cache": "OS file cache is not forcibly flushed; this is not a cold-disk benchmark",
+  "source_rng": "same seed+1 minibatch stream in both independently trained source services",
+  "scripts_sha256": {
+    "benchmark_fresh_raw.py": "57104b92ddf9897dbee0e1cab7b0e4829fc7c5f3bc18414f83f9889c6cfa6fb0",
+    "experiment.py": "07f581c79db06830130e21bf9326a1e8845577a623f9c6afe07294024b6992bb",
+    "run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+    "export_api.py": "234765cc4000920d56b166bb38fcb97f071bbf5fb6f0046145ee2c14e12617d2",
+    "batching.py": "3328d0b90982350a50d0d79f9183807529d0a99ac73b05ba1c90378e5c22f033"
+  }
+}
