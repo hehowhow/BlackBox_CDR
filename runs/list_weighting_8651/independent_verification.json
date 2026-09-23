@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "model_directories": 24,
+  "frozen_design_unchanged_since_before_parent_test_evaluation": true,
+  "selected_epochs_and_lambdas_minimize_validation_rmse": true,
+  "full_outer_refit_counts_match": true,
+  "all_predictions_finite": true,
+  "all_completed_before_test_evaluation": true
+}

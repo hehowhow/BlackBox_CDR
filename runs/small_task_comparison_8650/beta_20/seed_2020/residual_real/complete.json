@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "selection_sha256": "15d025d9789995efcd067be2e7d2d3ba935fcfddc4c340e197d2ba36104d016b",
+  "final_sha256": "e42cde0e87e0a1ade35937ba36363d576bdfb3de61baf5b3af4ca909040e2f72",
+  "test_sha256": "9a650351f66a6912f8bf15f70881ca958c954e0c3bcf5e31b8b648280b060239",
+  "assignment_sha256": "a62c1ee518728615649e6a28c8ca9bbdf5b7dd53ea5c72104b9897ffb5557fae",
+  "initial_parameters_sha256": "a60d9ae7af3860b55ed72b25256b290ec1ec1caf9e77e9cc8e5a6d9ca38f3d6e",
+  "full_outer_train_rows": 1585889,
+  "refit_epochs": 4,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false
+}

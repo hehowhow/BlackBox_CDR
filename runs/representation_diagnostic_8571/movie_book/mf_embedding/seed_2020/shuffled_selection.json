@@ -1,0 +1,9 @@
+{
+  "epoch": 0,
+  "validation_rmse": 1.0059829073341722,
+  "initialization_sha256": "bdee88d45cc8c8e9fba86f004e5995f5c6c0cab410cb6ab4d6827fdc98ab139e",
+  "checkpoint_sha256": "215b98df68ce1bc51f26b58f6f51f178987354f6d6feda9881eebebc09794490",
+  "feature_sha256": "2bbd9eea88f78ef6be1a1c6f49fee499f8376f83572b0706688a4d20896ab72d",
+  "permutation_sha256": "33ffba35dbf90a0f854b9673c0aacc8642ade21d6e3836a0db91d0bbf1f30d52",
+  "test_labels_read": false
+}

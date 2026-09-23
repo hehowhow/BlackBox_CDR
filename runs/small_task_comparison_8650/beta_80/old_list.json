@@ -1,0 +1,17 @@
+{
+  "2020": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/music_movie_clean/beta_80/seed_2020",
+    "complete_sha256": "ec76c6ca5d42127cc537bb1c2e9740a17aee85d9297085584c3b2de735d162f6",
+    "test_sha256": "58f874b5a69ed3c202603d1e0ff3c8cf8531240aefce1900d738d11b98cf3316"
+  },
+  "2021": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/music_movie_clean/beta_80/seed_2021",
+    "complete_sha256": "e26d04390af0801b6d41dc483b0a6f58032e924e3897a35243e15160a38c8ccf",
+    "test_sha256": "fbf54352f9647ab11d0582142702a5e03a22a0082130a0ea2dc57c3586fcb171"
+  },
+  "2022": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/music_movie_clean/beta_80/seed_2022",
+    "complete_sha256": "47917a041cef6ca3811dd187d81a8a2e886b657431f3d8da805578923b8056b6",
+    "test_sha256": "11003f9a3b4475133db88c209967790c8503009026702e9766304a594c6c1247"
+  }
+}

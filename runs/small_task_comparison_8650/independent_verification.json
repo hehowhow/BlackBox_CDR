@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "code_unchanged": true,
+  "checked_model_directories": 24,
+  "all_epochs_selected_by_validation": true,
+  "refit_epoch_counts_match": true,
+  "all_test_predictions_finite": true,
+  "all_completed_before_evaluation": true
+}

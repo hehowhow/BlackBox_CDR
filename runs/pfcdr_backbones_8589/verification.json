@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "backbone": "MF",
+      "k": 50000,
+      "epoch": 1,
+      "selection_and_hashes": true
+    },
+    {
+      "backbone": "MF",
+      "k": 70000,
+      "native_prediction_samples": 32,
+      "passed": true,
+      "maximum_native_difference": 9.5367431640625e-07
+    },
+    {
+      "backbone": "MF",
+      "k": 70000,
+      "epoch": 1,
+      "selection_and_hashes": true
+    },
+    {
+      "backbone": "GMF",
+      "k": 50000,
+      "native_prediction_samples": 32,
+      "passed": true,
+      "maximum_native_difference": 7.152557373046875e-07
+    },
+    {
+      "backbone": "GMF",
+      "k": 50000,
+      "epoch": 5,
+      "selection_and_hashes": true
+    },
+    {
+      "backbone": "GMF",
+      "k": 70000,
+      "epoch": 5,
+      "selection_and_hashes": true
+    },
+    {
+      "backbone": "DNN",
+      "k": 50000,
+      "epoch": 1,
+      "selection_and_hashes": true
+    },
+    {
+      "backbone": "DNN",
+      "k": 70000,
+      "native_prediction_samples": 32,
+      "passed": true,
+      "maximum_native_difference": 1.430511474609375e-06
+    },
+    {
+      "backbone": "DNN",
+      "k": 70000,
+      "epoch": 1,
+      "selection_and_hashes": true
+    }
+  ],
+  "scope": "Native model prediction samples, full stored validation metrics/selection, all model/data provenance; not repeated training",
+  "shared_embedding_initialization_verified": true,
+  "target_prototypes_only_training_users": true
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "start": 0,
+    "users": 200,
+    "selected_pre_step_mse": 3.4106049283605736e-14,
+    "seconds": 3.2075246162712574
+  },
+  {
+    "start": 200,
+    "users": 200,
+    "selected_pre_step_mse": 3.979039252493925e-14,
+    "seconds": 3.1558393202722073
+  },
+  {
+    "start": 400,
+    "users": 200,
+    "selected_pre_step_mse": 3.751665455077949e-14,
+    "seconds": 3.419036190956831
+  },
+  {
+    "start": 600,
+    "users": 200,
+    "selected_pre_step_mse": 3.4106049283605736e-14,
+    "seconds": 2.931935392320156
+  },
+  {
+    "start": 800,
+    "users": 200,
+    "selected_pre_step_mse": 8.640199558422601e-14,
+    "seconds": 3.852853689342737
+  },
+  {
+    "start": 1000,
+    "users": 200,
+    "selected_pre_step_mse": 3.8653525231925265e-14,
+    "seconds": 4.052533652633429
+  },
+  {
+    "start": 1200,
+    "users": 200,
+    "selected_pre_step_mse": 4.3200997792113005e-14,
+    "seconds": 4.384578511118889
+  },
+  {
+    "start": 1400,
+    "users": 200,
+    "selected_pre_step_mse": 4.3200997792113005e-14,
+    "seconds": 2.373574037104845
+  },
+  {
+    "start": 1600,
+    "users": 200,
+    "selected_pre_step_mse": 3.979039252493925e-14,
+    "seconds": 2.9314401112496853
+  },
+  {
+    "start": 1800,
+    "users": 200,
+    "selected_pre_step_mse": 6.025402073984998e-14,
+    "seconds": 1.0398585461080074
+  },
+  {
+    "start": 2000,
+    "users": 200,
+    "selected_pre_step_mse": 4.661160305928676e-14,
+    "seconds": 2.8239141069352627
+  },
+  {
+    "start": 2200,
+    "users": 200,
+    "selected_pre_step_mse": 4.547473237814098e-14,
+    "seconds": 1.7846371233463287
+  },
+  {
+    "start": 2400,
+    "users": 200,
+    "selected_pre_step_mse": 5.002220832646051e-14,
+    "seconds": 3.5290809646248817
+  },
+  {
+    "start": 2600,
+    "users": 200,
+    "selected_pre_step_mse": 7.95807850498785e-14,
+    "seconds": 2.2561805061995983
+  },
+  {
+    "start": 2800,
+    "users": 200,
+    "selected_pre_step_mse": 3.524291996475151e-14,
+    "seconds": 0.7964309677481651
+  },
+  {
+    "start": 3000,
+    "users": 200,
+    "selected_pre_step_mse": 4.092725981795324e-14,
+    "seconds": 0.5771265402436256
+  },
+  {
+    "start": 3200,
+    "users": 200,
+    "selected_pre_step_mse": 4.7748470352300745e-14,
+    "seconds": 0.6593330055475235
+  },
+  {
+    "start": 3400,
+    "users": 181,
+    "selected_pre_step_mse": 3.140520341612246e-14,
+    "seconds": 0.7282311394810677
+  }
+]

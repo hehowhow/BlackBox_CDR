@@ -1,0 +1,223 @@
+{
+  "task": "book_movie",
+  "selected_baseline": "smoothed_mean_5",
+  "test_rows": 156129,
+  "test_users": 7478,
+  "cleanup": {
+    "rule": "No filtering: source and target raw item catalogs already disjoint",
+    "removed_items": 0,
+    "removed_source_ratings": 0,
+    "preserved_prior_protocol": true,
+    "prior_test_sha256": "57713ab0a4eeb6461b73f776008d6e8a4ca2694bd0946dcc747600d32fce9665"
+  },
+  "baselines": {
+    "fixed_baseline": {
+      "mae": 0.8425192364146543,
+      "rmse": 1.086141830031561,
+      "user_macro_mae": 0.8450502675042163,
+      "prediction_mean": 4.123060703277588,
+      "prediction_std": 0.4573308527469635,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_mean": {
+      "mae": 0.8348875053406114,
+      "rmse": 1.0919842469391372,
+      "user_macro_mae": 0.8342887663053964,
+      "prediction_mean": 4.11921583584754,
+      "prediction_std": 0.5506063065225044,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_median": {
+      "mae": 0.7571207142811394,
+      "rmse": 1.2041879143522454,
+      "user_macro_mae": 0.7222355149137324,
+      "prediction_mean": 4.4640233396742435,
+      "prediction_std": 0.7221280411086716,
+      "outside_rating_scale_fraction": 0.0
+    }
+  },
+  "per_seed": {
+    "target_bias": {
+      "2020": {
+        "mae": 0.835621142987678,
+        "rmse": 1.0865273670406455,
+        "user_macro_mae": 0.83567828780955,
+        "prediction_mean": 4.128148078918457,
+        "prediction_std": 0.5030779838562012,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2021": {
+        "mae": 0.835674912887892,
+        "rmse": 1.0864535251421938,
+        "user_macro_mae": 0.8357926114303517,
+        "prediction_mean": 4.12904691696167,
+        "prediction_std": 0.5002428889274597,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2022": {
+        "mae": 0.8356351443836427,
+        "rmse": 1.0865877866196352,
+        "user_macro_mae": 0.8356933028728877,
+        "prediction_mean": 4.127216815948486,
+        "prediction_std": 0.5054514408111572,
+        "outside_rating_scale_fraction": 0.0
+      }
+    },
+    "real": {
+      "2020": {
+        "mae": 0.8365824656273059,
+        "rmse": 1.0854867339525225,
+        "user_macro_mae": 0.8379326587785261,
+        "prediction_mean": 4.127181529998779,
+        "prediction_std": 0.48544782400131226,
+        "outside_rating_scale_fraction": 6.404960001024793e-06
+      },
+      "2021": {
+        "mae": 0.835956456845556,
+        "rmse": 1.0855285026447405,
+        "user_macro_mae": 0.8385132391974047,
+        "prediction_mean": 4.116081714630127,
+        "prediction_std": 0.511478066444397,
+        "outside_rating_scale_fraction": 0.0003010331200481653
+      },
+      "2022": {
+        "mae": 0.8366818278662399,
+        "rmse": 1.084978494266482,
+        "user_macro_mae": 0.8385741959010494,
+        "prediction_mean": 4.122945308685303,
+        "prediction_std": 0.4892965257167816,
+        "outside_rating_scale_fraction": 6.404960001024793e-06
+      }
+    },
+    "shuffled": {
+      "2020": {
+        "mae": 0.8355284153436666,
+        "rmse": 1.0866119711647957,
+        "user_macro_mae": 0.8369000100136708,
+        "prediction_mean": 4.118675708770752,
+        "prediction_std": 0.5124649405479431,
+        "outside_rating_scale_fraction": 0.00021136368003381819
+      },
+      "2021": {
+        "mae": 0.8369909379403916,
+        "rmse": 1.0856737879660407,
+        "user_macro_mae": 0.8380209828550628,
+        "prediction_mean": 4.129135608673096,
+        "prediction_std": 0.48112952709198,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2022": {
+        "mae": 0.836895964037071,
+        "rmse": 1.0855628511916657,
+        "user_macro_mae": 0.8382855076639623,
+        "prediction_mean": 4.126271724700928,
+        "prediction_std": 0.48570510745048523,
+        "outside_rating_scale_fraction": 0.0
+      }
+    }
+  },
+  "selected_epochs": {
+    "target_bias": {
+      "2020": 15,
+      "2021": 12,
+      "2022": 19
+    },
+    "real": {
+      "2020": 2,
+      "2021": 3,
+      "2022": 2
+    },
+    "shuffled": {
+      "2020": 3,
+      "2021": 2,
+      "2022": 2
+    }
+  },
+  "aggregate": {
+    "target_bias": {
+      "mae": {
+        "mean": 0.8356437334197375,
+        "std": 2.7894967252795573e-05
+      },
+      "rmse": {
+        "mean": 1.0865228929341582,
+        "std": 6.72424665135593e-05
+      },
+      "user_macro_mae": {
+        "mean": 0.835721400704263,
+        "std": 6.212558783868565e-05
+      }
+    },
+    "real": {
+      "mae": {
+        "mean": 0.8364069167797007,
+        "std": 0.0003932605088661587
+      },
+      "rmse": {
+        "mean": 1.0853312436212483,
+        "std": 0.00030620293332766867
+      },
+      "user_macro_mae": {
+        "mean": 0.8383400312923267,
+        "std": 0.0003541090279560985
+      }
+    },
+    "shuffled": {
+      "mae": {
+        "mean": 0.8364717724403764,
+        "std": 0.0008183501509210606
+      },
+      "rmse": {
+        "mean": 1.0859495367741674,
+        "std": 0.0005763603329450211
+      },
+      "user_macro_mae": {
+        "mean": 0.8377355001775654,
+        "std": 0.0007355448348701635
+      }
+    }
+  },
+  "comparisons": {
+    "real_minus_baseline": {
+      "delta_mae": -0.006112319634953733,
+      "delta_rmse": -0.0008105576141161919,
+      "mae_95ci": [
+        -0.0068184288733332404,
+        -0.005377951482526287
+      ],
+      "rmse_95ci": [
+        -0.001701160216924047,
+        7.738969581940188e-05
+      ],
+      "interpretation": "negative favors real; test-user cluster uncertainty conditional on these three seeds; not a prediction ensemble"
+    },
+    "real_minus_shuffled": {
+      "delta_mae": -6.485566067560011e-05,
+      "delta_rmse": -0.0006183663231602576,
+      "mae_95ci": [
+        -0.000543713003832133,
+        0.00033587485571028025
+      ],
+      "rmse_95ci": [
+        -0.0012497357288652033,
+        -9.76412061409531e-05
+      ],
+      "interpretation": "negative favors real; test-user cluster uncertainty conditional on these three seeds; not a prediction ensemble"
+    },
+    "real_minus_target_bias": {
+      "delta_mae": 0.000763183359962949,
+      "delta_rmse": -0.0011916219038750064,
+      "mae_95ci": [
+        0.0002288732798201354,
+        0.0013167457680437723
+      ],
+      "rmse_95ci": [
+        -0.0018589374068632369,
+        -0.0005284749178387287
+      ],
+      "interpretation": "negative favors real; test-user cluster uncertainty conditional on these three seeds; not a prediction ensemble"
+    }
+  },
+  "primary_rmse_source_increment_supported": false,
+  "inference_scope": "One fixed split, three training/permutation seeds, user-cluster CIs conditional on fitted runs"
+}

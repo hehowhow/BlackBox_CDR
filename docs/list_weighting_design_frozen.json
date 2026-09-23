@@ -1,0 +1,18 @@
+{
+  "frozen_at_utc": "2026-09-23T06:52:20.767506+00:00",
+  "parent_job": 8650,
+  "queued_job": 8651,
+  "parent_test_evaluation_started": false,
+  "variants": [
+    "inverse_degree",
+    "target_attention"
+  ],
+  "code_sha256": {
+    "scripts/list_weighting.py": "09a4f88bf57c906bc502eaac96a901e3bd13c87b02c7e24f15ec10013d03a616",
+    "scripts/slurm_list_weighting.sh": "c3a0b55e4efc07dd13a7c02741b0dabef11ea3a8be0ce2a001e3cca7e32c73f1"
+  },
+  "source_urls": [
+    "https://hexiangnan.github.io/papers/sigir20-LightGCN.pdf",
+    "https://arxiv.org/pdf/1706.06978"
+  ]
+}

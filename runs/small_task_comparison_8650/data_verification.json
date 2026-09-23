@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "prior_job": 8638,
+  "overlap_users": 17904,
+  "clean_data_unchanged": true,
+  "identical_outer_and_inner_splits": true,
+  "unchanged_old_list_predictions": true
+}

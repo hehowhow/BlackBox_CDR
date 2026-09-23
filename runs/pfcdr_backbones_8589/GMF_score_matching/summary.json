@@ -1,0 +1,204 @@
+{
+  "status": "PASS",
+  "results": {
+    "50000": {
+      "selection": {
+        "epoch": 7,
+        "validation_rmse": 1.2107912363015993,
+        "validation_mae": 0.9498305740703057,
+        "checkpoint_sha256": "ee02b60dfb52bb5cb6c0b7143e267909a4bc9e8b7ca109ef1960f2ef640c9d33",
+        "validation_sha256": "483c5d48a3692f22476937d2f203e39b2a765d7267e4d24b91e4699516365cb3",
+        "test_sha256": "cc1bb7d672db5f831ce83e279c13b439501db1da38b70e6a4f8aad065e37bef2",
+        "raw_test_sha256": "fc5cff45a7e5489c1a4fd58cf989e1befe8559d5abaab5fdf771259d93f2a842"
+      },
+      "metrics": {
+        "mae": 0.9631454842995631,
+        "rmse": 1.2347606827013182,
+        "user_macro_mae": 1.0303858013542524,
+        "prediction_mean": 3.805821180343628,
+        "prediction_std": 0.8048803210258484,
+        "outside_rating_scale_fraction": 0.030289055844846247
+      },
+      "comparisons": {
+        "MF": {
+          "delta_mae": -0.01099796301744782,
+          "delta_rmse": -0.05819835112411775,
+          "mae_95ci": [
+            -0.025275289601850652,
+            0.001391444830426182
+          ],
+          "rmse_95ci": [
+            -0.07556058334091827,
+            -0.04290037407667454
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "GMF": {
+          "delta_mae": -1.0711833676493003,
+          "delta_rmse": -0.998876280165852,
+          "mae_95ci": [
+            -1.1022642395206925,
+            -1.0385727430058305
+          ],
+          "rmse_95ci": [
+            -1.026866478529746,
+            -0.9700433691290731
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "DNN": {
+          "delta_mae": 0.1366053916433415,
+          "delta_rmse": 0.14263809968358654,
+          "mae_95ci": [
+            0.12512004697503035,
+            0.14868280608918624
+          ],
+          "rmse_95ci": [
+            0.12690393117215482,
+            0.1583338133469912
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "item_mean": {
+          "delta_mae": 0.12825797895895175,
+          "delta_rmse": 0.14277643576218102,
+          "mae_95ci": [
+            0.11752384908196399,
+            0.1391862631599194
+          ],
+          "rmse_95ci": [
+            0.12831811767586235,
+            0.15666506988546083
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.12062624766058849,
+          "delta_rmse": 0.1486188524873635,
+          "mae_95ci": [
+            0.10975551749373279,
+            0.1316714182829874
+          ],
+          "rmse_95ci": [
+            0.13357626759957084,
+            0.1633592943017774
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "item_median": {
+          "delta_mae": 0.2060247700184238,
+          "delta_rmse": 0.030572768349072854,
+          "mae_95ci": [
+            0.18935616740185165,
+            0.22351251167635788
+          ],
+          "rmse_95ci": [
+            0.012515118911914508,
+            0.048267283461025164
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        }
+      }
+    },
+    "70000": {
+      "selection": {
+        "epoch": 7,
+        "validation_rmse": 1.2146002674110155,
+        "validation_mae": 0.971660800855333,
+        "checkpoint_sha256": "66eefe97c77b54bea17935b3dbd76028ffa78cece7f06dc64bfc69c026fdeacf",
+        "validation_sha256": "e30c728e549de10f6d852f1ef4e55bd47b5f84331a4491de5910ed8c31b1ce48",
+        "test_sha256": "8e708de6d680f920adeca5e1b5aa9fd339f53ff7d2876c45f4ba800ebff9a7f6",
+        "raw_test_sha256": "a960df225ebf75f7094b4d09ea4dd1761a8227bff231186f4d8d2f311df724f6"
+      },
+      "metrics": {
+        "mae": 0.9862121494112929,
+        "rmse": 1.238329044834315,
+        "user_macro_mae": 1.0537721411676806,
+        "prediction_mean": 3.740917682647705,
+        "prediction_std": 0.7439144253730774,
+        "outside_rating_scale_fraction": 0.013155787842104926
+      },
+      "comparisons": {
+        "MF": {
+          "delta_mae": -0.0027186979254245625,
+          "delta_rmse": -0.04619545706825612,
+          "mae_95ci": [
+            -0.01482096614829457,
+            0.007595936459445342
+          ],
+          "rmse_95ci": [
+            -0.060464206822463645,
+            -0.033300559691337876
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "GMF": {
+          "delta_mae": -0.7474486822499901,
+          "delta_rmse": -0.6844204630125033,
+          "mae_95ci": [
+            -0.7718781537889329,
+            -0.7221790330221727
+          ],
+          "rmse_95ci": [
+            -0.7067580405939343,
+            -0.6613040372182791
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "DNN": {
+          "delta_mae": 0.16593228776321478,
+          "delta_rmse": 0.1388846229818277,
+          "mae_95ci": [
+            0.1521886261631686,
+            0.17951118103710753
+          ],
+          "rmse_95ci": [
+            0.12103616487153344,
+            0.1558845556631566
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "item_mean": {
+          "delta_mae": 0.15132464407068147,
+          "delta_rmse": 0.14634479789517774,
+          "mae_95ci": [
+            0.14024102747664163,
+            0.16235157079178925
+          ],
+          "rmse_95ci": [
+            0.1319157580175705,
+            0.1607747068654746
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.14369291277231822,
+          "delta_rmse": 0.15218721462036022,
+          "mae_95ci": [
+            0.1324658295283745,
+            0.15488308130548215
+          ],
+          "rmse_95ci": [
+            0.13633184482185626,
+            0.16721286873896732
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        },
+        "item_median": {
+          "delta_mae": 0.2290914351301535,
+          "delta_rmse": 0.03414113048206957,
+          "mae_95ci": [
+            0.21126325853454078,
+            0.24744008219838284
+          ],
+          "rmse_95ci": [
+            0.014841936382032789,
+            0.052629674796445924
+          ],
+          "interpretation": "Negative favors corrected GMF; conditional on one fitted seed"
+        }
+      }
+    }
+  },
+  "scope": "Validation-motivated correction; not an original published GMF result"
+}

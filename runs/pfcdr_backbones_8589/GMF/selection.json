@@ -1,0 +1,20 @@
+{
+  "50000": {
+    "epoch": 5,
+    "validation_rmse": 2.204291021850671,
+    "validation_mae": 2.0052305418852057,
+    "checkpoint_sha256": "5162b214814a3eaff4d9ff5a64c899dd78486af94a7916b6b0effa27140ad251",
+    "validation_sha256": "e52e043833d24205507911fdb603fb5a316d22f7d753a0da1e2b7736dd5707df",
+    "test_sha256": "e714181cb9421de8d3bc460aa5b0ad928de34586b8f4a7d8074eab197b722758",
+    "raw_test_sha256": "1907a4f07c1bba63ca196257610327de4c0eee3c38f73ebfe3eab7666ff1cde7"
+  },
+  "70000": {
+    "epoch": 5,
+    "validation_rmse": 1.8932276803704668,
+    "validation_mae": 1.7042737273927147,
+    "checkpoint_sha256": "ddd892da39c4ddb959ca1439ee76cfafbf93cb1d16d088395c134a60149d2c2b",
+    "validation_sha256": "e99f57251659d49d8c5a548f7388dde41d3c6267990dcc7166746319cf511697",
+    "test_sha256": "0b01b2f6be9e274493d96337e0842066e6e145ef5c03444047dfa29b0d4834f9",
+    "raw_test_sha256": "1da861200d49e50f3a75fd09f63ed8b7539c9c7daca740a90b8e4119b71c205b"
+  }
+}

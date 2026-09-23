@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "checks": [
+    "all data and baseline hashes unchanged",
+    "source and target raw item catalogs disjoint",
+    "user groups disjoint",
+    "within-split derangements verified",
+    "paired model initialization hashes identical",
+    "all arms trained full declared budget",
+    "selected epochs independently match validation minima",
+    "restored-checkpoint validation predictions match selected RMSE",
+    "selected model and test-prediction hashes unchanged"
+  ],
+  "models": [
+    {
+      "task": "book_movie",
+      "seed": 2020,
+      "arm": "target_bias",
+      "selected_epoch": 15,
+      "restored_checkpoint_validation_rmse": 1.0772941067405983,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2020,
+      "arm": "real",
+      "selected_epoch": 2,
+      "restored_checkpoint_validation_rmse": 1.0754389827125184,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2020,
+      "arm": "shuffled",
+      "selected_epoch": 3,
+      "restored_checkpoint_validation_rmse": 1.076402662647153,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2021,
+      "arm": "target_bias",
+      "selected_epoch": 12,
+      "restored_checkpoint_validation_rmse": 1.0773137057151099,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2021,
+      "arm": "real",
+      "selected_epoch": 3,
+      "restored_checkpoint_validation_rmse": 1.0753352703433408,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2021,
+      "arm": "shuffled",
+      "selected_epoch": 2,
+      "restored_checkpoint_validation_rmse": 1.0767712194160866,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2022,
+      "arm": "target_bias",
+      "selected_epoch": 19,
+      "restored_checkpoint_validation_rmse": 1.077292494400422,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2022,
+      "arm": "real",
+      "selected_epoch": 2,
+      "restored_checkpoint_validation_rmse": 1.0755008403713895,
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "seed": 2022,
+      "arm": "shuffled",
+      "selected_epoch": 2,
+      "restored_checkpoint_validation_rmse": 1.076525839424154,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2020,
+      "arm": "target_bias",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2020,
+      "arm": "real",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2020,
+      "arm": "shuffled",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2021,
+      "arm": "target_bias",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2021,
+      "arm": "real",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2021,
+      "arm": "shuffled",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2022,
+      "arm": "target_bias",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2022,
+      "arm": "real",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "seed": 2022,
+      "arm": "shuffled",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 1.0059829073341722,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2020,
+      "arm": "target_bias",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2020,
+      "arm": "real",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2020,
+      "arm": "shuffled",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2021,
+      "arm": "target_bias",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2021,
+      "arm": "real",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2021,
+      "arm": "shuffled",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2022,
+      "arm": "target_bias",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2022,
+      "arm": "real",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "seed": 2022,
+      "arm": "shuffled",
+      "selected_epoch": 0,
+      "restored_checkpoint_validation_rmse": 0.9781768388795935,
+      "passed": true
+    }
+  ]
+}

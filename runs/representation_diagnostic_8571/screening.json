@@ -1,0 +1,74 @@
+{
+  "book_movie/mf_embedding": {
+    "baseline_validation_rmse": 1.0776980564727823,
+    "real_validation_rmse": 1.0675109038959973,
+    "shuffled_validation_rmse": 1.0773429979775369,
+    "gain": 0.01018715257678493,
+    "expand": true,
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ]
+  },
+  "book_movie/history_stats": {
+    "baseline_validation_rmse": 1.0776980564727823,
+    "real_validation_rmse": 1.0399560130009804,
+    "shuffled_validation_rmse": 1.0773508774087839,
+    "gain": 0.03774204347180188,
+    "expand": true,
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ]
+  },
+  "movie_book/mf_embedding": {
+    "baseline_validation_rmse": 1.0059829073341722,
+    "real_validation_rmse": 1.001480762790884,
+    "shuffled_validation_rmse": 1.0059829073341722,
+    "gain": 0.0045021445432882334,
+    "expand": true,
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ]
+  },
+  "movie_book/history_stats": {
+    "baseline_validation_rmse": 1.0059829073341722,
+    "real_validation_rmse": 0.9914871074257969,
+    "shuffled_validation_rmse": 1.0059829073341722,
+    "gain": 0.01449579990837524,
+    "expand": true,
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ]
+  },
+  "movie_music_clean/mf_embedding": {
+    "baseline_validation_rmse": 0.9781768388795935,
+    "real_validation_rmse": 0.9737090855051892,
+    "shuffled_validation_rmse": 0.9781768388795935,
+    "gain": 0.004467753374404304,
+    "expand": true,
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ]
+  },
+  "movie_music_clean/history_stats": {
+    "baseline_validation_rmse": 0.9781768388795935,
+    "real_validation_rmse": 0.952412965328481,
+    "shuffled_validation_rmse": 0.9781768388795935,
+    "gain": 0.025763873551112537,
+    "expand": true,
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ]
+  }
+}

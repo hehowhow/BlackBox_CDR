@@ -1,0 +1,62 @@
+{
+  "validation_metrics": {
+    "global_mean": {
+      "mae": 0.9391735108554862,
+      "rmse": 1.1872691813503558,
+      "user_macro_mae": 0.9568345150039249
+    },
+    "global_median": {
+      "mae": 0.9293839691984599,
+      "rmse": 1.5070504504007165,
+      "user_macro_mae": 0.8036056298083166
+    },
+    "item_mean": {
+      "mae": 0.8313152044057632,
+      "rmse": 1.08238374786005,
+      "user_macro_mae": 0.8339652944804313
+    },
+    "item_median": {
+      "mae": 0.7549752487624382,
+      "rmse": 1.193217525601753,
+      "user_macro_mae": 0.7177502378521324
+    },
+    "smoothed_mean_1": {
+      "mae": 0.8324196778890369,
+      "rmse": 1.078498025701203,
+      "user_macro_mae": 0.8360954941205536
+    },
+    "smoothed_mean_5": {
+      "mae": 0.8385970291385844,
+      "rmse": 1.0776980565048033,
+      "user_macro_mae": 0.8439944566367277
+    },
+    "smoothed_mean_10": {
+      "mae": 0.8449116889966172,
+      "rmse": 1.0816933907096182,
+      "user_macro_mae": 0.8513508462534367
+    },
+    "smoothed_mean_20": {
+      "mae": 0.8539892128220281,
+      "rmse": 1.089698692153347,
+      "user_macro_mae": 0.8617058592930363
+    },
+    "smoothed_mean_50": {
+      "mae": 0.869551022925723,
+      "rmse": 1.1059869721931568,
+      "user_macro_mae": 0.8793637941597844
+    },
+    "smoothed_mean_100": {
+      "mae": 0.8831423867444277,
+      "rmse": 1.1213363640603309,
+      "user_macro_mae": 0.8945605423438112
+    }
+  },
+  "selected_by_validation": {
+    "mae": "item_median",
+    "rmse": "smoothed_mean_5"
+  },
+  "test_labels_opened": false,
+  "test_access_guard_enabled": true,
+  "fitted_statistics_sha256": "43a1c6e892ab63894d0c6696b5510f9029b0179b6d1dd84cecee7c4b25488f24",
+  "protocol_sha256": "3b85768a9b45ebacec043acc81fc4e45782c22127c17aa993f53e5ad5be91ce8"
+}

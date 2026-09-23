@@ -1,0 +1,63 @@
+{
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "source_epochs": 10,
+  "source_dim": 10,
+  "source_lr": 0.01,
+  "source_batch": 512,
+  "k": 100,
+  "student_epochs": 20,
+  "student_dim": 32,
+  "student_hidden": 64,
+  "student_lr": 0.001,
+  "student_weight_decay": 1e-05,
+  "student_dropout": 0.1,
+  "student_batch": 2048,
+  "arms": [
+    "real",
+    "shuffled"
+  ],
+  "selection_metric": "validation_rmse",
+  "include_epoch_zero": true,
+  "baseline_alphas": [
+    0,
+    1,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "objective": "target training MSE",
+  "permutation": "fixed derangement within each train/validation/test user group",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 991,
+  "test_policy": "After dataset construction, only aggregate stage reads test labels, after all nine runs have frozen selections",
+  "source_api": "Privileged source MF vectors or source history statistics; Top100 is a prior matched-seed reference",
+  "split_note": "One fixed user split per task; three training/permutation seeds, not three independent splits",
+  "code_sha256": {
+    "representation_diagnostic.py": "3b048f8367b31a150c44d880d348906af4e09df49231065e266142f90f8f1c1e",
+    "residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+    "book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2"
+  },
+  "prior_root": "/home/hehao32/BlackBox_CDR/runs/residual_study_20260922",
+  "representations": [
+    "mf_embedding",
+    "history_stats"
+  ],
+  "screening_seed": 2020,
+  "source_models_retrained": false,
+  "expansion_seeds": [
+    2021,
+    2022
+  ],
+  "minimum_validation_gain": 0.0001,
+  "expansion_rule": "Real representation improves fixed-baseline validation RMSE by at least 0.0001 in seed2020",
+  "architecture": "fixed standardized source features padded to 32 -> 64 -> 32, dot target embedding, plus item bias",
+  "information_scope": "Privileged diagnosis, not a black-box method or a mathematical upper bound",
+  "normalization": "mean/std from training overlap users only; applied before within-split permutation"
+}

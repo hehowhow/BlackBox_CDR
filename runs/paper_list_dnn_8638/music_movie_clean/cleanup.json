@@ -1,0 +1,8 @@
+{
+  "raw_overlap_users": 18031,
+  "clean_overlap_users": 17904,
+  "lost_overlap_users": 127,
+  "removed_items": 2441,
+  "removed_source_ratings": 34881,
+  "target_ratings_unchanged": 1697533
+}

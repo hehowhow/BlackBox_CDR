@@ -1,0 +1,47 @@
+{
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "source_epochs": 10,
+  "source_dim": 10,
+  "source_lr": 0.01,
+  "source_batch": 512,
+  "k": 100,
+  "student_epochs": 20,
+  "student_dim": 32,
+  "student_hidden": 64,
+  "student_lr": 0.001,
+  "student_weight_decay": 1e-05,
+  "student_dropout": 0.1,
+  "student_batch": 2048,
+  "arms": [
+    "target_bias",
+    "real",
+    "shuffled"
+  ],
+  "selection_metric": "validation_rmse",
+  "include_epoch_zero": true,
+  "baseline_alphas": [
+    0,
+    1,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "objective": "target training MSE",
+  "permutation": "fixed derangement within each train/validation/test user group",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 991,
+  "test_policy": "After dataset construction, only aggregate stage reads test labels, after all nine runs have frozen selections",
+  "source_api": "Fresh MF Top100 opaque IDs only; no scores/weights/histories passed to student",
+  "split_note": "One fixed user split per task; three training/permutation seeds, not three independent splits",
+  "code_sha256": {
+    "residual_prepare.py": "b7d26b5fc533881c3acc8821ad237dcee12b4881ebb0b22a1c6a8f757db5fa39",
+    "residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664"
+  }
+}

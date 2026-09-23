@@ -1,0 +1,52 @@
+{
+  "task": "Movies_and_TV->CDs_and_Vinyl",
+  "seed": 2021,
+  "scope": "split reconstructed from downloaded mid data; historical per-sample artifacts unavailable",
+  "original_baseline_lines": [
+    70,
+    77
+  ],
+  "original_baseline_sha256": "b5ef46d56643d364f0896aa9366eab9d7cd8ba2ff7914ae11d020b59f437b26d",
+  "train_ratings": 1007400,
+  "test_ratings": 90192,
+  "cold_users": 3606,
+  "train_test_user_overlap": 0,
+  "target_raw_user_overlap": 0,
+  "actual_disk_split_and_id_maps_verified": false,
+  "independent_pandas_predictions_match": true,
+  "shuffled_test_labels_predictions_identical": true,
+  "constant_test_labels_predictions_identical": true,
+  "changed_train_labels_changes_predictions": true,
+  "test_item_missing_train_ratings": 0,
+  "test_item_training_count_quantiles": [
+    1.0,
+    9.0,
+    22.0,
+    59.0,
+    974.0
+  ],
+  "metrics": {
+    "target_train_global_mean": {
+      "mae": 0.8365856782569321,
+      "rmse": 1.0600982332705533
+    },
+    "target_train_global_median": {
+      "mae": 0.7007827745254568,
+      "rmse": 1.2707781674890493
+    },
+    "target_train_item_mean": {
+      "mae": 0.7469916700603992,
+      "rmse": 1.00609401494447
+    }
+  },
+  "historical_item_mean_metrics": {
+    "mae": 0.7469916700603992,
+    "rmse": 1.00609401494447
+  },
+  "historical_metric_match": true,
+  "train_mean": 4.2939626761961485,
+  "test_rating5_fraction": 0.5961726095440837,
+  "source_train_target_test_same_raw_user_item": 5236,
+  "source_train_target_test_same_raw_user_item_rating": 5236,
+  "unseen_item_above_train_max_probe": "IndexError (robustness issue, not leakage)"
+}

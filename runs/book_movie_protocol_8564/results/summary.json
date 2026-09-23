@@ -1,0 +1,76 @@
+{
+  "status": "PASS",
+  "job_id": "8564",
+  "selected_by_validation": {
+    "mae": "item_median",
+    "rmse": "smoothed_mean_5"
+  },
+  "test_metrics": {
+    "global_mean": {
+      "mae": 0.9359576564950951,
+      "rmse": 1.1829391714189488,
+      "user_macro_mae": 0.960095197024607
+    },
+    "global_median": {
+      "mae": 0.9054948151848792,
+      "rmse": 1.4895485906391241,
+      "user_macro_mae": 0.8104573693642125
+    },
+    "item_mean": {
+      "mae": 0.8348875053406114,
+      "rmse": 1.0919842469391372,
+      "user_macro_mae": 0.8342887663053964
+    },
+    "item_median": {
+      "mae": 0.7571207142811394,
+      "rmse": 1.2041879143522454,
+      "user_macro_mae": 0.7222355149137324
+    },
+    "smoothed_mean_1": {
+      "mae": 0.8362836762816193,
+      "rmse": 1.0878435391728134,
+      "user_macro_mae": 0.8366583441170097
+    },
+    "smoothed_mean_5": {
+      "mae": 0.8425192366389747,
+      "rmse": 1.0861418302139547,
+      "user_macro_mae": 0.8450502686609949
+    },
+    "smoothed_mean_10": {
+      "mae": 0.8486152556727816,
+      "rmse": 1.0892428889340713,
+      "user_macro_mae": 0.8527098317761947
+    },
+    "smoothed_mean_20": {
+      "mae": 0.8571955154028973,
+      "rmse": 1.0959022857112954,
+      "user_macro_mae": 0.8633652007952787
+    },
+    "smoothed_mean_50": {
+      "mae": 0.8715280054787048,
+      "rmse": 1.109756311976715,
+      "user_macro_mae": 0.8812360824876565
+    },
+    "smoothed_mean_100": {
+      "mae": 0.8838613147058533,
+      "rmse": 1.1230457910033707,
+      "user_macro_mae": 0.8966283930914212
+    }
+  },
+  "selected_test_metrics": {
+    "mae": {
+      "mae": 0.7571207142811394,
+      "rmse": 1.2041879143522454,
+      "user_macro_mae": 0.7222355149137324
+    },
+    "rmse": {
+      "mae": 0.8425192366389747,
+      "rmse": 1.0861418302139547,
+      "user_macro_mae": 0.8450502686609949
+    }
+  },
+  "test_evaluations": 1,
+  "target_test_users": 7478,
+  "target_test_ratings": 156129,
+  "unseen_test_ratings": 6
+}

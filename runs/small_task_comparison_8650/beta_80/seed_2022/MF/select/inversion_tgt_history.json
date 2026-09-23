@@ -1,0 +1,92 @@
+[
+  {
+    "start": 0,
+    "users": 200,
+    "selected_pre_step_mse": 1.7053025658242404e-13,
+    "seconds": 0.3837248459458351
+  },
+  {
+    "start": 200,
+    "users": 200,
+    "selected_pre_step_mse": 1.0686562718726852e-13,
+    "seconds": 0.9412957094609737
+  },
+  {
+    "start": 400,
+    "users": 200,
+    "selected_pre_step_mse": 1.46656016324076e-13,
+    "seconds": 0.5480855591595173
+  },
+  {
+    "start": 600,
+    "users": 200,
+    "selected_pre_step_mse": 1.2050804147969996e-13,
+    "seconds": 0.5580399818718433
+  },
+  {
+    "start": 800,
+    "users": 200,
+    "selected_pre_step_mse": 9.549694070460149e-14,
+    "seconds": 0.5544795021414757
+  },
+  {
+    "start": 1000,
+    "users": 200,
+    "selected_pre_step_mse": 1.5006661820311795e-13,
+    "seconds": 0.5345306396484375
+  },
+  {
+    "start": 1200,
+    "users": 200,
+    "selected_pre_step_mse": 1.0459188582497697e-13,
+    "seconds": 1.083811491727829
+  },
+  {
+    "start": 1400,
+    "users": 200,
+    "selected_pre_step_mse": 9.322320611857352e-14,
+    "seconds": 0.5251968875527382
+  },
+  {
+    "start": 1600,
+    "users": 200,
+    "selected_pre_step_mse": 1.2732925879031104e-13,
+    "seconds": 0.5529839619994164
+  },
+  {
+    "start": 1800,
+    "users": 200,
+    "selected_pre_step_mse": 1.3301359525538098e-13,
+    "seconds": 0.5422365143895149
+  },
+  {
+    "start": 2000,
+    "users": 200,
+    "selected_pre_step_mse": 1.1254996365233846e-13,
+    "seconds": 0.5345501825213432
+  },
+  {
+    "start": 2200,
+    "users": 200,
+    "selected_pre_step_mse": 7.730705046385053e-14,
+    "seconds": 0.8024979792535305
+  },
+  {
+    "start": 2400,
+    "users": 200,
+    "selected_pre_step_mse": 1.0572875989425454e-13,
+    "seconds": 0.6448059901595116
+  },
+  {
+    "start": 2600,
+    "users": 200,
+    "selected_pre_step_mse": 1.2278177606572793e-13,
+    "seconds": 0.5225520394742489
+  },
+  {
+    "start": 2800,
+    "users": 65,
+    "selected_pre_step_mse": 6.996113351186509e-14,
+    "seconds": 0.43723734095692635
+  }
+]

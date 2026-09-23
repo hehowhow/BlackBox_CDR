@@ -1,0 +1,15 @@
+{
+  "epoch": 1,
+  "train_mse": 1.353547583921379,
+  "validation_rmse": 1.1049209735966574,
+  "validation_mae": 0.8560650644577934,
+  "seconds": 1.405905794352293,
+  "initial_sha256": "45208eae684224157053716c92c83984f728c20b699754f39e24e95f55fd9efd",
+  "batch_order_sha256": "9b6302d4a91dd225c17e9b12224699b025452469fd42b1ed56a316cf7d733bd5",
+  "parameters": 4570277,
+  "head_parameters": 6273,
+  "checkpoint_sha256": "9cf4e44d903f3c24c016ac98423191fce88c320d4da9b29297c49017375d3fdc",
+  "validation_sha256": "48fb494d1e01964166eec9e84a059d2109c773ecc1de6fc666a33838a0be48ea",
+  "test_sha256": "ac386ecd0700a954b3aaa05a5112f5d97296bd8326f10ac7839a3fea0e2e77ee",
+  "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+}

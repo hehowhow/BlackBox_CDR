@@ -1,0 +1,47 @@
+{
+  "scope": "API IDs only; no target test labels; explain unseen-ID weighting, not used for model selection",
+  "rows": [
+    {
+      "beta": 20,
+      "seed": 2020,
+      "test_returned_ids_missing_from_train_fraction": 0.0008796425579447082,
+      "rank_mass_on_unseen_ids": 0.0006690709217776858,
+      "degree_mass_on_unseen_ids": 0.006646560377950975
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "test_returned_ids_missing_from_train_fraction": 0.0008908126221725775,
+      "rank_mass_on_unseen_ids": 0.000680070801221396,
+      "degree_mass_on_unseen_ids": 0.006959620413876328
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "test_returned_ids_missing_from_train_fraction": 0.0009773806199385646,
+      "rank_mass_on_unseen_ids": 0.0007447782404334106,
+      "degree_mass_on_unseen_ids": 0.006846395857330972
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "test_returned_ids_missing_from_train_fraction": 0.0038602248132374502,
+      "rank_mass_on_unseen_ids": 0.0029807669765536658,
+      "degree_mass_on_unseen_ids": 0.01912952440416822
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "test_returned_ids_missing_from_train_fraction": 0.003779236193534874,
+      "rank_mass_on_unseen_ids": 0.002913820946036059,
+      "degree_mass_on_unseen_ids": 0.01855054262074548
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "test_returned_ids_missing_from_train_fraction": 0.004333589331843887,
+      "rank_mass_on_unseen_ids": 0.003363545542587676,
+      "degree_mass_on_unseen_ids": 0.0199837387622659
+    }
+  ]
+}

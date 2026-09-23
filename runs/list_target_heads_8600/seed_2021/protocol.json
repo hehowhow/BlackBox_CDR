@@ -1,0 +1,56 @@
+{
+  "dim": 32,
+  "hidden": 64,
+  "dropout": 0.1,
+  "epochs": 10,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 2048,
+  "k": 100,
+  "task": "Book->Movie",
+  "source_backbone": "MF",
+  "source_seed": 2020,
+  "heads": [
+    "DOT",
+    "GMF",
+    "DNN",
+    "MLP",
+    "DOT_MLP"
+  ],
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "source_lists_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f",
+  "source_list_origin": "/home/hehao32/BlackBox_CDR/runs/list_source_backbones_8596/queries/MF/topk_ids.npz",
+  "source_list_policy": "unchanged fixed Top100; no scores; no seen-item filtering",
+  "encoder": "same trainable rank-pooling MLP; architecture and initial parameters matched within seed",
+  "head_definitions": {
+    "DOT": "sum(z*v)",
+    "GMF": "w^T(z*v), no bias",
+    "DNN": "(Az+b)^T v, author-style affine user transform",
+    "MLP": "concat(z,v): 64->64 ReLU->32 ReLU->1",
+    "DOT_MLP": "sum(z*v) + same nonlinear MLP residual; not official NeuMF"
+  },
+  "head_initialization": "GMF ones; DNN identity/zero bias; DOT_MLP zero last layer; MLP default random",
+  "common_prediction": "training global mean + trainable item bias + masked interaction",
+  "no_list_users": "interaction forced zero after head; mean + item bias only",
+  "vocabulary": "reuse 8596 shared opaque-ID vocabulary for exact seed-2020 control; only MF lists are read",
+  "selection": "minimum validation RMSE among epochs 1..10, independently per head/seed",
+  "selection_of_method": "mean selected validation RMSE across three seeds, frozen before test labels",
+  "unknown_target_items": "same frozen smoothed-mean fallback for items absent from target training",
+  "test_policy": "all 15 runs frozen and independently verified before test labels",
+  "scope": "one task, one fixed source model/list, three student seeds; no learning-rate or epoch-budget search",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 993,
+  "code_hashes": {
+    "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_list_target_heads.sh": "bd2fcc9bdc83b6a792bd17d4ca6cc29a99e9d77c2a0b024e48bdc00043cb289c",
+    "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+    "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664"
+  },
+  "seed": 2021
+}

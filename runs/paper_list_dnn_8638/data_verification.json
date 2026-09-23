@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "raw_counts_match_paper": true,
+  "all_catalog_intersections_zero": true,
+  "independent_item_means": true,
+  "disjoint_target_train_test_users": true
+}

@@ -1,0 +1,1046 @@
+{
+  "scope": "Static code/configuration audit and arithmetic over stored metrics; no causal retraining",
+  "paper": {
+    "path": "/home/hehao32/3696410.3714580.pdf",
+    "sha256": "25b7ca30f727ecdc24dc2be582f48e62feb92f95441165c9a29284ffbc40ba06",
+    "transcription": "Manually read local PDF; tables/figures visually checked on PDF pages 6, 7, 8, 11",
+    "tasks": [
+      "Books->Movies_and_TV",
+      "Books->CDs_and_Vinyl",
+      "CDs_and_Vinyl->Movies_and_TV"
+    ],
+    "pretrain_lr_grid": [
+      0.001,
+      0.005,
+      0.01,
+      0.02,
+      0.1
+    ],
+    "embedding_dim": 10,
+    "runs": 10,
+    "test_overlap_fractions": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "table1_book_movie_beta20": {
+      "TGT": {
+        "mae": 4.1831,
+        "rmse": 4.7536
+      },
+      "EMCDR": {
+        "mae": 1.1651,
+        "rmse": 1.4548
+      },
+      "PTUPCDR": {
+        "mae": 0.997,
+        "rmse": 1.3317
+      },
+      "PFCDR": {
+        "mae": 0.9579,
+        "rmse": 1.2437
+      }
+    },
+    "figure2_book_movie_pfcdR_mae": {
+      "MF": 0.958,
+      "GMF": 0.867,
+      "DNN": 0.802
+    },
+    "figure3_k_values": [
+      100,
+      1000,
+      10000,
+      30000,
+      50000,
+      70000
+    ],
+    "paper_inversion_loss_text": "BCE (Section 5.1), but squared error in Eqs. 9/10 and Appendix A",
+    "exact_best_lr_per_task_and_backbone": "not specified in inspected paper/config files"
+  },
+  "upstream": {
+    "commit": "c88e6fe7bd52ea258e686d5850cf5422d2b35a44",
+    "argparse_defaults": {
+      "--process_data_mid": 0,
+      "--process_data_ready": 0,
+      "--task": "3",
+      "--base_model": "MF",
+      "--seed": 2020,
+      "--ratio": [
+        0.8,
+        0.2
+      ],
+      "--gpu": "1",
+      "--epoch": 10,
+      "--lr": 0.01,
+      "--lr_prototype": 0.005
+    },
+    "config": {
+      "use_cuda": 1,
+      "root": "./data/",
+      "model_root": "./model/",
+      "src_tgt_pairs": {
+        "1": {
+          "src": "Books",
+          "tgt": "Movies_and_TV",
+          "co_user_num": 37388,
+          "topk": 85000,
+          "uid_src": 603668,
+          "iid_src": 367982,
+          "uid_tgt": 123960,
+          "iid_tgt": 50052,
+          "batchsize_src": 512,
+          "batchsize_tgt": 512,
+          "batchsize_meta": 512,
+          "batchsize_map": 128,
+          "batchsize_test": 1024
+        },
+        "2": {
+          "src": "Books",
+          "tgt": "CDs_and_Vinyl",
+          "co_user_num": 16738,
+          "topk": 50000,
+          "uid_src": 603668,
+          "iid_src": 367982,
+          "uid_tgt": 75258,
+          "iid_tgt": 64443,
+          "batchsize_src": 512,
+          "batchsize_tgt": 512,
+          "batchsize_meta": 512,
+          "batchsize_map": 128,
+          "batchsize_test": 256
+        },
+        "3": {
+          "src": "CDs_and_Vinyl",
+          "tgt": "Movies_and_TV",
+          "co_user_num": 18031,
+          "topk": 85000,
+          "uid_src": 75258,
+          "iid_src": 64443,
+          "uid_tgt": 123960,
+          "iid_tgt": 50052,
+          "batchsize_src": 256,
+          "batchsize_tgt": 256,
+          "batchsize_meta": 1024,
+          "batchsize_map": 128,
+          "batchsize_test": 512
+        }
+      },
+      "emb_dim": 10,
+      "meta_dim": 50,
+      "num_fields": 2,
+      "wd": 0
+    },
+    "inversion": {
+      "syn_root": "./syn_data/",
+      "iter": 300,
+      "batch": 200,
+      "r_feature": 0,
+      "lr": 0.0001,
+      "weight_decay": 0.0001,
+      "clean_gen_data": true,
+      "target_label": 5,
+      "store_best_results": true
+    },
+    "effective_mf_voting_k": 70000,
+    "report_policy": "separate minima of test MAE and test RMSE across epochs"
+  },
+  "historical_runs": [
+    {
+      "root": ".",
+      "task": "Books->Movies_and_TV",
+      "configured": {
+        "use_cuda": 1,
+        "root": "./data/",
+        "model_root": "./model/",
+        "src_tgt_pairs": {
+          "1": {
+            "src": "Books",
+            "tgt": "Movies_and_TV",
+            "co_user_num": 37388,
+            "topk": 85000,
+            "uid_src": 603668,
+            "iid_src": 367982,
+            "uid_tgt": 123960,
+            "iid_tgt": 50052,
+            "batchsize_src": 512,
+            "batchsize_tgt": 512,
+            "batchsize_meta": 512,
+            "batchsize_map": 128,
+            "batchsize_test": 1024
+          },
+          "2": {
+            "src": "Books",
+            "tgt": "CDs_and_Vinyl",
+            "co_user_num": 16738,
+            "topk": 50000,
+            "uid_src": 603668,
+            "iid_src": 367982,
+            "uid_tgt": 75258,
+            "iid_tgt": 64443,
+            "batchsize_src": 512,
+            "batchsize_tgt": 512,
+            "batchsize_meta": 512,
+            "batchsize_map": 128,
+            "batchsize_test": 256
+          },
+          "3": {
+            "src": "CDs_and_Vinyl",
+            "tgt": "Movies_and_TV",
+            "co_user_num": 18031,
+            "topk": 85000,
+            "uid_src": 75258,
+            "iid_src": 64443,
+            "uid_tgt": 123960,
+            "iid_tgt": 50052,
+            "batchsize_src": 256,
+            "batchsize_tgt": 256,
+            "batchsize_meta": 1024,
+            "batchsize_map": 128,
+            "batchsize_test": 512
+          }
+        },
+        "emb_dim": 10,
+        "meta_dim": 50,
+        "num_fields": 2,
+        "wd": 0,
+        "task": "1",
+        "base_model": "MF",
+        "ratio": [
+          0.8,
+          0.2
+        ],
+        "seed": 2020,
+        "epoch": 10,
+        "lr": 0.01,
+        "lr_prototype": 0.005,
+        "inversion_iter": 300,
+        "inversion_batch": 200,
+        "inversion_lr": 0.0001,
+        "inversion_weight_decay": 0.0001,
+        "inversion_target_label": 5,
+        "voting_topk": 70000,
+        "voting_topk_note": "Official MF forward hardcodes 70000, overriding config.json topk=85000. Preserve executable behavior.",
+        "primary_reporting": "fixed final epoch; also report official minimum test MAE over epochs separately"
+      },
+      "common_default_comparison": {
+        "base_model": {
+          "local": "MF",
+          "public_default": "MF",
+          "equal": true
+        },
+        "epoch": {
+          "local": 10,
+          "public_default": 10,
+          "equal": true
+        },
+        "lr": {
+          "local": 0.01,
+          "public_default": 0.01,
+          "equal": true
+        },
+        "lr_prototype": {
+          "local": 0.005,
+          "public_default": 0.005,
+          "equal": true
+        },
+        "emb_dim": {
+          "local": 10,
+          "public_default": 10,
+          "equal": true
+        },
+        "wd": {
+          "local": 0,
+          "public_default": 0,
+          "equal": true
+        },
+        "inversion_iter": {
+          "local": 300,
+          "public_default": 300,
+          "equal": true
+        },
+        "inversion_batch": {
+          "local": 200,
+          "public_default": 200,
+          "equal": true
+        },
+        "inversion_lr": {
+          "local": 0.0001,
+          "public_default": 0.0001,
+          "equal": true
+        },
+        "inversion_weight_decay": {
+          "local": 0.0001,
+          "public_default": 0.0001,
+          "equal": true
+        },
+        "inversion_target_label": {
+          "local": 5,
+          "public_default": 5,
+          "equal": true
+        }
+      },
+      "history": {
+        "base": {
+          "src": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "tgt": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        "wb": {
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "final": {
+            "epoch": 10,
+            "mae": 0.9678691029548645,
+            "rmse": 1.2431238889694214
+          },
+          "descriptive_min_test_mae": {
+            "epoch": 8,
+            "mae": 0.9633884429931641,
+            "rmse": 1.2416948080062866
+          },
+          "descriptive_min_test_rmse": {
+            "epoch": 8,
+            "mae": 0.9633884429931641,
+            "rmse": 1.2416948080062866
+          }
+        },
+        "emcdr": {
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "final": {
+            "epoch": 10,
+            "mae": 1.1760615110397339,
+            "rmse": 1.4827224016189575,
+            "seconds": 0.757876580581069
+          },
+          "descriptive_min_test_mae": {
+            "epoch": 5,
+            "mae": 1.1648715734481812,
+            "rmse": 1.4740593433380127,
+            "seconds": 0.7086992394179106
+          },
+          "descriptive_min_test_rmse": {
+            "epoch": 5,
+            "mae": 1.1648715734481812,
+            "rmse": 1.4740593433380127,
+            "seconds": 0.7086992394179106
+          }
+        }
+      },
+      "audited_item_mean": {
+        "mae": 0.8334280464924584,
+        "rmse": 1.0885900387412386
+      },
+      "target_users": 123960,
+      "effective_voting_k": 70000,
+      "voting_fraction": 0.5646982897708939,
+      "minimum_pairwise_voter_intersection": 16040,
+      "minimum_pairwise_voter_overlap_fraction": 0.22914285714285715,
+      "official_task_direction_match": true,
+      "artifact_availability": {
+        "checkpoints/base_seed2020.pt": false,
+        "results/wb_predictions.npz": false
+      }
+    },
+    {
+      "root": "runs/movie_to_book",
+      "task": "Movies_and_TV->Books",
+      "configured": {
+        "use_cuda": 1,
+        "root": "./data/",
+        "model_root": "./model/",
+        "src_tgt_pairs": {
+          "1": {
+            "src": "Movies_and_TV",
+            "tgt": "Books",
+            "co_user_num": 37388,
+            "uid_src": 123960,
+            "iid_src": 50052,
+            "uid_tgt": 603668,
+            "iid_tgt": 367982,
+            "topk": 70000,
+            "batchsize_src": 512,
+            "batchsize_tgt": 512,
+            "batchsize_meta": 512,
+            "batchsize_map": 128,
+            "batchsize_test": 1024
+          }
+        },
+        "emb_dim": 10,
+        "meta_dim": 50,
+        "num_fields": 2,
+        "wd": 0,
+        "task": "1",
+        "base_model": "MF",
+        "ratio": [
+          0.8,
+          0.2
+        ],
+        "seed": 2020,
+        "epoch": 10,
+        "lr": 0.01,
+        "lr_prototype": 0.005,
+        "inversion_iter": 300,
+        "inversion_batch": 200,
+        "inversion_lr": 0.0001,
+        "inversion_weight_decay": 0.0001,
+        "inversion_target_label": 5,
+        "voting_topk": 70000,
+        "voting_topk_note": "Official MF forward hardcodes 70000, overriding config.json topk=85000. Preserve executable behavior.",
+        "primary_reporting": "fixed final epoch; also report official minimum test MAE over epochs separately"
+      },
+      "common_default_comparison": {
+        "base_model": {
+          "local": "MF",
+          "public_default": "MF",
+          "equal": true
+        },
+        "epoch": {
+          "local": 10,
+          "public_default": 10,
+          "equal": true
+        },
+        "lr": {
+          "local": 0.01,
+          "public_default": 0.01,
+          "equal": true
+        },
+        "lr_prototype": {
+          "local": 0.005,
+          "public_default": 0.005,
+          "equal": true
+        },
+        "emb_dim": {
+          "local": 10,
+          "public_default": 10,
+          "equal": true
+        },
+        "wd": {
+          "local": 0,
+          "public_default": 0,
+          "equal": true
+        },
+        "inversion_iter": {
+          "local": 300,
+          "public_default": 300,
+          "equal": true
+        },
+        "inversion_batch": {
+          "local": 200,
+          "public_default": 200,
+          "equal": true
+        },
+        "inversion_lr": {
+          "local": 0.0001,
+          "public_default": 0.0001,
+          "equal": true
+        },
+        "inversion_weight_decay": {
+          "local": 0.0001,
+          "public_default": 0.0001,
+          "equal": true
+        },
+        "inversion_target_label": {
+          "local": 5,
+          "public_default": 5,
+          "equal": true
+        }
+      },
+      "history": {
+        "base": {
+          "src": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "tgt": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        "wb": {
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "final": {
+            "epoch": 10,
+            "mae": 1.077061653137207,
+            "rmse": 1.3740668296813965
+          },
+          "descriptive_min_test_mae": {
+            "epoch": 5,
+            "mae": 1.0768957138061523,
+            "rmse": 1.3747421503067017
+          },
+          "descriptive_min_test_rmse": {
+            "epoch": 1,
+            "mae": 1.0800983905792236,
+            "rmse": 1.3719626665115356
+          }
+        },
+        "emcdr": {
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "final": {
+            "epoch": 10,
+            "mae": 1.1192634105682373,
+            "rmse": 1.4220815896987915,
+            "seconds": 0.8291785884648561
+          },
+          "descriptive_min_test_mae": {
+            "epoch": 10,
+            "mae": 1.1192634105682373,
+            "rmse": 1.4220815896987915,
+            "seconds": 0.8291785884648561
+          },
+          "descriptive_min_test_rmse": {
+            "epoch": 1,
+            "mae": 1.1217092275619507,
+            "rmse": 1.4214333295822144,
+            "seconds": 1.21809306088835
+          }
+        }
+      },
+      "audited_item_mean": {
+        "mae": 0.7874479597862379,
+        "rmse": 1.0252572926922061
+      },
+      "target_users": 603668,
+      "effective_voting_k": 70000,
+      "voting_fraction": 0.11595777811644811,
+      "minimum_pairwise_voter_intersection": 0,
+      "minimum_pairwise_voter_overlap_fraction": 0.0,
+      "official_task_direction_match": false,
+      "artifact_availability": {
+        "checkpoints/base_seed2020.pt": false,
+        "results/wb_predictions.npz": false
+      }
+    },
+    {
+      "root": "runs/movie_to_music",
+      "task": "Movies_and_TV->CDs_and_Vinyl",
+      "configured": {
+        "use_cuda": 1,
+        "root": "./data/",
+        "model_root": "./model/",
+        "src_tgt_pairs": {
+          "1": {
+            "src": "Movies_and_TV",
+            "tgt": "CDs_and_Vinyl",
+            "co_user_num": 18031,
+            "uid_src": 123960,
+            "iid_src": 50052,
+            "uid_tgt": 75258,
+            "iid_tgt": 64443,
+            "topk": 70000,
+            "batchsize_src": 512,
+            "batchsize_tgt": 512,
+            "batchsize_meta": 512,
+            "batchsize_map": 128,
+            "batchsize_test": 1024
+          }
+        },
+        "emb_dim": 10,
+        "meta_dim": 50,
+        "num_fields": 2,
+        "wd": 0,
+        "task": "1",
+        "base_model": "MF",
+        "ratio": [
+          0.8,
+          0.2
+        ],
+        "seed": 2020,
+        "epoch": 10,
+        "lr": 0.01,
+        "lr_prototype": 0.005,
+        "inversion_iter": 300,
+        "inversion_batch": 200,
+        "inversion_lr": 0.0001,
+        "inversion_weight_decay": 0.0001,
+        "inversion_target_label": 5,
+        "voting_topk": 70000,
+        "voting_topk_note": "Official MF forward hardcodes 70000, overriding config.json topk=85000. Preserve executable behavior.",
+        "primary_reporting": "fixed final epoch; also report official minimum test MAE over epochs separately"
+      },
+      "common_default_comparison": {
+        "base_model": {
+          "local": "MF",
+          "public_default": "MF",
+          "equal": true
+        },
+        "epoch": {
+          "local": 10,
+          "public_default": 10,
+          "equal": true
+        },
+        "lr": {
+          "local": 0.01,
+          "public_default": 0.01,
+          "equal": true
+        },
+        "lr_prototype": {
+          "local": 0.005,
+          "public_default": 0.005,
+          "equal": true
+        },
+        "emb_dim": {
+          "local": 10,
+          "public_default": 10,
+          "equal": true
+        },
+        "wd": {
+          "local": 0,
+          "public_default": 0,
+          "equal": true
+        },
+        "inversion_iter": {
+          "local": 300,
+          "public_default": 300,
+          "equal": true
+        },
+        "inversion_batch": {
+          "local": 200,
+          "public_default": 200,
+          "equal": true
+        },
+        "inversion_lr": {
+          "local": 0.0001,
+          "public_default": 0.0001,
+          "equal": true
+        },
+        "inversion_weight_decay": {
+          "local": 0.0001,
+          "public_default": 0.0001,
+          "equal": true
+        },
+        "inversion_target_label": {
+          "local": 5,
+          "public_default": 5,
+          "equal": true
+        }
+      },
+      "history": {
+        "base": {
+          "src": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "tgt": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ]
+        },
+        "wb": {
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "final": {
+            "epoch": 10,
+            "mae": 1.639227032661438,
+            "rmse": 1.9112468957901
+          },
+          "descriptive_min_test_mae": {
+            "epoch": 2,
+            "mae": 1.6390888690948486,
+            "rmse": 1.9109569787979126
+          },
+          "descriptive_min_test_rmse": {
+            "epoch": 2,
+            "mae": 1.6390888690948486,
+            "rmse": 1.9109569787979126
+          }
+        },
+        "emcdr": {
+          "epochs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "final": {
+            "epoch": 10,
+            "mae": 1.6534223556518555,
+            "rmse": 1.9794392585754395,
+            "seconds": 0.3681589150801301
+          },
+          "descriptive_min_test_mae": {
+            "epoch": 7,
+            "mae": 1.5670970678329468,
+            "rmse": 1.907232403755188,
+            "seconds": 0.3771623848006129
+          },
+          "descriptive_min_test_rmse": {
+            "epoch": 7,
+            "mae": 1.5670970678329468,
+            "rmse": 1.907232403755188,
+            "seconds": 0.3771623848006129
+          }
+        }
+      },
+      "audited_item_mean": {
+        "mae": 0.741995136226943,
+        "rmse": 0.9994786248770366
+      },
+      "target_users": 75258,
+      "effective_voting_k": 70000,
+      "voting_fraction": 0.9301336734965053,
+      "minimum_pairwise_voter_intersection": 64742,
+      "minimum_pairwise_voter_overlap_fraction": 0.9248857142857143,
+      "official_task_direction_match": false,
+      "artifact_availability": {
+        "checkpoints/base_seed2020.pt": false,
+        "results/wb_predictions.npz": false
+      }
+    }
+  ],
+  "recent_protocol": {
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "source_epochs": 10,
+    "source_dim": 10,
+    "source_lr": 0.01,
+    "source_batch": 512,
+    "k": 100,
+    "student_epochs": 20,
+    "student_dim": 32,
+    "student_hidden": 64,
+    "student_lr": 0.001,
+    "student_weight_decay": 1e-05,
+    "student_dropout": 0.1,
+    "student_batch": 2048,
+    "arms": [
+      "target_bias",
+      "real",
+      "shuffled"
+    ],
+    "selection_metric": "validation_rmse",
+    "include_epoch_zero": true,
+    "baseline_alphas": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "objective": "target training MSE",
+    "permutation": "fixed derangement within each train/validation/test user group",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 991,
+    "test_policy": "After dataset construction, only aggregate stage reads test labels, after all nine runs have frozen selections",
+    "source_api": "Fresh MF Top100 opaque IDs only; no scores/weights/histories passed to student",
+    "split_note": "One fixed user split per task; three training/permutation seeds, not three independent splits",
+    "code_sha256": {
+      "residual_prepare.py": "b7d26b5fc533881c3acc8821ad237dcee12b4881ebb0b22a1c6a8f757db5fa39",
+      "residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664"
+    }
+  },
+  "diagnostic_protocol": {
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "source_epochs": 10,
+    "source_dim": 10,
+    "source_lr": 0.01,
+    "source_batch": 512,
+    "k": 100,
+    "student_epochs": 20,
+    "student_dim": 32,
+    "student_hidden": 64,
+    "student_lr": 0.001,
+    "student_weight_decay": 1e-05,
+    "student_dropout": 0.1,
+    "student_batch": 2048,
+    "arms": [
+      "real",
+      "shuffled"
+    ],
+    "selection_metric": "validation_rmse",
+    "include_epoch_zero": true,
+    "baseline_alphas": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "objective": "target training MSE",
+    "permutation": "fixed derangement within each train/validation/test user group",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 991,
+    "test_policy": "After dataset construction, only aggregate stage reads test labels, after all nine runs have frozen selections",
+    "source_api": "Privileged source MF vectors or source history statistics; Top100 is a prior matched-seed reference",
+    "split_note": "One fixed user split per task; three training/permutation seeds, not three independent splits",
+    "code_sha256": {
+      "representation_diagnostic.py": "3b048f8367b31a150c44d880d348906af4e09df49231065e266142f90f8f1c1e",
+      "residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+      "book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2"
+    },
+    "prior_root": "/home/hehao32/BlackBox_CDR/runs/residual_study_20260922",
+    "representations": [
+      "mf_embedding",
+      "history_stats"
+    ],
+    "screening_seed": 2020,
+    "source_models_retrained": false,
+    "expansion_seeds": [
+      2021,
+      2022
+    ],
+    "minimum_validation_gain": 0.0001,
+    "expansion_rule": "Real representation improves fixed-baseline validation RMSE by at least 0.0001 in seed2020",
+    "architecture": "fixed standardized source features padded to 32 -> 64 -> 32, dot target embedding, plus item bias",
+    "information_scope": "Privileged diagnosis, not a black-box method or a mathematical upper bound",
+    "normalization": "mean/std from training overlap users only; applied before within-split permutation"
+  },
+  "recent_manifests": {
+    "book_movie": {
+      "task": "book_movie",
+      "source": "Books",
+      "target": "Movies_and_TV",
+      "overlap_users": 37388,
+      "source_users": 603668,
+      "source_items": 367982,
+      "target_users": 123960,
+      "target_items": 50052,
+      "rows": {
+        "source": 8898041,
+        "train": 1381412,
+        "validation": 159992,
+        "test": 156129
+      },
+      "users": {
+        "train": 22432,
+        "validation": 7478,
+        "test": 7478
+      },
+      "cleanup": {
+        "rule": "No filtering: source and target raw item catalogs already disjoint",
+        "removed_items": 0,
+        "removed_source_ratings": 0,
+        "preserved_prior_protocol": true,
+        "prior_test_sha256": "57713ab0a4eeb6461b73f776008d6e8a4ca2694bd0946dcc747600d32fce9665"
+      },
+      "cross_domain_raw_item_overlap": 0,
+      "cross_domain_same_user_item_rating_leaks": 0,
+      "test_unseen_item_rows": 6,
+      "split_policy": "60/20/20 overlap users; all target-only users in training; no temporal filtering"
+    },
+    "movie_book": {
+      "task": "movie_book",
+      "source": "Movies_and_TV",
+      "target": "Books",
+      "overlap_users": 37388,
+      "source_users": 123960,
+      "source_items": 50052,
+      "target_users": 603668,
+      "target_items": 367982,
+      "rows": {
+        "source": 1697533,
+        "train": 8401231,
+        "validation": 250826,
+        "test": 245984
+      },
+      "users": {
+        "train": 22432,
+        "validation": 7478,
+        "test": 7478
+      },
+      "cleanup": {
+        "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+        "removed_items": 0,
+        "removed_source_ratings": 0,
+        "source_users_before": 123960,
+        "source_users_after": 123960,
+        "overlap_users_before": 37388,
+        "remaining_cross_domain_raw_items": 0
+      },
+      "cross_domain_raw_item_overlap": 0,
+      "cross_domain_same_user_item_rating_leaks": 0,
+      "test_unseen_item_rows": 7,
+      "split_policy": "60/20/20 overlap users; all target-only users in training; no temporal filtering"
+    },
+    "movie_music_clean": {
+      "task": "movie_music_clean",
+      "source": "Movies_and_TV",
+      "target": "CDs_and_Vinyl",
+      "overlap_users": 17874,
+      "source_users": 123803,
+      "source_items": 47611,
+      "target_users": 75258,
+      "target_items": 64443,
+      "rows": {
+        "source": 1662200,
+        "train": 909144,
+        "validation": 90629,
+        "test": 97819
+      },
+      "users": {
+        "train": 10724,
+        "validation": 3575,
+        "test": 3575
+      },
+      "cleanup": {
+        "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+        "removed_items": 2441,
+        "removed_source_ratings": 35333,
+        "source_users_before": 123960,
+        "source_users_after": 123803,
+        "overlap_users_before": 18031,
+        "remaining_cross_domain_raw_items": 0
+      },
+      "cross_domain_raw_item_overlap": 0,
+      "cross_domain_same_user_item_rating_leaks": 0,
+      "test_unseen_item_rows": 12,
+      "split_policy": "60/20/20 overlap users; all target-only users in training; no temporal filtering"
+    }
+  },
+  "evidence_sha256": {
+    "configs/first_round.json": "a6b343f3bf52470806cea8ee58ba97f7f93334646ac8443cc1c0a5bfe5fee5ae",
+    "scripts/experiment.py": "826db1ce2685f2c1da4d6f7d72cca718d0ba0b85f5f0b31ba83cd2024ba71fc8",
+    "scripts/run_emcdr.py": "6bc0e572ae920ddf19263e87a3a47ade7f90941e39a4ff257aaf3376ae3d7b25",
+    "scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+    "scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "scripts/representation_diagnostic.py": "3b048f8367b31a150c44d880d348906af4e09df49231065e266142f90f8f1c1e",
+    "external/PFCDR/config.json": "08da1cf7e98de8f919a5283c9c49e637c3bb99ea426af496c28132f6b9c8090d",
+    "external/PFCDR/main.py": "bfe40c77abb4229accc6136a7a0ccaae151118e0f8737792167afa9b93e0b37b",
+    "external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+    "external/PFCDR/run.py": "f8fb3f59d5e87b6c50fd744fe9ab24d15c9969112a90cb71917308aac477fcaf",
+    "external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+    "external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f",
+    "external/PFCDR/preprocessing.py": "c9f122f1042bc6595bdc8cd4a91641f527de2133603596a4715a19f3ef9c6f50",
+    "results/base_training.json": "04ded9f482f64ed2c214e7dc743d8deb3ca6a8c996d30163e0bb627c32399ac5",
+    "results/wb_training.json": "d44e64dbfa8780c93a2dcf92fa2b95a29612a89b50494045056eb90e0d505fe7",
+    "results/emcdr_training.json": "61ca413eda5d91e8d12e11ef6325b85b71498b8964882226bbccc0787955c1c0",
+    "results/mean_leakage_audit/case_0.json": "cde62c87e6dd2be10ff31859b72ace993a7c998dea3f952cc9675f2a401fdecc",
+    "runs/movie_to_book/results/base_training.json": "9016e6e659d0ee7a58c2cfb5e115833f2ce611b408b5b021d151b5835de68da3",
+    "runs/movie_to_book/results/wb_training.json": "d006260a088bcb1e847470d6bbef9c8e21d0f8243b68bb2fff4b92fb46cc14c7",
+    "runs/movie_to_book/results/emcdr_training.json": "010ec6aafc8d5b01a4542fc00c817527b74e3d412a5519035a93de4911ff63b4",
+    "runs/movie_to_book/configs/first_round.json": "38f3f0e2e98ff6d6450d28a7421b51b53549ff8f59809ed5ced189a0e0f6ea65",
+    "results/mean_leakage_audit/case_1.json": "d2228625b79560b19d2b2961410a9af034e64c36ece1da74104c5e8e1897560e",
+    "runs/movie_to_music/results/base_training.json": "eed6da8e49b96e82bc13b07a739801b6cb8f455f5b33947aa9ead84503c5bd9e",
+    "runs/movie_to_music/results/wb_training.json": "c8c5c2e973641260d5e4f0b34c7243fc339aa2a9b5ef325129f6fa4df5682f5d",
+    "runs/movie_to_music/results/emcdr_training.json": "a2fd9d346c2249a80e2b1394004528fe26ebff5b53f10068c663a38b6f5691a0",
+    "runs/movie_to_music/configs/first_round.json": "0b58e5203ec503e860d8d8bf2cc2ecaebeab0fa199228fd972f4d50b563a092f",
+    "results/mean_leakage_audit/case_2.json": "c6e5d01bc39a52f3e77cbcbd8150471979c6ecc23854aa96a03c57c7a66cfd22",
+    "runs/residual_study_20260922/experiment.json": "04fff72ebd872709351d0aa295c7148ebe743c73784efbef6004ec90b0ba27fe",
+    "runs/representation_diagnostic_8571/protocol.json": "bbceaa4a4ad8b2503116deaf02d3f38df479c7307ecec002ff6b005b329d424b"
+  }
+}

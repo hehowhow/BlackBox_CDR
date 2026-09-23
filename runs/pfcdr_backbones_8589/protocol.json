@@ -1,0 +1,55 @@
+{
+  "task": "Book->Movie",
+  "backbones": [
+    "MF",
+    "GMF",
+    "DNN"
+  ],
+  "seed": 2020,
+  "dim": 10,
+  "pretrain_epochs": 10,
+  "pretrain_lr": 0.01,
+  "pretrain_weight_decay": 0.0,
+  "pretrain_batch": 512,
+  "inversion_iterations": 300,
+  "inversion_batch": 200,
+  "inversion_lr": 0.0001,
+  "inversion_weight_decay": 0.0001,
+  "inversion_target": 5,
+  "inversion_warmup": 10,
+  "bridge_epochs": 10,
+  "bridge_lr": 0.005,
+  "bridge_batch": 512,
+  "bridge_weight_decay": 0.0,
+  "primary_k": 70000,
+  "reported_ks": [
+    50000,
+    70000
+  ],
+  "selection": "validation_rmse",
+  "primary_selection": "Minimum validation RMSE among bridge epochs 1..10 independently for each predeclared K",
+  "source_target_pretraining": "Fixed final epoch; no target validation cold-user vectors used for pretrain selection",
+  "voting_candidates": "All target model rows, including untrained validation/test user rows, matching public code",
+  "gmf_matching": "Public raw target user vector matching; output uses learned GMF linear weights",
+  "unknown_target_items": "Only items absent from target training fall back to frozen smoothed mean; also save raw predictions",
+  "initialization": "Matched source/target embedding initialization across backbones; separate deterministic head and mapping RNG",
+  "inversion_implementation": "Cache per-user item scores; optimize full catalog weights with Adam, same loss/schedule and post-step best-input convention as public inversion",
+  "split": "Existing 60/20/20 overlap-user split; only explicit train_users enter target inversion/bridge",
+  "scope": "One seed, no learning-rate search, exploratory backbone screening; not ten-run paper reproduction",
+  "test_policy": "Test IDs may receive source prototypes; test target labels opened only after all three runs freeze selections",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 991,
+  "code_sha256": {
+    "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+    "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_verify.py": "f1f52f7f6f4c78ead9d6b4063d608625f5aecf3df8360530759cf11cee8370a6",
+    "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664"
+  },
+  "upstream_sha256": {
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f"
+  }
+}

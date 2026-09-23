@@ -1,0 +1,7 @@
+{
+  "job": "8589",
+  "gpu": "1",
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu130",
+  "seed": 2020
+}

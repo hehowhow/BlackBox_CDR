@@ -1,0 +1,52 @@
+{
+  "task": "Movies_and_TV->Books",
+  "seed": 2020,
+  "scope": "split reconstructed from downloaded mid data; historical per-sample artifacts unavailable",
+  "original_baseline_lines": [
+    70,
+    77
+  ],
+  "original_baseline_sha256": "b5ef46d56643d364f0896aa9366eab9d7cd8ba2ff7914ae11d020b59f437b26d",
+  "train_ratings": 8645832,
+  "test_ratings": 252209,
+  "cold_users": 7478,
+  "train_test_user_overlap": 0,
+  "target_raw_user_overlap": 0,
+  "actual_disk_split_and_id_maps_verified": false,
+  "independent_pandas_predictions_match": true,
+  "shuffled_test_labels_predictions_identical": true,
+  "constant_test_labels_predictions_identical": true,
+  "changed_train_labels_changes_predictions": true,
+  "test_item_missing_train_ratings": 0,
+  "test_item_training_count_quantiles": [
+    1.0,
+    12.0,
+    35.0,
+    103.0,
+    7341.0
+  ],
+  "metrics": {
+    "target_train_global_mean": {
+      "mae": 0.8470543019082996,
+      "rmse": 1.0712765168989822
+    },
+    "target_train_global_median": {
+      "mae": 0.8198954042084144,
+      "rmse": 1.3471070240903842
+    },
+    "target_train_item_mean": {
+      "mae": 0.7874479597862379,
+      "rmse": 1.0252572926922061
+    }
+  },
+  "historical_item_mean_metrics": {
+    "mae": 0.7874479597862379,
+    "rmse": 1.0252572926922061
+  },
+  "historical_metric_match": true,
+  "train_mean": 4.251969156930183,
+  "test_rating5_fraction": 0.5181535948360289,
+  "source_train_target_test_same_raw_user_item": 0,
+  "source_train_target_test_same_raw_user_item_rating": 0,
+  "unseen_item_above_train_max_probe": "IndexError (robustness issue, not leakage)"
+}

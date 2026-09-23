@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "seed": 2021,
+  "beta": 80,
+  "backbone": "MF",
+  "selection_sha256": "39db5e64f64a5e35ba63df9186616a0a9f3cc47411bf431042a319f8ec8a83b2",
+  "final_sha256": "fc7caf66b2ae49ec8fba20dbf4541abeabbe487f85a7276831a32d35930950d7",
+  "predictions": {
+    "EMCDR": "d9eb49184b3312c6a9970817ea42babf5aeda4da165a6b30dbc864710efcb2a8",
+    "PFCDR": "44fe2a1e60290743cbb8b7eb482c40b5c619b3661721bf70cb26c3c08854cf6a"
+  },
+  "restored_predictions": true,
+  "native_voting_checks": 4,
+  "source_weights_unchanged": true,
+  "full_outer_train_rows": 1254172,
+  "test_labels_opened": false
+}

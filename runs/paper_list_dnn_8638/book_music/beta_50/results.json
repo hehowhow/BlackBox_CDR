@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "manifest": {
+    "task": "book_music",
+    "source": "Books",
+    "target": "CDs_and_Vinyl",
+    "overlap_users": 16738,
+    "source_users": 603668,
+    "target_users": 75258,
+    "source_items": 367982,
+    "target_items": 64443,
+    "rows": {
+      "source": 8898041,
+      "train": 902269,
+      "inner_train": 865640,
+      "validation": 36629,
+      "test": 195323
+    },
+    "cleanup": {
+      "raw_overlap_users": 16738,
+      "clean_overlap_users": 16738,
+      "lost_overlap_users": 0,
+      "removed_items": 0,
+      "removed_source_ratings": 0,
+      "target_ratings_unchanged": 1097592
+    },
+    "cross_domain_raw_item_overlap": 0,
+    "cross_domain_same_user_item_rating_leaks": 0,
+    "hashes": {
+      "data/inner_train.csv": "c173d3133376e8d4f115d6d4e02a7902b9d0146887cbc986e4b6307d0b9dc8cf",
+      "data/inner_train_users.npy": "92ce29eda2ef553563db505c6d0168b065d1a0f113a9ae2e6f481305f364a6eb",
+      "data/test.csv": "2b9b2f2cea6a88a3f8085aea6bec809d15e470bb991542cf83b3ff2a9277fcdd",
+      "data/test_features.npy": "5fcd0006688062708dce416cfec8860158c20424b283a7990fb1154ecb95d4af",
+      "data/test_users.npy": "65efd0c8e1478d17ea211778211dee2a24aae2e244bf1c73a6f09ebfca020bad",
+      "data/train.csv": "7ba6b6e7b1f8e25620ea4bc50c9f3eef7459a7c5e5a3a5d2e19c3945045bfb9e",
+      "data/train_users.npy": "2f0b6a497511199a49805b098c6b55b45d3bcb08ce932616ab2185441486f4a0",
+      "data/validation.csv": "c993d4a3b368af2de6d64bd94507ecf49cc4ad7798794339e93f9637388f7ac9",
+      "data/validation_users.npy": "9e667944288f7ec12d78d27bf39b5a1b6b6b5e22703b9995d2ce24f9ba8cae79",
+      "baseline/audit.json": "38dc58ef733f05a6bf2018690bad9b12c2570a9b1c2cd55b26a0aa7d180236a4",
+      "baseline/seen.npy": "9fd5ba09709e94582c0b8ecfaa3bb77c093ba006a69a171e9726a9072abd58f0",
+      "baseline/statistics.npz": "46dca7f836b5ff952f647e3921000d995caa310854d79327665db0869514bbf5",
+      "baseline/values.npy": "e2343c726228fb51238586666c22ce09c21ef73c765957c53e8472b4faa83d2f",
+      "inner_baseline/audit.json": "2394d11c74c22167798b3a5e49e58208b3f5dfc271dc556449763158c8258096",
+      "inner_baseline/seen.npy": "ee986dcdcd6a157c7145c714276fdab333bcdefce5f39f32d5cca91bdc046ae1",
+      "inner_baseline/statistics.npz": "3cda1b10a4c7b26f9d2c5577b13a6a9e8afd3b04fcd2b5560244775cbaeb532e",
+      "inner_baseline/values.npy": "a425baaa744e5a6bf1075bdcf4fd8a73d8eb5f8cf29b7c810e8b185ad33a0f2b"
+    },
+    "beta": 50,
+    "users": {
+      "outer_train": 8369,
+      "inner_train": 6695,
+      "validation": 1674,
+      "test": 8369,
+      "target_only": 58520
+    }
+  },
+  "baseline": {
+    "mae": 0.7314280840308645,
+    "rmse": 0.9970734267691561,
+    "user_macro_mae": 0.7264550456059715,
+    "prediction_mean": 4.340289942350699,
+    "prediction_std": 0.47442803898456226,
+    "outside_rating_scale_fraction": 0.0
+  },
+  "aggregate": {
+    "mae": {
+      "mean": 0.7496651247344617,
+      "std": 0.0001743227617856525
+    },
+    "rmse": {
+      "mean": 1.0040818197310912,
+      "std": 0.00043295872386215137
+    }
+  },
+  "per_seed": {
+    "2020": {
+      "mae": 0.7494657093899671,
+      "rmse": 1.0045786633718496,
+      "user_macro_mae": 0.7394293374272587,
+      "prediction_mean": 4.361584663391113,
+      "prediction_std": 0.33861395716667175,
+      "outside_rating_scale_fraction": 0.007843418337830158
+    },
+    "2021": {
+      "mae": 0.7497885719425442,
+      "rmse": 1.0037853036901987,
+      "user_macro_mae": 0.740341903288429,
+      "prediction_mean": 4.360843658447266,
+      "prediction_std": 0.3280412256717682,
+      "outside_rating_scale_fraction": 0.004617991736764231
+    },
+    "2022": {
+      "mae": 0.7497410928708736,
+      "rmse": 1.0038814921312254,
+      "user_macro_mae": 0.739027626624906,
+      "prediction_mean": 4.3613810539245605,
+      "prediction_std": 0.3247546851634979,
+      "outside_rating_scale_fraction": 0.003742518802189194
+    }
+  },
+  "comparison": {
+    "delta_mae": 0.018237040703597218,
+    "delta_rmse": 0.007008392961935117,
+    "mae_95ci": [
+      0.014890080594297198,
+      0.021984985310155473
+    ],
+    "rmse_95ci": [
+      0.0016903073470952166,
+      0.01257239918390266
+    ],
+    "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+  }
+}

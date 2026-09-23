@@ -1,0 +1,82 @@
+{
+  "history_stats": {
+    "columns": [
+      "log_count",
+      "rating_mean",
+      "rating_std",
+      "fraction_1_stars",
+      "fraction_2_stars",
+      "fraction_3_stars",
+      "fraction_4_stars",
+      "fraction_5_stars",
+      "item_centered_mean",
+      "mean_log_item_count"
+    ],
+    "inputs": {
+      "source_csv_sha256": "e7c79b456e0f9f75f43ba6194f6780030efdc5d424dc0d762726e5d998d007f1"
+    },
+    "sha256": "84a69b8e46d65b468a8339256ae01a9319613a11f05afb62e1fd7a815765aecf",
+    "normalization_train_users": 10724,
+    "target_labels_read": false
+  },
+  "mf_embedding_2020": {
+    "columns": [
+      "source_mf_dim_0",
+      "source_mf_dim_1",
+      "source_mf_dim_2",
+      "source_mf_dim_3",
+      "source_mf_dim_4",
+      "source_mf_dim_5",
+      "source_mf_dim_6",
+      "source_mf_dim_7",
+      "source_mf_dim_8",
+      "source_mf_dim_9"
+    ],
+    "inputs": {
+      "source_checkpoint_sha256": "60ff4d597de708dd1d8b87a10c7160a158d52027d8843b509a5cf5c14d82ab15"
+    },
+    "sha256": "9bb69d2b3ab649666430a298b7c613fb577b2501e6f563613f0843df006119a8",
+    "normalization_train_users": 10724,
+    "target_labels_read": false
+  },
+  "mf_embedding_2021": {
+    "columns": [
+      "source_mf_dim_0",
+      "source_mf_dim_1",
+      "source_mf_dim_2",
+      "source_mf_dim_3",
+      "source_mf_dim_4",
+      "source_mf_dim_5",
+      "source_mf_dim_6",
+      "source_mf_dim_7",
+      "source_mf_dim_8",
+      "source_mf_dim_9"
+    ],
+    "inputs": {
+      "source_checkpoint_sha256": "2059e77db197ab087cf3b2394132c6dd8c37f844296b706efc2152bb84c71b0d"
+    },
+    "sha256": "bbd2d89d327b3e83e694f78990660165a20e66196775621fac7485be35143cdf",
+    "normalization_train_users": 10724,
+    "target_labels_read": false
+  },
+  "mf_embedding_2022": {
+    "columns": [
+      "source_mf_dim_0",
+      "source_mf_dim_1",
+      "source_mf_dim_2",
+      "source_mf_dim_3",
+      "source_mf_dim_4",
+      "source_mf_dim_5",
+      "source_mf_dim_6",
+      "source_mf_dim_7",
+      "source_mf_dim_8",
+      "source_mf_dim_9"
+    ],
+    "inputs": {
+      "source_checkpoint_sha256": "78e1fcf6c6fb7812f9f01757c9729491cf822fb8c96fa72950615828eb3e3d26"
+    },
+    "sha256": "146c08b6c8459b9b907e64083067a0a15b9dfcbed7dc8906208dc9d1ad236600",
+    "normalization_train_users": 10724,
+    "target_labels_read": false
+  }
+}

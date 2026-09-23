@@ -1,0 +1,26 @@
+{
+  "task": "music_movie_clean",
+  "source": "CDs_and_Vinyl",
+  "target": "Movies_and_TV",
+  "overlap_users": 17904,
+  "source_users": 75131,
+  "target_users": 123960,
+  "source_items": 62002,
+  "target_items": 50052,
+  "rows": {
+    "source": 1062711
+  },
+  "cleanup": {
+    "raw_overlap_users": 18031,
+    "clean_overlap_users": 17904,
+    "lost_overlap_users": 127,
+    "removed_items": 2441,
+    "removed_source_ratings": 34881,
+    "target_ratings_unchanged": 1697533
+  },
+  "cross_domain_raw_item_overlap": 0,
+  "cross_domain_same_user_item_rating_leaks": 0,
+  "hashes": {
+    "data/source.csv": "5be7fc8c2ad8ee99b4f0da5a95114832fcd93ccfa406bd3016bf971505c89974"
+  }
+}

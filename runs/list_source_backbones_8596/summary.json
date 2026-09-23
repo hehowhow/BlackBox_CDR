@@ -1,0 +1,342 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "task": "Book->Movie",
+    "backbones": [
+      "MF",
+      "GMF",
+      "DNN"
+    ],
+    "source_checkpoints": {
+      "MF": {
+        "path": "/home/hehao32/BlackBox_CDR/runs/pfcdr_backbones_8589/MF/pretrained.pt",
+        "sha256": "f4eef88d60de94de57917f1a6f25a24fac4e6d8aeca83f8e178a4616cd352287"
+      },
+      "GMF": {
+        "path": "/home/hehao32/BlackBox_CDR/runs/pfcdr_backbones_8589/GMF/pretrained.pt",
+        "sha256": "263a6e6eb7e53cea96307e25fc935701ed6c589b431e418515620b319dd3834a"
+      },
+      "DNN": {
+        "path": "/home/hehao32/BlackBox_CDR/runs/pfcdr_backbones_8589/DNN/pretrained.pt",
+        "sha256": "d66e81b9f97e2a7816521e6f440b750e983bbef1e269f5a1f15ca91ace9a3249"
+      }
+    },
+    "seed": 2020,
+    "k": 100,
+    "export_batch": 128,
+    "source_dim": 10,
+    "source_epochs": 10,
+    "source_lr": 0.01,
+    "seen_item_filter": false,
+    "score_clipping": false,
+    "learner_uses_scores": false,
+    "dim": 32,
+    "hidden": 64,
+    "dropout": 0.1,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "selection": "minimum validation RMSE over epochs 1..10; all arms frozen before test labels",
+    "student": "original LIST: rank pooling -> 32/64/32 ReLU MLP -> item dot + mean + item bias",
+    "vocabulary": "union of returned opaque IDs only; shared ID initialization across teachers",
+    "unknown_target_items": "frozen smoothed-mean fallback only for items absent from target training",
+    "source_scope": "same pretrained source models as PFCDR 8589; no target weights or source weights given to student",
+    "scope": "one task and one seed; historical test set, exploratory source-backbone comparison",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 992,
+    "code_hashes": {
+      "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+      "/home/hehao32/BlackBox_CDR/scripts/slurm_list_source_backbones.sh": "bb9c2a1f34da3e4ab9f1405d543ee889b43e5a1bfa4d75b1b30eb700542ca163",
+      "/home/hehao32/BlackBox_CDR/scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+      "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2"
+    }
+  },
+  "shared": {
+    "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+    "vocabulary_sha256": "235da23480f9830313f5f13f56cd46e0ccadeeac7705a992ad864b4cdb22119e",
+    "vocabulary_size": 90877,
+    "train_mean": 4.117109298706055,
+    "list_comparisons": {
+      "MF__GMF": {
+        "mean_common_items": 0.09315823258799615,
+        "mean_overlap_fraction": 0.0009315823258799615,
+        "mean_jaccard": 0.0004685260916322984,
+        "same_top1_fraction": 0.0
+      },
+      "MF__DNN": {
+        "mean_common_items": 0.18639670482507756,
+        "mean_overlap_fraction": 0.0018639670482507756,
+        "mean_jaccard": 0.0009380674253780025,
+        "same_top1_fraction": 0.0
+      },
+      "GMF__DNN": {
+        "mean_common_items": 0.3570664384294426,
+        "mean_overlap_fraction": 0.0035706643842944256,
+        "mean_jaccard": 0.0017985550586926743,
+        "same_top1_fraction": 2.6746549695089334e-05
+      }
+    }
+  },
+  "baselines": {
+    "item_mean": {
+      "mae": 0.8348875053406114,
+      "rmse": 1.0919842469391372,
+      "user_macro_mae": 0.8342887663053964,
+      "prediction_mean": 4.11921583584754,
+      "prediction_std": 0.5506063065225044,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "smoothed_mean_5": {
+      "mae": 0.8425192366389747,
+      "rmse": 1.0861418302139547,
+      "user_macro_mae": 0.8450502686609949,
+      "prediction_mean": 4.123060577471313,
+      "prediction_std": 0.4573308435308123,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_median": {
+      "mae": 0.7571207142811394,
+      "rmse": 1.2041879143522454,
+      "user_macro_mae": 0.7222355149137324,
+      "prediction_mean": 4.4640233396742435,
+      "prediction_std": 0.7221280411086716,
+      "outside_rating_scale_fraction": 0.0
+    }
+  },
+  "models": {
+    "MF": {
+      "selection": {
+        "epoch": 2,
+        "train_mse": 1.2859194070994027,
+        "validation_rmse": 1.0922156714351239,
+        "validation_mae": 0.852591435466476,
+        "seconds": 0.8624643534421921,
+        "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+        "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+        "checkpoint_sha256": "0609b99ae9e8573b442f63758d9e3f67b0599bc090fb559911fad4380035d7ca",
+        "validation_sha256": "ff76a81c09abc291753b3e9bc3bd5eac8da5c25ac8c0649c1b65c4428f6a82a0",
+        "test_sha256": "da04083fd6734609ea12e86ecd63c7b44ac99745116ec2f01bb3bed5bad667a6",
+        "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+      },
+      "metrics": {
+        "mae": 0.8559789868770104,
+        "rmse": 1.0986970119398483,
+        "user_macro_mae": 0.862253830030809,
+        "prediction_mean": 4.095412254333496,
+        "prediction_std": 0.47121793031692505,
+        "outside_rating_scale_fraction": 0.003759711520601554
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.02109148153639895,
+          "delta_rmse": 0.006712765000711052,
+          "mae_95ci": [
+            0.018095957946272345,
+            0.024062291307507217
+          ],
+          "rmse_95ci": [
+            0.003438050448585994,
+            0.009954095657167499
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.013459750238035695,
+          "delta_rmse": 0.012555181725893538,
+          "mae_95ci": [
+            0.01149671617115539,
+            0.015450626988765537
+          ],
+          "rmse_95ci": [
+            0.010040671696935666,
+            0.014978761623138635
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "item_median": {
+          "delta_mae": 0.09885827259587099,
+          "delta_rmse": -0.10549090241239711,
+          "mae_95ci": [
+            0.08815209587084058,
+            0.10956690779748904
+          ],
+          "rmse_95ci": [
+            -0.11341894200595073,
+            -0.09787989290447965
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "LIST_MF": {
+          "delta_mae": 0.0,
+          "delta_rmse": 0.0,
+          "mae_95ci": [
+            0.0,
+            0.0
+          ],
+          "rmse_95ci": [
+            0.0,
+            0.0
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        }
+      }
+    },
+    "GMF": {
+      "selection": {
+        "epoch": 3,
+        "train_mse": 1.2413169459943882,
+        "validation_rmse": 1.0933069467648653,
+        "validation_mae": 0.8573062874578322,
+        "seconds": 0.82023736089468,
+        "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+        "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+        "checkpoint_sha256": "90d7f13127c4e6c98f8682bcb13b4fd975184156ce2e37a4f1a8b7a380b0a9e9",
+        "validation_sha256": "ae86783423365037584d7c9cddd2ea56770fa3baf634bc79417c2cadbd729ed3",
+        "test_sha256": "9ebbdedd627db3da67e00c20fceeffe17e164ceb123c649d9e7f27e3efa7a119",
+        "list_sha256": "2a014e46818b3ae32b18452e41ad101d85689b4f1a309f86456651a9f2321285"
+      },
+      "metrics": {
+        "mae": 0.8605866730440316,
+        "rmse": 1.099037290670664,
+        "user_macro_mae": 0.8694205063337643,
+        "prediction_mean": 4.072181224822998,
+        "prediction_std": 0.49392253160476685,
+        "outside_rating_scale_fraction": 0.00589256320094281
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.025699167703420178,
+          "delta_rmse": 0.00705304373152682,
+          "mae_95ci": [
+            0.022031208685469872,
+            0.029355828796179106
+          ],
+          "rmse_95ci": [
+            0.0023315990982408275,
+            0.011645965717734607
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.018067436405056925,
+          "delta_rmse": 0.012895460456709307,
+          "mae_95ci": [
+            0.015040723560672797,
+            0.021073102817926063
+          ],
+          "rmse_95ci": [
+            0.008491231689029965,
+            0.01703198678986756
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "item_median": {
+          "delta_mae": 0.10346595876289222,
+          "delta_rmse": -0.10515062368158135,
+          "mae_95ci": [
+            0.0918550397989024,
+            0.11452932185062409
+          ],
+          "rmse_95ci": [
+            -0.11411758108510897,
+            -0.09680808675171385
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "LIST_MF": {
+          "delta_mae": 0.00460768616702123,
+          "delta_rmse": 0.0003402787308157684,
+          "mae_95ci": [
+            0.002228564150595927,
+            0.006938919712223212
+          ],
+          "rmse_95ci": [
+            -0.0028998482864382225,
+            0.0036466418091154074
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        }
+      }
+    },
+    "DNN": {
+      "selection": {
+        "epoch": 3,
+        "train_mse": 1.2159933097439433,
+        "validation_rmse": 1.057383499341732,
+        "validation_mae": 0.8063424070007569,
+        "seconds": 0.8568779602646828,
+        "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+        "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+        "checkpoint_sha256": "0eae2e28530668c34331301082b3fb141b7fc6b5e21656e5e6f58e0a2306d1d4",
+        "validation_sha256": "ce2ed24542d232f07f0db53eecf3bac97000d263cf41bb6a9fd9510122625acc",
+        "test_sha256": "e021ba34b3bbb6172a131e78b5452b3a14e592d21d50d2e4691a9488f4a57cfd",
+        "list_sha256": "b19afa1cb788b0ac14f413b755e895bb36d1e2d3dd5142f2cbd0f6a1859d007a"
+      },
+      "metrics": {
+        "mae": 0.8124350500628761,
+        "rmse": 1.0677717867482281,
+        "user_macro_mae": 0.81514409533287,
+        "prediction_mean": 4.107814311981201,
+        "prediction_std": 0.5853708982467651,
+        "outside_rating_scale_fraction": 0.008326448001332231
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": -0.022452455277735317,
+          "delta_rmse": -0.024212460190909058,
+          "mae_95ci": [
+            -0.029933117520525444,
+            -0.013914585548774349
+          ],
+          "rmse_95ci": [
+            -0.03388656145795648,
+            -0.013600002083276986
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": -0.03008418657609857,
+          "delta_rmse": -0.01837004346572657,
+          "mae_95ci": [
+            -0.03757425349549153,
+            -0.021305150034047877
+          ],
+          "rmse_95ci": [
+            -0.028163730381815494,
+            -0.0070243290062902
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "item_median": {
+          "delta_mae": 0.05531433578173672,
+          "delta_rmse": -0.13641612760401722,
+          "mae_95ci": [
+            0.042354770445254784,
+            0.06899469011269685
+          ],
+          "rmse_95ci": [
+            -0.15018396962483918,
+            -0.12160785937916438
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        },
+        "LIST_MF": {
+          "delta_mae": -0.043543936814134265,
+          "delta_rmse": -0.03092522519162011,
+          "mae_95ci": [
+            -0.05135412741482319,
+            -0.034750803765026456
+          ],
+          "rmse_95ci": [
+            -0.04068870292954078,
+            -0.01966971968357563
+          ],
+          "interpretation": "negative favors this LIST arm; user-cluster CI conditional on one fitted seed"
+        }
+      }
+    }
+  }
+}

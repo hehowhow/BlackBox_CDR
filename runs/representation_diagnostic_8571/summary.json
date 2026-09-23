@@ -1,0 +1,1124 @@
+{
+  "status": "PASS",
+  "tasks": {
+    "book_movie": {
+      "baseline": {
+        "mae": 0.8425192364146543,
+        "rmse": 1.086141830031561,
+        "user_macro_mae": 0.8450502675042163,
+        "prediction_mean": 4.123060703277588,
+        "prediction_std": 0.4573308527469635,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "representations": {
+        "mf_embedding": {
+          "seeds": [
+            2020,
+            2021,
+            2022
+          ],
+          "screening": {
+            "baseline_validation_rmse": 1.0776980564727823,
+            "real_validation_rmse": 1.0675109038959973,
+            "shuffled_validation_rmse": 1.0773429979775369,
+            "gain": 0.01018715257678493,
+            "expand": true,
+            "seeds": [
+              2020,
+              2021,
+              2022
+            ]
+          },
+          "per_seed": {
+            "real": {
+              "2020": {
+                "mae": 0.8271636269879592,
+                "rmse": 1.075856041840941,
+                "user_macro_mae": 0.8310258037210744,
+                "prediction_mean": 4.108911991119385,
+                "prediction_std": 0.5355064868927002,
+                "outside_rating_scale_fraction": 0.004598761280735802
+              },
+              "2021": {
+                "mae": 0.823156032282712,
+                "rmse": 1.073400809035546,
+                "user_macro_mae": 0.8276531491591881,
+                "prediction_mean": 4.117613315582275,
+                "prediction_std": 0.5300911068916321,
+                "outside_rating_scale_fraction": 0.0043169430406907105
+              },
+              "2022": {
+                "mae": 0.8258115071868112,
+                "rmse": 1.075103669823522,
+                "user_macro_mae": 0.8288163105431484,
+                "prediction_mean": 4.1121320724487305,
+                "prediction_std": 0.5331557989120483,
+                "outside_rating_scale_fraction": 0.004406612480705058
+              }
+            },
+            "shuffled": {
+              "2020": {
+                "mae": 0.8388810665195497,
+                "rmse": 1.0860818440450857,
+                "user_macro_mae": 0.8402974774776083,
+                "prediction_mean": 4.1294379234313965,
+                "prediction_std": 0.46944621205329895,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2021": {
+                "mae": 0.8389768913923774,
+                "rmse": 1.0861385717426604,
+                "user_macro_mae": 0.8402997656111417,
+                "prediction_mean": 4.129610538482666,
+                "prediction_std": 0.46921446919441223,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2022": {
+                "mae": 0.8391594752283846,
+                "rmse": 1.0861383120547856,
+                "user_macro_mae": 0.8406043752929676,
+                "prediction_mean": 4.129308700561523,
+                "prediction_std": 0.4686140716075897,
+                "outside_rating_scale_fraction": 0.0
+              }
+            }
+          },
+          "aggregate": {
+            "real": {
+              "mae": {
+                "mean": 0.8253770554858274,
+                "std": 0.002038814616571894
+              },
+              "rmse": {
+                "mean": 1.0747868402333363,
+                "std": 0.0012579061070226534
+              },
+              "user_macro_mae": {
+                "mean": 0.8291650878078035,
+                "std": 0.0017131648734749316
+              }
+            },
+            "shuffled": {
+              "mae": {
+                "mean": 0.8390058110467705,
+                "std": 0.00014143942907281283
+              },
+              "rmse": {
+                "mean": 1.0861195759475104,
+                "std": 3.2677044004905614e-05
+              },
+              "user_macro_mae": {
+                "mean": 0.8404005394605726,
+                "std": 0.00017653071634961512
+              }
+            }
+          },
+          "epochs": {
+            "real": {
+              "2020": 2,
+              "2021": 2,
+              "2022": 2
+            },
+            "shuffled": {
+              "2020": 1,
+              "2021": 1,
+              "2022": 1
+            }
+          },
+          "comparisons": {
+            "minus_baseline": {
+              "delta_mae": -0.017142180928827022,
+              "delta_rmse": -0.011354499056757561,
+              "mae_95ci": [
+                -0.01945580185551447,
+                -0.014845718816621315
+              ],
+              "rmse_95ci": [
+                -0.01445659370897387,
+                -0.008459707572770044
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_shuffled": {
+              "delta_mae": -0.013628755560943229,
+              "delta_rmse": -0.011332245300414767,
+              "mae_95ci": [
+                -0.015889814112235605,
+                -0.011364866371710775
+              ],
+              "rmse_95ci": [
+                -0.0144529609156633,
+                -0.008411897183964378
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_top100": {
+              "delta_mae": -0.011029861293873289,
+              "delta_rmse": -0.010543941442641369,
+              "mae_95ci": [
+                -0.013231539387292754,
+                -0.008906337505933377
+              ],
+              "rmse_95ci": [
+                -0.013385381838248566,
+                -0.007830900397715014
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_target_bias": {
+              "delta_mae": -0.01026667793391034,
+              "delta_rmse": -0.011735563346516376,
+              "mae_95ci": [
+                -0.012602861593020034,
+                -0.008049337693639429
+              ],
+              "rmse_95ci": [
+                -0.014828994743340406,
+                -0.008803550580546283
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            }
+          },
+          "source_increment_supported": true
+        },
+        "history_stats": {
+          "seeds": [
+            2020,
+            2021,
+            2022
+          ],
+          "screening": {
+            "baseline_validation_rmse": 1.0776980564727823,
+            "real_validation_rmse": 1.0399560130009804,
+            "shuffled_validation_rmse": 1.0773508774087839,
+            "gain": 0.03774204347180188,
+            "expand": true,
+            "seeds": [
+              2020,
+              2021,
+              2022
+            ]
+          },
+          "per_seed": {
+            "real": {
+              "2020": {
+                "mae": 0.7922922112148602,
+                "rmse": 1.0455736026034312,
+                "user_macro_mae": 0.7944817203060969,
+                "prediction_mean": 4.107551097869873,
+                "prediction_std": 0.6014984250068665,
+                "outside_rating_scale_fraction": 0.018074797122891968
+              },
+              "2021": {
+                "mae": 0.791847302739596,
+                "rmse": 1.0458534241397015,
+                "user_macro_mae": 0.7933801955863587,
+                "prediction_mean": 4.11415958404541,
+                "prediction_std": 0.5944343209266663,
+                "outside_rating_scale_fraction": 0.017927483042868397
+              },
+              "2022": {
+                "mae": 0.7931886411340665,
+                "rmse": 1.04501014569312,
+                "user_macro_mae": 0.7953723707750835,
+                "prediction_mean": 4.108321666717529,
+                "prediction_std": 0.5903366208076477,
+                "outside_rating_scale_fraction": 0.015384713922461555
+              }
+            },
+            "shuffled": {
+              "2020": {
+                "mae": 0.8388153381368851,
+                "rmse": 1.0860442663406427,
+                "user_macro_mae": 0.8402170236818117,
+                "prediction_mean": 4.129568099975586,
+                "prediction_std": 0.46954870223999023,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2021": {
+                "mae": 0.8389976725640521,
+                "rmse": 1.0861030977833346,
+                "user_macro_mae": 0.8403331879952932,
+                "prediction_mean": 4.129720211029053,
+                "prediction_std": 0.4686897099018097,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2022": {
+                "mae": 0.8390303697903017,
+                "rmse": 1.0860251665249159,
+                "user_macro_mae": 0.8404884960245013,
+                "prediction_mean": 4.129129886627197,
+                "prediction_std": 0.4691586494445801,
+                "outside_rating_scale_fraction": 0.0
+              }
+            }
+          },
+          "aggregate": {
+            "real": {
+              "mae": {
+                "mean": 0.792442718362841,
+                "std": 0.0006832177349243322
+              },
+              "rmse": {
+                "mean": 1.045479057478751,
+                "std": 0.0004295156808171723
+              },
+              "user_macro_mae": {
+                "mean": 0.7944114288891798,
+                "std": 0.000997945969535317
+              }
+            },
+            "shuffled": {
+              "mae": {
+                "mean": 0.8389477934970797,
+                "std": 0.00011586886546563821
+              },
+              "rmse": {
+                "mean": 1.0860575102162977,
+                "std": 4.061859723643237e-05
+              },
+              "user_macro_mae": {
+                "mean": 0.8403462359005354,
+                "std": 0.00013620570503742964
+              }
+            }
+          },
+          "epochs": {
+            "real": {
+              "2020": 2,
+              "2021": 2,
+              "2022": 2
+            },
+            "shuffled": {
+              "2020": 1,
+              "2021": 1,
+              "2022": 1
+            }
+          },
+          "comparisons": {
+            "minus_baseline": {
+              "delta_mae": -0.050076518051813346,
+              "delta_rmse": -0.04066271373329444,
+              "mae_95ci": [
+                -0.05602668466135804,
+                -0.044833393624153645
+              ],
+              "rmse_95ci": [
+                -0.04761541581554986,
+                -0.034250976060553114
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_shuffled": {
+              "delta_mae": -0.04650507513423863,
+              "delta_rmse": -0.04057839442441025,
+              "mae_95ci": [
+                -0.05243553114842074,
+                -0.04139310944103412
+              ],
+              "rmse_95ci": [
+                -0.047575875608820914,
+                -0.03418992351503883
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_top100": {
+              "delta_mae": -0.04396419841685961,
+              "delta_rmse": -0.03985215611917825,
+              "mae_95ci": [
+                -0.04992713040840353,
+                -0.038904036910862944
+              ],
+              "rmse_95ci": [
+                -0.04661248289633362,
+                -0.03365873146326735
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_target_bias": {
+              "delta_mae": -0.04320101505689666,
+              "delta_rmse": -0.04104377802305326,
+              "mae_95ci": [
+                -0.04890919399521907,
+                -0.03817969605474879
+              ],
+              "rmse_95ci": [
+                -0.04788512377013719,
+                -0.03478140050528151
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            }
+          },
+          "source_increment_supported": true
+        }
+      }
+    },
+    "movie_book": {
+      "baseline": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "representations": {
+        "mf_embedding": {
+          "seeds": [
+            2020,
+            2021,
+            2022
+          ],
+          "screening": {
+            "baseline_validation_rmse": 1.0059829073341722,
+            "real_validation_rmse": 1.001480762790884,
+            "shuffled_validation_rmse": 1.0059829073341722,
+            "gain": 0.0045021445432882334,
+            "expand": true,
+            "seeds": [
+              2020,
+              2021,
+              2022
+            ]
+          },
+          "per_seed": {
+            "real": {
+              "2020": {
+                "mae": 0.7869620102934933,
+                "rmse": 1.01502708695773,
+                "user_macro_mae": 0.8301008579636028,
+                "prediction_mean": 4.198627471923828,
+                "prediction_std": 0.4061536490917206,
+                "outside_rating_scale_fraction": 0.00047970599713802523
+              },
+              "2021": {
+                "mae": 0.787761068902304,
+                "rmse": 1.0155485560216828,
+                "user_macro_mae": 0.8315024737147485,
+                "prediction_mean": 4.195663928985596,
+                "prediction_std": 0.40490037202835083,
+                "outside_rating_scale_fraction": 0.0003536815402627813
+              },
+              "2022": {
+                "mae": 0.7855579095205777,
+                "rmse": 1.0148511004221175,
+                "user_macro_mae": 0.8286920858875214,
+                "prediction_mean": 4.197038173675537,
+                "prediction_std": 0.42090103030204773,
+                "outside_rating_scale_fraction": 0.001138285416937687
+              }
+            },
+            "shuffled": {
+              "2020": {
+                "mae": 0.7955101186273171,
+                "rmse": 1.0194791745807932,
+                "user_macro_mae": 0.8410808407385246,
+                "prediction_mean": 4.1899895668029785,
+                "prediction_std": 0.3702319860458374,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2021": {
+                "mae": 0.7955101186273171,
+                "rmse": 1.0194791745807932,
+                "user_macro_mae": 0.8410808407385246,
+                "prediction_mean": 4.1899895668029785,
+                "prediction_std": 0.3702319860458374,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2022": {
+                "mae": 0.7955101186273171,
+                "rmse": 1.0194791745807932,
+                "user_macro_mae": 0.8410808407385246,
+                "prediction_mean": 4.1899895668029785,
+                "prediction_std": 0.3702319860458374,
+                "outside_rating_scale_fraction": 0.0
+              }
+            }
+          },
+          "aggregate": {
+            "real": {
+              "mae": {
+                "mean": 0.7867603295721249,
+                "std": 0.0011153403742135927
+              },
+              "rmse": {
+                "mean": 1.01514224780051,
+                "std": 0.000362708689065522
+              },
+              "user_macro_mae": {
+                "mean": 0.8300984725219576,
+                "std": 0.0014051954321749815
+              }
+            },
+            "shuffled": {
+              "mae": {
+                "mean": 0.7955101186273171,
+                "std": 0.0
+              },
+              "rmse": {
+                "mean": 1.0194791745807932,
+                "std": 0.0
+              },
+              "user_macro_mae": {
+                "mean": 0.8410808407385245,
+                "std": 1.3597399555105182e-16
+              }
+            }
+          },
+          "epochs": {
+            "real": {
+              "2020": 2,
+              "2021": 2,
+              "2022": 3
+            },
+            "shuffled": {
+              "2020": 0,
+              "2021": 0,
+              "2022": 0
+            }
+          },
+          "comparisons": {
+            "minus_baseline": {
+              "delta_mae": -0.00874978905519197,
+              "delta_rmse": -0.004336883581874007,
+              "mae_95ci": [
+                -0.009700722966809478,
+                -0.007805870876644859
+              ],
+              "rmse_95ci": [
+                -0.005305117129244813,
+                -0.003394117083574583
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_shuffled": {
+              "delta_mae": -0.00874978905519197,
+              "delta_rmse": -0.004336883581874007,
+              "mae_95ci": [
+                -0.009700722966809478,
+                -0.007805870876644859
+              ],
+              "rmse_95ci": [
+                -0.005305117129244813,
+                -0.003394117083574583
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_top100": {
+              "delta_mae": -0.00874978905519197,
+              "delta_rmse": -0.004336883581874007,
+              "mae_95ci": [
+                -0.009700722966809478,
+                -0.007805870876644859
+              ],
+              "rmse_95ci": [
+                -0.005305117129244813,
+                -0.003394117083574583
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_target_bias": {
+              "delta_mae": -0.00874978905519197,
+              "delta_rmse": -0.004336883581874007,
+              "mae_95ci": [
+                -0.009700722966809478,
+                -0.007805870876644859
+              ],
+              "rmse_95ci": [
+                -0.005305117129244813,
+                -0.003394117083574583
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            }
+          },
+          "source_increment_supported": true
+        },
+        "history_stats": {
+          "seeds": [
+            2020,
+            2021,
+            2022
+          ],
+          "screening": {
+            "baseline_validation_rmse": 1.0059829073341722,
+            "real_validation_rmse": 0.9914871074257969,
+            "shuffled_validation_rmse": 1.0059829073341722,
+            "gain": 0.01449579990837524,
+            "expand": true,
+            "seeds": [
+              2020,
+              2021,
+              2022
+            ]
+          },
+          "per_seed": {
+            "real": {
+              "2020": {
+                "mae": 0.7750789282441961,
+                "rmse": 1.0050110775722845,
+                "user_macro_mae": 0.8169824448968389,
+                "prediction_mean": 4.192222595214844,
+                "prediction_std": 0.44043493270874023,
+                "outside_rating_scale_fraction": 0.0027318850006504487
+              },
+              "2021": {
+                "mae": 0.7726171766820322,
+                "rmse": 1.0046666803421642,
+                "user_macro_mae": 0.8137398313434911,
+                "prediction_mean": 4.201461315155029,
+                "prediction_std": 0.4417177140712738,
+                "outside_rating_scale_fraction": 0.004947476258618447
+              },
+              "2022": {
+                "mae": 0.7750897481029531,
+                "rmse": 1.0048456386426967,
+                "user_macro_mae": 0.8161979748044961,
+                "prediction_mean": 4.190866470336914,
+                "prediction_std": 0.44336456060409546,
+                "outside_rating_scale_fraction": 0.0030489787953688046
+              }
+            },
+            "shuffled": {
+              "2020": {
+                "mae": 0.7955101186273171,
+                "rmse": 1.0194791745807932,
+                "user_macro_mae": 0.8410808407385246,
+                "prediction_mean": 4.1899895668029785,
+                "prediction_std": 0.3702319860458374,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2021": {
+                "mae": 0.7955101186273171,
+                "rmse": 1.0194791745807932,
+                "user_macro_mae": 0.8410808407385246,
+                "prediction_mean": 4.1899895668029785,
+                "prediction_std": 0.3702319860458374,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2022": {
+                "mae": 0.7955101186273171,
+                "rmse": 1.0194791745807932,
+                "user_macro_mae": 0.8410808407385246,
+                "prediction_mean": 4.1899895668029785,
+                "prediction_std": 0.3702319860458374,
+                "outside_rating_scale_fraction": 0.0
+              }
+            }
+          },
+          "aggregate": {
+            "real": {
+              "mae": {
+                "mean": 0.7742619510097271,
+                "std": 0.0014244266246876498
+              },
+              "rmse": {
+                "mean": 1.004841132185715,
+                "std": 0.0001722428348132968
+              },
+              "user_macro_mae": {
+                "mean": 0.8156400836816088,
+                "std": 0.0016917646239462633
+              }
+            },
+            "shuffled": {
+              "mae": {
+                "mean": 0.7955101186273171,
+                "std": 0.0
+              },
+              "rmse": {
+                "mean": 1.0194791745807932,
+                "std": 0.0
+              },
+              "user_macro_mae": {
+                "mean": 0.8410808407385245,
+                "std": 1.3597399555105182e-16
+              }
+            }
+          },
+          "epochs": {
+            "real": {
+              "2020": 2,
+              "2021": 2,
+              "2022": 2
+            },
+            "shuffled": {
+              "2020": 0,
+              "2021": 0,
+              "2022": 0
+            }
+          },
+          "comparisons": {
+            "minus_baseline": {
+              "delta_mae": -0.021248167617589964,
+              "delta_rmse": -0.01463803255352425,
+              "mae_95ci": [
+                -0.02344205866586254,
+                -0.01905461497882782
+              ],
+              "rmse_95ci": [
+                -0.016704327975553584,
+                -0.0124393298200301
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_shuffled": {
+              "delta_mae": -0.021248167617589964,
+              "delta_rmse": -0.01463803255352425,
+              "mae_95ci": [
+                -0.02344205866586254,
+                -0.01905461497882782
+              ],
+              "rmse_95ci": [
+                -0.016704327975553584,
+                -0.0124393298200301
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_top100": {
+              "delta_mae": -0.021248167617589964,
+              "delta_rmse": -0.01463803255352425,
+              "mae_95ci": [
+                -0.02344205866586254,
+                -0.01905461497882782
+              ],
+              "rmse_95ci": [
+                -0.016704327975553584,
+                -0.0124393298200301
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_target_bias": {
+              "delta_mae": -0.021248167617589964,
+              "delta_rmse": -0.01463803255352425,
+              "mae_95ci": [
+                -0.02344205866586254,
+                -0.01905461497882782
+              ],
+              "rmse_95ci": [
+                -0.016704327975553584,
+                -0.0124393298200301
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            }
+          },
+          "source_increment_supported": true
+        }
+      }
+    },
+    "movie_music_clean": {
+      "baseline": {
+        "mae": 0.7605328310218314,
+        "rmse": 0.9966488332967731,
+        "user_macro_mae": 0.7684871443836876,
+        "prediction_mean": 4.29453706741333,
+        "prediction_std": 0.36654210090637207,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "representations": {
+        "mf_embedding": {
+          "seeds": [
+            2020,
+            2021,
+            2022
+          ],
+          "screening": {
+            "baseline_validation_rmse": 0.9781768388795935,
+            "real_validation_rmse": 0.9737090855051892,
+            "shuffled_validation_rmse": 0.9781768388795935,
+            "gain": 0.004467753374404304,
+            "expand": true,
+            "seeds": [
+              2020,
+              2021,
+              2022
+            ]
+          },
+          "per_seed": {
+            "real": {
+              "2020": {
+                "mae": 0.746744873370915,
+                "rmse": 0.9907827967362134,
+                "user_macro_mae": 0.7576391899058321,
+                "prediction_mean": 4.289554119110107,
+                "prediction_std": 0.44028952717781067,
+                "outside_rating_scale_fraction": 0.004815015487788671
+              },
+              "2021": {
+                "mae": 0.7455805521950998,
+                "rmse": 0.9916803216000187,
+                "user_macro_mae": 0.7529228487620121,
+                "prediction_mean": 4.30080509185791,
+                "prediction_std": 0.43083348870277405,
+                "outside_rating_scale_fraction": 0.0054181702941146406
+              },
+              "2022": {
+                "mae": 0.7428537164266605,
+                "rmse": 0.9895320969262342,
+                "user_macro_mae": 0.7523613705487108,
+                "prediction_mean": 4.298360347747803,
+                "prediction_std": 0.44093066453933716,
+                "outside_rating_scale_fraction": 0.006420020650384895
+              }
+            },
+            "shuffled": {
+              "2020": {
+                "mae": 0.7605328310218314,
+                "rmse": 0.9966488332967731,
+                "user_macro_mae": 0.7684871443836876,
+                "prediction_mean": 4.29453706741333,
+                "prediction_std": 0.36654210090637207,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2021": {
+                "mae": 0.7605328310218314,
+                "rmse": 0.9966488332967731,
+                "user_macro_mae": 0.7684871443836876,
+                "prediction_mean": 4.29453706741333,
+                "prediction_std": 0.36654210090637207,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2022": {
+                "mae": 0.7605328310218314,
+                "rmse": 0.9966488332967731,
+                "user_macro_mae": 0.7684871443836876,
+                "prediction_mean": 4.29453706741333,
+                "prediction_std": 0.36654210090637207,
+                "outside_rating_scale_fraction": 0.0
+              }
+            }
+          },
+          "aggregate": {
+            "real": {
+              "mae": {
+                "mean": 0.7450597139975584,
+                "std": 0.0019971804906463784
+              },
+              "rmse": {
+                "mean": 0.9906650717541554,
+                "std": 0.0010789400774901922
+              },
+              "user_macro_mae": {
+                "mean": 0.754307803072185,
+                "std": 0.002898692484992341
+              }
+            },
+            "shuffled": {
+              "mae": {
+                "mean": 0.7605328310218314,
+                "std": 0.0
+              },
+              "rmse": {
+                "mean": 0.996648833296773,
+                "std": 1.3597399555105182e-16
+              },
+              "user_macro_mae": {
+                "mean": 0.7684871443836876,
+                "std": 0.0
+              }
+            }
+          },
+          "epochs": {
+            "real": {
+              "2020": 2,
+              "2021": 2,
+              "2022": 2
+            },
+            "shuffled": {
+              "2020": 0,
+              "2021": 0,
+              "2022": 0
+            }
+          },
+          "comparisons": {
+            "minus_baseline": {
+              "delta_mae": -0.01547311702427312,
+              "delta_rmse": -0.005983369849032472,
+              "mae_95ci": [
+                -0.018153328240563937,
+                -0.012906846967799944
+              ],
+              "rmse_95ci": [
+                -0.009629522760553025,
+                -0.002921667943330491
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_shuffled": {
+              "delta_mae": -0.01547311702427312,
+              "delta_rmse": -0.005983369849032472,
+              "mae_95ci": [
+                -0.018153328240563937,
+                -0.012906846967799944
+              ],
+              "rmse_95ci": [
+                -0.009629522760553025,
+                -0.002921667943330491
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_top100": {
+              "delta_mae": -0.01547311702427312,
+              "delta_rmse": -0.005983369849032472,
+              "mae_95ci": [
+                -0.018153328240563937,
+                -0.012906846967799944
+              ],
+              "rmse_95ci": [
+                -0.009629522760553025,
+                -0.002921667943330491
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_target_bias": {
+              "delta_mae": -0.01547311702427312,
+              "delta_rmse": -0.005983369849032472,
+              "mae_95ci": [
+                -0.018153328240563937,
+                -0.012906846967799944
+              ],
+              "rmse_95ci": [
+                -0.009629522760553025,
+                -0.002921667943330491
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            }
+          },
+          "source_increment_supported": true
+        },
+        "history_stats": {
+          "seeds": [
+            2020,
+            2021,
+            2022
+          ],
+          "screening": {
+            "baseline_validation_rmse": 0.9781768388795935,
+            "real_validation_rmse": 0.952412965328481,
+            "shuffled_validation_rmse": 0.9781768388795935,
+            "gain": 0.025763873551112537,
+            "expand": true,
+            "seeds": [
+              2020,
+              2021,
+              2022
+            ]
+          },
+          "per_seed": {
+            "real": {
+              "2020": {
+                "mae": 0.7211203748295401,
+                "rmse": 0.971899546396609,
+                "user_macro_mae": 0.7305570129327785,
+                "prediction_mean": 4.28617000579834,
+                "prediction_std": 0.5043798685073853,
+                "outside_rating_scale_fraction": 0.019024933806315748
+              },
+              "2021": {
+                "mae": 0.721361330563987,
+                "rmse": 0.9717849925404732,
+                "user_macro_mae": 0.7304576388858127,
+                "prediction_mean": 4.290163993835449,
+                "prediction_std": 0.49697285890579224,
+                "outside_rating_scale_fraction": 0.016939449391222564
+              },
+              "2022": {
+                "mae": 0.7185794401911482,
+                "rmse": 0.9714892257354535,
+                "user_macro_mae": 0.7263668896636627,
+                "prediction_mean": 4.29594087600708,
+                "prediction_std": 0.49928176403045654,
+                "outside_rating_scale_fraction": 0.02157045154826772
+              }
+            },
+            "shuffled": {
+              "2020": {
+                "mae": 0.7605328310218314,
+                "rmse": 0.9966488332967731,
+                "user_macro_mae": 0.7684871443836876,
+                "prediction_mean": 4.29453706741333,
+                "prediction_std": 0.36654210090637207,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2021": {
+                "mae": 0.7605328310218314,
+                "rmse": 0.9966488332967731,
+                "user_macro_mae": 0.7684871443836876,
+                "prediction_mean": 4.29453706741333,
+                "prediction_std": 0.36654210090637207,
+                "outside_rating_scale_fraction": 0.0
+              },
+              "2022": {
+                "mae": 0.7605328310218314,
+                "rmse": 0.9966488332967731,
+                "user_macro_mae": 0.7684871443836876,
+                "prediction_mean": 4.29453706741333,
+                "prediction_std": 0.36654210090637207,
+                "outside_rating_scale_fraction": 0.0
+              }
+            }
+          },
+          "aggregate": {
+            "real": {
+              "mae": {
+                "mean": 0.7203537151948917,
+                "std": 0.0015412831531463169
+              },
+              "rmse": {
+                "mean": 0.9717245882241786,
+                "std": 0.00021172451986732177
+              },
+              "user_macro_mae": {
+                "mean": 0.7291271804940846,
+                "std": 0.002390998306500074
+              }
+            },
+            "shuffled": {
+              "mae": {
+                "mean": 0.7605328310218314,
+                "std": 0.0
+              },
+              "rmse": {
+                "mean": 0.996648833296773,
+                "std": 1.3597399555105182e-16
+              },
+              "user_macro_mae": {
+                "mean": 0.7684871443836876,
+                "std": 0.0
+              }
+            }
+          },
+          "epochs": {
+            "real": {
+              "2020": 2,
+              "2021": 2,
+              "2022": 2
+            },
+            "shuffled": {
+              "2020": 0,
+              "2021": 0,
+              "2022": 0
+            }
+          },
+          "comparisons": {
+            "minus_baseline": {
+              "delta_mae": -0.04017911582693978,
+              "delta_rmse": -0.024924229695373334,
+              "mae_95ci": [
+                -0.0468326010151521,
+                -0.03393369352728698
+              ],
+              "rmse_95ci": [
+                -0.03253387813227793,
+                -0.017662810123593282
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_shuffled": {
+              "delta_mae": -0.04017911582693978,
+              "delta_rmse": -0.024924229695373334,
+              "mae_95ci": [
+                -0.0468326010151521,
+                -0.03393369352728698
+              ],
+              "rmse_95ci": [
+                -0.03253387813227793,
+                -0.017662810123593282
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_top100": {
+              "delta_mae": -0.04017911582693978,
+              "delta_rmse": -0.024924229695373334,
+              "mae_95ci": [
+                -0.0468326010151521,
+                -0.03393369352728698
+              ],
+              "rmse_95ci": [
+                -0.03253387813227793,
+                -0.017662810123593282
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            },
+            "minus_target_bias": {
+              "delta_mae": -0.04017911582693978,
+              "delta_rmse": -0.024924229695373334,
+              "mae_95ci": [
+                -0.0468326010151521,
+                -0.03393369352728698
+              ],
+              "rmse_95ci": [
+                -0.03253387813227793,
+                -0.017662810123593282
+              ],
+              "interpretation": "negative favors this representation; user-cluster CI conditional on 3 fitted seeds"
+            }
+          },
+          "source_increment_supported": true
+        }
+      }
+    }
+  },
+  "protocol": {
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "source_epochs": 10,
+    "source_dim": 10,
+    "source_lr": 0.01,
+    "source_batch": 512,
+    "k": 100,
+    "student_epochs": 20,
+    "student_dim": 32,
+    "student_hidden": 64,
+    "student_lr": 0.001,
+    "student_weight_decay": 1e-05,
+    "student_dropout": 0.1,
+    "student_batch": 2048,
+    "arms": [
+      "real",
+      "shuffled"
+    ],
+    "selection_metric": "validation_rmse",
+    "include_epoch_zero": true,
+    "baseline_alphas": [
+      0,
+      1,
+      5,
+      10,
+      20,
+      50,
+      100
+    ],
+    "objective": "target training MSE",
+    "permutation": "fixed derangement within each train/validation/test user group",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 991,
+    "test_policy": "After dataset construction, only aggregate stage reads test labels, after all nine runs have frozen selections",
+    "source_api": "Privileged source MF vectors or source history statistics; Top100 is a prior matched-seed reference",
+    "split_note": "One fixed user split per task; three training/permutation seeds, not three independent splits",
+    "code_sha256": {
+      "representation_diagnostic.py": "3b048f8367b31a150c44d880d348906af4e09df49231065e266142f90f8f1c1e",
+      "residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+      "book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2"
+    },
+    "prior_root": "/home/hehao32/BlackBox_CDR/runs/residual_study_20260922",
+    "representations": [
+      "mf_embedding",
+      "history_stats"
+    ],
+    "screening_seed": 2020,
+    "source_models_retrained": false,
+    "expansion_seeds": [
+      2021,
+      2022
+    ],
+    "minimum_validation_gain": 0.0001,
+    "expansion_rule": "Real representation improves fixed-baseline validation RMSE by at least 0.0001 in seed2020",
+    "architecture": "fixed standardized source features padded to 32 -> 64 -> 32, dot target embedding, plus item bias",
+    "information_scope": "Privileged diagnosis, not a black-box method or a mathematical upper bound",
+    "normalization": "mean/std from training overlap users only; applied before within-split permutation"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "baseline_pairs": 12,
+  "residual_models": 12,
+  "all_new_models_frozen_before_test": true,
+  "independent_means_match": true,
+  "real_shuffled_initial_parameters_match": true
+}

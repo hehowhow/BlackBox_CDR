@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "shared_initialization": true,
+  "shared_batch_order": true,
+  "checks": [
+    {
+      "backbone": "MF",
+      "selected_epoch": 3,
+      "restored_predictions": true
+    },
+    {
+      "backbone": "DNN",
+      "selected_epoch": 3,
+      "restored_predictions": true
+    }
+  ]
+}

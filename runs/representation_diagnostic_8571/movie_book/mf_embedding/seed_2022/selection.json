@@ -1,0 +1,22 @@
+{
+  "real": {
+    "epoch": 3,
+    "validation_rmse": 1.0011060190661096,
+    "initialization_sha256": "80551f6d9e673d6e7357399f80ae2b1c8a71f1a04d449a8e3e9e48dab62b6670",
+    "checkpoint_sha256": "44b57d5c837d063df7aa595c0bd799ae84d1c7a2f667f04afda7a0cf6049b7d9",
+    "feature_sha256": "954d7e6e848cc95cafd112cefeede7db32e3f5a23d841a199c4577cd23823b2d",
+    "permutation_sha256": "e6640a953a6538c57546f6046d42bf1348b55a06533e1f252e65a8384476868c",
+    "test_labels_read": false,
+    "prediction_sha256": "0b0cd39026a35acb89f6545c29e7d981547e8180a028b73d49ceebb496592067"
+  },
+  "shuffled": {
+    "epoch": 0,
+    "validation_rmse": 1.0059829073341722,
+    "initialization_sha256": "80551f6d9e673d6e7357399f80ae2b1c8a71f1a04d449a8e3e9e48dab62b6670",
+    "checkpoint_sha256": "00aa1b7d8e0181846baf59b07c6455747fd5a6d5324968612bc09a64ca599683",
+    "feature_sha256": "954d7e6e848cc95cafd112cefeede7db32e3f5a23d841a199c4577cd23823b2d",
+    "permutation_sha256": "e6640a953a6538c57546f6046d42bf1348b55a06533e1f252e65a8384476868c",
+    "test_labels_read": false,
+    "prediction_sha256": "32f1d7808ce9761f2da511b54058584a72c46248f01349d81dc257066e2420ff"
+  }
+}

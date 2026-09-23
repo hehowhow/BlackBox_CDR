@@ -1,0 +1,26 @@
+{
+  "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+  "vocabulary_sha256": "235da23480f9830313f5f13f56cd46e0ccadeeac7705a992ad864b4cdb22119e",
+  "vocabulary_size": 90877,
+  "train_mean": 4.117109298706055,
+  "list_comparisons": {
+    "MF__GMF": {
+      "mean_common_items": 0.09315823258799615,
+      "mean_overlap_fraction": 0.0009315823258799615,
+      "mean_jaccard": 0.0004685260916322984,
+      "same_top1_fraction": 0.0
+    },
+    "MF__DNN": {
+      "mean_common_items": 0.18639670482507756,
+      "mean_overlap_fraction": 0.0018639670482507756,
+      "mean_jaccard": 0.0009380674253780025,
+      "same_top1_fraction": 0.0
+    },
+    "GMF__DNN": {
+      "mean_common_items": 0.3570664384294426,
+      "mean_overlap_fraction": 0.0035706643842944256,
+      "mean_jaccard": 0.0017985550586926743,
+      "same_top1_fraction": 2.6746549695089334e-05
+    }
+  }
+}

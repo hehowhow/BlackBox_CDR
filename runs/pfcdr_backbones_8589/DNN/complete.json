@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "pretrained_sha256": "d66e81b9f97e2a7816521e6f440b750e983bbef1e269f5a1f15ca91ace9a3249",
+  "prototypes": {
+    "src": "168211a1923fed6397a5c9f3cd5efa7e6108825535355ff162dab3a3d03987d9",
+    "tgt": "9b92f5b6c23050e625717a57d508b03861a6d4e67e33981b78af5401c190b346"
+  },
+  "selection_sha256": "38923afca395ae159a581547a4a0234b33abc2e11003690e38f29637551c4ddd"
+}

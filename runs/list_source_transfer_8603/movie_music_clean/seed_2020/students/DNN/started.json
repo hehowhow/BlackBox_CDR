@@ -1,0 +1,6 @@
+{
+  "job": "8603",
+  "gpu": "6",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu130"
+}

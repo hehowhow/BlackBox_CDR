@@ -1,0 +1,12 @@
+{
+  "selected_head": "DOT",
+  "metric": "mean selected validation RMSE",
+  "validation_means": {
+    "DOT": 1.0922148893782655,
+    "GMF": 1.0922702884351159,
+    "DNN": 1.0930861050970873,
+    "MLP": 1.118015428164114,
+    "DOT_MLP": 1.1068962076062823
+  },
+  "test_labels_used": false
+}

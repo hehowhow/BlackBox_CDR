@@ -1,0 +1,833 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "dim": 32,
+    "hidden": 64,
+    "dropout": 0.1,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "k": 100,
+    "task": "Book->Movie",
+    "source_backbone": "MF",
+    "source_seed": 2020,
+    "heads": [
+      "DOT",
+      "GMF",
+      "DNN",
+      "MLP",
+      "DOT_MLP"
+    ],
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "source_lists_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f",
+    "source_list_origin": "/home/hehao32/BlackBox_CDR/runs/list_source_backbones_8596/queries/MF/topk_ids.npz",
+    "source_list_policy": "unchanged fixed Top100; no scores; no seen-item filtering",
+    "encoder": "same trainable rank-pooling MLP; architecture and initial parameters matched within seed",
+    "head_definitions": {
+      "DOT": "sum(z*v)",
+      "GMF": "w^T(z*v), no bias",
+      "DNN": "(Az+b)^T v, author-style affine user transform",
+      "MLP": "concat(z,v): 64->64 ReLU->32 ReLU->1",
+      "DOT_MLP": "sum(z*v) + same nonlinear MLP residual; not official NeuMF"
+    },
+    "head_initialization": "GMF ones; DNN identity/zero bias; DOT_MLP zero last layer; MLP default random",
+    "common_prediction": "training global mean + trainable item bias + masked interaction",
+    "no_list_users": "interaction forced zero after head; mean + item bias only",
+    "vocabulary": "reuse 8596 shared opaque-ID vocabulary for exact seed-2020 control; only MF lists are read",
+    "selection": "minimum validation RMSE among epochs 1..10, independently per head/seed",
+    "selection_of_method": "mean selected validation RMSE across three seeds, frozen before test labels",
+    "unknown_target_items": "same frozen smoothed-mean fallback for items absent from target training",
+    "test_policy": "all 15 runs frozen and independently verified before test labels",
+    "scope": "one task, one fixed source model/list, three student seeds; no learning-rate or epoch-budget search",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 993,
+    "code_hashes": {
+      "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+      "/home/hehao32/BlackBox_CDR/scripts/slurm_list_target_heads.sh": "bd2fcc9bdc83b6a792bd17d4ca6cc29a99e9d77c2a0b024e48bdc00043cb289c",
+      "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+      "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664"
+    }
+  },
+  "baselines": {
+    "item_mean": {
+      "mae": 0.8348875053406114,
+      "rmse": 1.0919842469391372,
+      "user_macro_mae": 0.8342887663053964,
+      "prediction_mean": 4.11921583584754,
+      "prediction_std": 0.5506063065225044,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "smoothed_mean_5": {
+      "mae": 0.8425192366389747,
+      "rmse": 1.0861418302139547,
+      "user_macro_mae": 0.8450502686609949,
+      "prediction_mean": 4.123060577471313,
+      "prediction_std": 0.4573308435308123,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_median": {
+      "mae": 0.7571207142811394,
+      "rmse": 1.2041879143522454,
+      "user_macro_mae": 0.7222355149137324,
+      "prediction_mean": 4.4640233396742435,
+      "prediction_std": 0.7221280411086716,
+      "outside_rating_scale_fraction": 0.0
+    }
+  },
+  "models": {
+    "DOT": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.8559789868770104,
+            "rmse": 1.0986970119398483,
+            "user_macro_mae": 0.862253830030809,
+            "prediction_mean": 4.095412254333496,
+            "prediction_std": 0.47121793031692505,
+            "outside_rating_scale_fraction": 0.003759711520601554
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2859194070994027,
+            "validation_rmse": 1.0922156714351239,
+            "validation_mae": 0.852591435466476,
+            "seconds": 0.8586693666875362,
+            "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+            "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+            "parameters": 4564004,
+            "head_parameters": 0,
+            "checkpoint_sha256": "0609b99ae9e8573b442f63758d9e3f67b0599bc090fb559911fad4380035d7ca",
+            "validation_sha256": "ff76a81c09abc291753b3e9bc3bd5eac8da5c25ac8c0649c1b65c4428f6a82a0",
+            "test_sha256": "da04083fd6734609ea12e86ecd63c7b44ac99745116ec2f01bb3bed5bad667a6",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.8553293776871463,
+            "rmse": 1.0992722153337129,
+            "user_macro_mae": 0.8613120736773664,
+            "prediction_mean": 4.09601354598999,
+            "prediction_std": 0.48107391595840454,
+            "outside_rating_scale_fraction": 0.005629959840900794
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.28589506606284,
+            "validation_rmse": 1.091944943539489,
+            "validation_mae": 0.850957187363622,
+            "seconds": 1.0750792324543,
+            "initial_sha256": "45208eae684224157053716c92c83984f728c20b699754f39e24e95f55fd9efd",
+            "batch_order_sha256": "9b6302d4a91dd225c17e9b12224699b025452469fd42b1ed56a316cf7d733bd5",
+            "parameters": 4564004,
+            "head_parameters": 0,
+            "checkpoint_sha256": "7c1c9cee55ae4633978eb2bde3a9b404149ea568925a95bdc8eb4958a6728606",
+            "validation_sha256": "e2b615ecdd2ecd8b08c463c893fe111f636e559893ab55f7522dfd132aca14e0",
+            "test_sha256": "b566ab12011180a8b078ea963582c993f826cef057db1e2b02329c2a80854181",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.8550928177716676,
+            "rmse": 1.100025992075205,
+            "user_macro_mae": 0.8604071442515955,
+            "prediction_mean": 4.091545104980469,
+            "prediction_std": 0.49369359016418457,
+            "outside_rating_scale_fraction": 0.006750827841080133
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.286280360240102,
+            "validation_rmse": 1.0924840531601834,
+            "validation_mae": 0.8512962337979508,
+            "seconds": 0.9478178471326828,
+            "initial_sha256": "852252d592f616a67cd0a7fe330faeb506981ab24cd353a4192c26583082b96f",
+            "batch_order_sha256": "fc77669652b22d93c0e2451cc833df5cc9161fa840f9ace8c70df9a4e26ac045",
+            "parameters": 4564004,
+            "head_parameters": 0,
+            "checkpoint_sha256": "39481c9c860f3f59a09613ed9e218ea7170ac49deb7192db0a2ac7aacdd9476a",
+            "validation_sha256": "d9ff21a1945b1fec6e6b7e81542ac89cee167ac12a51e73e0bfe37e736e7bc35",
+            "test_sha256": "7ac4fa024f146ce26687d4628b2c5870cf39df64c35c66777ce4719108f2abce",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.855467060778608,
+          "std": 0.00045884790080358246
+        },
+        "rmse": {
+          "mean": 1.099331739782922,
+          "std": 0.0006664866240843716
+        },
+        "user_macro_mae": {
+          "mean": 0.8613243493199235,
+          "std": 0.0009234040883261922
+        }
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.020579555437996944,
+          "delta_rmse": 0.007347492843784813,
+          "mae_95ci": [
+            0.017738033922651237,
+            0.023404323259475238
+          ],
+          "rmse_95ci": [
+            0.004330206899348793,
+            0.01060119408906371
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.012947824139633912,
+          "delta_rmse": 0.013189909568967298,
+          "mae_95ci": [
+            0.010864595819154384,
+            0.0148688210110243
+          ],
+          "rmse_95ci": [
+            0.010356452606785136,
+            0.01578089215675252
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "item_median": {
+          "delta_mae": 0.09834634649746876,
+          "delta_rmse": -0.10485617456932335,
+          "mae_95ci": [
+            0.08748377444792609,
+            0.10872957463205372
+          ],
+          "rmse_95ci": [
+            -0.11274932193833787,
+            -0.09789924547195993
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "LIST_DOT": {
+          "delta_mae": 0.0,
+          "delta_rmse": 0.0,
+          "mae_95ci": [
+            0.0,
+            0.0
+          ],
+          "rmse_95ci": [
+            0.0,
+            0.0
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        }
+      }
+    },
+    "GMF": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.8560189819093745,
+            "rmse": 1.0987365258992958,
+            "user_macro_mae": 0.862310602562171,
+            "prediction_mean": 4.095376491546631,
+            "prediction_std": 0.47116637229919434,
+            "outside_rating_scale_fraction": 0.003791736320606678
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2858659292086647,
+            "validation_rmse": 1.0922767696487694,
+            "validation_mae": 0.852651569686256,
+            "seconds": 1.0316339023411274,
+            "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+            "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+            "parameters": 4564036,
+            "head_parameters": 32,
+            "checkpoint_sha256": "0ea340566ea5e82267f5b457b04afee51c9a374640d14891a061be1141523fe2",
+            "validation_sha256": "0e10ddb38a59caf0667c2cc1e82b22cfe0814101e4816ecbaaf6109b578e2745",
+            "test_sha256": "b1bb39adc4c8b3e01baa9af8c2517bc87c425ddd81a93add8ce0f042a6ce2833",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.8554620603583293,
+            "rmse": 1.0993206774812985,
+            "user_macro_mae": 0.861486364118927,
+            "prediction_mean": 4.095623016357422,
+            "prediction_std": 0.4813538193702698,
+            "outside_rating_scale_fraction": 0.005687604480910016
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2858785069190075,
+            "validation_rmse": 1.0919935347095915,
+            "validation_mae": 0.8510659683006419,
+            "seconds": 0.7102315649390221,
+            "initial_sha256": "45208eae684224157053716c92c83984f728c20b699754f39e24e95f55fd9efd",
+            "batch_order_sha256": "9b6302d4a91dd225c17e9b12224699b025452469fd42b1ed56a316cf7d733bd5",
+            "parameters": 4564036,
+            "head_parameters": 32,
+            "checkpoint_sha256": "316be27feecb10331f5a5d95e90108784eeb3b5d2c09d92a94134df1b8391e0c",
+            "validation_sha256": "e4a474fb7f323aacf6b4a6d08328111f9cac0b28bc060750f2e4bff108c70b69",
+            "test_sha256": "21720eb5f946a4541aa25e45183ee5cb0bb9c47c55cfd790e993bb327bae830d",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.8551546948999786,
+            "rmse": 1.1000529090316822,
+            "user_macro_mae": 0.8605170891427929,
+            "prediction_mean": 4.091430187225342,
+            "prediction_std": 0.4934777319431305,
+            "outside_rating_scale_fraction": 0.006782852641085257
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2862228104287496,
+            "validation_rmse": 1.0925405609469865,
+            "validation_mae": 0.8513752767657201,
+            "seconds": 1.0348744168877602,
+            "initial_sha256": "852252d592f616a67cd0a7fe330faeb506981ab24cd353a4192c26583082b96f",
+            "batch_order_sha256": "fc77669652b22d93c0e2451cc833df5cc9161fa840f9ace8c70df9a4e26ac045",
+            "parameters": 4564036,
+            "head_parameters": 32,
+            "checkpoint_sha256": "dcd3120dd850625228bb7cd50ebffa79a81cf40c30df1986ecec578e98114133",
+            "validation_sha256": "8951598ab048cf585a0df2b9b1ed041f2e94730469c26eb61e52cd901f147533",
+            "test_sha256": "395697a6e1a386282ca4a51448f616946f1b42023986e99177b89c1cc60cec7b",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.8555452457225607,
+          "std": 0.00043810713560654766
+        },
+        "rmse": {
+          "mean": 1.099370037470759,
+          "std": 0.0006595782320752206
+        },
+        "user_macro_mae": {
+          "mean": 0.8614380186079637,
+          "std": 0.0008977335699944745
+        }
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.020657740381949674,
+          "delta_rmse": 0.007385790531621621,
+          "mae_95ci": [
+            0.01781930023777625,
+            0.023491199856726135
+          ],
+          "rmse_95ci": [
+            0.00435113413488349,
+            0.010635612667309493
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.013026009083586643,
+          "delta_rmse": 0.013228207256804106,
+          "mae_95ci": [
+            0.010934102936317861,
+            0.014947157539860053
+          ],
+          "rmse_95ci": [
+            0.010391937688377468,
+            0.015820406710386887
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "item_median": {
+          "delta_mae": 0.09842453144142149,
+          "delta_rmse": -0.10481787688148654,
+          "mae_95ci": [
+            0.08756601924881638,
+            0.10880490504350104
+          ],
+          "rmse_95ci": [
+            -0.11269770194932362,
+            -0.09786252584663943
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "LIST_DOT": {
+          "delta_mae": 7.818494395273046e-05,
+          "delta_rmse": 3.829768783680798e-05,
+          "mae_95ci": [
+            5.557204218938165e-05,
+            9.692678309152305e-05
+          ],
+          "rmse_95ci": [
+            2.749074934504936e-06,
+            6.48292421285945e-05
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        }
+      }
+    },
+    "DNN": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.8564538422644767,
+            "rmse": 1.0989672067369174,
+            "user_macro_mae": 0.8628738388673596,
+            "prediction_mean": 4.097029209136963,
+            "prediction_std": 0.465511679649353,
+            "outside_rating_scale_fraction": 0.004284918240685587
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2851330739851687,
+            "validation_rmse": 1.0927558625303218,
+            "validation_mae": 0.8533737951241122,
+            "seconds": 0.8287419639527798,
+            "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+            "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+            "parameters": 4565060,
+            "head_parameters": 1056,
+            "checkpoint_sha256": "cf40fb5f6bd7a4a1c9247e318ebbcf1c87578000ae834a7f80b7837c30c787b7",
+            "validation_sha256": "87b6e8cbbc57e8f4d9cecd321f8309bcf2251b69f985a6d79aac87482dd27bdb",
+            "test_sha256": "3bd4b661ac5c28ba5eb00c1234b3034f53df7ab467ca86024c74296ea79d0d61",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.8557766219960908,
+            "rmse": 1.100543470196595,
+            "user_macro_mae": 0.8616737593259687,
+            "prediction_mean": 4.091156005859375,
+            "prediction_std": 0.49646392464637756,
+            "outside_rating_scale_fraction": 0.007596282561215405
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2852591225499705,
+            "validation_rmse": 1.0931936774891817,
+            "validation_mae": 0.8514857575110337,
+            "seconds": 1.2151427567005157,
+            "initial_sha256": "45208eae684224157053716c92c83984f728c20b699754f39e24e95f55fd9efd",
+            "batch_order_sha256": "9b6302d4a91dd225c17e9b12224699b025452469fd42b1ed56a316cf7d733bd5",
+            "parameters": 4565060,
+            "head_parameters": 1056,
+            "checkpoint_sha256": "766b5026e88f08bf99cd4d7b0077419759b0701764d018c94c0307a0c1f74a61",
+            "validation_sha256": "51babc39faeb3f52f4bf65ec210a31aad1d365e864c60ed74ee996b1a8c59ae8",
+            "test_sha256": "33ee45b4bb1c6962d709bd59b6476c97f4013e6f34b5fe387da5310c21f3ed02",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.8571878570363767,
+            "rmse": 1.0998874865494903,
+            "user_macro_mae": 0.8635031052445624,
+            "prediction_mean": 4.095054626464844,
+            "prediction_std": 0.46780866384506226,
+            "outside_rating_scale_fraction": 0.005815703680930513
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2854990944048552,
+            "validation_rmse": 1.0933087752717578,
+            "validation_mae": 0.8540850013078728,
+            "seconds": 0.8222312554717064,
+            "initial_sha256": "852252d592f616a67cd0a7fe330faeb506981ab24cd353a4192c26583082b96f",
+            "batch_order_sha256": "fc77669652b22d93c0e2451cc833df5cc9161fa840f9ace8c70df9a4e26ac045",
+            "parameters": 4565060,
+            "head_parameters": 1056,
+            "checkpoint_sha256": "d9db2223f1e4e94d13fe0fcdff6547ea1beaea3f3d6d39bbb17840f67db4981c",
+            "validation_sha256": "ec6b8e5affc310d49ae68050fcd7be1c79e7116d71c6683a1a9145a74fac40f3",
+            "test_sha256": "4695352f80081e3d3061a72e7011bced1cb8edf6b038acc9f8f219fd1bdc8087",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.8564727737656481,
+          "std": 0.0007058079668260306
+        },
+        "rmse": {
+          "mean": 1.0997993878276675,
+          "std": 0.0007918160532401695
+        },
+        "user_macro_mae": {
+          "mean": 0.8626835678126302,
+          "std": 0.00092939707777126
+        }
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.02158526842503694,
+          "delta_rmse": 0.007815140888530378,
+          "mae_95ci": [
+            0.01868414581387119,
+            0.024525687593765243
+          ],
+          "rmse_95ci": [
+            0.00465990235324854,
+            0.011214076322398516
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.01395353712667391,
+          "delta_rmse": 0.013657557613712864,
+          "mae_95ci": [
+            0.011874648743559242,
+            0.015937040044884946
+          ],
+          "rmse_95ci": [
+            0.010825520540561425,
+            0.016389102858144235
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "item_median": {
+          "delta_mae": 0.09935205948450876,
+          "delta_rmse": -0.1043885265245778,
+          "mae_95ci": [
+            0.08860809375827278,
+            0.10962148048311411
+          ],
+          "rmse_95ci": [
+            -0.11229035322328854,
+            -0.09766122144222839
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "LIST_DOT": {
+          "delta_mae": 0.0010057129870399972,
+          "delta_rmse": 0.0004676480447455648,
+          "mae_95ci": [
+            0.000719494824755489,
+            0.0012482700906645983
+          ],
+          "rmse_95ci": [
+            3.335337226444598e-05,
+            0.0008309583451832155
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        }
+      }
+    },
+    "MLP": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.86088237136188,
+            "rmse": 1.1159109771393867,
+            "user_macro_mae": 0.8713469551845162,
+            "prediction_mean": 4.12277889251709,
+            "prediction_std": 0.5334249138832092,
+            "outside_rating_scale_fraction": 0.002478719520396595
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.2421161282803392,
+            "validation_rmse": 1.1206040056639839,
+            "validation_mae": 0.8685316337587607,
+            "seconds": 1.0399069897830486,
+            "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+            "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+            "parameters": 4570277,
+            "head_parameters": 6273,
+            "checkpoint_sha256": "57d72b396f115c4cdb7f10d00e60b9a228480abeb8d8133dbb98d885547fc6b9",
+            "validation_sha256": "e97ccf375be9e9441236cc1f1d41115127d0dedb4e751890cab69ab9f9c970ac",
+            "test_sha256": "eacbf0f5bc475b1e8aed202627dda91a0d3396fca0ba8e848eb0447cdc51867f",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.8606936072317352,
+            "rmse": 1.1160479662452898,
+            "user_macro_mae": 0.8619119398996004,
+            "prediction_mean": 4.151399612426758,
+            "prediction_std": 0.48738035559654236,
+            "outside_rating_scale_fraction": 0.0006981406401117026
+          },
+          "selection": {
+            "epoch": 1,
+            "train_mse": 1.3401582945565842,
+            "validation_rmse": 1.1158736689184876,
+            "validation_mae": 0.8634410796791228,
+            "seconds": 1.3936714567244053,
+            "initial_sha256": "45208eae684224157053716c92c83984f728c20b699754f39e24e95f55fd9efd",
+            "batch_order_sha256": "9b6302d4a91dd225c17e9b12224699b025452469fd42b1ed56a316cf7d733bd5",
+            "parameters": 4570277,
+            "head_parameters": 6273,
+            "checkpoint_sha256": "e24d7a7b2ae2e70a2c5544abdee2b198486e6a8eef3304ba7513aa7842399cb1",
+            "validation_sha256": "6a17e96fd540d9424b925b40f877d31ae4cbb4339d564fad7dfce4603c72a1cc",
+            "test_sha256": "0e2e0f7621577020f847a5d868b95273858e68daab8bc8bfde33c3f7b296fb44",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.8669284527163849,
+            "rmse": 1.1173020383688856,
+            "user_macro_mae": 0.8781955587805034,
+            "prediction_mean": 4.085193157196045,
+            "prediction_std": 0.5607629418373108,
+            "outside_rating_scale_fraction": 0.0021776864003484296
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.242045276861646,
+            "validation_rmse": 1.1175686099098707,
+            "validation_mae": 0.8698207151242164,
+            "seconds": 1.1796848811209202,
+            "initial_sha256": "852252d592f616a67cd0a7fe330faeb506981ab24cd353a4192c26583082b96f",
+            "batch_order_sha256": "fc77669652b22d93c0e2451cc833df5cc9161fa840f9ace8c70df9a4e26ac045",
+            "parameters": 4570277,
+            "head_parameters": 6273,
+            "checkpoint_sha256": "be8e43495b4e0d7621d17c44a25252afa0dd43d7fb762f33e0d79a3cd79a13f7",
+            "validation_sha256": "753ff0546ecf1e952e8a213ff326e19cd776356b0204a8cf7a1d1fab6aa66a2e",
+            "test_sha256": "d581572222bafb25762ee3124e0c2eb6709c697f3cb6c50339ee211863a3526a",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.8628348104366667,
+          "std": 0.0035464543293167693
+        },
+        "rmse": {
+          "mean": 1.1164203272511874,
+          "std": 0.0007666500995164458
+        },
+        "user_macro_mae": {
+          "mean": 0.8704848179548733,
+          "std": 0.008175972200092021
+        }
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.027947305096055475,
+          "delta_rmse": 0.024436080312050173,
+          "mae_95ci": [
+            0.02292047844449024,
+            0.03345374095391883
+          ],
+          "rmse_95ci": [
+            0.018521192270108094,
+            0.030563673922646573
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.020315573797692443,
+          "delta_rmse": 0.03027849703723266,
+          "mae_95ci": [
+            0.015571217196342925,
+            0.025008072128653108
+          ],
+          "rmse_95ci": [
+            0.024770624153623008,
+            0.03581395083844122
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "item_median": {
+          "delta_mae": 0.10571409615552729,
+          "delta_rmse": -0.08776758710105799,
+          "mae_95ci": [
+            0.095121145576947,
+            0.1156099757077169
+          ],
+          "rmse_95ci": [
+            -0.09653406027302296,
+            -0.0796176861905041
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "LIST_DOT": {
+          "delta_mae": 0.007367749658058531,
+          "delta_rmse": 0.01708858746826536,
+          "mae_95ci": [
+            0.002982651845616142,
+            0.01182025863239907
+          ],
+          "rmse_95ci": [
+            0.01249377208060148,
+            0.022033833303120604
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        }
+      }
+    },
+    "DOT_MLP": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.8502074909168669,
+            "rmse": 1.105313502385862,
+            "user_macro_mae": 0.8561544083173682,
+            "prediction_mean": 4.1678876876831055,
+            "prediction_std": 0.4571691155433655,
+            "outside_rating_scale_fraction": 0.0012938019202070083
+          },
+          "selection": {
+            "epoch": 1,
+            "train_mse": 1.352864677590755,
+            "validation_rmse": 1.1141765747064778,
+            "validation_mae": 0.8593145741715217,
+            "seconds": 1.370295375585556,
+            "initial_sha256": "fac614610e2cb8f96aca28754d41c5ef7409ac77b8212cd836ef52256d27ab80",
+            "batch_order_sha256": "9200671e3610d3528c657451e57985ac5f7d732c2ab1056a5319f36846831571",
+            "parameters": 4570277,
+            "head_parameters": 6273,
+            "checkpoint_sha256": "41789751c0192394249a8c007d6ba2822430fc85ba049afd5601a3d0b6ef1de9",
+            "validation_sha256": "b4bd61fbe0fedc540bfb054fe5287ed26dde18978100fdc0bac812f5617bae39",
+            "test_sha256": "a9dce4b0b95743cbe8324ca2eda7eec1278a4d8aac5a5f6bddf5861b3013a0bc",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.8570282681530464,
+            "rmse": 1.108578317992009,
+            "user_macro_mae": 0.8600790401534686,
+            "prediction_mean": 4.12943172454834,
+            "prediction_std": 0.48358389735221863,
+            "outside_rating_scale_fraction": 0.002203306240352529
+          },
+          "selection": {
+            "epoch": 1,
+            "train_mse": 1.353547583921379,
+            "validation_rmse": 1.1049209735966574,
+            "validation_mae": 0.8560650644577934,
+            "seconds": 1.405905794352293,
+            "initial_sha256": "45208eae684224157053716c92c83984f728c20b699754f39e24e95f55fd9efd",
+            "batch_order_sha256": "9b6302d4a91dd225c17e9b12224699b025452469fd42b1ed56a316cf7d733bd5",
+            "parameters": 4570277,
+            "head_parameters": 6273,
+            "checkpoint_sha256": "9cf4e44d903f3c24c016ac98423191fce88c320d4da9b29297c49017375d3fdc",
+            "validation_sha256": "48fb494d1e01964166eec9e84a059d2109c773ecc1de6fc666a33838a0be48ea",
+            "test_sha256": "ac386ecd0700a954b3aaa05a5112f5d97296bd8326f10ac7839a3fea0e2e77ee",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.860876627689737,
+            "rmse": 1.102254322426781,
+            "user_macro_mae": 0.8666727837480418,
+            "prediction_mean": 4.08536434173584,
+            "prediction_std": 0.4904381036758423,
+            "outside_rating_scale_fraction": 0.001582025120253124
+          },
+          "selection": {
+            "epoch": 1,
+            "train_mse": 1.3606558000075286,
+            "validation_rmse": 1.101591074515712,
+            "validation_mae": 0.8616892796402258,
+            "seconds": 1.1452025435864925,
+            "initial_sha256": "852252d592f616a67cd0a7fe330faeb506981ab24cd353a4192c26583082b96f",
+            "batch_order_sha256": "fc77669652b22d93c0e2451cc833df5cc9161fa840f9ace8c70df9a4e26ac045",
+            "parameters": 4570277,
+            "head_parameters": 6273,
+            "checkpoint_sha256": "24e9f9cac75e6625c70f3e4bce46abcec24379bc4c35830c4c04c3c3a2029d62",
+            "validation_sha256": "22bac44bc3cb9eaa4b16d91e231a8ee3a104b8336e889e34590a8bafdc70ee9b",
+            "test_sha256": "3fde04efdb0cd862cbbbb83bb58781f5befbbaab05db28e04cff209a799ab116",
+            "list_sha256": "edcd1fc0e7598f8eaec177420bd746a1983a64ef1e736b7d8e643225127df66f"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.8560374622532168,
+          "std": 0.005403137247739097
+        },
+        "rmse": {
+          "mean": 1.1053820476015506,
+          "std": 0.0031625549500683085
+        },
+        "user_macro_mae": {
+          "mean": 0.8609687440729595,
+          "std": 0.005315330208314207
+        }
+      },
+      "comparisons": {
+        "item_mean": {
+          "delta_mae": 0.021149956912605683,
+          "delta_rmse": 0.013397800662413436,
+          "mae_95ci": [
+            0.015489053190966344,
+            0.02695530316581421
+          ],
+          "rmse_95ci": [
+            0.006903805234685358,
+            0.019845939077425604
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "smoothed_mean_5": {
+          "delta_mae": 0.013518225614242652,
+          "delta_rmse": 0.01924021738759592,
+          "mae_95ci": [
+            0.008552753937623744,
+            0.018732338912659834
+          ],
+          "rmse_95ci": [
+            0.013106102722220889,
+            0.025156403622927193
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "item_median": {
+          "delta_mae": 0.0989167479720775,
+          "delta_rmse": -0.09880586675069473,
+          "mae_95ci": [
+            0.0878345169147755,
+            0.10952888368527763
+          ],
+          "rmse_95ci": [
+            -0.10806048245902997,
+            -0.08995006959976869
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        },
+        "LIST_DOT": {
+          "delta_mae": 0.0005704014746087394,
+          "delta_rmse": 0.006050307818628624,
+          "mae_95ci": [
+            -0.003742255904324918,
+            0.005116722927141921
+          ],
+          "rmse_95ci": [
+            0.0013782806057389095,
+            0.011005851102888943
+          ],
+          "interpretation": "negative favors head; average of individual-seed metrics; user-cluster CI conditional on three fitted students and one fixed source list"
+        }
+      }
+    }
+  },
+  "method_selection": {
+    "selected_head": "DOT",
+    "metric": "mean selected validation RMSE",
+    "validation_means": {
+      "DOT": 1.0922148893782655,
+      "GMF": 1.0922702884351159,
+      "DNN": 1.0930861050970873,
+      "MLP": 1.118015428164114,
+      "DOT_MLP": 1.1068962076062823
+    },
+    "test_labels_used": false
+  }
+}

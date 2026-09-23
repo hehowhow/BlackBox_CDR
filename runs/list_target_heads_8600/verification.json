@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "seed": 2020,
+      "head": "DOT",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2020,
+      "head": "GMF",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2020,
+      "head": "DNN",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2020,
+      "head": "MLP",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2020,
+      "head": "DOT_MLP",
+      "epoch": 1,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2021,
+      "head": "DOT",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2021,
+      "head": "GMF",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2021,
+      "head": "DNN",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2021,
+      "head": "MLP",
+      "epoch": 1,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2021,
+      "head": "DOT_MLP",
+      "epoch": 1,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2022,
+      "head": "DOT",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2022,
+      "head": "GMF",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2022,
+      "head": "DNN",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2022,
+      "head": "MLP",
+      "epoch": 2,
+      "full_prediction_restore": true
+    },
+    {
+      "seed": 2022,
+      "head": "DOT_MLP",
+      "epoch": 1,
+      "full_prediction_restore": true
+    }
+  ],
+  "matched_initialization_and_batches": true,
+  "original_MF_LIST_replay_max_error": {
+    "validation.npy": 0.0,
+    "test.npy": 0.0
+  },
+  "method_selection_sha256": "19d8e125f5124d3c9446a083507046ff5909becb3a1cf90505074ef5b232146f"
+}

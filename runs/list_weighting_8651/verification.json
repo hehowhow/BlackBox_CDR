@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "new_models": 24,
+  "same_initial_parameters_as_rank_control": true,
+  "same_derangements_as_rank_control": true,
+  "all_frozen_before_test": true
+}

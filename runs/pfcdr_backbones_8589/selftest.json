@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "backbone": "MF",
+      "domain": "src",
+      "integer_forward": true,
+      "inversion_forward": true,
+      "inversion_gradient": true
+    },
+    {
+      "backbone": "MF",
+      "domain": "tgt",
+      "integer_forward": true,
+      "inversion_forward": true,
+      "inversion_gradient": true
+    },
+    {
+      "backbone": "MF",
+      "native_voting": true,
+      "k": 70000
+    },
+    {
+      "backbone": "GMF",
+      "domain": "src",
+      "integer_forward": true,
+      "inversion_forward": true,
+      "inversion_gradient": true
+    },
+    {
+      "backbone": "GMF",
+      "domain": "tgt",
+      "integer_forward": true,
+      "inversion_forward": true,
+      "inversion_gradient": true
+    },
+    {
+      "backbone": "GMF",
+      "native_voting": true,
+      "k": 50000
+    },
+    {
+      "backbone": "DNN",
+      "domain": "src",
+      "integer_forward": true,
+      "inversion_forward": true,
+      "inversion_gradient": true
+    },
+    {
+      "backbone": "DNN",
+      "domain": "tgt",
+      "integer_forward": true,
+      "inversion_forward": true,
+      "inversion_gradient": true
+    },
+    {
+      "backbone": "DNN",
+      "native_voting": true,
+      "k": 70000
+    }
+  ]
+}

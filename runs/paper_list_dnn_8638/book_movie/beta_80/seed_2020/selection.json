@@ -1,0 +1,9 @@
+{
+  "epoch": 4,
+  "train_mse": 1.263785400161431,
+  "seconds": 0.9424480721354485,
+  "validation_rmse": 1.1209941889309383,
+  "validation_mae": 0.8552666153220921,
+  "validation_sha256": "1e225c54c0d62bf61e75e97e3f30068d425b8e2f156e59790f93ebffaccea046",
+  "checkpoint_sha256": "8c3ff491569bc2a370cc2a596d1990f9977979d5eea5364b9b25c7e2e3642c5d"
+}

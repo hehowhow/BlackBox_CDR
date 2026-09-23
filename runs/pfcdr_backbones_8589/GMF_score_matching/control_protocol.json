@@ -1,0 +1,18 @@
+{
+  "motivation": "Poor validation performance under public GMF matcher; specified before main study test evaluation",
+  "difference": "Match users with the actual GMF score linear(U * mapped_prototype), including learned dimension weights",
+  "reused": "Identical source/target model, source/target prototypes, initial mapping, training users and batch sequence",
+  "seed": 2020,
+  "ks": [
+    50000,
+    70000
+  ],
+  "selection": "validation RMSE separately for each K",
+  "extra_pretraining": false,
+  "extra_inversion": false,
+  "bridge_epochs": 10,
+  "script_sha256": "5b36c5102c87f9a1d31dd27a6f3aea6086d4cb2b019cb209e3f0bc71fffa6747",
+  "parent_protocol_sha256": "f96df4003cc8d8ce59639250ba170ce6230d76998e259ed216fe7ebf85f87ec1",
+  "original_complete_sha256": "8c77b1f911bcf345ef8eae87bcd6cedd632911ae418cf1568c8f3a51e125fd3d",
+  "main_test_evaluation_already_started": false
+}

@@ -1,0 +1,225 @@
+{
+  "task": "movie_book",
+  "selected_baseline": "smoothed_mean_5",
+  "test_rows": 245984,
+  "test_users": 7478,
+  "cleanup": {
+    "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+    "removed_items": 0,
+    "removed_source_ratings": 0,
+    "source_users_before": 123960,
+    "source_users_after": 123960,
+    "overlap_users_before": 37388,
+    "remaining_cross_domain_raw_items": 0
+  },
+  "baselines": {
+    "fixed_baseline": {
+      "mae": 0.7955101186273171,
+      "rmse": 1.0194791745807932,
+      "user_macro_mae": 0.8410808407385246,
+      "prediction_mean": 4.1899895668029785,
+      "prediction_std": 0.3702319860458374,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_mean": {
+      "mae": 0.7942579064234785,
+      "rmse": 1.0340548471052324,
+      "user_macro_mae": 0.8352368181547069,
+      "prediction_mean": 4.180072116647765,
+      "prediction_std": 0.4813918229860963,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_median": {
+      "mae": 0.7259720144399636,
+      "rmse": 1.136962922354506,
+      "user_macro_mae": 0.7414762209804588,
+      "prediction_mean": 4.485972664888774,
+      "prediction_std": 0.6467100618957276,
+      "outside_rating_scale_fraction": 0.0
+    }
+  },
+  "per_seed": {
+    "target_bias": {
+      "2020": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2021": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2022": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      }
+    },
+    "real": {
+      "2020": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2021": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2022": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      }
+    },
+    "shuffled": {
+      "2020": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2021": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      },
+      "2022": {
+        "mae": 0.7955101186273171,
+        "rmse": 1.0194791745807932,
+        "user_macro_mae": 0.8410808407385246,
+        "prediction_mean": 4.1899895668029785,
+        "prediction_std": 0.3702319860458374,
+        "outside_rating_scale_fraction": 0.0
+      }
+    }
+  },
+  "selected_epochs": {
+    "target_bias": {
+      "2020": 0,
+      "2021": 0,
+      "2022": 0
+    },
+    "real": {
+      "2020": 0,
+      "2021": 0,
+      "2022": 0
+    },
+    "shuffled": {
+      "2020": 0,
+      "2021": 0,
+      "2022": 0
+    }
+  },
+  "aggregate": {
+    "target_bias": {
+      "mae": {
+        "mean": 0.7955101186273171,
+        "std": 0.0
+      },
+      "rmse": {
+        "mean": 1.0194791745807932,
+        "std": 0.0
+      },
+      "user_macro_mae": {
+        "mean": 0.8410808407385245,
+        "std": 1.3597399555105182e-16
+      }
+    },
+    "real": {
+      "mae": {
+        "mean": 0.7955101186273171,
+        "std": 0.0
+      },
+      "rmse": {
+        "mean": 1.0194791745807932,
+        "std": 0.0
+      },
+      "user_macro_mae": {
+        "mean": 0.8410808407385245,
+        "std": 1.3597399555105182e-16
+      }
+    },
+    "shuffled": {
+      "mae": {
+        "mean": 0.7955101186273171,
+        "std": 0.0
+      },
+      "rmse": {
+        "mean": 1.0194791745807932,
+        "std": 0.0
+      },
+      "user_macro_mae": {
+        "mean": 0.8410808407385245,
+        "std": 1.3597399555105182e-16
+      }
+    }
+  },
+  "comparisons": {
+    "real_minus_baseline": {
+      "delta_mae": 0.0,
+      "delta_rmse": 0.0,
+      "mae_95ci": [
+        0.0,
+        0.0
+      ],
+      "rmse_95ci": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "negative favors real; test-user cluster uncertainty conditional on these three seeds; not a prediction ensemble"
+    },
+    "real_minus_shuffled": {
+      "delta_mae": 0.0,
+      "delta_rmse": 0.0,
+      "mae_95ci": [
+        0.0,
+        0.0
+      ],
+      "rmse_95ci": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "negative favors real; test-user cluster uncertainty conditional on these three seeds; not a prediction ensemble"
+    },
+    "real_minus_target_bias": {
+      "delta_mae": 0.0,
+      "delta_rmse": 0.0,
+      "mae_95ci": [
+        0.0,
+        0.0
+      ],
+      "rmse_95ci": [
+        0.0,
+        0.0
+      ],
+      "interpretation": "negative favors real; test-user cluster uncertainty conditional on these three seeds; not a prediction ensemble"
+    }
+  },
+  "primary_rmse_source_increment_supported": false,
+  "inference_scope": "One fixed split, three training/permutation seeds, user-cluster CIs conditional on fitted runs"
+}

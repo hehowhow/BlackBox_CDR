@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "code_and_input_hashes_unchanged": true,
+  "source_checks": 36,
+  "min_native_top100_overlap": 100,
+  "max_native_score_error": 1.430511474609375e-06,
+  "all_27_final_models_completed_before_test_evaluation": true,
+  "all_9_split_counts_and_cleanup_valid": true
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "head": "DOT",
+      "formula": true,
+      "input_gradients": true,
+      "no_list_bias_only": true,
+      "dot_function_initialization": true
+    },
+    {
+      "head": "GMF",
+      "formula": true,
+      "input_gradients": true,
+      "no_list_bias_only": true,
+      "dot_function_initialization": true
+    },
+    {
+      "head": "DNN",
+      "formula": true,
+      "input_gradients": true,
+      "no_list_bias_only": true,
+      "dot_function_initialization": true
+    },
+    {
+      "head": "MLP",
+      "formula": true,
+      "input_gradients": true,
+      "no_list_bias_only": true,
+      "dot_function_initialization": false
+    },
+    {
+      "head": "DOT_MLP",
+      "formula": true,
+      "input_gradients": true,
+      "no_list_bias_only": true,
+      "dot_function_initialization": true
+    }
+  ]
+}

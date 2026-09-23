@@ -1,0 +1,26 @@
+{
+  "task": "book_music",
+  "source": "Books",
+  "target": "CDs_and_Vinyl",
+  "overlap_users": 16738,
+  "source_users": 603668,
+  "target_users": 75258,
+  "source_items": 367982,
+  "target_items": 64443,
+  "rows": {
+    "source": 8898041
+  },
+  "cleanup": {
+    "raw_overlap_users": 16738,
+    "clean_overlap_users": 16738,
+    "lost_overlap_users": 0,
+    "removed_items": 0,
+    "removed_source_ratings": 0,
+    "target_ratings_unchanged": 1097592
+  },
+  "cross_domain_raw_item_overlap": 0,
+  "cross_domain_same_user_item_rating_leaks": 0,
+  "hashes": {
+    "data/source.csv": "4e07c37807810521d79fb1e8b10ccce254e5d8e03d9252ff4fa343ee3244d186"
+  }
+}

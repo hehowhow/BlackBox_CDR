@@ -1,0 +1,133 @@
+{
+  "version": "list-residual-v1",
+  "snapshot_date": "2026-09-24",
+  "role": "archival parameter snapshot, not a CLI input file",
+  "main_method": "LIST_residual_real",
+  "protocol_file": "runs/small_task_comparison_8650/protocol.json",
+  "source_protocol_file": "runs/paper_list_dnn_8638/protocol.json",
+  "comparison_file": "runs/list_weighting_8651/main_comparison.csv",
+  "parameters": {
+    "task": "music_movie_clean",
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "betas": [
+      20,
+      80
+    ],
+    "backbones": [
+      "MF",
+      "DNN"
+    ],
+    "arms": [
+      "real",
+      "shuffled"
+    ],
+    "seed": 2020,
+    "dim": 32,
+    "hidden": 64,
+    "dropout": 0.1,
+    "k": 100,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "source_dim": 10,
+    "pretrain_epochs": 10,
+    "pretrain_lr": 0.01,
+    "pretrain_weight_decay": 0.0,
+    "source_batch": 512,
+    "target_batch": 256,
+    "source_policy": "DNN source checkpoint and ID lists reused exactly from 8638; fresh matched MF; source batch512 kept for DNN comparability (author task3 uses256)",
+    "inversion_iterations": 300,
+    "inversion_batch": 200,
+    "inversion_lr": 0.0001,
+    "inversion_weight_decay": 0.0001,
+    "inversion_target": 5,
+    "inversion_warmup": 10,
+    "bridge_epochs": 10,
+    "bridge_lr": 0.005,
+    "bridge_batch": 1024,
+    "bridge_weight_decay": 0.0,
+    "primary_k": 70000,
+    "emcdr_epochs": 10,
+    "emcdr_lr": 0.01,
+    "emcdr_batch": 128,
+    "emcdr_weight_decay": 0.0,
+    "residual": "fixed ordinary item mean + source-list interaction only; no learned item bias; zero final encoder layer; same original LIST encoder/dimensions",
+    "lambdas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "residual_training": "fit unscaled correction at lambda1; validation chooses epoch0..10 and lambda; zero ties keep epoch0",
+    "selection": "inner cold-user validation RMSE; all methods freshly refit full outer train for selected epochs; lambda frozen before refit",
+    "shuffle": "fixed user derangement separately within original inner_train,validation,test groups; unchanged during full refit",
+    "baselines": "ordinary item mean only; all models fallback to ordinary mean on unseen target items",
+    "pf_protocol": "author MF and DNN forward, inversion300 and K70000; all target user rows including cold untrained rows vote; no LR/K search",
+    "evaluation": "every new final model frozen before test labels; historical test reused; comparisons exploratory; no ten-run paper reproduction",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 998
+  },
+  "split_parameters": {
+    "split_seed": 2020,
+    "validation_seed": 20260923,
+    "inner_validation_fraction": 0.2,
+    "split": "sorted raw IDs; nested test sets from one random permutation; round(beta*N), same count rule as paper",
+    "cleanup": "remove every cross-domain shared raw item from source only; target untouched; no renewed 5-core"
+  },
+  "selected_parameters": [
+    {
+      "beta": 20,
+      "seed": 2020,
+      "epoch": 4,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0699374473502148,
+      "record": "runs/small_task_comparison_8650/beta_20/seed_2020/residual_real/selection.json"
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "epoch": 6,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.07143481060393,
+      "record": "runs/small_task_comparison_8650/beta_20/seed_2021/residual_real/selection.json"
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "epoch": 5,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0737527450332667,
+      "record": "runs/small_task_comparison_8650/beta_20/seed_2022/residual_real/selection.json"
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0931329580400515,
+      "record": "runs/small_task_comparison_8650/beta_80/seed_2020/residual_real/selection.json"
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0946774770623138,
+      "record": "runs/small_task_comparison_8650/beta_80/seed_2021/residual_real/selection.json"
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0980205700602441,
+      "record": "runs/small_task_comparison_8650/beta_80/seed_2022/residual_real/selection.json"
+    }
+  ]
+}

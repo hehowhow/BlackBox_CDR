@@ -1,0 +1,92 @@
+[
+  {
+    "start": 0,
+    "users": 200,
+    "selected_pre_step_mse": 1.1823430689367198e-13,
+    "seconds": 2.121757324784994
+  },
+  {
+    "start": 200,
+    "users": 200,
+    "selected_pre_step_mse": 1.1823430689367198e-13,
+    "seconds": 0.8848613575100899
+  },
+  {
+    "start": 400,
+    "users": 200,
+    "selected_pre_step_mse": 1.7053025658242404e-13,
+    "seconds": 0.4194410815834999
+  },
+  {
+    "start": 600,
+    "users": 200,
+    "selected_pre_step_mse": 1.2846612608332503e-13,
+    "seconds": 0.3368254750967026
+  },
+  {
+    "start": 800,
+    "users": 200,
+    "selected_pre_step_mse": 1.7166712387543803e-13,
+    "seconds": 0.34140168130397797
+  },
+  {
+    "start": 1000,
+    "users": 200,
+    "selected_pre_step_mse": 1.3869794527297807e-13,
+    "seconds": 0.3629602640867233
+  },
+  {
+    "start": 1200,
+    "users": 200,
+    "selected_pre_step_mse": 1.6825652199639607e-13,
+    "seconds": 0.33799294382333755
+  },
+  {
+    "start": 1400,
+    "users": 200,
+    "selected_pre_step_mse": 1.3983481256599206e-13,
+    "seconds": 0.35079486295580864
+  },
+  {
+    "start": 1600,
+    "users": 200,
+    "selected_pre_step_mse": 9.777067529062947e-14,
+    "seconds": 0.34214482456445694
+  },
+  {
+    "start": 1800,
+    "users": 200,
+    "selected_pre_step_mse": 1.6711964115085493e-13,
+    "seconds": 0.3541885167360306
+  },
+  {
+    "start": 2000,
+    "users": 200,
+    "selected_pre_step_mse": 1.6711964115085493e-13,
+    "seconds": 0.34733519330620766
+  },
+  {
+    "start": 2200,
+    "users": 200,
+    "selected_pre_step_mse": 1.0118128394593501e-13,
+    "seconds": 0.36005865409970284
+  },
+  {
+    "start": 2400,
+    "users": 200,
+    "selected_pre_step_mse": 1.31876727962367e-13,
+    "seconds": 0.33566974103450775
+  },
+  {
+    "start": 2600,
+    "users": 200,
+    "selected_pre_step_mse": 1.2619239149729705e-13,
+    "seconds": 0.3652319051325321
+  },
+  {
+    "start": 2800,
+    "users": 65,
+    "selected_pre_step_mse": 1.4342032336051025e-13,
+    "seconds": 0.1546139493584633
+  }
+]

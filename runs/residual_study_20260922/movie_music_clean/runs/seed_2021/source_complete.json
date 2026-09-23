@@ -1,0 +1,8 @@
+{
+  "source_sha256": "2059e77db197ab087cf3b2394132c6dd8c37f844296b706efc2152bb84c71b0d",
+  "topk_sha256": "550f2017da1d79a9a34eeeec3d3558bbfe635adf46be3076face3ae19336653e",
+  "source_data_sha256": "e7c79b456e0f9f75f43ba6194f6780030efdc5d424dc0d762726e5d998d007f1",
+  "seed": 2021,
+  "epochs": 10,
+  "target_labels_used": false
+}

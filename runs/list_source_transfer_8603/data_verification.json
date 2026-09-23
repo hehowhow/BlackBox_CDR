@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "task": "movie_book",
+      "raw_item_intersection": 0,
+      "removed_source_items": 0,
+      "source_data_sha256": "13ab90a68c227e1f8177a4716dd005fd43cb25d31924cf4a9d6210cc79113703",
+      "cleanup": {
+        "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+        "removed_items": 0,
+        "removed_source_ratings": 0,
+        "source_users_before": 123960,
+        "source_users_after": 123960,
+        "overlap_users_before": 37388,
+        "remaining_cross_domain_raw_items": 0
+      }
+    },
+    {
+      "task": "movie_music_clean",
+      "raw_item_intersection": 0,
+      "removed_source_items": 2441,
+      "source_data_sha256": "e7c79b456e0f9f75f43ba6194f6780030efdc5d424dc0d762726e5d998d007f1",
+      "cleanup": {
+        "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+        "removed_items": 2441,
+        "removed_source_ratings": 35333,
+        "source_users_before": 123960,
+        "source_users_after": 123803,
+        "overlap_users_before": 18031,
+        "remaining_cross_domain_raw_items": 0
+      }
+    }
+  ]
+}

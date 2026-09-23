@@ -1,0 +1,54 @@
+{
+  "task": "movie_book",
+  "source": "Movies_and_TV",
+  "target": "Books",
+  "overlap_users": 37388,
+  "source_users": 123960,
+  "source_items": 50052,
+  "target_users": 603668,
+  "target_items": 367982,
+  "rows": {
+    "source": 1697533,
+    "train": 8401231,
+    "validation": 250826,
+    "test": 245984
+  },
+  "users": {
+    "train": 22432,
+    "validation": 7478,
+    "test": 7478
+  },
+  "cleanup": {
+    "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+    "removed_items": 0,
+    "removed_source_ratings": 0,
+    "source_users_before": 123960,
+    "source_users_after": 123960,
+    "overlap_users_before": 37388,
+    "remaining_cross_domain_raw_items": 0
+  },
+  "cross_domain_raw_item_overlap": 0,
+  "cross_domain_same_user_item_rating_leaks": 0,
+  "test_unseen_item_rows": 7,
+  "split_policy": "60/20/20 overlap users; all target-only users in training; no temporal filtering",
+  "hashes": {
+    "data/id_maps/source_items.csv": "72f6906038a50949fc365c50b75197f09a5203e1e60e9c5c4a4216ff3d9e8b2c",
+    "data/id_maps/source_users.csv": "d9abe0789a71854b12bc651df3f982bb194f9e563551965c07f8ec2a70993a51",
+    "data/id_maps/target_items.csv": "06d2a329c833c150f1a1ca55daf4481d61792bf881ba0324282e704ca59ec783",
+    "data/id_maps/target_users.csv": "c83bd5cd3cc75a00a196273f84c7e0a81570aadf834159f5935a2ed6c08c7b65",
+    "data/source.csv": "13ab90a68c227e1f8177a4716dd005fd43cb25d31924cf4a9d6210cc79113703",
+    "data/test.csv": "6bec751b43cdc5bbdb2b1366f7e75212299d08cd4b61b1cee5951df3214287c4",
+    "data/test_features.npy": "da8b393573dcf4ba7879dcca79ed80ff255c608fe4a9e8381a3e0c2795f5a2b3",
+    "data/test_users.npy": "233fa97216ffac9d7a7dcc64311719b7c811378c11cfdd046203139c07219659",
+    "data/train.csv": "279c0b5ed98c0778346eeec77887e0f66a430d50763ba61269030ed0a521e8e9",
+    "data/train_users.npy": "2392cc86cc918ae5e17bd40a8a31eba8f5ef3e582042fab0c40e98c4e0100284",
+    "data/validation.csv": "1087e2c6615fbf0e16c771bbf6ac2748162e30e3340bdbc3a31c438de14ccc79",
+    "data/validation_users.npy": "10b762c266263bd86fc19ae6e754cda1ed93b8a3ef70e143779c841fa6224d7b"
+  },
+  "baseline_hashes": {
+    "baseline/seen.npy": "45e529b0aa8294686f5bf84f0863aa36971ec280cb5603c8e768c4cad8fd861e",
+    "baseline/selection.json": "ab6d1e946fc6cf5600dc65c5b482ea0d7e75b1f1ba8c87165455ecb4ff26f97e",
+    "baseline/statistics.npz": "7fdeaf83bb77fa18371936fc38e733b65a68544e9bfe25a4facb54c36eadd4cf",
+    "baseline/values.npy": "247c0b407c3fadc7a4c2e7ba4116661657c593feadcf692bdfc3a9605572a727"
+  }
+}

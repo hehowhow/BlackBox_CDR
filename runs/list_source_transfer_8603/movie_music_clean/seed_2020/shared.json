@@ -1,0 +1,14 @@
+{
+  "initial_sha256": "22c02edd08709290645907fba45719a360d4051ee50dbb6eb3937d25fca0e113",
+  "vocabulary_sha256": "bf14d9f2a79b0471fa683ffcb5b5a6511212e4ed91410cea419cf47871b87053",
+  "vocabulary_size": 19309,
+  "train_mean": 4.294677257537842,
+  "list_comparisons": {
+    "MF__DNN": {
+      "mean_common_items": 1.916191115586886,
+      "mean_overlap_fraction": 0.01916191115586886,
+      "mean_jaccard": 0.009760898116926287,
+      "same_top1_fraction": 0.0011189437171310282
+    }
+  }
+}

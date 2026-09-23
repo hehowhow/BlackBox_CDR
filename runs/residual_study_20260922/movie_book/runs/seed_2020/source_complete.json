@@ -1,0 +1,8 @@
+{
+  "source_sha256": "5d6178e0fe0f2ccd22ed9e8269b6ac180e9653eb6220eb70e25c9d69cc9021b2",
+  "topk_sha256": "c60873ba1d79d06f4608184cb52e18e7546f5e88d448c87c83cfd1ab77deb6d3",
+  "source_data_sha256": "13ab90a68c227e1f8177a4716dd005fd43cb25d31924cf4a9d6210cc79113703",
+  "seed": 2020,
+  "epochs": 10,
+  "target_labels_used": false
+}

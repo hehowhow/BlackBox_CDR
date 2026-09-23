@@ -1,0 +1,1098 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "tasks": [
+      "book_movie",
+      "book_music",
+      "music_movie_clean"
+    ],
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "betas": [
+      20,
+      50,
+      80
+    ],
+    "seed": 2020,
+    "source_dim": 10,
+    "source_epochs": 10,
+    "source_lr": 0.01,
+    "source_weight_decay": 0.0,
+    "source_batch": 512,
+    "source_batch_policy": "retain best existing DNN LIST pipeline (512 for every task); not paper task3 batch256",
+    "source_backbone": "author affine DNN; fixed final epoch; source only; shared across beta within task/seed",
+    "k": 100,
+    "seen_item_filter": false,
+    "score_clipping": false,
+    "learner_uses_scores": false,
+    "dim": 32,
+    "hidden": 64,
+    "dropout": 0.1,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "student": "original LIST: rank-weight pooling, MLP encoder, dot target item + train mean + item bias",
+    "vocabulary": "DNN returned opaque IDs only",
+    "baseline": "item_mean only; no smoothing",
+    "split_seed": 2020,
+    "validation_seed": 20260923,
+    "inner_validation_fraction": 0.2,
+    "split": "sorted raw IDs; nested test sets from one random permutation; round(beta*N), same count rule as paper",
+    "selection": "inner cold-user validation RMSE, epoch1..10; fresh refit full outer training for selected epochs",
+    "test_policy": "all 27 final models frozen and restored before target test labels are opened",
+    "scope": "cleaned paper directions and all beta; three model seeds, one fixed split; not original PFCDR reproduction",
+    "cleanup": "remove every cross-domain shared raw item from source only; target untouched; no renewed 5-core",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 997,
+    "code_hashes": {
+      "/home/hehao32/BlackBox_CDR/scripts/paper_list_dnn.py": "d296a75cc905605b7d0e165eba20d3d2583f54fdb00dbee8dbf32e9c6753a6d8",
+      "/home/hehao32/BlackBox_CDR/scripts/slurm_paper_list_dnn.sh": "2e1edbaa79c987c4eb05c7c7229a5beb4a0fb218f22ebcb75c37074c57a9ff32",
+      "/home/hehao32/BlackBox_CDR/scripts/list_source_transfer.py": "81b9be2c70f38f46ae48ce2ee9559e3e86b17a6fe80ecf21a80d4c0b9f016323",
+      "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+      "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+      "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+      "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+      "/home/hehao32/BlackBox_CDR/scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f"
+    },
+    "input_hashes": {
+      "Books": "79cd760235bc7e912a5c0872c82b60122b0858019e2270547a98d81af4f908ee",
+      "Movies_and_TV": "a8f90c43089b6b0cf14a17469ae56604f86129cc3e1ab16d6e88a6bd57b10848",
+      "CDs_and_Vinyl": "0554cd1610df1ec4d03b5407f9412dcb15a8e6fa04e6e39557e2dc8723b2fb00"
+    }
+  },
+  "results": {
+    "book_movie": {
+      "20": {
+        "manifest": {
+          "task": "book_movie",
+          "source": "Books",
+          "target": "Movies_and_TV",
+          "overlap_users": 37388,
+          "source_users": 603668,
+          "target_users": 123960,
+          "source_items": 367982,
+          "target_items": 50052,
+          "rows": {
+            "source": 8898041,
+            "train": 1541253,
+            "inner_train": 1410842,
+            "validation": 130411,
+            "test": 156280
+          },
+          "cleanup": {
+            "raw_overlap_users": 37388,
+            "clean_overlap_users": 37388,
+            "lost_overlap_users": 0,
+            "removed_items": 0,
+            "removed_source_ratings": 0,
+            "target_ratings_unchanged": 1697533
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "903432cd26bdd8182eb7164eef14674538baab170327204853b190470d35a88a",
+            "data/inner_train_users.npy": "5f5d669780904ea3968b243c82591f5d6244d12624ecd7c6f134c6aa2f0f0803",
+            "data/test.csv": "8ba0391311c033246248320e2b5dbff074336285ba43048caad871faad84d086",
+            "data/test_features.npy": "4e7c403a4612ffb37ddd2a538de7eabd2b91413852e9ec912b1f51c6c55eed6e",
+            "data/test_users.npy": "233fa97216ffac9d7a7dcc64311719b7c811378c11cfdd046203139c07219659",
+            "data/train.csv": "5b6aa8528c32480126bab445834021566ffbcf0997eafa3022509104898a55c3",
+            "data/train_users.npy": "7816b5381e12c37c0673ed1c39d8952865cfc6af6e281dacedae284a0f87a6aa",
+            "data/validation.csv": "29fabec504ff4076c17b4fd1332d68f9620f7851034a41cd316763d8d1fb79be",
+            "data/validation_users.npy": "0ec691123dc45f99384a415a92c1d9aa8cea745124e9d57d3622f77d635b811a",
+            "baseline/audit.json": "15eefbc367dde73f30da252d3969c9ad893496286fb777843ea246523871174c",
+            "baseline/seen.npy": "d3c53c5d446fad8129b14a109907f750aa3049663e1c8e047dda6a65c00c0fce",
+            "baseline/statistics.npz": "62a6050a3b0b2a8722ae078462700d21414d96e9314f79724f8a2cd8162ec6bc",
+            "baseline/values.npy": "47c3950dc0e1eef91c1f96893ba5786edd63970f38e5410714b6dd437d29fa76",
+            "inner_baseline/audit.json": "1194db91b91991a3e65d69d4c63043f416acd927b8997de8245fd5245f42f44e",
+            "inner_baseline/seen.npy": "f46855e1f653f1de67a8e3adb5a8bb06d7240ab8988e90b78b7572ac2b0cd736",
+            "inner_baseline/statistics.npz": "ad4727ab2706ab6c260667ac277b51d62362416fee695fb186ed515aeeeff017",
+            "inner_baseline/values.npy": "b69fd4f71923f943bde70bdc2059eaf18edaf82d1b93e93d2729398ac0fc7fd1"
+          },
+          "beta": 20,
+          "users": {
+            "outer_train": 29910,
+            "inner_train": 23928,
+            "validation": 5982,
+            "test": 7478,
+            "target_only": 86572
+          }
+        },
+        "baseline": {
+          "mae": 0.8160911069707845,
+          "rmse": 1.0652577813863318,
+          "user_macro_mae": 0.8318675739503641,
+          "prediction_mean": 4.118335602520073,
+          "prediction_std": 0.5430666101227438,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.7924691799237006,
+            "std": 0.004809646880547406
+          },
+          "rmse": {
+            "mean": 1.044880063274716,
+            "std": 0.0031449588728821158
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.7953584697962357,
+            "rmse": 1.0419338684454558,
+            "user_macro_mae": 0.8169781911819809,
+            "prediction_mean": 4.106841564178467,
+            "prediction_std": 0.5744181275367737,
+            "outside_rating_scale_fraction": 0.0076657281801894035
+          },
+          "2021": {
+            "mae": 0.786917016741593,
+            "rmse": 1.0445144877077772,
+            "user_macro_mae": 0.8090500800757152,
+            "prediction_mean": 4.115266799926758,
+            "prediction_std": 0.6197432279586792,
+            "outside_rating_scale_fraction": 0.012471205528538521
+          },
+          "2022": {
+            "mae": 0.7951320532332731,
+            "rmse": 1.0481918336709146,
+            "user_macro_mae": 0.8171955239965811,
+            "prediction_mean": 4.105771064758301,
+            "prediction_std": 0.6200190186500549,
+            "outside_rating_scale_fraction": 0.009834911696954185
+          }
+        },
+        "comparison": {
+          "delta_mae": -0.02362192704708377,
+          "delta_rmse": -0.02037771811161589,
+          "mae_95ci": [
+            -0.029966628849899223,
+            -0.017238518315234406
+          ],
+          "rmse_95ci": [
+            -0.02793292631419389,
+            -0.01293484146658945
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      },
+      "50": {
+        "manifest": {
+          "task": "book_movie",
+          "source": "Books",
+          "target": "Movies_and_TV",
+          "overlap_users": 37388,
+          "source_users": 603668,
+          "target_users": 123960,
+          "source_items": 367982,
+          "target_items": 50052,
+          "rows": {
+            "source": 8898041,
+            "train": 1294771,
+            "inner_train": 1213809,
+            "validation": 80962,
+            "test": 402762
+          },
+          "cleanup": {
+            "raw_overlap_users": 37388,
+            "clean_overlap_users": 37388,
+            "lost_overlap_users": 0,
+            "removed_items": 0,
+            "removed_source_ratings": 0,
+            "target_ratings_unchanged": 1697533
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "a7ae365631c1f6333f984d9a615030c8396cb6f18f8f0fc701377fcb576b1967",
+            "data/inner_train_users.npy": "9fbaefb57dba0b72f069f4c64b14b1a5cf0aff666509d63f34691d2ba8877989",
+            "data/test.csv": "90ea164965a4a133ce4f84e3ba05cb20a3efa1b1e0d35c0d4922793152d7c4ae",
+            "data/test_features.npy": "403335b3f5dc38da0d81ca996088ace77a850ad22eb9ef48e15ea08a94ba7bcf",
+            "data/test_users.npy": "4817628edc2a7f9702f593b8824deb014d769c07e590a23a2bf78330a8e21b27",
+            "data/train.csv": "3e979ca88d5c2bff347562f1c53a7fe12b33f425a04d73d14406efb3cd604c90",
+            "data/train_users.npy": "1b3c72491b046f7514f9b530965662486d27fcf5aac20cfa0390d70639106528",
+            "data/validation.csv": "30e8f3cec89c34178453c2002d1e6a2655cc053e242d1cdaf182bbd9757c1c0b",
+            "data/validation_users.npy": "461eac00cafcc5aab71114f35f5d5e2e59bf76541dd622847494e573e0c3d641",
+            "baseline/audit.json": "5ca81e2c7bf6135f6592993197e8863b8c8a23cce3c2d7a26ef491be8da4706a",
+            "baseline/seen.npy": "bfd9d43f3325f9a54f84d52e9ed4faf360f515aac6b0e8f54d4720c8713d8d19",
+            "baseline/statistics.npz": "2ee935ff693d043db73c062dd3825b4d05a5c15fef4370e890646a1a68fb3712",
+            "baseline/values.npy": "b064a0e0021628eeb4f14624d24555df21e4899fdc54cbc217e507839d4c92f7",
+            "inner_baseline/audit.json": "a7c23d30b97211cbfc8ed8a0d4663531b8c91d2f8442cb3200605c29a30e6a6d",
+            "inner_baseline/seen.npy": "d96eb12b9c80559b5160a957ac8336f6a1146c1d312fc5075626458c6a04dae1",
+            "inner_baseline/statistics.npz": "34ef6686874a06248bad4bded6b54fd1406a329ae941778546575a2186a7d7ee",
+            "inner_baseline/values.npy": "f4a14a878e9739a484b42365e6a5573b61ef179ee643fea11d8cb514e894699a"
+          },
+          "beta": 50,
+          "users": {
+            "outer_train": 18694,
+            "inner_train": 14955,
+            "validation": 3739,
+            "test": 18694,
+            "target_only": 86572
+          }
+        },
+        "baseline": {
+          "mae": 0.8228690941661009,
+          "rmse": 1.0786362536983505,
+          "user_macro_mae": 0.833239618592878,
+          "prediction_mean": 4.112368010966924,
+          "prediction_std": 0.558270334572095,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.8096093505838157,
+            "std": 0.012520542236670108
+          },
+          "rmse": {
+            "mean": 1.0666763417209368,
+            "std": 0.003603029303997825
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8024528600600465,
+            "rmse": 1.065252792844157,
+            "user_macro_mae": 0.8158231071507461,
+            "prediction_mean": 4.124112606048584,
+            "prediction_std": 0.6107545495033264,
+            "outside_rating_scale_fraction": 0.017360128313991887
+          },
+          "2021": {
+            "mae": 0.8023086041443686,
+            "rmse": 1.0640025657443968,
+            "user_macro_mae": 0.8148315107617486,
+            "prediction_mean": 4.114006042480469,
+            "prediction_std": 0.6133185029029846,
+            "outside_rating_scale_fraction": 0.011952468207030454
+          },
+          "2022": {
+            "mae": 0.8240665875470318,
+            "rmse": 1.0707736665742564,
+            "user_macro_mae": 0.8414192227164045,
+            "prediction_mean": 4.079770565032959,
+            "prediction_std": 0.5643357634544373,
+            "outside_rating_scale_fraction": 0.00736911625227802
+          }
+        },
+        "comparison": {
+          "delta_mae": -0.01325974358228521,
+          "delta_rmse": -0.011959911977413714,
+          "mae_95ci": [
+            -0.016959414006243078,
+            -0.009526507509288774
+          ],
+          "rmse_95ci": [
+            -0.01675816441234981,
+            -0.00718662393841761
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      },
+      "80": {
+        "manifest": {
+          "task": "book_movie",
+          "source": "Books",
+          "target": "Movies_and_TV",
+          "overlap_users": 37388,
+          "source_users": 603668,
+          "target_users": 123960,
+          "source_items": 367982,
+          "target_items": 50052,
+          "rows": {
+            "source": 8898041,
+            "train": 1063353,
+            "inner_train": 1033258,
+            "validation": 30095,
+            "test": 634180
+          },
+          "cleanup": {
+            "raw_overlap_users": 37388,
+            "clean_overlap_users": 37388,
+            "lost_overlap_users": 0,
+            "removed_items": 0,
+            "removed_source_ratings": 0,
+            "target_ratings_unchanged": 1697533
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "1aef0d58427b1de0aabe6b12179f9c98de0dede4747f63999e2a6df034d60ece",
+            "data/inner_train_users.npy": "ad75fc70f966befe0ada26221c8b438a3d5c51ec77396fc263c094d1ba9ff7a4",
+            "data/test.csv": "660c5fedcd4a754252abba8d3953161be0822d2a97da47af26b446c87655ec78",
+            "data/test_features.npy": "006aef29088ddfb0de4164227eb66937c1b58b1771eb7d1ae0fef744fbd2adfa",
+            "data/test_users.npy": "896ce426ceda868d9cd7c11eef1a3e6663efa700e58f3cff438c669acc49d423",
+            "data/train.csv": "7af906480707576132407a6dd31a9a3dca302dce10bbf10aa6e41c3a51918137",
+            "data/train_users.npy": "9d5468cbe1e6a143e27a455f3d69d96f80a8a8f8c350258bbd38dce885656782",
+            "data/validation.csv": "5dc4fc420461ffdf5dddcae6179112dc3784e547df9b1572857e115f530524f2",
+            "data/validation_users.npy": "7a0d8591765af23fd3f46fca69527b309d65ef59b5d4ab3d91eb518adfdbf11e",
+            "baseline/audit.json": "1f52c2b1eb2d6b4d823354c25353c7c066b59e003f63275d6b1c75a0a0e55486",
+            "baseline/seen.npy": "1d534e7674198543498ee63b780b367f750f8f2762da8d690995a78f29dc136f",
+            "baseline/statistics.npz": "e60386829030a0cc4aa4b32498b4fed5ca02b6efbaa72f7de1c0d030f7f20753",
+            "baseline/values.npy": "8da24fb361ef6a9197ee270b81a6b48797a470e1c6e54015a39e9a508ab73b62",
+            "inner_baseline/audit.json": "c81daf2344490404b2fb9bad8c0764745ba3323e64a713b70f872bae32e816a8",
+            "inner_baseline/seen.npy": "7a946d68cfe8179b9f7c86bf4415d5659fecf1119dc7d9dde0f2da591424fafc",
+            "inner_baseline/statistics.npz": "fb8654d111a953356e1ab21d5b49009bae7c81d1f42df3e15b98e37c6c947d8a",
+            "inner_baseline/values.npy": "3edf7ecc8fd041562c4b593d1ef68d58b44626d3dd4e0eb92da94ffa79ed8a43"
+          },
+          "beta": 80,
+          "users": {
+            "outer_train": 7478,
+            "inner_train": 5982,
+            "validation": 1496,
+            "test": 29910,
+            "target_only": 86572
+          }
+        },
+        "baseline": {
+          "mae": 0.8365215384526059,
+          "rmse": 1.1003514241313248,
+          "user_macro_mae": 0.8364647979720801,
+          "prediction_mean": 4.125962392068626,
+          "prediction_std": 0.5679718279176912,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.850025316037978,
+            "std": 0.013753402732480826
+          },
+          "rmse": {
+            "mean": 1.1116424010204806,
+            "std": 0.005596519705791982
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8442634863373218,
+            "rmse": 1.1097730291858088,
+            "user_macro_mae": 0.8505697207309957,
+            "prediction_mean": 4.104080677032471,
+            "prediction_std": 0.5912473797798157,
+            "outside_rating_scale_fraction": 0.013707464757639787
+          },
+          "2021": {
+            "mae": 0.8400899492279614,
+            "rmse": 1.107219837687957,
+            "user_macro_mae": 0.8454373312669637,
+            "prediction_mean": 4.11397123336792,
+            "prediction_std": 0.5901510715484619,
+            "outside_rating_scale_fraction": 0.013370021129647735
+          },
+          "2022": {
+            "mae": 0.8657225125486508,
+            "rmse": 1.117934336187676,
+            "user_macro_mae": 0.8725716663721504,
+            "prediction_mean": 4.122512340545654,
+            "prediction_std": 0.45167475938796997,
+            "outside_rating_scale_fraction": 0.008533854741556025
+          }
+        },
+        "comparison": {
+          "delta_mae": 0.013503777585372356,
+          "delta_rmse": 0.011290976889155738,
+          "mae_95ci": [
+            0.010640302956098762,
+            0.016555054623821393
+          ],
+          "rmse_95ci": [
+            0.007661788071297038,
+            0.015334136231450338
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      }
+    },
+    "book_music": {
+      "20": {
+        "manifest": {
+          "task": "book_music",
+          "source": "Books",
+          "target": "CDs_and_Vinyl",
+          "overlap_users": 16738,
+          "source_users": 603668,
+          "target_users": 75258,
+          "source_items": 367982,
+          "target_items": 64443,
+          "rows": {
+            "source": 8898041,
+            "train": 1022721,
+            "inner_train": 962889,
+            "validation": 59832,
+            "test": 74871
+          },
+          "cleanup": {
+            "raw_overlap_users": 16738,
+            "clean_overlap_users": 16738,
+            "lost_overlap_users": 0,
+            "removed_items": 0,
+            "removed_source_ratings": 0,
+            "target_ratings_unchanged": 1097592
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "fa29a68380abb7044c537f30254962ded8962eabf0f32c6a02158e6d1f81f5f3",
+            "data/inner_train_users.npy": "cb7f7718c3c214cb22e73177c196f5b97c3c07fdc23131938e6fcd0ec5b4b9e1",
+            "data/test.csv": "543566064b3c6e910504acd4b3c1869f4c206594b0508feddbe698c17cc564b7",
+            "data/test_features.npy": "2a92ff661d463b8771e58100c31f6cdbb5706392b4d6f03a890906f39d7c43d9",
+            "data/test_users.npy": "6a0156edfe1aa82d9ea83c305a6226f76d3475a0b425174ccbde7b7518f3fd28",
+            "data/train.csv": "e32c7c1ba2ed7c2cae5b4e3a33d11612591714263821ceba04c81ab866251145",
+            "data/train_users.npy": "b34cd2e8075a4422cf86c671b8142d7a45fa050802ea8425d64359607a4a15b4",
+            "data/validation.csv": "0e3851cf3bf3bf7710428dba9861c2d3981e8a4ef8c8fd5c9252698cfa7c3252",
+            "data/validation_users.npy": "06e2afc2d3d83157c9a50257513c85b6ae543a1ad126d8cc6e61d1ea5cf71340",
+            "baseline/audit.json": "e92ebbb0c13528c130cf6632f4b9740bfa9a4a97021b631b182d1e5827b62188",
+            "baseline/seen.npy": "2b1a160d1278123638193febd4d88b4ca0a7800ac4012594c2935a6f7e265a2f",
+            "baseline/statistics.npz": "d70d56b3f5537e096b7500f19e1dfc1c7990ed1db5d0b23b601b40795e0055f9",
+            "baseline/values.npy": "4bf5c2ab8bb3a2ecd768954bf93a1215c965be8cb7d1cf9b2087edd713e53675",
+            "inner_baseline/audit.json": "a21bc147296274a4cf4ebde06c32159e54ab51698540916a6a27ee6b9a4918d1",
+            "inner_baseline/seen.npy": "16c439130eed0e95310a9fe2b3c008a61a104f452a1e0b076cebfc316889701a",
+            "inner_baseline/statistics.npz": "71e3a46aab7b1ff49c5d5fa2998943734fb66212f8f08cc28dc7b90a1752b7ab",
+            "inner_baseline/values.npy": "4eae08bd9e38c3169288789c5ed27020f6c8ad0732f534ef9d4672f300ef13bb"
+          },
+          "beta": 20,
+          "users": {
+            "outer_train": 13390,
+            "inner_train": 10712,
+            "validation": 2678,
+            "test": 3348,
+            "target_only": 58520
+          }
+        },
+        "baseline": {
+          "mae": 0.7171153088841435,
+          "rmse": 0.9685653331073212,
+          "user_macro_mae": 0.7236637205184547,
+          "prediction_mean": 4.338570939910498,
+          "prediction_std": 0.46290233460914787,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.7212955613487063,
+            "std": 0.015193289618314397
+          },
+          "rmse": {
+            "mean": 0.965483885919634,
+            "std": 0.006957571291905632
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.7173074323585111,
+            "rmse": 0.9613817952270575,
+            "user_macro_mae": 0.7290618706143467,
+            "prediction_mean": 4.33799934387207,
+            "prediction_std": 0.44950804114341736,
+            "outside_rating_scale_fraction": 0.011339503946788477
+          },
+          "2021": {
+            "mae": 0.7084941140312928,
+            "rmse": 0.961552671053899,
+            "user_macro_mae": 0.7165520755373507,
+            "prediction_mean": 4.345956802368164,
+            "prediction_std": 0.47848570346832275,
+            "outside_rating_scale_fraction": 0.016308049845734664
+          },
+          "2022": {
+            "mae": 0.7380851376563149,
+            "rmse": 0.9735171914779456,
+            "user_macro_mae": 0.7460656483668033,
+            "prediction_mean": 4.337026119232178,
+            "prediction_std": 0.35092803835868835,
+            "outside_rating_scale_fraction": 0.00880180577259553
+          }
+        },
+        "comparison": {
+          "delta_mae": 0.004180252464562884,
+          "delta_rmse": -0.003081447187687177,
+          "mae_95ci": [
+            -0.0003451186984127663,
+            0.008343065582698145
+          ],
+          "rmse_95ci": [
+            -0.009733731596712763,
+            0.0033765648213710123
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      },
+      "50": {
+        "manifest": {
+          "task": "book_music",
+          "source": "Books",
+          "target": "CDs_and_Vinyl",
+          "overlap_users": 16738,
+          "source_users": 603668,
+          "target_users": 75258,
+          "source_items": 367982,
+          "target_items": 64443,
+          "rows": {
+            "source": 8898041,
+            "train": 902269,
+            "inner_train": 865640,
+            "validation": 36629,
+            "test": 195323
+          },
+          "cleanup": {
+            "raw_overlap_users": 16738,
+            "clean_overlap_users": 16738,
+            "lost_overlap_users": 0,
+            "removed_items": 0,
+            "removed_source_ratings": 0,
+            "target_ratings_unchanged": 1097592
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "c173d3133376e8d4f115d6d4e02a7902b9d0146887cbc986e4b6307d0b9dc8cf",
+            "data/inner_train_users.npy": "92ce29eda2ef553563db505c6d0168b065d1a0f113a9ae2e6f481305f364a6eb",
+            "data/test.csv": "2b9b2f2cea6a88a3f8085aea6bec809d15e470bb991542cf83b3ff2a9277fcdd",
+            "data/test_features.npy": "5fcd0006688062708dce416cfec8860158c20424b283a7990fb1154ecb95d4af",
+            "data/test_users.npy": "65efd0c8e1478d17ea211778211dee2a24aae2e244bf1c73a6f09ebfca020bad",
+            "data/train.csv": "7ba6b6e7b1f8e25620ea4bc50c9f3eef7459a7c5e5a3a5d2e19c3945045bfb9e",
+            "data/train_users.npy": "2f0b6a497511199a49805b098c6b55b45d3bcb08ce932616ab2185441486f4a0",
+            "data/validation.csv": "c993d4a3b368af2de6d64bd94507ecf49cc4ad7798794339e93f9637388f7ac9",
+            "data/validation_users.npy": "9e667944288f7ec12d78d27bf39b5a1b6b6b5e22703b9995d2ce24f9ba8cae79",
+            "baseline/audit.json": "38dc58ef733f05a6bf2018690bad9b12c2570a9b1c2cd55b26a0aa7d180236a4",
+            "baseline/seen.npy": "9fd5ba09709e94582c0b8ecfaa3bb77c093ba006a69a171e9726a9072abd58f0",
+            "baseline/statistics.npz": "46dca7f836b5ff952f647e3921000d995caa310854d79327665db0869514bbf5",
+            "baseline/values.npy": "e2343c726228fb51238586666c22ce09c21ef73c765957c53e8472b4faa83d2f",
+            "inner_baseline/audit.json": "2394d11c74c22167798b3a5e49e58208b3f5dfc271dc556449763158c8258096",
+            "inner_baseline/seen.npy": "ee986dcdcd6a157c7145c714276fdab333bcdefce5f39f32d5cca91bdc046ae1",
+            "inner_baseline/statistics.npz": "3cda1b10a4c7b26f9d2c5577b13a6a9e8afd3b04fcd2b5560244775cbaeb532e",
+            "inner_baseline/values.npy": "a425baaa744e5a6bf1075bdcf4fd8a73d8eb5f8cf29b7c810e8b185ad33a0f2b"
+          },
+          "beta": 50,
+          "users": {
+            "outer_train": 8369,
+            "inner_train": 6695,
+            "validation": 1674,
+            "test": 8369,
+            "target_only": 58520
+          }
+        },
+        "baseline": {
+          "mae": 0.7314280840308645,
+          "rmse": 0.9970734267691561,
+          "user_macro_mae": 0.7264550456059715,
+          "prediction_mean": 4.340289942350699,
+          "prediction_std": 0.47442803898456226,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.7496651247344617,
+            "std": 0.0001743227617856525
+          },
+          "rmse": {
+            "mean": 1.0040818197310912,
+            "std": 0.00043295872386215137
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.7494657093899671,
+            "rmse": 1.0045786633718496,
+            "user_macro_mae": 0.7394293374272587,
+            "prediction_mean": 4.361584663391113,
+            "prediction_std": 0.33861395716667175,
+            "outside_rating_scale_fraction": 0.007843418337830158
+          },
+          "2021": {
+            "mae": 0.7497885719425442,
+            "rmse": 1.0037853036901987,
+            "user_macro_mae": 0.740341903288429,
+            "prediction_mean": 4.360843658447266,
+            "prediction_std": 0.3280412256717682,
+            "outside_rating_scale_fraction": 0.004617991736764231
+          },
+          "2022": {
+            "mae": 0.7497410928708736,
+            "rmse": 1.0038814921312254,
+            "user_macro_mae": 0.739027626624906,
+            "prediction_mean": 4.3613810539245605,
+            "prediction_std": 0.3247546851634979,
+            "outside_rating_scale_fraction": 0.003742518802189194
+          }
+        },
+        "comparison": {
+          "delta_mae": 0.018237040703597218,
+          "delta_rmse": 0.007008392961935117,
+          "mae_95ci": [
+            0.014890080594297198,
+            0.021984985310155473
+          ],
+          "rmse_95ci": [
+            0.0016903073470952166,
+            0.01257239918390266
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      },
+      "80": {
+        "manifest": {
+          "task": "book_music",
+          "source": "Books",
+          "target": "CDs_and_Vinyl",
+          "overlap_users": 16738,
+          "source_users": 603668,
+          "target_users": 75258,
+          "source_items": 367982,
+          "target_items": 64443,
+          "rows": {
+            "source": 8898041,
+            "train": 791210,
+            "inner_train": 776602,
+            "validation": 14608,
+            "test": 306382
+          },
+          "cleanup": {
+            "raw_overlap_users": 16738,
+            "clean_overlap_users": 16738,
+            "lost_overlap_users": 0,
+            "removed_items": 0,
+            "removed_source_ratings": 0,
+            "target_ratings_unchanged": 1097592
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "0d0dde694d16344ba9728abafbaf9f7de0c3d1213eff880c4e68fa79a966baa9",
+            "data/inner_train_users.npy": "3a9f7083ecf162db5f86d6669941792cebf51ed05ba86a125a5e06e0ff4bd2f3",
+            "data/test.csv": "f889debec68d10d98bc9aaab0b3544fdf43c25d6e04e209b0275015b73dba40e",
+            "data/test_features.npy": "54381f9aac43b1c69b663b14c01bf8626c96572aa7d9287fd14ba9db1ba2aef8",
+            "data/test_users.npy": "afaabb4640f088b9ce52be3850c95eb759c6d7398db2ff8472b108c8e24c6138",
+            "data/train.csv": "a9c85c31ee5d2bcdb9c602bda6c85137b4ea364b4100896beb4f45cbc2a275fa",
+            "data/train_users.npy": "fcf2ef8e198e6df0ab2a35d5fa9b1ef97c0b5604f61ffa96da34ad674666a534",
+            "data/validation.csv": "b8cdeda04fea0b425406bf7d5d8994ecc370ecacd650fbecf565cb2778be36e3",
+            "data/validation_users.npy": "7b5a82a1b83a525f139ee01feb7968df1fcb04a0c01ee603e62c17f9fec7bd0d",
+            "baseline/audit.json": "3d4726047327631fcb2cc3e16443779a7ca2d53e5d34fddbff84b1ad12325ea3",
+            "baseline/seen.npy": "19270b01327f82bacc81fccc089bef138c3fee67079a31e360a43964d9f18bc7",
+            "baseline/statistics.npz": "f535163fe86f0660d23ef8305ac9ad1ac49dfb21220c4cb81481bb9e5d575f00",
+            "baseline/values.npy": "4cef6d67298277c1dc06c651559f45ef79dd260736f96a20a547c54d16ce8cab",
+            "inner_baseline/audit.json": "a30a23d34f99ae4a8037ccb7abb5b8769136ab945713f12996650041a64b5897",
+            "inner_baseline/seen.npy": "c172cb76e1cd4b293f79ab4f8bdaa76d5e8e554239adab77224af1d04de35166",
+            "inner_baseline/statistics.npz": "1b6718fa9c9226bacbc1bff1a296575a89c1d0eb510bf06730bfd473e45d0789",
+            "inner_baseline/values.npy": "07b47ea174d649c95c7db983a243702eb532f89c00612af25f5cc5d0b307f532"
+          },
+          "beta": 80,
+          "users": {
+            "outer_train": 3348,
+            "inner_train": 2678,
+            "validation": 670,
+            "test": 13390,
+            "target_only": 58520
+          }
+        },
+        "baseline": {
+          "mae": 0.7297252580550104,
+          "rmse": 0.9955754066101378,
+          "user_macro_mae": 0.7313280829722852,
+          "prediction_mean": 4.3397018498117035,
+          "prediction_std": 0.4928053124240211,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.7786570213951712,
+            "std": 0.000291033698155798
+          },
+          "rmse": {
+            "mean": 1.0059088383108286,
+            "std": 0.00046376631741852707
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.7788085684250976,
+            "rmse": 1.0062512384173274,
+            "user_macro_mae": 0.7778185061072285,
+            "prediction_mean": 4.332693576812744,
+            "prediction_std": 0.15891872346401215,
+            "outside_rating_scale_fraction": 5.875018767421062e-05
+          },
+          "2021": {
+            "mae": 0.778841008802505,
+            "rmse": 1.0060942203974486,
+            "user_macro_mae": 0.7779124425369834,
+            "prediction_mean": 4.332231044769287,
+            "prediction_std": 0.15980872511863708,
+            "outside_rating_scale_fraction": 0.0002056256568597372
+          },
+          "2022": {
+            "mae": 0.7783214869579109,
+            "rmse": 1.0053810561177092,
+            "user_macro_mae": 0.7774441041251559,
+            "prediction_mean": 4.332624912261963,
+            "prediction_std": 0.16272315382957458,
+            "outside_rating_scale_fraction": 0.0
+          }
+        },
+        "comparison": {
+          "delta_mae": 0.04893176334016058,
+          "delta_rmse": 0.01033343170069064,
+          "mae_95ci": [
+            0.04483658784010048,
+            0.05360396912805049
+          ],
+          "rmse_95ci": [
+            0.004343493784392285,
+            0.01707126266970138
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      }
+    },
+    "music_movie_clean": {
+      "20": {
+        "manifest": {
+          "task": "music_movie_clean",
+          "source": "CDs_and_Vinyl",
+          "target": "Movies_and_TV",
+          "overlap_users": 17904,
+          "source_users": 75131,
+          "target_users": 123960,
+          "source_items": 62002,
+          "target_items": 50052,
+          "rows": {
+            "source": 1062711,
+            "train": 1585889,
+            "inner_train": 1494495,
+            "validation": 91394,
+            "test": 111644
+          },
+          "cleanup": {
+            "raw_overlap_users": 18031,
+            "clean_overlap_users": 17904,
+            "lost_overlap_users": 127,
+            "removed_items": 2441,
+            "removed_source_ratings": 34881,
+            "target_ratings_unchanged": 1697533
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "f6e71f41e12b512eb23c8f887c6c61c20b9780df2b93709fb950976a177959a5",
+            "data/inner_train_users.npy": "9971910966008a565fc29d4545bbd8943bc155d1cce5be0ba233a8f89251a2a0",
+            "data/test.csv": "d1254c7b2c6c4acd375cf7f1358e3565ed0a1c2124efb02861ce3835b2ef3e5e",
+            "data/test_features.npy": "e905fb32efdb92f0aa15b574d1011a5c27c193d705505038b0ab296e686eb340",
+            "data/test_users.npy": "376a31a21a73f8a97ab963d7ad4b4f6918d11af882542a8e9f3c4c1a4b6dfa63",
+            "data/train.csv": "deb666e37c94869d01f209079c98658e172b1760ae8629d4c14fe49b82f80251",
+            "data/train_users.npy": "1922e2391aac3e1c111b6163defd05f69b948690bdec8bec2f3fe6bd36a6a2f1",
+            "data/validation.csv": "d6597b7a624973a753fc3482a7948038df4c9bbb752c04d618a05eb2101b58d5",
+            "data/validation_users.npy": "7a583c7c9f08049050947a4fe14d8a8b101de08c56776a2946576b13cef8fee6",
+            "baseline/audit.json": "f4d75d1b2b898fa806bbdc0a600b6aedb6d93b4014b1c78814c4349ac13a5a77",
+            "baseline/seen.npy": "d3c53c5d446fad8129b14a109907f750aa3049663e1c8e047dda6a65c00c0fce",
+            "baseline/statistics.npz": "20c743f77dec36c659fe942298a0cbf461a990860e7fa8e3a718ccb79588d6b2",
+            "baseline/values.npy": "c8efd66961dca8fc0389644d065f794507d83bb064ded4a973b2d2d3925ea8e9",
+            "inner_baseline/audit.json": "70c0f9d6f24c73cc2eb646f13595df738a7f0a3ffff335db752867fcb90b414b",
+            "inner_baseline/seen.npy": "6186a02f754c6a7aa341358eb57ce7775b58d1240c8942fd6af153e9455cb52b",
+            "inner_baseline/statistics.npz": "d0e4004108c5632229c8e9c4f5b5c63d729071bcfdf078b91abe301aa6bbbb6c",
+            "inner_baseline/values.npy": "8805eae6b7c4f6aed094deca88f28b1adfc143921898a6615347c15749de1850"
+          },
+          "beta": 20,
+          "users": {
+            "outer_train": 14323,
+            "inner_train": 11458,
+            "validation": 2865,
+            "test": 3581,
+            "target_only": 106056
+          }
+        },
+        "baseline": {
+          "mae": 0.8286117232550023,
+          "rmse": 1.074617946984074,
+          "user_macro_mae": 0.8660737317713905,
+          "prediction_mean": 4.062920328576306,
+          "prediction_std": 0.5707782150898463,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.822821996441304,
+            "std": 0.008569576532328739
+          },
+          "rmse": {
+            "mean": 1.067574969915286,
+            "std": 0.001592874746016409
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.814617698960574,
+            "rmse": 1.0662184107381605,
+            "user_macro_mae": 0.8592991437479643,
+            "prediction_mean": 4.083982944488525,
+            "prediction_std": 0.601417601108551,
+            "outside_rating_scale_fraction": 0.011438142667765397
+          },
+          "2021": {
+            "mae": 0.8317152587348219,
+            "rmse": 1.0671775821037137,
+            "user_macro_mae": 0.8762216568867918,
+            "prediction_mean": 4.037723064422607,
+            "prediction_std": 0.5530208945274353,
+            "outside_rating_scale_fraction": 0.0033051485077567984
+          },
+          "2022": {
+            "mae": 0.8221330316285164,
+            "rmse": 1.0693289169039844,
+            "user_macro_mae": 0.8655991508162562,
+            "prediction_mean": 4.058931827545166,
+            "prediction_std": 0.6142629981040955,
+            "outside_rating_scale_fraction": 0.009691519472609366
+          }
+        },
+        "comparison": {
+          "delta_mae": -0.005789726813697937,
+          "delta_rmse": -0.007042977068787796,
+          "mae_95ci": [
+            -0.0159568743788296,
+            0.0028321659268100738
+          ],
+          "rmse_95ci": [
+            -0.017118912023243543,
+            0.0024558180152904623
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      },
+      "50": {
+        "manifest": {
+          "task": "music_movie_clean",
+          "source": "CDs_and_Vinyl",
+          "target": "Movies_and_TV",
+          "overlap_users": 17904,
+          "source_users": 75131,
+          "target_users": 123960,
+          "source_items": 62002,
+          "target_items": 50052,
+          "rows": {
+            "source": 1062711,
+            "train": 1419617,
+            "inner_train": 1365589,
+            "validation": 54028,
+            "test": 277916
+          },
+          "cleanup": {
+            "raw_overlap_users": 18031,
+            "clean_overlap_users": 17904,
+            "lost_overlap_users": 127,
+            "removed_items": 2441,
+            "removed_source_ratings": 34881,
+            "target_ratings_unchanged": 1697533
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "283d7c1cdad540b1bca09b6b8b26b24850ae178a03df77ec4c04a6355244b7f9",
+            "data/inner_train_users.npy": "c8c81bba582e05cc369395a8017f4a6a58a1119de93b7a960d1597d392e61360",
+            "data/test.csv": "8ed0c594c9eb152275da7040c28ea63274b04db1e3c44d0563109b35d376d67d",
+            "data/test_features.npy": "286ba68b28de3daf0753acd7c1b8c4112bbdd5968b71990909962dc3785ef897",
+            "data/test_users.npy": "2f979b629520c8febaadd3772a0b9739caa0efb4614e12806d737e9a38b64409",
+            "data/train.csv": "f2d29df00e00f164a2ef17be07e44e12445c841ea5b13af9792b4b970cd324d9",
+            "data/train_users.npy": "552783bb5c5b511cea8f2f13d0e0ad6bcc4849c95c01afe89ef396b7e4586bba",
+            "data/validation.csv": "ea8ebe2ce5915c0b8696630be0c371359ee42878f2efb1704cfc914963a3c132",
+            "data/validation_users.npy": "78c8b4082403d3d8f9e65cb9ac23223cbe83a0b61799509ce1243f7b7175a8e1",
+            "baseline/audit.json": "d379a2252f7bb5077b0cb2c56488b734b0b50297fae12ba3d6835036b92e3b04",
+            "baseline/seen.npy": "d47e75a3d5b4fbb948e74d24b621a5b731c26488f5dacba4b5900b682244777c",
+            "baseline/statistics.npz": "66c9798a40d6648ce05094031594f6b5ec653b56fd2aa805207d1c13dacc2c0d",
+            "baseline/values.npy": "c9a98649646e44568ebbb1bd35c24f785e0ac1c3e7b0e8caaa87ec9817f4bbb2",
+            "inner_baseline/audit.json": "af298ec97619c49c35d68e9f731105be359c3b6b2151651d9df5be2d7cd62840",
+            "inner_baseline/seen.npy": "9a17f67e5a836eef986acf71495e69943fb75e68520b0040e5551ee122ceb1f8",
+            "inner_baseline/statistics.npz": "f8a85febf4c6bac546f1d5e4037850d20dd1731358f36c4dd4c2405c8323ce43",
+            "inner_baseline/values.npy": "794d002670ac96e660131b64035afd96ff8f73ef0eab31709f64088c83ff8ca2"
+          },
+          "beta": 50,
+          "users": {
+            "outer_train": 8952,
+            "inner_train": 7162,
+            "validation": 1790,
+            "test": 8952,
+            "target_only": 106056
+          }
+        },
+        "baseline": {
+          "mae": 0.8376186758463576,
+          "rmse": 1.0873867308688558,
+          "user_macro_mae": 0.8709612002773873,
+          "prediction_mean": 4.063935892538884,
+          "prediction_std": 0.576519265208846,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.8388818713959338,
+            "std": 0.002322492036212626
+          },
+          "rmse": {
+            "mean": 1.0918446242983992,
+            "std": 0.0016761186868327535
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8367819747046816,
+            "rmse": 1.0935453362260916,
+            "user_macro_mae": 0.8726703305715778,
+            "prediction_mean": 4.072729110717773,
+            "prediction_std": 0.6123400330543518,
+            "outside_rating_scale_fraction": 0.013385339455087148
+          },
+          "2021": {
+            "mae": 0.8384872455230369,
+            "rmse": 1.0917943046191074,
+            "user_macro_mae": 0.8717783236402636,
+            "prediction_mean": 4.089025974273682,
+            "prediction_std": 0.5588207840919495,
+            "outside_rating_scale_fraction": 0.006106161574000777
+          },
+          "2022": {
+            "mae": 0.8413763939600832,
+            "rmse": 1.0901942320499987,
+            "user_macro_mae": 0.8826569108469118,
+            "prediction_mean": 4.062321662902832,
+            "prediction_std": 0.5768135190010071,
+            "outside_rating_scale_fraction": 0.0064839735747492045
+          }
+        },
+        "comparison": {
+          "delta_mae": 0.0012631955495764347,
+          "delta_rmse": 0.004457893429543391,
+          "mae_95ci": [
+            -0.004763047174641379,
+            0.0073028902958766516
+          ],
+          "rmse_95ci": [
+            -0.002313226184027891,
+            0.011242218755919348
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      },
+      "80": {
+        "manifest": {
+          "task": "music_movie_clean",
+          "source": "CDs_and_Vinyl",
+          "target": "Movies_and_TV",
+          "overlap_users": 17904,
+          "source_users": 75131,
+          "target_users": 123960,
+          "source_items": 62002,
+          "target_items": 50052,
+          "rows": {
+            "source": 1062711,
+            "train": 1254172,
+            "inner_train": 1228172,
+            "validation": 26000,
+            "test": 443361
+          },
+          "cleanup": {
+            "raw_overlap_users": 18031,
+            "clean_overlap_users": 17904,
+            "lost_overlap_users": 127,
+            "removed_items": 2441,
+            "removed_source_ratings": 34881,
+            "target_ratings_unchanged": 1697533
+          },
+          "cross_domain_raw_item_overlap": 0,
+          "cross_domain_same_user_item_rating_leaks": 0,
+          "hashes": {
+            "data/inner_train.csv": "fd5fc90d6b31d28175de3bc0c049a926dd0571c200c8163524e196bba66a67c4",
+            "data/inner_train_users.npy": "8ad1d3da116fc4a67570ab40552d09652bd60b3b8229d508d29747cd3a6b91b5",
+            "data/test.csv": "a380cada477336384bf225232d076eb70461bbdb624693f702ae5cda2bbf4fe6",
+            "data/test_features.npy": "f935db15b012a0d7272ba38b6fb0155adeafcc068525b72b13ea68ff7059209e",
+            "data/test_users.npy": "e97ff6f771d4540806e812b54533a1cf96867268a6ba40388ebfcb7fdbf69d7b",
+            "data/train.csv": "50f4eccc607fbce255e382d23313bccd22ab351cbf5fd303cfe094e168ca99dd",
+            "data/train_users.npy": "87b4363a36061792bd8cac7790c58c1c373f6635983621165c806971e532d8ad",
+            "data/validation.csv": "ed782566cb027c6850eec83ea6eb2672b0718b0963985f41b1ed250d62b11a6c",
+            "data/validation_users.npy": "60b096ec45631c27a05b7e87230fb0079f7e7295070c8ff0de68122f3e325393",
+            "baseline/audit.json": "aaedf46327b2536622289ae34f2b8def97a61e38d7aa2f3a13afdabb5e76e4e9",
+            "baseline/seen.npy": "baa47f531e731f3bebfbce4d74a5a4c7afebc56861b4a45f99d22f85c1958a11",
+            "baseline/statistics.npz": "67544813dc85b957769da0cc7c3cd7e4e6afe85b7c0bc7ec4267c80a2001e23e",
+            "baseline/values.npy": "bc4f4d156c2ace045cb9d2a5341760cb0d141f7f99507c80e5b713b5fac1dcb9",
+            "inner_baseline/audit.json": "774c2ab98c3778164ae2df0fccad85f6a052684b956961d81db211182d33dbe0",
+            "inner_baseline/seen.npy": "8b717c3bbc787e15f41d0d94ea398b31a359c84d746db2fb77c6b33fcdffe689",
+            "inner_baseline/statistics.npz": "55927ebb1bf6a3217845c042037b61fecfa0246eed53b9e3a4c80471183c84f9",
+            "inner_baseline/values.npy": "1539c304e152d1c4d669be8ebc2491b69530cc4843a6af58c9fabaa51abf35be"
+          },
+          "beta": 80,
+          "users": {
+            "outer_train": 3581,
+            "inner_train": 2865,
+            "validation": 716,
+            "test": 14323,
+            "target_only": 106056
+          }
+        },
+        "baseline": {
+          "mae": 0.8407440345916307,
+          "rmse": 1.097641479924352,
+          "user_macro_mae": 0.8751519847774373,
+          "prediction_mean": 4.08494565707673,
+          "prediction_std": 0.5766819104169383,
+          "outside_rating_scale_fraction": 0.0
+        },
+        "aggregate": {
+          "mae": {
+            "mean": 0.8706049790843924,
+            "std": 0.002497302076751314
+          },
+          "rmse": {
+            "mean": 1.1247527635847858,
+            "std": 0.00830970762492865
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8692403374912804,
+            "rmse": 1.1195481982701079,
+            "user_macro_mae": 0.9074722624276264,
+            "prediction_mean": 4.120591163635254,
+            "prediction_std": 0.4063817262649536,
+            "outside_rating_scale_fraction": 0.0032050631426760587
+          },
+          "2021": {
+            "mae": 0.869087337914389,
+            "rmse": 1.1203739563755113,
+            "user_macro_mae": 0.9070744689617507,
+            "prediction_mean": 4.12006139755249,
+            "prediction_std": 0.41973406076431274,
+            "outside_rating_scale_fraction": 0.004001254057077641
+          },
+          "2022": {
+            "mae": 0.8734872618475078,
+            "rmse": 1.1343361361087385,
+            "user_macro_mae": 0.9109666331275422,
+            "prediction_mean": 4.1620941162109375,
+            "prediction_std": 0.33170217275619507,
+            "outside_rating_scale_fraction": 0.0012563125759821004
+          }
+        },
+        "comparison": {
+          "delta_mae": 0.029860944492761443,
+          "delta_rmse": 0.02711128366043399,
+          "mae_95ci": [
+            0.02625860974428732,
+            0.03382339111715682
+          ],
+          "rmse_95ci": [
+            0.022541455692953974,
+            0.03196941689682849
+          ],
+          "interpretation": "negative favors LIST; user cluster 95% interval conditional on three fitted source/student seeds and one split; no multiplicity correction"
+        }
+      }
+    }
+  }
+}

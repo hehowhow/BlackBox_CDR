@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "task": "book_movie",
+      "features": "history_stats",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "book_movie",
+      "features": "mf_embedding_2020",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "book_movie",
+      "features": "mf_embedding_2021",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "book_movie",
+      "features": "mf_embedding_2022",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_book",
+      "features": "history_stats",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_book",
+      "features": "mf_embedding_2020",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_book",
+      "features": "mf_embedding_2021",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_book",
+      "features": "mf_embedding_2022",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_music_clean",
+      "features": "history_stats",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_music_clean",
+      "features": "mf_embedding_2020",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_music_clean",
+      "features": "mf_embedding_2021",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    },
+    {
+      "task": "movie_music_clean",
+      "features": "mf_embedding_2022",
+      "raw_features_verified": true,
+      "training_only_scaling_verified": true
+    }
+  ]
+}

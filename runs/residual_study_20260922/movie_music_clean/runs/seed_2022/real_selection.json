@@ -1,0 +1,9 @@
+{
+  "epoch": 0,
+  "validation_rmse": 0.9781768388795935,
+  "initial_state_sha256": "f119d95a3217eb2890470220225432b6c65214f174af3f5331dc86fdbcc57ed7",
+  "checkpoint_sha256": "35a446287fb23cc72646c01429b3472fd56894f4b58d08f3d58e4bcc138670eb",
+  "selection_metric": "validation_rmse",
+  "epochs_trained": 20,
+  "test_labels_read": false
+}

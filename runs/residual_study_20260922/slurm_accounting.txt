@@ -1,0 +1,6 @@
+JobID   JobName                  State      ExitCode  Elapsed
+8565    residual-selftest        COMPLETED  0:0       00:00:05
+8566    cdr-residual-data         COMPLETED  0:0       00:00:42
+8567    cdr-residual-train        COMPLETED  0:0       00:11:54
+8568    residual-verify          COMPLETED  0:0       00:00:02
+Training allocation: GPU 3 and GPU 4 (Slurm CUDA_VISIBLE_DEVICES), 8 CPUs.

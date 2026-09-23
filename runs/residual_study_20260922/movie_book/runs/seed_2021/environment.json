@@ -1,0 +1,6 @@
+{
+  "job_id": "8567",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu130",
+  "cuda_visible_devices": "3"
+}

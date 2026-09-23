@@ -1,0 +1,12 @@
+{
+  "EMCDR": {
+    "epoch": 9,
+    "mapping_mse": 0.6413866931855366,
+    "validation_rmse": 1.7227723206832448
+  },
+  "PFCDR": {
+    "epoch": 10,
+    "mapping_mse": 0.08094831802874128,
+    "validation_rmse": 1.4141567769360246
+  }
+}

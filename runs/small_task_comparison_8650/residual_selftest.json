@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "starts_at_ordinary_mean": true,
+  "zero_init_can_learn": true,
+  "no_list_stays_at_mean": true
+}

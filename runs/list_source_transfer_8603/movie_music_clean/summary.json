@@ -1,0 +1,295 @@
+{
+  "status": "PASS",
+  "task": "movie_music_clean",
+  "cleanup": {
+    "rule": "Drop all shared raw item IDs from source before user splitting; target untouched; no reapplication of 5-core",
+    "removed_items": 2441,
+    "removed_source_ratings": 35333,
+    "source_users_before": 123960,
+    "source_users_after": 123803,
+    "overlap_users_before": 18031,
+    "remaining_cross_domain_raw_items": 0
+  },
+  "baselines": {
+    "item_mean": {
+      "mae": 0.7472458612255346,
+      "rmse": 1.0114059813378062,
+      "user_macro_mae": 0.7537549776473028,
+      "prediction_mean": 4.306428383856235,
+      "prediction_std": 0.4957743824155692,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "smoothed_mean_5": {
+      "mae": 0.7605328292952384,
+      "rmse": 0.9966488338592389,
+      "user_macro_mae": 0.7684871432877908,
+      "prediction_mean": 4.29453702716389,
+      "prediction_std": 0.3665421323148319,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_median": {
+      "mae": 0.6714799783273189,
+      "rmse": 1.11943894923612,
+      "user_macro_mae": 0.6353910218644017,
+      "prediction_mean": 4.629749844099817,
+      "prediction_std": 0.6089035241811646,
+      "outside_rating_scale_fraction": 0.0
+    }
+  },
+  "models": {
+    "MF": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.7632206137348821,
+            "rmse": 1.013469255420365,
+            "user_macro_mae": 0.7688066066784435,
+            "prediction_mean": 4.3173956871032715,
+            "prediction_std": 0.3808835446834564,
+            "outside_rating_scale_fraction": 0.009711814678130015
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.0712990736340997,
+            "validation_rmse": 0.9944322649490512,
+            "validation_mae": 0.7512295530083061,
+            "seconds": 0.5599019676446915,
+            "initial_sha256": "22c02edd08709290645907fba45719a360d4051ee50dbb6eb3937d25fca0e113",
+            "batch_order_sha256": "3e49d55ccc31510ffb64e334f47860efcbcf8e16eae714a9a4b1b967eba3ee64",
+            "checkpoint_sha256": "93108ac61b6269e12adbb3914ebee07ca8818a8913378300e41f4369c95d4634",
+            "validation_sha256": "0627ac58cb3eaea93ec0048c2f726d14d87d3e0df0cedcc3ac9ac65991d88c29",
+            "test_sha256": "b3d313bab19a343cfe0d52e5d0e05651a6cd903da72f51b8b8b15c77dfc20b3c",
+            "list_sha256": "db77d816ed5b59d23d18e84ddc9e88d9328f40eb9c99ffe9b5951e6782375b47"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.7653698478350346,
+            "rmse": 1.014768576117103,
+            "user_macro_mae": 0.7695235186552933,
+            "prediction_mean": 4.314787864685059,
+            "prediction_std": 0.3898233473300934,
+            "outside_rating_scale_fraction": 0.0101105102280743
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.070431293062485,
+            "validation_rmse": 0.9961864536666968,
+            "validation_mae": 0.7513245002524886,
+            "seconds": 0.6047032177448273,
+            "initial_sha256": "a2f1b331d304533f8496ebb29635266e6b26b716098ff5eac90e0a4cb179b751",
+            "batch_order_sha256": "f45e46e06b5be9ee656c4a25511614017f08dd5d3dae683f1ba858eec1cfec64",
+            "checkpoint_sha256": "c2c136e97572128f95090b683e4688bd3ccfd8b0d53ea8b7dbbdcb487182d9e5",
+            "validation_sha256": "39978ba90a2bbe39e828b5c98e1f4e35eed59fd430c6919b69c618298ebedf0d",
+            "test_sha256": "c3a5e3c6090e40cb7cf2f3de2bf646ac59f88f9e47327d862c034087ea016aa2",
+            "list_sha256": "f484a9da6f9a27c48c9dbc3cc555c4c4c3c097b68ed6680962dde0c924e348c3"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.7661262201735681,
+            "rmse": 1.0175725446417205,
+            "user_macro_mae": 0.7692010955183559,
+            "prediction_mean": 4.3158159255981445,
+            "prediction_std": 0.4086993634700775,
+            "outside_rating_scale_fraction": 0.017695948639834796
+          },
+          "selection": {
+            "epoch": 2,
+            "train_mse": 1.0700978062881128,
+            "validation_rmse": 0.9968655921261647,
+            "validation_mae": 0.7516522064552976,
+            "seconds": 0.6355438940227032,
+            "initial_sha256": "91b076d9e387f7ab756f8d92e89ecc3f602426194eb9eb98b2f894e20cd11e06",
+            "batch_order_sha256": "174008b5f373ea7e509ffd51614d578797b18ad3f830ea702ac6bb7e77e07b78",
+            "checkpoint_sha256": "e63ac4ce246400db906258f4734f758501a3aee1846c67475e54eb74037cabd1",
+            "validation_sha256": "81144009bff8f3c67e22ceb5c686c34c1b084097e62a0fcda55584596d1e72d5",
+            "test_sha256": "126d060efe02f52110d5d1b0663278e793e2a327397a8e38d4683bc2489e68ef",
+            "list_sha256": "63ae11519a5b0d3e55f913ef77f1c0fbf8814fd0016b73aaffeae857d12c8b06"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.7649055605811617,
+          "std": 0.0015074180524045193
+        },
+        "rmse": {
+          "mean": 1.015270125393063,
+          "std": 0.0020971193017291444
+        },
+        "user_macro_mae": {
+          "mean": 0.7691770736173643,
+          "std": 0.0003590591656442373
+        }
+      }
+    },
+    "DNN": {
+      "per_seed": {
+        "2020": {
+          "metrics": {
+            "mae": 0.7511174058132772,
+            "rmse": 1.0056746295939525,
+            "user_macro_mae": 0.7585743750864504,
+            "prediction_mean": 4.294703006744385,
+            "prediction_std": 0.4946645498275757,
+            "outside_rating_scale_fraction": 0.011551947985565176
+          },
+          "selection": {
+            "epoch": 4,
+            "train_mse": 0.990127114076538,
+            "validation_rmse": 0.9827806842498048,
+            "validation_mae": 0.7339586588196483,
+            "seconds": 0.8153255060315132,
+            "initial_sha256": "22c02edd08709290645907fba45719a360d4051ee50dbb6eb3937d25fca0e113",
+            "batch_order_sha256": "3e49d55ccc31510ffb64e334f47860efcbcf8e16eae714a9a4b1b967eba3ee64",
+            "checkpoint_sha256": "dfe55f25f0e6510a090178d3960d84324cd1cdda4bdfffbfb280e7c4b701bca5",
+            "validation_sha256": "afcd02d4f405ef838521a0ace149b4f1122721ba6d833f2a1359d5266f500cc5",
+            "test_sha256": "cf70e5296b41a5aac0ff0df8691913d31ab8c9e5e0bcb666f682e7e88d511dca",
+            "list_sha256": "47f2a46119bff3a11cecd0cfa8ea4ad643c902f8579d50bbe8b753e3bcbed705"
+          }
+        },
+        "2021": {
+          "metrics": {
+            "mae": 0.7488559736929744,
+            "rmse": 1.0090416843972578,
+            "user_macro_mae": 0.7568385419116069,
+            "prediction_mean": 4.302398204803467,
+            "prediction_std": 0.5114529728889465,
+            "outside_rating_scale_fraction": 0.01882047454993406
+          },
+          "selection": {
+            "epoch": 4,
+            "train_mse": 0.9897205503198613,
+            "validation_rmse": 0.9901212833250016,
+            "validation_mae": 0.734441395967577,
+            "seconds": 0.6149138808250427,
+            "initial_sha256": "a2f1b331d304533f8496ebb29635266e6b26b716098ff5eac90e0a4cb179b751",
+            "batch_order_sha256": "f45e46e06b5be9ee656c4a25511614017f08dd5d3dae683f1ba858eec1cfec64",
+            "checkpoint_sha256": "2cb668be88a15cfdfa5b862045acb09ff54780152655582cfa485dcc3db501b4",
+            "validation_sha256": "167523ddec5afba8369df2111c67b159affa8fe07a9a5954263f13b23aacaac4",
+            "test_sha256": "a55bd265f35ff94f86e43dd5780e17597e9b546230dc8846f2e1f969115d4edf",
+            "list_sha256": "9422ab131ff67cdec70b2054a0ee67d08363fea6927060bffcaff2e79ec37daa"
+          }
+        },
+        "2022": {
+          "metrics": {
+            "mae": 0.754447054195875,
+            "rmse": 1.0101338192791267,
+            "user_macro_mae": 0.7612962867721123,
+            "prediction_mean": 4.29447603225708,
+            "prediction_std": 0.5091896057128906,
+            "outside_rating_scale_fraction": 0.014649505719747697
+          },
+          "selection": {
+            "epoch": 4,
+            "train_mse": 0.9922496463706519,
+            "validation_rmse": 0.9876722243797196,
+            "validation_mae": 0.7372684561995417,
+            "seconds": 0.6929067894816399,
+            "initial_sha256": "91b076d9e387f7ab756f8d92e89ecc3f602426194eb9eb98b2f894e20cd11e06",
+            "batch_order_sha256": "174008b5f373ea7e509ffd51614d578797b18ad3f830ea702ac6bb7e77e07b78",
+            "checkpoint_sha256": "f8a276fb71502adb61ec67d6d200db2d558f54a365c9a0b2e6a74d1b1f09a423",
+            "validation_sha256": "14676408edd155c6ee9a9f9aff83bdeb37e4f67cc97cadb98a335dd1b6a3ff5c",
+            "test_sha256": "22137b2776bd79eb5eb93fd3982a4230469df68ea88c9c3550710e988b5370fe",
+            "list_sha256": "1ee6618548357010d406a5c318e7153db67c7f608c9a44c368ff1a3c77a52bbb"
+          }
+        }
+      },
+      "aggregate": {
+        "mae": {
+          "mean": 0.7514734779007087,
+          "std": 0.0028124963637424843
+        },
+        "rmse": {
+          "mean": 1.008283377756779,
+          "std": 0.002324298793794972
+        },
+        "user_macro_mae": {
+          "mean": 0.75890306792339,
+          "std": 0.0022469760893547293
+        }
+      }
+    }
+  },
+  "DNN_comparisons": {
+    "item_mean": {
+      "delta_mae": 0.0042276166751744615,
+      "delta_rmse": -0.003122603581027228,
+      "mae_95ci": [
+        -0.0012167670838548665,
+        0.00966246119151013
+      ],
+      "rmse_95ci": [
+        -0.010937088201225338,
+        0.004444783857035024
+      ],
+      "interpretation": "negative favors DNN-source LIST; arithmetic mean of per-pipeline metrics; user-cluster CI conditional on three paired source/student seeds"
+    },
+    "smoothed_mean_5": {
+      "delta_mae": -0.009059351394529402,
+      "delta_rmse": 0.01163454389754015,
+      "mae_95ci": [
+        -0.01503076344071872,
+        -0.0033945337711494437
+      ],
+      "rmse_95ci": [
+        0.003975905748789263,
+        0.019201978508293374
+      ],
+      "interpretation": "negative favors DNN-source LIST; arithmetic mean of per-pipeline metrics; user-cluster CI conditional on three paired source/student seeds"
+    },
+    "item_median": {
+      "delta_mae": 0.07999349957338997,
+      "delta_rmse": -0.11115557147934108,
+      "mae_95ci": [
+        0.06413928692352848,
+        0.09464343568973561
+      ],
+      "rmse_95ci": [
+        -0.12238981753532817,
+        -0.10068260529680012
+      ],
+      "interpretation": "negative favors DNN-source LIST; arithmetic mean of per-pipeline metrics; user-cluster CI conditional on three paired source/student seeds"
+    },
+    "LIST_MF": {
+      "delta_mae": -0.013432082680452817,
+      "delta_rmse": -0.006986747636283856,
+      "mae_95ci": [
+        -0.01841921149289863,
+        -0.00850184836332027
+      ],
+      "rmse_95ci": [
+        -0.013678169878140413,
+        -0.00016389924056479913
+      ],
+      "interpretation": "negative favors DNN-source LIST; arithmetic mean of per-pipeline metrics; user-cluster CI conditional on three paired source/student seeds"
+    }
+  },
+  "list_comparisons": {
+    "2020": {
+      "MF__DNN": {
+        "mean_common_items": 1.916191115586886,
+        "mean_overlap_fraction": 0.01916191115586886,
+        "mean_jaccard": 0.009760898116926287,
+        "same_top1_fraction": 0.0011189437171310282
+      }
+    },
+    "2021": {
+      "MF__DNN": {
+        "mean_common_items": 1.8802170750811233,
+        "mean_overlap_fraction": 0.018802170750811233,
+        "mean_jaccard": 0.009570916403184911,
+        "same_top1_fraction": 0.0004475774868524113
+      }
+    },
+    "2022": {
+      "MF__DNN": {
+        "mean_common_items": 2.43851404274365,
+        "mean_overlap_fraction": 0.0243851404274365,
+        "mean_jaccard": 0.012459747107212394,
+        "same_top1_fraction": 0.03435157211592257
+      }
+    }
+  }
+}

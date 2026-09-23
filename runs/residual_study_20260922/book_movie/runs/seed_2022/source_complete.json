@@ -1,0 +1,8 @@
+{
+  "source_sha256": "adf1b8ef022d540f96e5fd3397e1f0e4cf2490ecafe8c39de2e39be93272a2c2",
+  "topk_sha256": "f6ec5fd5e1155dacc3142eaffde5f3b8d09f17a037991785bf890142ef88da09",
+  "source_data_sha256": "6e4e61812381ea6b74b9b8891ba447abfe6098ab5a1ae6bbf9a946fd4f15a256",
+  "seed": 2022,
+  "epochs": 10,
+  "target_labels_used": false
+}

@@ -1,0 +1,8 @@
+{
+  "job": "8600",
+  "gpu": "1",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "torch": "2.11.0+cu130",
+  "seed": 2020,
+  "head": "DOT_MLP"
+}

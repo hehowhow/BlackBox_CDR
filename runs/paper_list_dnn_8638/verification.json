@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "final_models": 27,
+  "source_models": 9,
+  "all_refits_frozen_before_test": true,
+  "all_prediction_restores_exact": true,
+  "independent_test_item_means_match": true
+}

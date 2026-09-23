@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "variant": "inverse_degree",
+      "zero_correction": true,
+      "can_learn": true,
+      "normalized_weights": true,
+      "no_list_fallback": true,
+      "no_added_parameters": true
+    },
+    {
+      "variant": "target_attention",
+      "zero_correction": true,
+      "can_learn": true,
+      "normalized_weights": true,
+      "no_list_fallback": true,
+      "no_added_parameters": true
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "selected_epoch": 4,
+  "refit_epochs": 4,
+  "selection_sha256": "b52db0cc99a0985c48e4a03b1c75715982a6799b54db562c7f5487a7fea289a8",
+  "final_sha256": "ced8ffce3441a77decec83745aadfe8a50fc04caa4c475a8095dd101f509a61e",
+  "test_sha256": "40579daa5da396b0ba0fbf89754bb6185566ffbcd985f787b4ab9c266c8436c8",
+  "list_sha256": "253755f6491630d065325b1dc10d4627b791e6f5963d6b3b9140507561e1028e",
+  "initial_trainable_parameters_sha256": "9d4c9c09883589f28723879fd3648336fe629732a10ff46c3c08b9e13e7aabe7",
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "full_outer_train_rows": 1022721,
+  "test_labels_opened": false
+}

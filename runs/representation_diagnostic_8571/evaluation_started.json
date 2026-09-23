@@ -1,0 +1,20 @@
+{
+  "book_movie/mf_embedding/2020": "46115506fe84d15e04982c3130aab0e767945825eec8956c374dfb0fd8ff5497",
+  "book_movie/mf_embedding/2021": "73344d92f5d7c83ee199fe8d848809e48420f6f360906148fd59a91158458d81",
+  "book_movie/mf_embedding/2022": "2d97b7983561855e51d2d21ef74330f4ceafab924fce4f729bbee4c4b679b2c0",
+  "book_movie/history_stats/2020": "bd7b1e00c8ea49adbf59015a30dc5ae25c13e890698ed852326ff57c2f47fddf",
+  "book_movie/history_stats/2021": "76aaea645e66baf0617e1311ccea8cf7f53c2bc5ecb0d2c9eaae0df6975ee4b8",
+  "book_movie/history_stats/2022": "4ae9e017d48cab6e866f96ee465dbb770f4d24cea61a48b4e451e515ead7a8bd",
+  "movie_book/mf_embedding/2020": "17f34620543a7a5ff759ffad3f28a4693f4fff25fb8ca7b47ede930777d41f23",
+  "movie_book/mf_embedding/2021": "511dfe317b8846307da58d717101b87064c1df303ffdcb9e858179f12db80a71",
+  "movie_book/mf_embedding/2022": "46310a4fea595f048cfe53062e271c4da44c33c8cc4431c3c28f3120915fddee",
+  "movie_book/history_stats/2020": "7afd5c692c0a0d46969fbb49a73fe955b27e24ac80b40f2232649eaaf62e7d2a",
+  "movie_book/history_stats/2021": "c1b72e0c2cbd69a055740c4d4aedb7d0c6300739b6e2ca5003b8e5cc4db179c7",
+  "movie_book/history_stats/2022": "defd4f32583fe32cdb29164d7ed42e333f24d6da22133d45063187dfeae914cc",
+  "movie_music_clean/mf_embedding/2020": "187376fe2273f16a15da2be69053ba06c2bfd40276c3e0736981fc0f43502ccb",
+  "movie_music_clean/mf_embedding/2021": "e1e7bebf53e265e923efc5e0d1789fe934750fb36902a75b8a611a4a3d83cc4b",
+  "movie_music_clean/mf_embedding/2022": "5d80fe1062feb2dde26f8eb83d6db2c5bddf9dea7d2f58ae15bc61b7b9fa15df",
+  "movie_music_clean/history_stats/2020": "4f853fba97b5065206a0d173dce8a31bead2c236377fe0cec5bc150f6ec49482",
+  "movie_music_clean/history_stats/2021": "1b37546c5f06fac9144d9f3997d43d021c7045924820fd676432d5af4d8cc7a2",
+  "movie_music_clean/history_stats/2022": "2c2061dcedc5e5f9abfd275060965b5454a9a0f1dabc4712e66d6ffa344bad5f"
+}

@@ -72,5 +72,5 @@ def download(name):
 
 
 if __name__ == '__main__':
-    for domain in ['Movies_and_TV', 'Books']:
+    for domain in ['Movies_and_TV', 'Books', 'CDs_and_Vinyl']:
         download(f'reviews_{domain}_5.json.gz')

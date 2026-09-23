@@ -1,0 +1,578 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "task": "Book->Movie",
+    "backbones": [
+      "MF",
+      "GMF",
+      "DNN"
+    ],
+    "seed": 2020,
+    "dim": 10,
+    "pretrain_epochs": 10,
+    "pretrain_lr": 0.01,
+    "pretrain_weight_decay": 0.0,
+    "pretrain_batch": 512,
+    "inversion_iterations": 300,
+    "inversion_batch": 200,
+    "inversion_lr": 0.0001,
+    "inversion_weight_decay": 0.0001,
+    "inversion_target": 5,
+    "inversion_warmup": 10,
+    "bridge_epochs": 10,
+    "bridge_lr": 0.005,
+    "bridge_batch": 512,
+    "bridge_weight_decay": 0.0,
+    "primary_k": 70000,
+    "reported_ks": [
+      50000,
+      70000
+    ],
+    "selection": "validation_rmse",
+    "primary_selection": "Minimum validation RMSE among bridge epochs 1..10 independently for each predeclared K",
+    "source_target_pretraining": "Fixed final epoch; no target validation cold-user vectors used for pretrain selection",
+    "voting_candidates": "All target model rows, including untrained validation/test user rows, matching public code",
+    "gmf_matching": "Public raw target user vector matching; output uses learned GMF linear weights",
+    "unknown_target_items": "Only items absent from target training fall back to frozen smoothed mean; also save raw predictions",
+    "initialization": "Matched source/target embedding initialization across backbones; separate deterministic head and mapping RNG",
+    "inversion_implementation": "Cache per-user item scores; optimize full catalog weights with Adam, same loss/schedule and post-step best-input convention as public inversion",
+    "split": "Existing 60/20/20 overlap-user split; only explicit train_users enter target inversion/bridge",
+    "scope": "One seed, no learning-rate search, exploratory backbone screening; not ten-run paper reproduction",
+    "test_policy": "Test IDs may receive source prototypes; test target labels opened only after all three runs freeze selections",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 991,
+    "code_sha256": {
+      "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+      "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_verify.py": "f1f52f7f6f4c78ead9d6b4063d608625f5aecf3df8360530759cf11cee8370a6",
+      "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664"
+    },
+    "upstream_sha256": {
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f"
+    }
+  },
+  "baselines": {
+    "item_mean": {
+      "mae": 0.8348875053406114,
+      "rmse": 1.0919842469391372,
+      "user_macro_mae": 0.8342887663053964,
+      "prediction_mean": 4.11921583584754,
+      "prediction_std": 0.5506063065225044,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "item_median": {
+      "mae": 0.7571207142811394,
+      "rmse": 1.2041879143522454,
+      "user_macro_mae": 0.7222355149137324,
+      "prediction_mean": 4.4640233396742435,
+      "prediction_std": 0.7221280411086716,
+      "outside_rating_scale_fraction": 0.0
+    },
+    "smoothed_mean_5": {
+      "mae": 0.8425192366389747,
+      "rmse": 1.0861418302139547,
+      "user_macro_mae": 0.8450502686609949,
+      "prediction_mean": 4.123060577471313,
+      "prediction_std": 0.4573308435308123,
+      "outside_rating_scale_fraction": 0.0
+    }
+  },
+  "models": {
+    "MF": {
+      "50000": {
+        "selection": {
+          "epoch": 1,
+          "validation_rmse": 1.2744541808829712,
+          "validation_mae": 0.9630365491464202,
+          "checkpoint_sha256": "cd7ce774e3f2b29e74e4599264953a9d45d89ca5607c638120c903b80669d2de",
+          "validation_sha256": "bc589ff702fe1bedc2113edd5bffe4cb94cc075eb635e526e13cd979150ea498",
+          "test_sha256": "339e16fb19da0ffe1196c0bef165e260fafdfb2a377333cc6c7746bf2f3a9bab",
+          "raw_test_sha256": "94fe49cb4d7c51cd93e1b48da4d8a0e91b84b49cc0c466e7a4d29b1fa39e0bb4"
+        },
+        "metrics": {
+          "mae": 0.974143447317011,
+          "rmse": 1.292959033825436,
+          "user_macro_mae": 0.9831208629781997,
+          "prediction_mean": 4.034653663635254,
+          "prediction_std": 0.899810254573822,
+          "outside_rating_scale_fraction": 0.10657212945705154
+        },
+        "raw_metrics": {
+          "mae": 0.9742556337772594,
+          "rmse": 1.293231944738159,
+          "user_macro_mae": 0.9831810910832811,
+          "prediction_mean": 4.03447151184082,
+          "prediction_std": 0.9002829194068909,
+          "outside_rating_scale_fraction": 0.10661055921705768
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": 0.13925594197639957,
+            "delta_rmse": 0.20097478688629877,
+            "mae_95ci": [
+              0.12578721278569027,
+              0.15549243998985607
+            ],
+            "rmse_95ci": [
+              0.18283864608860276,
+              0.2200117068673443
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "item_median": {
+            "delta_mae": 0.2170227330358716,
+            "delta_rmse": 0.08877111947319061,
+            "mae_95ci": [
+              0.19914665848667218,
+              0.23935734511987825
+            ],
+            "rmse_95ci": [
+              0.06718890572678632,
+              0.11195911608349451
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "smoothed_mean_5": {
+            "delta_mae": 0.1316242106780363,
+            "delta_rmse": 0.20681720361148126,
+            "mae_95ci": [
+              0.11810785497001909,
+              0.14812919593301996
+            ],
+            "rmse_95ci": [
+              0.18756874723481698,
+              0.2268583900513802
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "MF_same_k": {
+            "delta_mae": 0.0,
+            "delta_rmse": 0.0,
+            "mae_95ci": [
+              0.0,
+              0.0
+            ],
+            "rmse_95ci": [
+              0.0,
+              0.0
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          }
+        }
+      },
+      "70000": {
+        "selection": {
+          "epoch": 1,
+          "validation_rmse": 1.2671301728279531,
+          "validation_mae": 0.9771717919275735,
+          "checkpoint_sha256": "a187455bb2f444b8bf954ad9d7ce2c3e732381dee4002bf43b2ce4361b0f6e50",
+          "validation_sha256": "d374d45fed51e62619c312f17825fa5c96a56cd7f5a96224e486aae67385f81d",
+          "test_sha256": "a0bf8fb8151854f5eec5e7dd29bebc83232c28429eebc9032bf0d3ce21555a3d",
+          "raw_test_sha256": "142993f19bc43c2c8a37d3c78fcc5a9d562dc41487984aae5309cb71402aa8b5"
+        },
+        "metrics": {
+          "mae": 0.9889308473367174,
+          "rmse": 1.284524501902571,
+          "user_macro_mae": 1.0098991441433964,
+          "prediction_mean": 3.9145026206970215,
+          "prediction_std": 0.8430482745170593,
+          "outside_rating_scale_fraction": 0.05922666512947627
+        },
+        "raw_metrics": {
+          "mae": 0.9890430495925079,
+          "rmse": 1.2847971407108738,
+          "user_macro_mae": 1.0099591790629678,
+          "prediction_mean": 3.914320468902588,
+          "prediction_std": 0.8435255885124207,
+          "outside_rating_scale_fraction": 0.059265094889482416
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": 0.15404334199610603,
+            "delta_rmse": 0.19254025496343385,
+            "mae_95ci": [
+              0.14201357383916147,
+              0.16830581692831315
+            ],
+            "rmse_95ci": [
+              0.17584261064296608,
+              0.20985488580430747
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "item_median": {
+            "delta_mae": 0.23181013305557807,
+            "delta_rmse": 0.08033658755032569,
+            "mae_95ci": [
+              0.21407914448749085,
+              0.25330704903971635
+            ],
+            "rmse_95ci": [
+              0.05923181720447302,
+              0.1028285332157296
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "smoothed_mean_5": {
+            "delta_mae": 0.14641161069774278,
+            "delta_rmse": 0.19838267168861634,
+            "mae_95ci": [
+              0.13387337191608129,
+              0.1611009591118909
+            ],
+            "rmse_95ci": [
+              0.18045950595970597,
+              0.21696044566974154
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "MF_same_k": {
+            "delta_mae": 0.0,
+            "delta_rmse": 0.0,
+            "mae_95ci": [
+              0.0,
+              0.0
+            ],
+            "rmse_95ci": [
+              0.0,
+              0.0
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          }
+        }
+      }
+    },
+    "GMF": {
+      "50000": {
+        "selection": {
+          "epoch": 5,
+          "validation_rmse": 2.204291021850671,
+          "validation_mae": 2.0052305418852057,
+          "checkpoint_sha256": "5162b214814a3eaff4d9ff5a64c899dd78486af94a7916b6b0effa27140ad251",
+          "validation_sha256": "e52e043833d24205507911fdb603fb5a316d22f7d753a0da1e2b7736dd5707df",
+          "test_sha256": "e714181cb9421de8d3bc460aa5b0ad928de34586b8f4a7d8074eab197b722758",
+          "raw_test_sha256": "1907a4f07c1bba63ca196257610327de4c0eee3c38f73ebfe3eab7666ff1cde7"
+        },
+        "metrics": {
+          "mae": 2.0343288519488634,
+          "rmse": 2.23363696286717,
+          "user_macro_mae": 2.1548620402672225,
+          "prediction_mean": 2.1948719024658203,
+          "prediction_std": 0.46808919310569763,
+          "outside_rating_scale_fraction": 0.01654401168264704
+        },
+        "raw_metrics": {
+          "mae": 2.0344271646196996,
+          "rmse": 2.2337643491187227,
+          "user_macro_mae": 2.1549196642121147,
+          "prediction_mean": 2.1947035789489746,
+          "prediction_std": 0.4682009816169739,
+          "outside_rating_scale_fraction": 0.01658244144265319
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": 1.199441346608252,
+            "delta_rmse": 1.141652715928033,
+            "mae_95ci": [
+              1.1627787183920888,
+              1.2348335237244041
+            ],
+            "rmse_95ci": [
+              1.1068618819469012,
+              1.1753820168151994
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "item_median": {
+            "delta_mae": 1.277208137667724,
+            "delta_rmse": 1.0294490485149248,
+            "mae_95ci": [
+              1.2334964136512396,
+              1.3214672084713097
+            ],
+            "rmse_95ci": [
+              0.9888337952418369,
+              1.0690132087705218
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "smoothed_mean_5": {
+            "delta_mae": 1.1918096153098887,
+            "delta_rmse": 1.1474951326532155,
+            "mae_95ci": [
+              1.1544197692614644,
+              1.2282488942652547
+            ],
+            "rmse_95ci": [
+              1.111295585753696,
+              1.182964550106447
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "MF_same_k": {
+            "delta_mae": 1.0601854046318524,
+            "delta_rmse": 0.9406779290417342,
+            "mae_95ci": [
+              1.026264723442451,
+              1.0915820314309967
+            ],
+            "rmse_95ci": [
+              0.9126651200490256,
+              0.9683747860225227
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          }
+        }
+      },
+      "70000": {
+        "selection": {
+          "epoch": 5,
+          "validation_rmse": 1.8932276803704668,
+          "validation_mae": 1.7042737273927147,
+          "checkpoint_sha256": "ddd892da39c4ddb959ca1439ee76cfafbf93cb1d16d088395c134a60149d2c2b",
+          "validation_sha256": "e99f57251659d49d8c5a548f7388dde41d3c6267990dcc7166746319cf511697",
+          "test_sha256": "0b01b2f6be9e274493d96337e0842066e6e145ef5c03444047dfa29b0d4834f9",
+          "raw_test_sha256": "1da861200d49e50f3a75fd09f63ed8b7539c9c7daca740a90b8e4119b71c205b"
+        },
+        "metrics": {
+          "mae": 1.733660831661283,
+          "rmse": 1.9227495078468182,
+          "user_macro_mae": 1.8442933701749364,
+          "prediction_mean": 2.5680525302886963,
+          "prediction_std": 0.4952314794063568,
+          "outside_rating_scale_fraction": 0.010292770721646843
+        },
+        "raw_metrics": {
+          "mae": 1.7337611600741756,
+          "rmse": 1.9229041704051424,
+          "user_macro_mae": 1.8443533349236725,
+          "prediction_mean": 2.5678820610046387,
+          "prediction_std": 0.49548277258872986,
+          "outside_rating_scale_fraction": 0.010331200481652992
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": 0.8987733263206715,
+            "delta_rmse": 0.830765260907681,
+            "mae_95ci": [
+              0.8671565117560565,
+              0.9295815960940063
+            ],
+            "rmse_95ci": [
+              0.7989822802649089,
+              0.8616345947416154
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "item_median": {
+            "delta_mae": 0.9765401173801436,
+            "delta_rmse": 0.7185615934945728,
+            "mae_95ci": [
+              0.9369500043575124,
+              1.016134938364498
+            ],
+            "rmse_95ci": [
+              0.6809896828713797,
+              0.7552822832812789
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "smoothed_mean_5": {
+            "delta_mae": 0.8911415950223083,
+            "delta_rmse": 0.8366076776328635,
+            "mae_95ci": [
+              0.8591249653636684,
+              0.9228029365911464
+            ],
+            "rmse_95ci": [
+              0.8028534352983099,
+              0.8684693332023932
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "MF_same_k": {
+            "delta_mae": 0.7447299843245655,
+            "delta_rmse": 0.6382250059442471,
+            "mae_95ci": [
+              0.7178849461353357,
+              0.7697228254837495
+            ],
+            "rmse_95ci": [
+              0.6149780331546172,
+              0.6607772833014053
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          }
+        }
+      }
+    },
+    "DNN": {
+      "50000": {
+        "selection": {
+          "epoch": 1,
+          "validation_rmse": 1.0755002061234162,
+          "validation_mae": 0.8170880124861791,
+          "checkpoint_sha256": "e708fd94255a0212fd5a78d19ef2b64f71fc663c3ca5e5148fa82b6e072daaf4",
+          "validation_sha256": "7e5182d371c824f79ff634d564241c99950171b2f4bd38b1c2d25b406f1aa17f",
+          "test_sha256": "8c9bb81d887a13895bbc1fe1a36e54cc5d50da6ca81beef95103fdb7d3e9bc1a",
+          "raw_test_sha256": "354fd0ff292c5428f9f9ac67239bae91497dd91acdfdc3d4c6a904f99b8c9a9b"
+        },
+        "metrics": {
+          "mae": 0.8265400926562216,
+          "rmse": 1.0921225830177317,
+          "user_macro_mae": 0.8340576936735067,
+          "prediction_mean": 4.136908531188965,
+          "prediction_std": 0.6584075093269348,
+          "outside_rating_scale_fraction": 0.0739324532918292
+        },
+        "raw_metrics": {
+          "mae": 0.8266553035565655,
+          "rmse": 1.0924238594330293,
+          "user_macro_mae": 0.8341297004952055,
+          "prediction_mean": 4.136723041534424,
+          "prediction_std": 0.6591107249259949,
+          "outside_rating_scale_fraction": 0.07397088305183534
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.008347412684389766,
+            "delta_rmse": 0.00013833607859448094,
+            "mae_95ci": [
+              -0.014661694334465616,
+              -0.001774448595422073
+            ],
+            "rmse_95ci": [
+              -0.00763561271468951,
+              0.00910964762624008
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "item_median": {
+            "delta_mae": 0.06941937837508227,
+            "delta_rmse": -0.11206533133451368,
+            "mae_95ci": [
+              0.06057495454444314,
+              0.07790543046681946
+            ],
+            "rmse_95ci": [
+              -0.12176027758970061,
+              -0.10260859690367799
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "smoothed_mean_5": {
+            "delta_mae": -0.01597914398275302,
+            "delta_rmse": 0.0059807528037769675,
+            "mae_95ci": [
+              -0.02233850586048899,
+              -0.009664383100056465
+            ],
+            "rmse_95ci": [
+              -0.0017345610994381477,
+              0.014178012746922307
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "MF_same_k": {
+            "delta_mae": -0.14760335466078933,
+            "delta_rmse": -0.2008364508077043,
+            "mae_95ci": [
+              -0.165784004594106,
+              -0.1321948260287305
+            ],
+            "rmse_95ci": [
+              -0.22172671581589407,
+              -0.17928702516502976
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          }
+        }
+      },
+      "70000": {
+        "selection": {
+          "epoch": 1,
+          "validation_rmse": 1.0836870011928637,
+          "validation_mae": 0.8116367791389887,
+          "checkpoint_sha256": "f16911260c9599091e8228a81437935b886b13603bc2759bad663895153096e6",
+          "validation_sha256": "90bebdd650cc22070fb280a3984edd74d1b370ad0396bbb3743f7d78f385d5eb",
+          "test_sha256": "af7209558c8fc393359a62020b2bba133781e71438719e1f748d6ca6cdc68d6f",
+          "raw_test_sha256": "8d8c3150470c525ed2b38b1458a365603f3964c8fe8dd59cb1666f9bd0338db7"
+        },
+        "metrics": {
+          "mae": 0.8202798616480781,
+          "rmse": 1.0994444218524873,
+          "user_macro_mae": 0.8215245399418477,
+          "prediction_mean": 4.202089786529541,
+          "prediction_std": 0.639584481716156,
+          "outside_rating_scale_fraction": 0.08197067809311531
+        },
+        "raw_metrics": {
+          "mae": 0.820395966353721,
+          "rmse": 1.0997481966841567,
+          "user_macro_mae": 0.8215973343273012,
+          "prediction_mean": 4.201903343200684,
+          "prediction_std": 0.640334963798523,
+          "outside_rating_scale_fraction": 0.08200910785312146
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.014607643692533312,
+            "delta_rmse": 0.007460174913350048,
+            "mae_95ci": [
+              -0.020671943323309468,
+              -0.008293430297961125
+            ],
+            "rmse_95ci": [
+              0.0003779760886834294,
+              0.015782618079123376
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "item_median": {
+            "delta_mae": 0.06315914736693873,
+            "delta_rmse": -0.10474349249975812,
+            "mae_95ci": [
+              0.05550626044597377,
+              0.07034178148001397
+            ],
+            "rmse_95ci": [
+              -0.11285311503086194,
+              -0.09678016502769517
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "smoothed_mean_5": {
+            "delta_mae": -0.022239374990896565,
+            "delta_rmse": 0.013302591638532535,
+            "mae_95ci": [
+              -0.028104336465301104,
+              -0.01635913368541687
+            ],
+            "rmse_95ci": [
+              0.006724353855231157,
+              0.020699061172554104
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          },
+          "MF_same_k": {
+            "delta_mae": -0.16865098568863934,
+            "delta_rmse": -0.1850800800500838,
+            "mae_95ci": [
+              -0.18657820750633278,
+              -0.15353521772533038
+            ],
+            "rmse_95ci": [
+              -0.2061475929318972,
+              -0.16431800031252675
+            ],
+            "interpretation": "Negative favors model; user-cluster CI conditional on one fitted seed, not training-seed uncertainty"
+          }
+        }
+      }
+    }
+  }
+}

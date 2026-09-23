@@ -175,6 +175,11 @@ def inverse(source):
                                                   map_location='cuda', weights_only=True))
     _, test_ids, train_ids = runner.get_data(runner.co_user_num, inversion=True)
     inv_cfg = json.loads((UPSTREAM / 'inversion_config.json').read_text())
+    # Honor the run-local settings (in particular short smoke-test inversions).
+    for key in ('iter', 'batch', 'lr', 'weight_decay', 'target_label'):
+        override = f'inversion_{key}'
+        if override in runner.config:
+            inv_cfg[key] = runner.config[override]
     inv_cfg.update({'task': '1', 'src': runner.src, 'tgt': runner.tgt, 'ratio': runner.ratio,
                     'base_model': 'MF', 'src_item_dims': runner.iid_src, 'tgt_item_dims': runner.iid_tgt,
                     'syn_root': str(ROOT / 'checkpoints' / f'prototypes_{source}') + '/'})

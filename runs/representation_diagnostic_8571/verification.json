@@ -1,0 +1,265 @@
+{
+  "status": "PASS",
+  "models": [
+    {
+      "task": "book_movie",
+      "representation": "mf_embedding",
+      "seed": 2020,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "mf_embedding",
+      "seed": 2021,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "mf_embedding",
+      "seed": 2022,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "mf_embedding",
+      "seed": 2020,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "mf_embedding",
+      "seed": 2021,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "mf_embedding",
+      "seed": 2022,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "history_stats",
+      "seed": 2020,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "history_stats",
+      "seed": 2021,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "history_stats",
+      "seed": 2022,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "history_stats",
+      "seed": 2020,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "history_stats",
+      "seed": 2021,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "book_movie",
+      "representation": "history_stats",
+      "seed": 2022,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "mf_embedding",
+      "seed": 2020,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "mf_embedding",
+      "seed": 2021,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "mf_embedding",
+      "seed": 2022,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "mf_embedding",
+      "seed": 2020,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "mf_embedding",
+      "seed": 2021,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "mf_embedding",
+      "seed": 2022,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "history_stats",
+      "seed": 2020,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "history_stats",
+      "seed": 2021,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "history_stats",
+      "seed": 2022,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "history_stats",
+      "seed": 2020,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "history_stats",
+      "seed": 2021,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_book",
+      "representation": "history_stats",
+      "seed": 2022,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "mf_embedding",
+      "seed": 2020,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "mf_embedding",
+      "seed": 2021,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "mf_embedding",
+      "seed": 2022,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "mf_embedding",
+      "seed": 2020,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "mf_embedding",
+      "seed": 2021,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "mf_embedding",
+      "seed": 2022,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "history_stats",
+      "seed": 2020,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "history_stats",
+      "seed": 2021,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "history_stats",
+      "seed": 2022,
+      "arm": "real",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "history_stats",
+      "seed": 2020,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "history_stats",
+      "seed": 2021,
+      "arm": "shuffled",
+      "passed": true
+    },
+    {
+      "task": "movie_music_clean",
+      "representation": "history_stats",
+      "seed": 2022,
+      "arm": "shuffled",
+      "passed": true
+    }
+  ],
+  "checks": [
+    "paired initialization",
+    "all epochs trained",
+    "validation minimum selection independently checked",
+    "restored model validation predictions match",
+    "data and fixed baseline unchanged",
+    "prediction and model hashes verified"
+  ]
+}

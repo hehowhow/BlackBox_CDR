@@ -21,10 +21,22 @@ external/
 *.tmp
 *.csv
 !results/metrics.csv
+!docs/cdr_effectiveness_results.csv
+!runs/**/comparison.csv
+!runs/**/combined_comparison.csv
+!runs/**/main_comparison.csv
+!runs/**/per_seed.csv
+# Local runtime links and raw item-ID lists are not publication artifacts.
+runs/**/data
+runs/**/baseline
+runs/**/inner_baseline
+runs/**/source_data
+runs/**/removed_source_items.json
 results/list_audit/replay*/
 runs/status.json
 runs/**/status.json
 runs/**/failure.json
+runs/slurm_smoke_*/
 .env
 .env.*
 *.pem

@@ -1,0 +1,71 @@
+{
+  "tasks": [
+    "book_movie",
+    "book_music",
+    "music_movie_clean"
+  ],
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "betas": [
+    20,
+    50,
+    80
+  ],
+  "seed": 2021,
+  "source_dim": 10,
+  "source_epochs": 10,
+  "source_lr": 0.01,
+  "source_weight_decay": 0.0,
+  "source_batch": 512,
+  "source_batch_policy": "retain best existing DNN LIST pipeline (512 for every task); not paper task3 batch256",
+  "source_backbone": "author affine DNN; fixed final epoch; source only; shared across beta within task/seed",
+  "k": 100,
+  "seen_item_filter": false,
+  "score_clipping": false,
+  "learner_uses_scores": false,
+  "dim": 32,
+  "hidden": 64,
+  "dropout": 0.1,
+  "epochs": 10,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 2048,
+  "student": "original LIST: rank-weight pooling, MLP encoder, dot target item + train mean + item bias",
+  "vocabulary": "DNN returned opaque IDs only",
+  "baseline": "item_mean only; no smoothing",
+  "split_seed": 2020,
+  "validation_seed": 20260923,
+  "inner_validation_fraction": 0.2,
+  "split": "sorted raw IDs; nested test sets from one random permutation; round(beta*N), same count rule as paper",
+  "selection": "inner cold-user validation RMSE, epoch1..10; fresh refit full outer training for selected epochs",
+  "test_policy": "all 27 final models frozen and restored before target test labels are opened",
+  "scope": "cleaned paper directions and all beta; three model seeds, one fixed split; not original PFCDR reproduction",
+  "cleanup": "remove every cross-domain shared raw item from source only; target untouched; no renewed 5-core",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 997,
+  "code_hashes": {
+    "/home/hehao32/BlackBox_CDR/scripts/paper_list_dnn.py": "d296a75cc905605b7d0e165eba20d3d2583f54fdb00dbee8dbf32e9c6753a6d8",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_paper_list_dnn.sh": "2e1edbaa79c987c4eb05c7c7229a5beb4a0fb218f22ebcb75c37074c57a9ff32",
+    "/home/hehao32/BlackBox_CDR/scripts/list_source_transfer.py": "81b9be2c70f38f46ae48ce2ee9559e3e86b17a6fe80ecf21a80d4c0b9f016323",
+    "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+    "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+    "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+    "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+    "/home/hehao32/BlackBox_CDR/scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f"
+  },
+  "input_hashes": {
+    "Books": "79cd760235bc7e912a5c0872c82b60122b0858019e2270547a98d81af4f908ee",
+    "Movies_and_TV": "a8f90c43089b6b0cf14a17469ae56604f86129cc3e1ab16d6e88a6bd57b10848",
+    "CDs_and_Vinyl": "0554cd1610df1ec4d03b5407f9412dcb15a8e6fa04e6e39557e2dc8723b2fb00"
+  },
+  "task": "book_movie"
+}
