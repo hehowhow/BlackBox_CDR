@@ -8,6 +8,7 @@ DNN 沿用 PFCDR 作者命名，实际为用户仿射变换后与物品向量内
 学生不读取源评分、教师参数或返回分数；需要已知的跨域用户对应与重叠训练用户。
 
 [当前版本与参数](docs/current_list_version.md) ·
+[主版本论文outline（与主图一致）](docs/list_residual_v1_paper_outline.md) ·
 [参数快照 JSON](configs/list_residual_v1.json) ·
 [完整结果与分析](runs/list_weighting_8651/report.md) ·
 [对比表 CSV](runs/list_weighting_8651/main_comparison.csv)
