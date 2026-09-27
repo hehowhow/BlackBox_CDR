@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "selection_sha256": "081e3c8439376883f75487f984d200f03350fb4c2b9bdec264d8ef51755c95d6",
+  "final_sha256": "25be65813cd75a52fb42d29c2266e4e2af522d8b4d49caa1103db7dcbc85f492",
+  "test_sha256": "e2909426dc95fca02b98d9df54358fe0d75d7a02479d8367128071e7b0b9d349",
+  "assignment_sha256": "ba6b5161ee59585d73d98f3b4e6d11c770bc3e25c9b13abb92cdfa341343309a",
+  "initial_parameters_sha256": "a60d9ae7af3860b55ed72b25256b290ec1ec1caf9e77e9cc8e5a6d9ca38f3d6e",
+  "shared_initial_parameters_sha256": "16445d5cf7be774fd5b16fdd62b44d14f2bbcd867f7ffe61a492d4400e93c3d6",
+  "trainable_parameters": 1904096,
+  "parent_trainable_parameters": 1904096,
+  "cluster_refit_sha256": "9191d3b6667122b1e3fe14db597355af1f8f2b19735061a4668f420a5374b103",
+  "cluster_select_sha256": "31b0abc776b95de5fc36855a12257742524408efb0bd0599939fd339505c2fe3",
+  "full_outer_train_rows": 1585889,
+  "refit_epochs": 5,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false
+}

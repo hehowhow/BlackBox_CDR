@@ -1,0 +1,98 @@
+{
+  "music_movie_clean/20/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650/beta_20/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "7b0043aeea9b39ac3e9d3bfa6c512c0d63d75a178c9d721d4743231f910dfe98",
+      "test.npy": "9a650351f66a6912f8bf15f70881ca958c954e0c3bcf5e31b8b648280b060239",
+      "selection.json": "15d025d9789995efcd067be2e7d2d3ba935fcfddc4c340e197d2ba36104d016b"
+    }
+  },
+  "music_movie_clean/20/gaussian_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_8913/gaussian_learned/beta_20/seed_2020",
+    "hashes": {
+      "complete.json": "76896e48f3f64773a4885b455d950cc2d0db1d5f2cd7eff3fad3777776e1b47b",
+      "test.npy": "0857ebf37e2c65d0552c27e2ef9b7340df18c80f930280ff01e08a35e353c55a",
+      "selection.json": "2106acd2e76ecaae5734d4a9ebc4119c3878d0217f398fcbd6597ce1b5742ca1"
+    }
+  },
+  "music_movie_clean/80/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650/beta_80/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "266974996bf00df57c1809c004b2a2a814dada381f57893845f36de189921b2f",
+      "test.npy": "47417d6bd1a3ee2371144064209de8a04b3b8d3afff490b10493dd0f44363d37",
+      "selection.json": "7637cd154e4bdc9f4a291aedf67fa1bb4eda8554d00fb216442be77f732e2df8"
+    }
+  },
+  "music_movie_clean/80/gaussian_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_8913/gaussian_learned/beta_80/seed_2020",
+    "hashes": {
+      "complete.json": "3c069542ececa1ac7e7451425fd6d8671bbb57415ff6b6ed677516c34cf22841",
+      "test.npy": "2af514b7ce9090229f021685c5f51015042e29e1d1334a3d94fb07e834a9a7f3",
+      "selection.json": "bebead3eb16f16e29795cc2a5f0f140e25bab06078f8058dbf09a8c37a94b840"
+    }
+  },
+  "book_movie/20/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/beta_20/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "972272b434839bf749b926b5901dc0d92dacbfac91490d46e4dc2d26177718cd",
+      "test.npy": "f15fc1b5f34e4a75ce21fda44d5b3120a1034eb271cfceb04e688057a3419309",
+      "selection.json": "1c1f9c5b8eb7094bebe7ced960f8f14deda7f65da615196275e7eff1ae8244cf"
+    }
+  },
+  "book_movie/20/gaussian_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/gaussian_learned/beta_20/seed_2020",
+    "hashes": {
+      "complete.json": "9ce4edf5fd1e75df4891fad7f2c1453258db56d9249b832f72a148fd5f7702be",
+      "test.npy": "07a547cdda127b0f1dfff17d7b550273c637ec7e9bab17351bb758bb868f1693",
+      "selection.json": "1a8bf1b4189a3ab36c44bb435939e80340926a7ee3dcd26eea6e325a0ed88119"
+    }
+  },
+  "book_movie/80/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/beta_80/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "e90af776f27b7682866b219abd390da3bfa7a29461be4df8144b9ecf1926f833",
+      "test.npy": "4504fa6ce8983a3437ee50d0baa79e5fdbceb256a337f7ce8e3117af282a661d",
+      "selection.json": "dcd43a3600e88ca49b599b980a13a52f66e86178c894cb6fa4e79dbc9f4ff3d9"
+    }
+  },
+  "book_movie/80/gaussian_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/gaussian_learned/beta_80/seed_2020",
+    "hashes": {
+      "complete.json": "ca63f02f3032c6ce417af3166614f1e8acada7a5f55671fa5c8925e51e76d12d",
+      "test.npy": "d4df32122439e9e618bb7ea10de92dbcdc79c365101d5c3da069116a5fa69f71",
+      "selection.json": "d27e8aa101e7bffdc2fbcaf1fb14e26dc1874c24834be890bd8dc39b89afd6c6"
+    }
+  },
+  "book_music/20/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/beta_20/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "f85a756ea9faf8c1bef0a36ead3f61af50efa4de7b668e3b3b1f1a413d188b64",
+      "test.npy": "d1508cad853a18c9222e570f7045ea6014648d6b3d4e352a343fc385ceada5ab",
+      "selection.json": "1cce8bc1b8e672c4b09cd2195c478be8b2f1d86972dae223279314296a671baf"
+    }
+  },
+  "book_music/20/gaussian_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/gaussian_learned/beta_20/seed_2020",
+    "hashes": {
+      "complete.json": "41619fa3c71ca6574ba9487dd4b5cab55914ddba82d4caf83597ff879d9f7589",
+      "test.npy": "583f556b7512d8584d61ea508e42ab7fa35546a1ab29f91a62ba3514870ab3bc",
+      "selection.json": "b06afc8ebb0705c5f0a4e0b6deec8d78776e45c82511f50cbcfe12e4ceb4153d"
+    }
+  },
+  "book_music/80/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/beta_80/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "95d85f384bd54c191553285cd6614a8e5cddd0ce5bf952376b6e1cc88197b74a",
+      "test.npy": "4278c234067479b3477f4c3d87c738530fad207f672adda040542eb4220e6b90",
+      "selection.json": "cb58ebfa74648e247c83042efebd3b312f8fbfae9e6c43604d841f47cb53f4d4"
+    }
+  },
+  "book_music/80/gaussian_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/gaussian_learned/beta_80/seed_2020",
+    "hashes": {
+      "complete.json": "c74946b93bef49ebdd83d91a745c62210642602b29e3770e32db3a819a13f08b",
+      "test.npy": "38aac7fc3d1905b5371be117a8ee0895ffa29d9e7fe2f8f93d58b598ccc42b0e",
+      "selection.json": "474a940c6a444d0f5e657a0ae2a06a526cf1784443f65b7ce7b14b7dc6f5198e"
+    }
+  }
+}

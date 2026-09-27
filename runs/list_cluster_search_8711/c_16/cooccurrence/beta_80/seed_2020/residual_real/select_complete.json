@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "selection_sha256": "4d6b33989f7fce49fa18bbd898471e17dea54ed1eac155bf04c720ff778c81a0",
+  "validation_sha256": "f04d55bf5686d45a17c7aac722ff87e882b49e8d6a31e217545a36588fc499ab",
+  "selected_sha256": "44454c57a5a185aa467cc8acadc9115dac1bc305d9374fd0caf8de61d8d3bed0",
+  "initial_parameters_sha256": "ea2f9be1f79bb1f85ba9d21d80e5a5cbd916c6808d641b889df57041e5a70e2a",
+  "shared_initial_parameters_sha256": "16445d5cf7be774fd5b16fdd62b44d14f2bbcd867f7ffe61a492d4400e93c3d6",
+  "trainable_parameters": 1934816,
+  "parent_trainable_parameters": 1904096,
+  "cluster_select_sha256": "7078e610ecf5b5d20b2c4c92cc51c3b422f459e108bb7c039df4e7fd00bc3ba8",
+  "inner_train_rows": 1228172
+}

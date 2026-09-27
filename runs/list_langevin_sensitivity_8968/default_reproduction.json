@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "task": "music_movie_clean",
+      "beta": 20,
+      "exact_predictions": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "task": "music_movie_clean",
+      "beta": 80,
+      "exact_predictions": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "task": "book_movie",
+      "beta": 20,
+      "exact_predictions": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "task": "book_movie",
+      "beta": 80,
+      "exact_predictions": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "task": "book_music",
+      "beta": 20,
+      "exact_predictions": true,
+      "max_abs_difference": 0.0
+    },
+    {
+      "task": "book_music",
+      "beta": 80,
+      "exact_predictions": true,
+      "max_abs_difference": 0.0
+    }
+  ]
+}

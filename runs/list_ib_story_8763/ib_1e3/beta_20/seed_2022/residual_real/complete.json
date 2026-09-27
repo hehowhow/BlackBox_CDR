@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "beta": 20,
+  "variant": "ib_1e3",
+  "seed": 2022,
+  "eta": 0.001,
+  "selection_sha256": "a687e179b4e23b75ce434f966c8e482f7e459b837841fed311a63ca8876a80a3",
+  "final_sha256": "db3d1e77aaba1a66270013efc5af408f1995897db83893e9129d2ccacff5d3c6",
+  "test_sha256": "ffe8ccb53c9cbfc93b47db4a96c50e1f1d47bf76c37919453d4b6666c7274afa",
+  "assignment_sha256": "a62c1ee518728615649e6a28c8ca9bbdf5b7dd53ea5c72104b9897ffb5557fae",
+  "initial_parameters_sha256": "34bcf31b371c6376dcd7f5003c54c59324bfda68b67a889aad83468adf89b239",
+  "shared_initial_parameters_sha256": "2d5831c96771dda0d519b5b807d63cd70021e820991423074914255eea47a15a",
+  "trainable_parameters": 1949440,
+  "extra_parameters": 4160,
+  "full_outer_train_rows": 1585889,
+  "source_list_interactions": 445017,
+  "refit_epochs": 10,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "source_ids_sha256": "9484df22890955497f8bff81301233cdc9dcc73e57052b9014fd9ce574b80ed3"
+}

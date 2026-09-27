@@ -1,0 +1,331 @@
+{
+  "status": "PASS",
+  "cases": 36,
+  "test_labels_opened": false,
+  "records": [
+    {
+      "case_id": 18,
+      "axis": "eval_mala_step",
+      "task": "music_movie_clean",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 19,
+      "axis": "eval_mala_step",
+      "task": "music_movie_clean",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 20,
+      "axis": "eval_mala_step",
+      "task": "book_movie",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 21,
+      "axis": "eval_mala_step",
+      "task": "book_movie",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 22,
+      "axis": "eval_mala_step",
+      "task": "book_music",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 23,
+      "axis": "eval_mala_step",
+      "task": "book_music",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 24,
+      "axis": "eval_mala_step",
+      "task": "music_movie_clean",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 25,
+      "axis": "eval_mala_step",
+      "task": "music_movie_clean",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 26,
+      "axis": "eval_mala_step",
+      "task": "book_movie",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 27,
+      "axis": "eval_mala_step",
+      "task": "book_movie",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 28,
+      "axis": "eval_mala_step",
+      "task": "book_music",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 29,
+      "axis": "eval_mala_step",
+      "task": "book_music",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 42,
+      "axis": "eval_steps",
+      "task": "music_movie_clean",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 43,
+      "axis": "eval_steps",
+      "task": "music_movie_clean",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 44,
+      "axis": "eval_steps",
+      "task": "book_movie",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 45,
+      "axis": "eval_steps",
+      "task": "book_movie",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 46,
+      "axis": "eval_steps",
+      "task": "book_music",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 47,
+      "axis": "eval_steps",
+      "task": "book_music",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 48,
+      "axis": "eval_steps",
+      "task": "music_movie_clean",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": false,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 49,
+      "axis": "eval_steps",
+      "task": "music_movie_clean",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 50,
+      "axis": "eval_steps",
+      "task": "book_movie",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 51,
+      "axis": "eval_steps",
+      "task": "book_movie",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 52,
+      "axis": "eval_steps",
+      "task": "book_music",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": false,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 53,
+      "axis": "eval_steps",
+      "task": "book_music",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 66,
+      "axis": "eval_chains",
+      "task": "music_movie_clean",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 67,
+      "axis": "eval_chains",
+      "task": "music_movie_clean",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 68,
+      "axis": "eval_chains",
+      "task": "book_movie",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 69,
+      "axis": "eval_chains",
+      "task": "book_movie",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 70,
+      "axis": "eval_chains",
+      "task": "book_music",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 71,
+      "axis": "eval_chains",
+      "task": "book_music",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 72,
+      "axis": "eval_chains",
+      "task": "music_movie_clean",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 73,
+      "axis": "eval_chains",
+      "task": "music_movie_clean",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 74,
+      "axis": "eval_chains",
+      "task": "book_movie",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 75,
+      "axis": "eval_chains",
+      "task": "book_movie",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 76,
+      "axis": "eval_chains",
+      "task": "book_music",
+      "beta": 20,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    },
+    {
+      "case_id": 77,
+      "axis": "eval_chains",
+      "task": "book_music",
+      "beta": 80,
+      "training_history_exact": true,
+      "same_refit_epoch": true,
+      "same_refit_checkpoint_if_epoch_equal": true
+    }
+  ]
+}

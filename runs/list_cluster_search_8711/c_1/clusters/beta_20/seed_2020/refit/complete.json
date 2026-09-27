@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "cluster_count": 1,
+  "groups_sha256": "9191d3b6667122b1e3fe14db597355af1f8f2b19735061a4668f420a5374b103",
+  "parent_groups_sha256": "bed9c135fdb84890d36dc00813b5eac7b0522d6028428655e727072027922ed2",
+  "fit_users_sha256": "1922e2391aac3e1c111b6163defd05f69b948690bdec8bec2f3fe6bd36a6a2f1",
+  "query_sha256": "edcda1e75f85c363eb641fa98f3b417642004ef24b5e06d298b54bb0486989e6",
+  "diagnostics": {
+    "inner_train": {
+      "unknown_fraction": 0.0,
+      "mean_group_sizes": [
+        100.0
+      ],
+      "empty_group_fraction": [
+        0.0
+      ]
+    },
+    "validation": {
+      "unknown_fraction": 0.0,
+      "mean_group_sizes": [
+        100.0
+      ],
+      "empty_group_fraction": [
+        0.0
+      ]
+    },
+    "train": {
+      "unknown_fraction": 0.0,
+      "mean_group_sizes": [
+        100.0
+      ],
+      "empty_group_fraction": [
+        0.0
+      ]
+    },
+    "test": {
+      "unknown_fraction": 0.0008796425579447082,
+      "mean_group_sizes": [
+        99.91203574420553
+      ],
+      "empty_group_fraction": [
+        0.0
+      ]
+    }
+  },
+  "kmeans_iterations": 2,
+  "item_counts": [
+    9037
+  ],
+  "training_only_features": true,
+  "test_labels_opened": false
+}

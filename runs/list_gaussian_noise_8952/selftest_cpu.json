@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "noises": [
+    1.0,
+    0.25,
+    0.5,
+    2.0,
+    4.0
+  ],
+  "full_covariance_values_and_gradients": true,
+  "unequal_history_lengths": true,
+  "exact_q1_loss_gradients_initialization_inference": true
+}

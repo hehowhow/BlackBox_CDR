@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "exact_joint_gaussian": true,
+  "exact_gaussian_gradient": true,
+  "tilted_gaussian_sampler": true,
+  "common_initialization": true,
+  "zero_initial_mc_mean": true,
+  "no_list_fallback": true,
+  "gradients_all_active_modules": true,
+  "forbidden": [
+    "test.csv",
+    "source.csv",
+    "source.pt",
+    "scores.npy"
+  ]
+}

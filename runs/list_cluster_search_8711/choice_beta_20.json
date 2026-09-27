@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "beta": 20,
+  "cluster_count": 1,
+  "grid": [
+    {
+      "cluster_count": 1,
+      "mean_validation_rmse": 1.0717051942856244,
+      "std_validation_rmse": 0.0019461746607640136,
+      "per_seed": {
+        "2020": 1.0698427795310272,
+        "2021": 1.0715472945646107,
+        "2022": 1.0737255087612352
+      }
+    },
+    {
+      "cluster_count": 2,
+      "mean_validation_rmse": 1.0743176542619626,
+      "std_validation_rmse": 0.0005879221235628358,
+      "per_seed": {
+        "2020": 1.0744542564962885,
+        "2021": 1.0736734561960686,
+        "2022": 1.0748252500935302
+      }
+    },
+    {
+      "cluster_count": 3,
+      "mean_validation_rmse": 1.0737645410990666,
+      "std_validation_rmse": 0.002508961155777519,
+      "per_seed": {
+        "2020": 1.0719700162851116,
+        "2021": 1.0726921216534915,
+        "2022": 1.0766314853585968
+      }
+    },
+    {
+      "cluster_count": 4,
+      "mean_validation_rmse": 1.0734429230205196,
+      "std_validation_rmse": 0.0021329551529761003,
+      "per_seed": {
+        "2020": 1.0728408667529357,
+        "2021": 1.0716757045847256,
+        "2022": 1.0758121977238977
+      }
+    },
+    {
+      "cluster_count": 8,
+      "mean_validation_rmse": 1.0731864603778651,
+      "std_validation_rmse": 0.0025133437882008452,
+      "per_seed": {
+        "2020": 1.0703640408431552,
+        "2021": 1.0740125565021952,
+        "2022": 1.0751827837882448
+      }
+    },
+    {
+      "cluster_count": 16,
+      "mean_validation_rmse": 1.0737079074475149,
+      "std_validation_rmse": 0.0026659904506363243,
+      "per_seed": {
+        "2020": 1.071110818277151,
+        "2021": 1.0735750712434697,
+        "2022": 1.0764378328219237
+      }
+    }
+  ],
+  "frozen_validation_models": {
+    "c_1/cooccurrence/beta_20/seed_2020/residual_real": "414c277b89f68b767ba6859d2903c37bb77bec21616b145f15282e191c09abd7",
+    "c_1/cooccurrence/beta_20/seed_2021/residual_real": "855ac1ad156a14bf0fc27b2a36e970cfcf3ac1ef2b9775be97c39a64139ccf79",
+    "c_1/cooccurrence/beta_20/seed_2022/residual_real": "03dcfedb903ee5ba31ef4cde80a9c32db85ff93a142ae4c5e55a1940a723ec74",
+    "c_2/cooccurrence/beta_20/seed_2020/residual_real": "1a91a3477dc51ce99b0b57bd1794c3220868819140c8c62a0ff602e0c49109e6",
+    "c_2/cooccurrence/beta_20/seed_2021/residual_real": "2100cba12186b9d558990a5780d7dac93fb07cc6b8d18e150d2d804de333b0c3",
+    "c_2/cooccurrence/beta_20/seed_2022/residual_real": "492d643f3ac1917a300a9475758c73784c5e09621c83c94fa71b61cf7e891674",
+    "c_3/cooccurrence/beta_20/seed_2020/residual_real": "2a82c705bf760987cf341a56443b051756cdf8b419e54f726ea6f6e3fde3a69e",
+    "c_3/cooccurrence/beta_20/seed_2021/residual_real": "146d0d6d147029e8df3d9cbc2ce5573f68ab98acb53b16130f5af47c4226281f",
+    "c_3/cooccurrence/beta_20/seed_2022/residual_real": "959f7cce5c51d80186cd132606928e818b6a511f4df3c73a5fa96bbb1e485747",
+    "c_4/cooccurrence/beta_20/seed_2020/residual_real": "896fb448b64f2dcbd2d208e4cd22a7453c1a3edea06f41ae5252d4515f6de222",
+    "c_4/cooccurrence/beta_20/seed_2021/residual_real": "ed321638dd462fa6c6f614eb56e46091b961201ced02e2a71f3047d351c44205",
+    "c_4/cooccurrence/beta_20/seed_2022/residual_real": "afb2e05511f50da5604122f4f5198562709a5d0d1fcde1a245dc29b6a68899e4",
+    "c_8/cooccurrence/beta_20/seed_2020/residual_real": "cee7e80806dfdd764f1c7932597e12bbd26762b67c4852810fd15c6608f17c78",
+    "c_8/cooccurrence/beta_20/seed_2021/residual_real": "bdd00cb96e1c792d50a9697d15e036b7b57f77527d50a8a83b028a3c0205b937",
+    "c_8/cooccurrence/beta_20/seed_2022/residual_real": "7a3049c392533060040792a7b2500daf3f447f07b44dfb15fdad2bba12a7a2d5",
+    "c_16/cooccurrence/beta_20/seed_2020/residual_real": "e36edacf310cc1cb07270bb5eb49a21655452f5d1520745983253d6ccd588acc",
+    "c_16/cooccurrence/beta_20/seed_2021/residual_real": "522171a9a888e8e3598a3e066b1b38466f421a809eaced405be1136f7cc2d095",
+    "c_16/cooccurrence/beta_20/seed_2022/residual_real": "72a6fa0cc586209dbf9fab2fb6bc291ea59a8df75e4bea51a67142d92780d614"
+  },
+  "test_labels_opened": false
+}

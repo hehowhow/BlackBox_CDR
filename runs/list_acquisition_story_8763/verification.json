@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "final_models": 18,
+  "same_parent_splits": true,
+  "exact_top100_prefixes": true,
+  "all_variants_frozen_before_new_test_labels": true,
+  "selection_refit_and_hashes_checked": true,
+  "shared_initialization_and_minibatches": true,
+  "student_teacher_processes_separate": true,
+  "ordinary_mean_unchanged": true,
+  "variants_reported_without_test_selection": true
+}

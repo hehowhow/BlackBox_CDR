@@ -1,0 +1,7 @@
+{
+  "job": "8763",
+  "gpu": "2",
+  "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "k": 20,
+  "epoch_budget": 10
+}

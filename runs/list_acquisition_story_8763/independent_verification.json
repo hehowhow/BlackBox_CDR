@@ -1,0 +1,175 @@
+{
+  "status": "PASS",
+  "audited_models": 18,
+  "model_audits": [
+    {
+      "variant": "k_20",
+      "beta": 20,
+      "seed": 2020,
+      "mae": 0.8112408811837295,
+      "rmse": 1.057636165933101,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_20",
+      "beta": 20,
+      "seed": 2021,
+      "mae": 0.8156092219046446,
+      "rmse": 1.0601083313214057,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_20",
+      "beta": 20,
+      "seed": 2022,
+      "mae": 0.8154443948995066,
+      "rmse": 1.0579893008130545,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_50",
+      "beta": 20,
+      "seed": 2020,
+      "mae": 0.805941761589899,
+      "rmse": 1.0578367270958233,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_50",
+      "beta": 20,
+      "seed": 2021,
+      "mae": 0.8112682803611327,
+      "rmse": 1.056601307107575,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_50",
+      "beta": 20,
+      "seed": 2022,
+      "mae": 0.8142892567037833,
+      "rmse": 1.0572798811859943,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_200",
+      "beta": 20,
+      "seed": 2020,
+      "mae": 0.8028068702572746,
+      "rmse": 1.0548374403565532,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_200",
+      "beta": 20,
+      "seed": 2021,
+      "mae": 0.8110813719725998,
+      "rmse": 1.056408467906178,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_200",
+      "beta": 20,
+      "seed": 2022,
+      "mae": 0.8053257465229358,
+      "rmse": 1.0555095463777604,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_20",
+      "beta": 80,
+      "seed": 2020,
+      "mae": 0.8330400585539355,
+      "rmse": 1.0900339720478733,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_20",
+      "beta": 80,
+      "seed": 2021,
+      "mae": 0.8346110038766829,
+      "rmse": 1.0899909244662371,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_20",
+      "beta": 80,
+      "seed": 2022,
+      "mae": 0.8353642578661311,
+      "rmse": 1.091273871090505,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_50",
+      "beta": 80,
+      "seed": 2020,
+      "mae": 0.8320549803457646,
+      "rmse": 1.0890500258529123,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_50",
+      "beta": 80,
+      "seed": 2021,
+      "mae": 0.8334406284430077,
+      "rmse": 1.0889923315671626,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_50",
+      "beta": 80,
+      "seed": 2022,
+      "mae": 0.8344293492046461,
+      "rmse": 1.0906074327091262,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_200",
+      "beta": 80,
+      "seed": 2020,
+      "mae": 0.8321270042252878,
+      "rmse": 1.0886351368190894,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_200",
+      "beta": 80,
+      "seed": 2021,
+      "mae": 0.8342310837240989,
+      "rmse": 1.088722495684315,
+      "status": "PASS"
+    },
+    {
+      "variant": "k_200",
+      "beta": 80,
+      "seed": 2022,
+      "mae": 0.835506157656969,
+      "rmse": 1.0908114294001552,
+      "status": "PASS"
+    }
+  ],
+  "prefix_audits": [
+    {
+      "seed": 2020,
+      "status": "PASS",
+      "prefix_100_exact": true,
+      "all_short_prefixes_exact": true
+    },
+    {
+      "seed": 2021,
+      "status": "PASS",
+      "prefix_100_exact": true,
+      "all_short_prefixes_exact": true
+    },
+    {
+      "seed": 2022,
+      "status": "PASS",
+      "prefix_100_exact": true,
+      "all_short_prefixes_exact": true
+    }
+  ],
+  "independent_metrics_and_deltas": true,
+  "independent_item_mean": true,
+  "validation_selection_replayed": true,
+  "all_models_frozen_before_evaluation": true,
+  "model_and_prediction_hashes": true
+}

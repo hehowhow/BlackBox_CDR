@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "counts": [
+    {
+      "cluster_count": 1,
+      "extra_parameters": 0,
+      "status": "PASS"
+    },
+    {
+      "cluster_count": 2,
+      "extra_parameters": 2048,
+      "status": "PASS"
+    },
+    {
+      "cluster_count": 3,
+      "extra_parameters": 4096,
+      "status": "PASS"
+    },
+    {
+      "cluster_count": 4,
+      "extra_parameters": 6144,
+      "status": "PASS"
+    },
+    {
+      "cluster_count": 8,
+      "extra_parameters": 14336,
+      "status": "PASS"
+    },
+    {
+      "cluster_count": 16,
+      "extra_parameters": 30720,
+      "status": "PASS"
+    }
+  ],
+  "empty_unknown_fallback": true,
+  "C1_original_init": true,
+  "C3_old_pool_exact": true
+}

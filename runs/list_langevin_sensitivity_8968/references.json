@@ -1,0 +1,98 @@
+{
+  "music_movie_clean/20/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650/beta_20/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "7b0043aeea9b39ac3e9d3bfa6c512c0d63d75a178c9d721d4743231f910dfe98",
+      "test.npy": "9a650351f66a6912f8bf15f70881ca958c954e0c3bcf5e31b8b648280b060239",
+      "selection.json": "15d025d9789995efcd067be2e7d2d3ba935fcfddc4c340e197d2ba36104d016b"
+    }
+  },
+  "music_movie_clean/20/energy_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_8913/energy_20/beta_20/seed_2020",
+    "hashes": {
+      "complete.json": "45e6a3ba2e803b60eadefe943eef55bc842014ad6f7491aed5008d11138b2b70",
+      "test.npy": "207da171dc51d8b2d7f1c18103084abf2472db8191fe1fd3f2914114cd810982",
+      "selection.json": "b5492045d8eab0ae2841ee98659c28ff753ca718b62f780c3d6c1482523ce90b"
+    }
+  },
+  "music_movie_clean/80/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650/beta_80/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "266974996bf00df57c1809c004b2a2a814dada381f57893845f36de189921b2f",
+      "test.npy": "47417d6bd1a3ee2371144064209de8a04b3b8d3afff490b10493dd0f44363d37",
+      "selection.json": "7637cd154e4bdc9f4a291aedf67fa1bb4eda8554d00fb216442be77f732e2df8"
+    }
+  },
+  "music_movie_clean/80/energy_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_8913/energy_20/beta_80/seed_2020",
+    "hashes": {
+      "complete.json": "5b6446464fc9f9e6df677825e40aa5d940f78062b76229673f6f7d28821480f5",
+      "test.npy": "2af514b7ce9090229f021685c5f51015042e29e1d1334a3d94fb07e834a9a7f3",
+      "selection.json": "bebead3eb16f16e29795cc2a5f0f140e25bab06078f8058dbf09a8c37a94b840"
+    }
+  },
+  "book_movie/20/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/beta_20/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "972272b434839bf749b926b5901dc0d92dacbfac91490d46e4dc2d26177718cd",
+      "test.npy": "f15fc1b5f34e4a75ce21fda44d5b3120a1034eb271cfceb04e688057a3419309",
+      "selection.json": "1c1f9c5b8eb7094bebe7ced960f8f14deda7f65da615196275e7eff1ae8244cf"
+    }
+  },
+  "book_movie/20/energy_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/energy_20/beta_20/seed_2020",
+    "hashes": {
+      "complete.json": "c5a2166aafd3dfb89e7ff771ba27f07ebafebebd37c1774447436ed3d996164a",
+      "test.npy": "f6dba5b88da2f81eb4d7189ca76966d431e5b1ac75161845546c41c0c9249b93",
+      "selection.json": "fc3041f73087faa6a7de5ebd2fa7bc7a6fa625cef9481badb02229437cca8814"
+    }
+  },
+  "book_movie/80/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/beta_80/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "e90af776f27b7682866b219abd390da3bfa7a29461be4df8144b9ecf1926f833",
+      "test.npy": "4504fa6ce8983a3437ee50d0baa79e5fdbceb256a337f7ce8e3117af282a661d",
+      "selection.json": "dcd43a3600e88ca49b599b980a13a52f66e86178c894cb6fa4e79dbc9f4ff3d9"
+    }
+  },
+  "book_movie/80/energy_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_movie/energy_20/beta_80/seed_2020",
+    "hashes": {
+      "complete.json": "a12b1149de730480d332827b7093ed908cace85c807817542e910489629ce57d",
+      "test.npy": "456e7d5c4a22226392e9383e2e6444c2f2b76c58180acfc9eef465cdf4a86da0",
+      "selection.json": "c6320ec90711fff434622ab712c9acf765ab22834fa6bfceac7a95ae9f89dc12"
+    }
+  },
+  "book_music/20/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/beta_20/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "f85a756ea9faf8c1bef0a36ead3f61af50efa4de7b668e3b3b1f1a413d188b64",
+      "test.npy": "d1508cad853a18c9222e570f7045ea6014648d6b3d4e352a343fc385ceada5ab",
+      "selection.json": "1cce8bc1b8e672c4b09cd2195c478be8b2f1d86972dae223279314296a671baf"
+    }
+  },
+  "book_music/20/energy_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/energy_20/beta_20/seed_2020",
+    "hashes": {
+      "complete.json": "f03f25757e1fdbc308030819d3701bc4ab5c5a09e1af44d5d3070ab52f499739",
+      "test.npy": "6418278a4227d32458f5ca1c00ff1830d4455e07e8dbd2902a431687ff8f4ec0",
+      "selection.json": "b2be7ff2493768c22c672abec3237187b8a1d5f66b85a8cc4606daef58f271c9"
+    }
+  },
+  "book_music/80/LIST_v1": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/beta_80/seed_2020/residual_real",
+    "hashes": {
+      "complete.json": "95d85f384bd54c191553285cd6614a8e5cddd0ce5bf952376b6e1cc88197b74a",
+      "test.npy": "4278c234067479b3477f4c3d87c738530fad207f672adda040542eb4220e6b90",
+      "selection.json": "cb58ebfa74648e247c83042efebd3b312f8fbfae9e6c43604d841f47cb53f4d4"
+    }
+  },
+  "book_music/80/energy_previous": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923/book_music/energy_20/beta_80/seed_2020",
+    "hashes": {
+      "complete.json": "227693a6adf46e4f521af03efe16e4f9f0f1494506d1572d18c554b9ee76658d",
+      "test.npy": "38aac7fc3d1905b5371be117a8ee0895ffa29d9e7fe2f8f93d58b598ccc42b0e",
+      "selection.json": "474a940c6a444d0f5e657a0ae2a06a526cf1784443f65b7ce7b14b7dc6f5198e"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "book_movie/2020": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_movie/seed_2020/queries/DNN/topk_ids.npz",
+    "sha256": "0943015d0f11ccfaca989681b988738576df7948684d4b4371698862e581e87d"
+  },
+  "book_movie/2021": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_movie/seed_2021/queries/DNN/topk_ids.npz",
+    "sha256": "f318b591f01551fc5d2dfa42ebdecaf67c9373efa6c810f056c5583cdaa50135"
+  },
+  "book_movie/2022": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_movie/seed_2022/queries/DNN/topk_ids.npz",
+    "sha256": "bde53653396a7d257fd829cea26d93ac6610d86af75ed9dd54e96cc5c48b3957"
+  },
+  "book_music/2020": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_music/seed_2020/queries/DNN/topk_ids.npz",
+    "sha256": "40cf1ab1e1479602d7c8bda87f656ee05839bffcd7c60bfc3e3547a8cb6d358d"
+  },
+  "book_music/2021": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_music/seed_2021/queries/DNN/topk_ids.npz",
+    "sha256": "253755f6491630d065325b1dc10d4627b791e6f5963d6b3b9140507561e1028e"
+  },
+  "book_music/2022": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_music/seed_2022/queries/DNN/topk_ids.npz",
+    "sha256": "20f2d560107ae78aa4529cfe605267829456a4cc77ba784c01c7357560c24221"
+  }
+}

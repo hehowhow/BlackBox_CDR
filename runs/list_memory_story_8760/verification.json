@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "models": 12,
+  "all_frozen_before_test": true,
+  "shared_initialization_matches_original": true,
+  "same_splits_and_baselines": true,
+  "training_only_pair_dictionary": true,
+  "restored_predictions": true,
+  "additional_parameters": 262176
+}

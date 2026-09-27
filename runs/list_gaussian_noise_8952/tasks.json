@@ -1,0 +1,152 @@
+[
+  {
+    "task": "music_movie_clean",
+    "noise": 1.0,
+    "beta": 20
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 1.0,
+    "beta": 80
+  },
+  {
+    "task": "book_movie",
+    "noise": 1.0,
+    "beta": 20
+  },
+  {
+    "task": "book_movie",
+    "noise": 1.0,
+    "beta": 80
+  },
+  {
+    "task": "book_music",
+    "noise": 1.0,
+    "beta": 20
+  },
+  {
+    "task": "book_music",
+    "noise": 1.0,
+    "beta": 80
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 0.25,
+    "beta": 20
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 0.25,
+    "beta": 80
+  },
+  {
+    "task": "book_movie",
+    "noise": 0.25,
+    "beta": 20
+  },
+  {
+    "task": "book_movie",
+    "noise": 0.25,
+    "beta": 80
+  },
+  {
+    "task": "book_music",
+    "noise": 0.25,
+    "beta": 20
+  },
+  {
+    "task": "book_music",
+    "noise": 0.25,
+    "beta": 80
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 0.5,
+    "beta": 20
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 0.5,
+    "beta": 80
+  },
+  {
+    "task": "book_movie",
+    "noise": 0.5,
+    "beta": 20
+  },
+  {
+    "task": "book_movie",
+    "noise": 0.5,
+    "beta": 80
+  },
+  {
+    "task": "book_music",
+    "noise": 0.5,
+    "beta": 20
+  },
+  {
+    "task": "book_music",
+    "noise": 0.5,
+    "beta": 80
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 2.0,
+    "beta": 20
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 2.0,
+    "beta": 80
+  },
+  {
+    "task": "book_movie",
+    "noise": 2.0,
+    "beta": 20
+  },
+  {
+    "task": "book_movie",
+    "noise": 2.0,
+    "beta": 80
+  },
+  {
+    "task": "book_music",
+    "noise": 2.0,
+    "beta": 20
+  },
+  {
+    "task": "book_music",
+    "noise": 2.0,
+    "beta": 80
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 4.0,
+    "beta": 20
+  },
+  {
+    "task": "music_movie_clean",
+    "noise": 4.0,
+    "beta": 80
+  },
+  {
+    "task": "book_movie",
+    "noise": 4.0,
+    "beta": 20
+  },
+  {
+    "task": "book_movie",
+    "noise": 4.0,
+    "beta": 80
+  },
+  {
+    "task": "book_music",
+    "noise": 4.0,
+    "beta": 20
+  },
+  {
+    "task": "book_music",
+    "noise": 4.0,
+    "beta": 80
+  }
+]

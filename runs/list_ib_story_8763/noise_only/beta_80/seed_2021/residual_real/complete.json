@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "beta": 80,
+  "variant": "noise_only",
+  "seed": 2021,
+  "eta": 0.0,
+  "selection_sha256": "e43fff8ef757fc10c2e61ae3e87f6421754a8449fee653430fc3c05a162504b3",
+  "final_sha256": "6311514e6db166b03db899ffeb43042e2fc4c47fba42e7c7f7941e7eb7483ae2",
+  "test_sha256": "ae932acd2a837b6a1646ba869ed7134f4068feaeff88684224ef413dd8faf2ce",
+  "assignment_sha256": "a62c1ee518728615649e6a28c8ca9bbdf5b7dd53ea5c72104b9897ffb5557fae",
+  "initial_parameters_sha256": "8948679bd2d3b913be5e120df9cf2c0a239f7e06d6e554cdb0245236f7c250c8",
+  "shared_initial_parameters_sha256": "7829d61507a252086133691508c9dcef2f53f72be0cb80d1c8176ed40d85cfbc",
+  "trainable_parameters": 1896512,
+  "extra_parameters": 4160,
+  "full_outer_train_rows": 1254172,
+  "source_list_interactions": 113300,
+  "refit_epochs": 10,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "source_ids_sha256": "f47091f421d971f9e765f6c31e74da8a2e5f967f6237e3ef1ff87591ee6d35d2"
+}

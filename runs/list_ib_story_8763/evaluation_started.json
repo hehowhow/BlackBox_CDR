@@ -1,0 +1,20 @@
+{
+  "noise_only/beta_20/seed_2020/residual_real": "5d512c34e07c744e2041422c1090491dc6f076f9316676691d67dc0d722f4efe",
+  "noise_only/beta_20/seed_2021/residual_real": "5d918c54c1645a9a74b5b10cac1df0b5718a734ab0227e343fea6c0758c3cfc1",
+  "noise_only/beta_20/seed_2022/residual_real": "f511a3852b441d2bf57e30c1d03a908210d8d6a49f8abc5f328e2101c2eb1010",
+  "noise_only/beta_80/seed_2020/residual_real": "c72a328428200f1d824419319c38555ba806cb3435064d973c56f0403ebd0a42",
+  "noise_only/beta_80/seed_2021/residual_real": "d23173230441aa795d99ca19ee1401db61a16a70df666948c312ec737adc93fb",
+  "noise_only/beta_80/seed_2022/residual_real": "b61c39d5ac620b5ea730ca9faa0d46cdfb8873edaf53bfc74c2910f6fc02be8c",
+  "ib_1e4/beta_20/seed_2020/residual_real": "52be115c3d6e82f66a6514719556a6fb581a68afd380e993d044d328ff02b3ce",
+  "ib_1e4/beta_20/seed_2021/residual_real": "33e55dd4972a793163c3825e6d796f9034b57c852d0cb65cf63eaad0c8502dcc",
+  "ib_1e4/beta_20/seed_2022/residual_real": "fd5aceb3da03b6303f66c5a48b0e42a36e4c6b1550c17245da715a175f3ef639",
+  "ib_1e4/beta_80/seed_2020/residual_real": "50a3c2f2f8fab38a6ec5d30ba8051c24c7f03c2b29cde5e67b7afd7fa0e7479c",
+  "ib_1e4/beta_80/seed_2021/residual_real": "f6d39738b05cef4e64e67a219c06b5f2387c23ebbb678e62f2df95a13d4072a1",
+  "ib_1e4/beta_80/seed_2022/residual_real": "bb436b5732ae9e76d229d27cf7ba0df2b425b5af46ac1605e1015577d6226dc8",
+  "ib_1e3/beta_20/seed_2020/residual_real": "a2a94ba4ecccd3c56fd85eeb35657a38c8d68d4d2a301214bfb9bb8e1127f757",
+  "ib_1e3/beta_20/seed_2021/residual_real": "f720c3d72f410c3207d82dc2c4fe9de49e58010f29fd89139e0e6f2e726cc862",
+  "ib_1e3/beta_20/seed_2022/residual_real": "7f2b95dd86dd0d49cfd0f6d9435718b79f6ce34051279577316d908e116872d8",
+  "ib_1e3/beta_80/seed_2020/residual_real": "d0be11c38ceff3098613f0d97aebc9ecf474bf6a865a177d86407393bf35092a",
+  "ib_1e3/beta_80/seed_2021/residual_real": "c824612c53a54c8c1c0517cdec8264006815ea7197811e6f48915700e42034d3",
+  "ib_1e3/beta_80/seed_2022/residual_real": "e93104b2b444aa7de0ce5601227a92bd7b9507dcc0efc9748cc9c7ffbdcb5b10"
+}

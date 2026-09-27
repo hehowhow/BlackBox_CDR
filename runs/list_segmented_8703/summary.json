@@ -1,0 +1,1112 @@
+{
+  "status": "PASS",
+  "protocol": {
+    "task": "music_movie_clean",
+    "seeds": [
+      2020,
+      2021,
+      2022
+    ],
+    "betas": [
+      20,
+      80
+    ],
+    "backbones": [
+      "MF",
+      "DNN"
+    ],
+    "arms": [
+      "real",
+      "shuffled"
+    ],
+    "seed": 2020,
+    "dim": 32,
+    "hidden": 64,
+    "dropout": 0.1,
+    "k": 100,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "source_dim": 10,
+    "pretrain_epochs": 10,
+    "pretrain_lr": 0.01,
+    "pretrain_weight_decay": 0.0,
+    "source_batch": 512,
+    "target_batch": 256,
+    "source_policy": "DNN source checkpoint and ID lists reused exactly from 8638; fresh matched MF; source batch512 kept for DNN comparability (author task3 uses256)",
+    "inversion_iterations": 300,
+    "inversion_batch": 200,
+    "inversion_lr": 0.0001,
+    "inversion_weight_decay": 0.0001,
+    "inversion_target": 5,
+    "inversion_warmup": 10,
+    "bridge_epochs": 10,
+    "bridge_lr": 0.005,
+    "bridge_batch": 1024,
+    "bridge_weight_decay": 0.0,
+    "primary_k": 70000,
+    "emcdr_epochs": 10,
+    "emcdr_lr": 0.01,
+    "emcdr_batch": 128,
+    "emcdr_weight_decay": 0.0,
+    "residual": "fixed ordinary item mean + three-pool source-list interaction; zero final encoder layer; frozen item bias",
+    "lambdas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "residual_training": "fit unscaled correction at lambda1; validation chooses epoch0..10 and lambda; zero ties keep epoch0",
+    "selection": "inner cold-user validation RMSE; all methods freshly refit full outer train for selected epochs; lambda frozen before refit",
+    "shuffle": "fixed user derangement separately within original inner_train,validation,test groups; unchanged during full refit",
+    "baselines": "ordinary item mean only; all models fallback to ordinary mean on unseen target items",
+    "pf_protocol": "author MF and DNN forward, inversion300 and K70000; all target user rows including cold untrained rows vote; no LR/K search",
+    "evaluation": "every new final model frozen before test labels; historical test reused; comparisons exploratory; no ten-run paper reproduction",
+    "bootstrap_repeats": 2000,
+    "bootstrap_seed": 1000,
+    "code_hashes": {
+      "/home/hehao32/BlackBox_CDR/scripts/small_task_comparison.py": "2b301de63982694bfc96e860f355fb21b6ce6b3538305bedfc582f47eb564699",
+      "/home/hehao32/BlackBox_CDR/scripts/slurm_small_task_comparison.sh": "821efcc652d155f138d2338236076f87cc042d27f108449f2cbb40e8816152a5",
+      "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+      "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+      "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+      "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+      "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+      "/home/hehao32/BlackBox_CDR/scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f",
+      "/home/hehao32/BlackBox_CDR/scripts/list_segmented.py": "ebf7947ef0519fe2f601032a5caa9b7bb7df146dc3a8fecb7f536ebfe2ccfc54",
+      "/home/hehao32/BlackBox_CDR/scripts/slurm_list_segmented.sh": "891a77fbd4b0ca4116ba5f4b0432c806d143dcb72137e7d5dcb022a0a87eaf1e"
+    },
+    "variants": [
+      "rank_segments",
+      "random_groups"
+    ],
+    "parent": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650",
+    "parent_protocol_sha256": "41cd9c718db1adb0ce09581a1d819669ef714d682afae44fb866b4e1011ba298",
+    "rank_groups": {
+      "rank_segments": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        [
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99
+        ]
+      ],
+      "random_groups": [
+        [
+          70,
+          2,
+          64,
+          42,
+          84,
+          33,
+          16,
+          66,
+          21,
+          48
+        ],
+        [
+          86,
+          26,
+          36,
+          39,
+          40,
+          4,
+          27,
+          18,
+          43,
+          38,
+          12,
+          89,
+          52,
+          5,
+          13,
+          56,
+          91,
+          82,
+          37,
+          97
+        ],
+        [
+          1,
+          98,
+          74,
+          45,
+          88,
+          73,
+          68,
+          31,
+          76,
+          77,
+          72,
+          19,
+          59,
+          92,
+          0,
+          9,
+          46,
+          55,
+          85,
+          29,
+          44,
+          3,
+          65,
+          49,
+          10,
+          51,
+          41,
+          30,
+          57,
+          28,
+          34,
+          53,
+          32,
+          75,
+          60,
+          25,
+          62,
+          67,
+          93,
+          35,
+          94,
+          61,
+          50,
+          71,
+          15,
+          69,
+          54,
+          95,
+          83,
+          7,
+          6,
+          14,
+          78,
+          81,
+          20,
+          22,
+          23,
+          58,
+          99,
+          11,
+          90,
+          80,
+          87,
+          17,
+          63,
+          79,
+          47,
+          8,
+          96,
+          24
+        ]
+      ]
+    },
+    "partition_seed": 20260924,
+    "pooling": "three separately normalized rank-weighted pools concatenated; MLP96->64->32",
+    "fair_control": "random fixed groups of 10/20/70 rank positions; same parameters, initialization, data, batches, optimizer and selection; no grouping search",
+    "parameter_change": "4096 extra first-layer weights versus original global pool; all other initial tensors unchanged",
+    "weighting_scope": "only pooling and encoder input dimension change; no target-conditioned per-item interaction",
+    "frozen_design": "boundaries10/30/100 and one random partition fixed before new test evaluation; historical test already explored"
+  },
+  "results": {
+    "20": {
+      "rank_segments_real": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8109299183381876,
+            "std": 0.0033712068156418985
+          },
+          "rmse": {
+            "mean": 1.058031131674305,
+            "std": 0.002235419424902748
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8072046670778976,
+            "rmse": 1.0554864838372326,
+            "user_macro_mae": 0.8477639542340883,
+            "prediction_mean": 4.078005073039697,
+            "prediction_std": 0.600328600756745,
+            "outside_rating_scale_fraction": 0.000761348572247501
+          },
+          "2021": {
+            "mae": 0.8118143248315276,
+            "rmse": 1.059678522979046,
+            "user_macro_mae": 0.8484009852806046,
+            "prediction_mean": 4.0666998157932275,
+            "prediction_std": 0.61193370827654,
+            "outside_rating_scale_fraction": 0.0017914084052882376
+          },
+          "2022": {
+            "mae": 0.8137707631051375,
+            "rmse": 1.0589283882066367,
+            "user_macro_mae": 0.851218667527965,
+            "prediction_mean": 4.067971570072166,
+            "prediction_std": 0.5913581657933991,
+            "outside_rating_scale_fraction": 0.00048368026942782413
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.017681804916814148,
+            "delta_rmse": -0.01658681530976887,
+            "mae_95ci": [
+              -0.02237641747822853,
+              -0.013249765975780665
+            ],
+            "rmse_95ci": [
+              -0.021253082987681575,
+              -0.01210609034239431
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": -0.01189207810311621,
+            "delta_rmse": -0.009543838240981076,
+            "mae_95ci": [
+              -0.017380076975164076,
+              -0.0054947361530845755
+            ],
+            "rmse_95ci": [
+              -0.016091934769022875,
+              -0.0028258942013919992
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.002433392561580594,
+            "delta_rmse": 0.001905207959702541,
+            "mae_95ci": [
+              0.0010890915181924145,
+              0.0037539946406949815
+            ],
+            "rmse_95ci": [
+              0.0005025039645483972,
+              0.0033208507025089245
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": -7.561843225500908e-05,
+            "delta_rmse": -0.001941940949600059,
+            "mae_95ci": [
+              -0.0019976444454032033,
+              0.0021403882681681873
+            ],
+            "rmse_95ci": [
+              -0.0037262363214816572,
+              5.5017836556551555e-05
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "shuffled": {
+            "delta_mae": -0.01657587459032306,
+            "delta_rmse": -0.01576123372575015,
+            "mae_95ci": [
+              -0.02121761009035914,
+              -0.012167555238997206
+            ],
+            "rmse_95ci": [
+              -0.02035543600602817,
+              -0.01141519135000054
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      },
+      "rank_segments_shuffled": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8275057929285107,
+            "std": 0.00010037671922582121
+          },
+          "rmse": {
+            "mean": 1.0737923654000554,
+            "std": 0.00031484394069579034
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8274044885712426,
+            "rmse": 1.073477360105217,
+            "user_macro_mae": 0.8653704510663924,
+            "prediction_mean": 4.061015880631579,
+            "prediction_std": 0.5785327385988085,
+            "outside_rating_scale_fraction": 0.0
+          },
+          "2021": {
+            "mae": 0.8276052155506676,
+            "rmse": 1.0737926883567992,
+            "user_macro_mae": 0.8651531398840492,
+            "prediction_mean": 4.061889141211962,
+            "prediction_std": 0.5747983898695996,
+            "outside_rating_scale_fraction": 0.0
+          },
+          "2022": {
+            "mae": 0.8275076746636217,
+            "rmse": 1.0741070477381496,
+            "user_macro_mae": 0.8653480742015074,
+            "prediction_mean": 4.061762528934657,
+            "prediction_std": 0.5753549543486339,
+            "outside_rating_scale_fraction": 0.0
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.0011059303264910891,
+            "delta_rmse": -0.0008255815840187234,
+            "mae_95ci": [
+              -0.0016482193232598011,
+              -0.0005786894355556119
+            ],
+            "rmse_95ci": [
+              -0.0014772792471872335,
+              -0.00020096943710242186
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": 0.004683796487206848,
+            "delta_rmse": 0.006217395484769073,
+            "mae_95ci": [
+              -0.003904043738337593,
+              0.014821659371207434
+            ],
+            "rmse_95ci": [
+              -0.0030094683065928904,
+              0.016444376942361602
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.019009267151903653,
+            "delta_rmse": 0.01766644168545269,
+            "mae_95ci": [
+              0.014417754319685259,
+              0.024157756980297387
+            ],
+            "rmse_95ci": [
+              0.012945519879201868,
+              0.022642896145858224
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": 0.01650025615806805,
+            "delta_rmse": 0.01381929277615009,
+            "mae_95ci": [
+              0.012382585331583875,
+              0.021249914748431624
+            ],
+            "rmse_95ci": [
+              0.00970990518137682,
+              0.01850393669949792
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      },
+      "random_groups_real": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8110055367704428,
+            "std": 0.0024730934975138695
+          },
+          "rmse": {
+            "mean": 1.0599730726239052,
+            "std": 0.0006677073656663287
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8085357070884246,
+            "rmse": 1.0592357552960316,
+            "user_macro_mae": 0.8450955530134473,
+            "prediction_mean": 4.076693303026894,
+            "prediction_std": 0.616962820627713,
+            "outside_rating_scale_fraction": 0.0030812224570957686
+          },
+          "2021": {
+            "mae": 0.8109990220106239,
+            "rmse": 1.0605369375753384,
+            "user_macro_mae": 0.8487518729539656,
+            "prediction_mean": 4.074925312664289,
+            "prediction_std": 0.6129953777797664,
+            "outside_rating_scale_fraction": 0.002140733044319444
+          },
+          "2022": {
+            "mae": 0.8134818812122798,
+            "rmse": 1.0601465250003455,
+            "user_macro_mae": 0.8517345840575637,
+            "prediction_mean": 4.074748796067262,
+            "prediction_std": 0.5893706225038047,
+            "outside_rating_scale_fraction": 0.00048368026942782413
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.01760618648455914,
+            "delta_rmse": -0.014644874360168814,
+            "mae_95ci": [
+              -0.0225121849669747,
+              -0.013379496515087111
+            ],
+            "rmse_95ci": [
+              -0.019293621227422196,
+              -0.010403750505423574
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": -0.011816459670861201,
+            "delta_rmse": -0.007601897291381017,
+            "mae_95ci": [
+              -0.017435239215751235,
+              -0.005669648854002263
+            ],
+            "rmse_95ci": [
+              -0.01456658727327321,
+              -0.0009783615647409203
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.002509010993835603,
+            "delta_rmse": 0.0038471489093026,
+            "mae_95ci": [
+              0.000653831599463255,
+              0.004213067585504448
+            ],
+            "rmse_95ci": [
+              0.001991342477448103,
+              0.005606277005206389
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": 0.0,
+            "delta_rmse": 0.0,
+            "mae_95ci": [
+              0.0,
+              0.0
+            ],
+            "rmse_95ci": [
+              0.0,
+              0.0
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "shuffled": {
+            "delta_mae": -0.01692703471357071,
+            "delta_rmse": -0.014401283289311598,
+            "mae_95ci": [
+              -0.021710957367569766,
+              -0.012650590555557882
+            ],
+            "rmse_95ci": [
+              -0.019126717745431867,
+              -0.010219276103153211
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      },
+      "random_groups_shuffled": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8279325714840134,
+            "std": 0.0010002211094183723
+          },
+          "rmse": {
+            "mean": 1.0743743559132166,
+            "std": 0.000988470990404764
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8281250591779983,
+            "rmse": 1.0745198827057536,
+            "user_macro_mae": 0.8656996242062437,
+            "prediction_mean": 4.063617639304354,
+            "prediction_std": 0.5720582694971782,
+            "outside_rating_scale_fraction": 0.0026333703557737094
+          },
+          "2021": {
+            "mae": 0.8268500955986676,
+            "rmse": 1.0733211888432699,
+            "user_macro_mae": 0.8649338366792642,
+            "prediction_mean": 4.0622966950042665,
+            "prediction_std": 0.5761926871479939,
+            "outside_rating_scale_fraction": 8.957042026441188e-06
+          },
+          "2022": {
+            "mae": 0.8288225596753741,
+            "rmse": 1.0752819961906268,
+            "user_macro_mae": 0.8668481203955274,
+            "prediction_mean": 4.0596944209385,
+            "prediction_std": 0.5778920716056545,
+            "outside_rating_scale_fraction": 0.0
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.0006791517709884287,
+            "delta_rmse": -0.00024359107085721496,
+            "mae_95ci": [
+              -0.0011810860248195841,
+              -0.00021619338198010694
+            ],
+            "rmse_95ci": [
+              -0.0008054126768235027,
+              0.00030845316580051127
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": 0.005110575042709509,
+            "delta_rmse": 0.006799385997930581,
+            "mae_95ci": [
+              -0.003584540500956419,
+              0.01531276508764791
+            ],
+            "rmse_95ci": [
+              -0.002467803247964125,
+              0.016969674461047475
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.019436045707406313,
+            "delta_rmse": 0.0182484321986142,
+            "mae_95ci": [
+              0.01482146592468819,
+              0.024623729823916488
+            ],
+            "rmse_95ci": [
+              0.013472653924529936,
+              0.023380766617500635
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": 0.01692703471357071,
+            "delta_rmse": 0.014401283289311598,
+            "mae_95ci": [
+              0.012650590555557882,
+              0.02171095736756976
+            ],
+            "rmse_95ci": [
+              0.01021927610315321,
+              0.019126717745431867
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      }
+    },
+    "80": {
+      "rank_segments_real": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8326360164169871,
+            "std": 0.0009065345207300461
+          },
+          "rmse": {
+            "mean": 1.0897789621984748,
+            "std": 0.000437434995946047
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8316963052435847,
+            "rmse": 1.0893051654421058,
+            "user_macro_mae": 0.8667662306530949,
+            "prediction_mean": 4.092731432552495,
+            "prediction_std": 0.587418174031931,
+            "outside_rating_scale_fraction": 0.00024584931917782574
+          },
+          "2021": {
+            "mae": 0.8335052615631566,
+            "rmse": 1.089864246425213,
+            "user_macro_mae": 0.8693056144452048,
+            "prediction_mean": 4.085065651687562,
+            "prediction_std": 0.5911717113085032,
+            "outside_rating_scale_fraction": 0.0003631352329140362
+          },
+          "2022": {
+            "mae": 0.8327064824442199,
+            "rmse": 1.090167474728106,
+            "user_macro_mae": 0.8684937727085993,
+            "prediction_mean": 4.092047101413706,
+            "prediction_std": 0.5877202107218462,
+            "outside_rating_scale_fraction": 0.00024584931917782574
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.008108018174644238,
+            "delta_rmse": -0.007862517725876947,
+            "mae_95ci": [
+              -0.00906802769736268,
+              -0.007251051900101871
+            ],
+            "rmse_95ci": [
+              -0.009083751916229208,
+              -0.006724988039785647
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": -0.03796896266740568,
+            "delta_rmse": -0.03497380138631093,
+            "mae_95ci": [
+              -0.041733514151463556,
+              -0.0342786314258191
+            ],
+            "rmse_95ci": [
+              -0.0398020316659153,
+              -0.03032481910433211
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": -0.001081279314220418,
+            "delta_rmse": 0.00038327919202951755,
+            "mae_95ci": [
+              -0.0014699784451381816,
+              -0.0006937493152690646
+            ],
+            "rmse_95ci": [
+              -5.485790449955008e-05,
+              0.0008233351592671595
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": -0.0014593095992325722,
+            "delta_rmse": -0.0014645939704821902,
+            "mae_95ci": [
+              -0.0019819238403033968,
+              -0.0009035132415980362
+            ],
+            "rmse_95ci": [
+              -0.0020214306693010792,
+              -0.0008811253393586648
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "shuffled": {
+            "delta_mae": -0.007752716382280589,
+            "delta_rmse": -0.007725128346165011,
+            "mae_95ci": [
+              -0.008705284922550563,
+              -0.0069033420578762045
+            ],
+            "rmse_95ci": [
+              -0.008952830131625915,
+              -0.006593563678025802
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      },
+      "rank_segments_shuffled": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8403887327992671,
+            "std": 0.0002441460444978223
+          },
+          "rmse": {
+            "mean": 1.0975040905446398,
+            "std": 7.603051188714488e-05
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8405195640930617,
+            "rmse": 1.097548220970671,
+            "user_macro_mae": 0.8748987828507455,
+            "prediction_mean": 4.085399854033274,
+            "prediction_std": 0.5769027805966742,
+            "outside_rating_scale_fraction": 0.009709920358353576
+          },
+          "2021": {
+            "mae": 0.8405395801183786,
+            "rmse": 1.0975477521744024,
+            "user_macro_mae": 0.8749314002092166,
+            "prediction_mean": 4.085328671260945,
+            "prediction_std": 0.576847888790365,
+            "outside_rating_scale_fraction": 0.009430238564059536
+          },
+          "2022": {
+            "mae": 0.8401070541863609,
+            "rmse": 1.0974162984888465,
+            "user_macro_mae": 0.8744504019440605,
+            "prediction_mean": 4.086176313890918,
+            "prediction_std": 0.5772513165239213,
+            "outside_rating_scale_fraction": 0.009380617600555755
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.0003553017923636492,
+            "delta_rmse": -0.00013738937971193485,
+            "mae_95ci": [
+              -0.0003757176728310728,
+              -0.0003360583086261841
+            ],
+            "rmse_95ci": [
+              -0.00015649782870815385,
+              -0.00011793462283642608
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": -0.030216246285125092,
+            "delta_rmse": -0.027248673040145926,
+            "mae_95ci": [
+              -0.03404814521010961,
+              -0.026514147187699694
+            ],
+            "rmse_95ci": [
+              -0.031954128096883076,
+              -0.02252675213254698
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.006671437068060171,
+            "delta_rmse": 0.008108407538194529,
+            "mae_95ci": [
+              0.0058503077123827855,
+              0.007533137082690674
+            ],
+            "rmse_95ci": [
+              0.007024229296454169,
+              0.009235389810058794
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": 0.006293406783048017,
+            "delta_rmse": 0.006260534375682821,
+            "mae_95ci": [
+              0.005479676337141758,
+              0.007225684899782123
+            ],
+            "rmse_95ci": [
+              0.005234777979457601,
+              0.007402027535959133
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      },
+      "random_groups_real": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8340953260162198,
+            "std": 0.001767512117837217
+          },
+          "rmse": {
+            "mean": 1.091243556168957,
+            "std": 0.0016607547029353804
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8328103263942654,
+            "rmse": 1.0906825150194799,
+            "user_macro_mae": 0.8681062995714052,
+            "prediction_mean": 4.092170034735925,
+            "prediction_std": 0.5876539233143948,
+            "outside_rating_scale_fraction": 0.00025487131254214965
+          },
+          "2021": {
+            "mae": 0.833364624798438,
+            "rmse": 1.0899359864424953,
+            "user_macro_mae": 0.8702892350639799,
+            "prediction_mean": 4.087197235851098,
+            "prediction_std": 0.5895807304309744,
+            "outside_rating_scale_fraction": 0.0002571268108832306
+          },
+          "2022": {
+            "mae": 0.8361110268559557,
+            "rmse": 1.0931121670448962,
+            "user_macro_mae": 0.8720388883414187,
+            "prediction_mean": 4.087191028981767,
+            "prediction_std": 0.5854966538165493,
+            "outside_rating_scale_fraction": 7.894244193783396e-05
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.006648708575411666,
+            "delta_rmse": -0.006397923755394756,
+            "mae_95ci": [
+              -0.0075932169513582585,
+              -0.005826974307061865
+            ],
+            "rmse_95ci": [
+              -0.00754480496218621,
+              -0.0053630138330801455
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": -0.03650965306817311,
+            "delta_rmse": -0.033509207415828746,
+            "mae_95ci": [
+              -0.040269014320471974,
+              -0.03297334658670182
+            ],
+            "rmse_95ci": [
+              -0.03821864726094868,
+              -0.028944798323566615
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.0003780302850121542,
+            "delta_rmse": 0.0018478731625117077,
+            "mae_95ci": [
+              -0.00023576770883826,
+              0.000904472715185267
+            ],
+            "rmse_95ci": [
+              0.0012833096763118688,
+              0.0023733022966870927
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": 0.0,
+            "delta_rmse": 0.0,
+            "mae_95ci": [
+              0.0,
+              0.0
+            ],
+            "rmse_95ci": [
+              0.0,
+              0.0
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "shuffled": {
+            "delta_mae": -0.0063759829044938154,
+            "delta_rmse": -0.006295676734370333,
+            "mae_95ci": [
+              -0.007311024441185618,
+              -0.0055603397634095076
+            ],
+            "rmse_95ci": [
+              -0.007438008687750708,
+              -0.005267850304943998
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      },
+      "random_groups_shuffled": {
+        "aggregate": {
+          "mae": {
+            "mean": 0.8404713089207126,
+            "std": 0.00031449120710282656
+          },
+          "rmse": {
+            "mean": 1.0975392329033276,
+            "std": 0.00010622180706887027
+          }
+        },
+        "per_seed": {
+          "2020": {
+            "mae": 0.8405419529729248,
+            "rmse": 1.0975620573346094,
+            "user_macro_mae": 0.8749219761674228,
+            "prediction_mean": 4.085360017401415,
+            "prediction_std": 0.5768907340310881,
+            "outside_rating_scale_fraction": 0.009714431355035738
+          },
+          "2021": {
+            "mae": 0.8407444699294081,
+            "rmse": 1.0976321871396693,
+            "user_macro_mae": 0.8751541498175957,
+            "prediction_mean": 4.084935731429052,
+            "prediction_std": 0.5766748814912296,
+            "outside_rating_scale_fraction": 0.010914356472490814
+          },
+          "2022": {
+            "mae": 0.8401275038598053,
+            "rmse": 1.0974234542357038,
+            "user_macro_mae": 0.8744722169861296,
+            "prediction_mean": 4.086159898018768,
+            "prediction_std": 0.5772307362466775,
+            "outside_rating_scale_fraction": 0.00948888152092764
+          }
+        },
+        "comparisons": {
+          "item_mean": {
+            "delta_mae": -0.0002727256709178505,
+            "delta_rmse": -0.0001022470210244227,
+            "mae_95ci": [
+              -0.00028845738747999285,
+              -0.0002579147444529954
+            ],
+            "rmse_95ci": [
+              -0.00011723411527246503,
+              -8.68993721739005e-05
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "LIST_original": {
+            "delta_mae": -0.030133670163679294,
+            "delta_rmse": -0.027213530681458414,
+            "mae_95ci": [
+              -0.03396735252593744,
+              -0.02643152734529353
+            ],
+            "rmse_95ci": [
+              -0.03192088779168734,
+              -0.02249310213275375
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "rank_residual": {
+            "delta_mae": 0.00675401318950597,
+            "delta_rmse": 0.00814354989688204,
+            "mae_95ci": [
+              0.005933464131603176,
+              0.007614521709028461
+            ],
+            "rmse_95ci": [
+              0.007055046437937436,
+              0.00926792429703644
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          },
+          "random_groups_real": {
+            "delta_mae": 0.0063759829044938154,
+            "delta_rmse": 0.006295676734370333,
+            "mae_95ci": [
+              0.0055603397634095076,
+              0.007311024441185618
+            ],
+            "rmse_95ci": [
+              0.005267850304943998,
+              0.0074380086877507065
+            ],
+            "interpretation": "negative favors this new model; mean of three individual model metrics; user-cluster CI conditional on fitted models and split; no multiplicity correction"
+          }
+        }
+      }
+    }
+  },
+  "parent_summary_sha256": "b553ba41c800eee553acf91d63190b879e9823333c25ae93ce9e79a733f27365"
+}

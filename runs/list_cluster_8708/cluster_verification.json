@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "cluster_fits": 12,
+  "checks": [
+    {
+      "beta": 20,
+      "seed": 2020,
+      "phase": "select",
+      "fit_users": 11458,
+      "items": 8684,
+      "status": "PASS"
+    },
+    {
+      "beta": 20,
+      "seed": 2020,
+      "phase": "refit",
+      "fit_users": 14323,
+      "items": 9037,
+      "status": "PASS"
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "phase": "select",
+      "fit_users": 11458,
+      "items": 8301,
+      "status": "PASS"
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "phase": "refit",
+      "fit_users": 14323,
+      "items": 8665,
+      "status": "PASS"
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "phase": "select",
+      "fit_users": 11458,
+      "items": 9992,
+      "status": "PASS"
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "phase": "refit",
+      "fit_users": 14323,
+      "items": 10286,
+      "status": "PASS"
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "phase": "select",
+      "fit_users": 2865,
+      "items": 6784,
+      "status": "PASS"
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "phase": "refit",
+      "fit_users": 3581,
+      "items": 7082,
+      "status": "PASS"
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "phase": "select",
+      "fit_users": 2865,
+      "items": 6425,
+      "status": "PASS"
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "phase": "refit",
+      "fit_users": 3581,
+      "items": 6741,
+      "status": "PASS"
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "phase": "select",
+      "fit_users": 2865,
+      "items": 7589,
+      "status": "PASS"
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "phase": "refit",
+      "fit_users": 3581,
+      "items": 7996,
+      "status": "PASS"
+    }
+  ],
+  "verifier_sha256": "ddb287ce17e2c9de187e3f9e1c8fb8b0e37b720f318a6d5c89b3819824168e21",
+  "train_only_cluster_fits": true,
+  "full_refit_recomputes_clusters": true,
+  "exact_per_user_random_group_sizes": true,
+  "reconstructed_features_match": true,
+  "nearest_centers_match": true,
+  "unknown_items_excluded": true,
+  "initialization_matches_8703": true,
+  "model_audit_sha256": "1b3754804e33246cb308ab4e41c0404f6ddad2835b453ad7378326a5dbc12db8"
+}

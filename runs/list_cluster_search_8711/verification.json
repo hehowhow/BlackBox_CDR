@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "validation_candidates": 36,
+  "final_models": 12,
+  "choice_uses_validation_only": true,
+  "chosen_controls_same_initialization": true,
+  "cluster_count_parameter_formula_verified": true,
+  "train_only_frozen_SVD_features": true,
+  "refit_same_initialization": true,
+  "all_models_frozen_before_test": true,
+  "refit_model_restore_matches": true
+}

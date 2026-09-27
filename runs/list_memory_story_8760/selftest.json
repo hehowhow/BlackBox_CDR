@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "training_only_dictionary": true,
+  "unordered_pair_invariance": true,
+  "manual_pool_match": true,
+  "memory_receives_gradient": true,
+  "padding_zero_gradient": true,
+  "shared_initialization_matches_parent": true,
+  "zero_initial_correction": true,
+  "no_list_fallback": true
+}

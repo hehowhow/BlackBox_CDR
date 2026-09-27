@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "cluster_count": 2,
+  "groups_sha256": "e4444cba9666d305dfff4afe2440fc07bf09d3b906c9b542464ce5b403c79796",
+  "parent_groups_sha256": "c1228ea2f45ab3f78189b7c3eb8cb19ba4ac0951887eb83482a0153e5905ad2c",
+  "fit_users_sha256": "1922e2391aac3e1c111b6163defd05f69b948690bdec8bec2f3fe6bd36a6a2f1",
+  "query_sha256": "9484df22890955497f8bff81301233cdc9dcc73e57052b9014fd9ce574b80ed3",
+  "diagnostics": {
+    "inner_train": {
+      "unknown_fraction": 0.0,
+      "mean_group_sizes": [
+        50.736428696107524,
+        49.263571303892476
+      ],
+      "empty_group_fraction": [
+        0.005498341769942398,
+        0.01536044684936289
+      ]
+    },
+    "validation": {
+      "unknown_fraction": 0.0,
+      "mean_group_sizes": [
+        50.215706806282725,
+        49.784293193717275
+      ],
+      "empty_group_fraction": [
+        0.005235602094240838,
+        0.012914485165794066
+      ]
+    },
+    "train": {
+      "unknown_fraction": 0.0,
+      "mean_group_sizes": [
+        50.63226977588494,
+        49.36773022411506
+      ],
+      "empty_group_fraction": [
+        0.005445786497242198,
+        0.01487118620400754
+      ]
+    },
+    "test": {
+      "unknown_fraction": 0.0009773806199385646,
+      "mean_group_sizes": [
+        50.04328399888299,
+        49.85897793912315
+      ],
+      "empty_group_fraction": [
+        0.003909522479754258,
+        0.012566322256352975
+      ]
+    }
+  },
+  "kmeans_iterations": 45,
+  "item_counts": [
+    6149,
+    4137
+  ],
+  "training_only_features": true,
+  "test_labels_opened": false
+}

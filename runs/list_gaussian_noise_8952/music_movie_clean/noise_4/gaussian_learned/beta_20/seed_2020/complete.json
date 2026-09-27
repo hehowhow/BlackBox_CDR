@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "variant": "gaussian_learned",
+  "beta": 20,
+  "seed": 2020,
+  "initial_parameters_sha256": "7d7ce733f74a9924ee7551bfc82a84d91dc39f978ace41e2bc74e07e93ea4ff7",
+  "common_initial_parameters_sha256": "a60d9ae7af3860b55ed72b25256b290ec1ec1caf9e77e9cc8e5a6d9ca38f3d6e",
+  "trainable_parameters": 1906176,
+  "full_outer_train_rows": 1585889,
+  "overlap_train_rows": 445017,
+  "grouped_users": 14323,
+  "refit_epochs": 7,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "source_ids_sha256": "edcda1e75f85c363eb641fa98f3b417642004ef24b5e06d298b54bb0486989e6",
+  "final_sha256": "99179eba2ab872c03ff034e00c8fd858e878e0f04533fa2504164f33cf5fa5c8",
+  "selection_sha256": "9c19fe84d664fdfc273cfc0b27739a7031bd590f322ae1538fbaebed4f331bfc",
+  "test_sha256": "4acc79d7722ce6deba160127e1b7696d38132826f8793515eee776d096b72b65",
+  "finished": 1790419769.7394423
+}

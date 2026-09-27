@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "manual_pooling_match": true,
+  "empty_groups_zero": true,
+  "unknown_source_fallback": true,
+  "matched_random_counts": true,
+  "zero_initial_correction": true,
+  "all_groups_receive_gradient": true,
+  "identical_variant_initialization": true,
+  "shared_initialization_matches_parent": true,
+  "added_parameters": 4096
+}

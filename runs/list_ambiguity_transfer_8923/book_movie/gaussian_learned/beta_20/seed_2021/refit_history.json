@@ -1,0 +1,22 @@
+[
+  {
+    "epoch": 1,
+    "objective_surrogate": 1.0745287765844687,
+    "seconds": 1.800721935927868
+  },
+  {
+    "epoch": 2,
+    "objective_surrogate": 0.9035153565563726,
+    "seconds": 1.2267103791236877
+  },
+  {
+    "epoch": 3,
+    "objective_surrogate": 0.7738730782344643,
+    "seconds": 1.1876742392778397
+  },
+  {
+    "epoch": 4,
+    "objective_surrogate": 0.710703739686961,
+    "seconds": 1.1846793368458748
+  }
+]

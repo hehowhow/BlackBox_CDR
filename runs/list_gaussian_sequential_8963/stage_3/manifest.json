@@ -1,0 +1,60 @@
+{
+  "round": 3,
+  "parameter": "std_upper",
+  "grid": [
+    2.0,
+    0.5,
+    1.0,
+    3.0
+  ],
+  "prerequisite_frozen_sha256": "987c9044f3d4c92693a4a6ec789f5204c07814f1923e48a5c6500ed809dcfc52",
+  "cases_sha256": "c227b99dca6057eefd39af724b48f431671ee8b2d9bb79e93c50a3df6f7fe4d3",
+  "new_fits": 14,
+  "evaluated_configurations": 20,
+  "skipped": [
+    {
+      "task": "music_movie_clean",
+      "beta": 80,
+      "value": 0.5,
+      "parameters": {
+        "latent_std": 1.0,
+        "std_lower": 0.05,
+        "std_upper": 0.5
+      },
+      "reason": "upper bound would clip the fixed initial standard deviation"
+    },
+    {
+      "task": "book_movie",
+      "beta": 80,
+      "value": 0.5,
+      "parameters": {
+        "latent_std": 1.0,
+        "std_lower": 0.05,
+        "std_upper": 0.5
+      },
+      "reason": "upper bound would clip the fixed initial standard deviation"
+    },
+    {
+      "task": "book_music",
+      "beta": 20,
+      "value": 0.5,
+      "parameters": {
+        "latent_std": 1.0,
+        "std_lower": 0.05,
+        "std_upper": 0.5
+      },
+      "reason": "upper bound would clip the fixed initial standard deviation"
+    },
+    {
+      "task": "book_music",
+      "beta": 80,
+      "value": 0.5,
+      "parameters": {
+        "latent_std": 1.0,
+        "std_lower": 0.05,
+        "std_upper": 0.5
+      },
+      "reason": "upper bound would clip the fixed initial standard deviation"
+    }
+  ]
+}

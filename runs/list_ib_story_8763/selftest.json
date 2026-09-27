@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "zero_correction_during_sampling": true,
+  "exact_common_initialization": true,
+  "extra_parameters": 4160,
+  "gaussian_kl_formula": true,
+  "no_list_zero_kl_and_correction": true,
+  "inference_equivalent_original_mlp": true,
+  "gradient_to_variance_from_mse_and_kl": true,
+  "guard_blocks": [
+    "test.csv",
+    "scores.npy",
+    "pretrained.pt",
+    "source.csv"
+  ]
+}

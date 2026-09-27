@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "model_count": 24,
+  "verifier_sha256": "5ff0ad468c084423751c8613017aa08badbf62ceca7bc86716857eb3a02bcf9c",
+  "checks": [
+    "frozen code and data hashes",
+    "training-only ordinary means",
+    "disjoint train/validation/test users",
+    "all 24 final models predate test evaluation",
+    "independent metric recomputation",
+    "validation argmin over declared epochs and lambdas",
+    "full outer refit for selected epochs",
+    "same initial parameters across new variants and arms",
+    "4096 extra parameters versus parent",
+    "same within-group user derangements as parent",
+    "unseen-item fallback"
+  ],
+  "selections": [
+    {
+      "model": "rank_segments/beta_20/seed_2020/residual_real",
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "rank_segments/beta_20/seed_2020/residual_shuffled",
+      "epoch": 5,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "rank_segments/beta_20/seed_2021/residual_real",
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "rank_segments/beta_20/seed_2021/residual_shuffled",
+      "epoch": 4,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "rank_segments/beta_20/seed_2022/residual_real",
+      "epoch": 3,
+      "lambda_value": 0.5,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "rank_segments/beta_20/seed_2022/residual_shuffled",
+      "epoch": 4,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "random_groups/beta_20/seed_2020/residual_real",
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "random_groups/beta_20/seed_2020/residual_shuffled",
+      "epoch": 2,
+      "lambda_value": 0.75,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "random_groups/beta_20/seed_2021/residual_real",
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "random_groups/beta_20/seed_2021/residual_shuffled",
+      "epoch": 4,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "random_groups/beta_20/seed_2022/residual_real",
+      "epoch": 3,
+      "lambda_value": 0.5,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "random_groups/beta_20/seed_2022/residual_shuffled",
+      "epoch": 6,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "rank_segments/beta_80/seed_2020/residual_real",
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "rank_segments/beta_80/seed_2020/residual_shuffled",
+      "epoch": 2,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "rank_segments/beta_80/seed_2021/residual_real",
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "rank_segments/beta_80/seed_2021/residual_shuffled",
+      "epoch": 2,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "rank_segments/beta_80/seed_2022/residual_real",
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "rank_segments/beta_80/seed_2022/residual_shuffled",
+      "epoch": 2,
+      "lambda_value": 0.5,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "random_groups/beta_80/seed_2020/residual_real",
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "random_groups/beta_80/seed_2020/residual_shuffled",
+      "epoch": 2,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1908192
+    },
+    {
+      "model": "random_groups/beta_80/seed_2021/residual_real",
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "random_groups/beta_80/seed_2021/residual_shuffled",
+      "epoch": 1,
+      "lambda_value": 1.0,
+      "trainable_parameters": 1896448
+    },
+    {
+      "model": "random_groups/beta_80/seed_2022/residual_real",
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "trainable_parameters": 1949376
+    },
+    {
+      "model": "random_groups/beta_80/seed_2022/residual_shuffled",
+      "epoch": 2,
+      "lambda_value": 0.5,
+      "trainable_parameters": 1949376
+    }
+  ]
+}

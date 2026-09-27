@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "beta": 80,
+  "cluster_count": 1,
+  "grid": [
+    {
+      "cluster_count": 1,
+      "mean_validation_rmse": 1.0951581165336977,
+      "std_validation_rmse": 0.0024942437886899932,
+      "per_seed": {
+        "2020": 1.0930931054791961,
+        "2021": 1.094451930286651,
+        "2022": 1.0979293138352455
+      }
+    },
+    {
+      "cluster_count": 2,
+      "mean_validation_rmse": 1.095522868820969,
+      "std_validation_rmse": 0.002100564113126745,
+      "per_seed": {
+        "2020": 1.093430456512556,
+        "2021": 1.0955066590292963,
+        "2022": 1.0976314909210543
+      }
+    },
+    {
+      "cluster_count": 3,
+      "mean_validation_rmse": 1.0957909952689224,
+      "std_validation_rmse": 0.0016253359755436614,
+      "per_seed": {
+        "2020": 1.0948673758924632,
+        "2021": 1.0948379153964556,
+        "2022": 1.0976676945178487
+      }
+    },
+    {
+      "cluster_count": 4,
+      "mean_validation_rmse": 1.0961413456523907,
+      "std_validation_rmse": 0.0025503518787714217,
+      "per_seed": {
+        "2020": 1.093218885057765,
+        "2021": 1.0979167618185737,
+        "2022": 1.097288390080834
+      }
+    },
+    {
+      "cluster_count": 8,
+      "mean_validation_rmse": 1.0979598981599181,
+      "std_validation_rmse": 0.0034504492921235835,
+      "per_seed": {
+        "2020": 1.0945411247998529,
+        "2021": 1.0978973954946762,
+        "2022": 1.1014411741852252
+      }
+    },
+    {
+      "cluster_count": 16,
+      "mean_validation_rmse": 1.096693474293003,
+      "std_validation_rmse": 0.001479373922001945,
+      "per_seed": {
+        "2020": 1.0951814835685276,
+        "2021": 1.0967610219535775,
+        "2022": 1.0981379173569035
+      }
+    }
+  ],
+  "frozen_validation_models": {
+    "c_1/cooccurrence/beta_80/seed_2020/residual_real": "43f3b3f4e79351308e91daf8440dfeda0c81dcc855f70589d51acb7fd4d240bd",
+    "c_1/cooccurrence/beta_80/seed_2021/residual_real": "c8943428e0333b96e0d67209eec87b43b62559026a1340a6ca424e88f6782cbb",
+    "c_1/cooccurrence/beta_80/seed_2022/residual_real": "7a490789366366bc1742ee8baa350d758d86b4b0e8c4dbf27254fac46dbf9aa1",
+    "c_2/cooccurrence/beta_80/seed_2020/residual_real": "6a4f75549c92a09ed2847935e9a4106131bc38d02914de70db8101ff0a0a875f",
+    "c_2/cooccurrence/beta_80/seed_2021/residual_real": "c3595acf4a2c2954175bb24d7288db3e45524d9ef785cbfb891b6f6fe30c83c8",
+    "c_2/cooccurrence/beta_80/seed_2022/residual_real": "8d001d2bf939dbf9c21d57087e5f875282e4f9b12ecc7e0ad9d19bd0812284e9",
+    "c_3/cooccurrence/beta_80/seed_2020/residual_real": "17f6db40c76ae359276b9986682394a0a72c328449e4c959bf08374476609401",
+    "c_3/cooccurrence/beta_80/seed_2021/residual_real": "749ae0390b6ee5f1d435c2c22fbcda974ba3abbfb6567dc5ab8ecac80cf38e6a",
+    "c_3/cooccurrence/beta_80/seed_2022/residual_real": "dc510bacafb893f74b81365afe94aa9a7815f3fc6485c899e2e4357db67f3133",
+    "c_4/cooccurrence/beta_80/seed_2020/residual_real": "c25fd3102ff8436573f586139f0e24a118460c1456f74d54b8a7af72fb663cd7",
+    "c_4/cooccurrence/beta_80/seed_2021/residual_real": "ea7c81260cfebd59715b1e8f4bde9e81574a6f42ecfedfac1d79a528e192ff37",
+    "c_4/cooccurrence/beta_80/seed_2022/residual_real": "7ee85ebf051c4482647fe523f168904e9bc4b034befcd1c1e4b23afa685c208e",
+    "c_8/cooccurrence/beta_80/seed_2020/residual_real": "0a22fc62fce9709043838759cb504b520968f37f928de3bb4b6b7284ef44c0ba",
+    "c_8/cooccurrence/beta_80/seed_2021/residual_real": "dda35f39dc748df6a5986afc476ebb649cea95447be6875e118f651dd1733541",
+    "c_8/cooccurrence/beta_80/seed_2022/residual_real": "f0c27a65a9f425e1a3ae41c02610bb4303561067940201c308a76e961acfeca3",
+    "c_16/cooccurrence/beta_80/seed_2020/residual_real": "153e59f502723c3bf65f1508823fd80d312298b335f94a98c11cbe488469398e",
+    "c_16/cooccurrence/beta_80/seed_2021/residual_real": "2b5f699359d7b32c03f2b57e8a45fefa8a2e985088d600bbd2262cd5b32e61af",
+    "c_16/cooccurrence/beta_80/seed_2022/residual_real": "b662bb72bba3c0025ee765102d4197897ff54a049641877f33fa6078a3f35cef"
+  },
+  "test_labels_opened": false
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "epoch": 1,
+    "train_mse": 1.134925365447998,
+    "kl_per_all_interactions": 12.719843864440918,
+    "kl_per_source_list_interaction": 140.80204783012883,
+    "objective": 1.1361969709396362,
+    "seconds": 1.0011842176318169
+  },
+  {
+    "epoch": 2,
+    "train_mse": 1.1348477602005005,
+    "kl_per_all_interactions": 6.686729907989502,
+    "kl_per_source_list_interaction": 74.01861802438667,
+    "objective": 1.1355159282684326,
+    "seconds": 1.0184909254312515
+  },
+  {
+    "epoch": 3,
+    "train_mse": 1.1323615312576294,
+    "kl_per_all_interactions": 3.586710214614868,
+    "kl_per_source_list_interaction": 39.70301432730766,
+    "objective": 1.132720947265625,
+    "seconds": 1.0137724950909615
+  },
+  {
+    "epoch": 4,
+    "train_mse": 1.1274241209030151,
+    "kl_per_all_interactions": 3.0344860553741455,
+    "kl_per_source_list_interaction": 33.59018045049164,
+    "objective": 1.1277267932891846,
+    "seconds": 0.9862348400056362
+  },
+  {
+    "epoch": 5,
+    "train_mse": 1.1235359907150269,
+    "kl_per_all_interactions": 3.261756181716919,
+    "kl_per_source_list_interaction": 36.10594240014362,
+    "objective": 1.1238616704940796,
+    "seconds": 0.9860113635659218
+  },
+  {
+    "epoch": 6,
+    "train_mse": 1.1205980777740479,
+    "kl_per_all_interactions": 3.3918721675872803,
+    "kl_per_source_list_interaction": 37.546258606948584,
+    "objective": 1.1209375858306885,
+    "seconds": 0.9946095459163189
+  },
+  {
+    "epoch": 7,
+    "train_mse": 1.1174763441085815,
+    "kl_per_all_interactions": 3.6726651191711426,
+    "kl_per_source_list_interaction": 40.654490360468756,
+    "objective": 1.1178436279296875,
+    "seconds": 0.9878646954894066
+  },
+  {
+    "epoch": 8,
+    "train_mse": 1.1111106872558594,
+    "kl_per_all_interactions": 4.361030101776123,
+    "kl_per_source_list_interaction": 48.274332257764904,
+    "objective": 1.1115472316741943,
+    "seconds": 0.986575361341238
+  },
+  {
+    "epoch": 9,
+    "train_mse": 1.1057486534118652,
+    "kl_per_all_interactions": 5.087484359741211,
+    "kl_per_source_list_interaction": 56.315802598635074,
+    "objective": 1.1062575578689575,
+    "seconds": 0.9852347411215305
+  },
+  {
+    "epoch": 10,
+    "train_mse": 1.102918267250061,
+    "kl_per_all_interactions": 5.381984233856201,
+    "kl_per_source_list_interaction": 59.57576284681288,
+    "objective": 1.1034570932388306,
+    "seconds": 1.047698900103569
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "round": 1,
+  "parameter": "latent_std",
+  "grid": [
+    0.3,
+    0.1,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "prerequisite_frozen_sha256": null,
+  "cases_sha256": "0020a87f4f666fca2f9b3b935e1e15ac2d0d0a7914f58b937ce05b01104762c2",
+  "new_fits": 30,
+  "evaluated_configurations": 30,
+  "skipped": []
+}

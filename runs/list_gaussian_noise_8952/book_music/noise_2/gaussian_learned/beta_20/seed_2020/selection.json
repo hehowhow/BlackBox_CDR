@@ -1,0 +1,5 @@
+{
+  "epoch": 9,
+  "lambda_value": 0.25,
+  "validation_rmse": 0.9551782860230261
+}

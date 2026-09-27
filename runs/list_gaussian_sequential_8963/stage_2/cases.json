@@ -1,0 +1,410 @@
+[
+  {
+    "case_id": 0,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.05,
+    "parameters": {
+      "latent_std": 0.5,
+      "std_lower": 0.05,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_20/value_0p05",
+    "output": "stage_2/music_movie_clean/beta_20/value_0p05/gaussian_learned/beta_20/seed_2020",
+    "reused_from": "stage_1/music_movie_clean/beta_20/value_0p5/gaussian_learned/beta_20/seed_2020",
+    "previous_output": "stage_1/music_movie_clean/beta_20/value_0p5/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 1,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.01,
+    "parameters": {
+      "latent_std": 0.5,
+      "std_lower": 0.01,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_20/value_0p01",
+    "output": "stage_2/music_movie_clean/beta_20/value_0p01/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/music_movie_clean/beta_20/value_0p5/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 2,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.03,
+    "parameters": {
+      "latent_std": 0.5,
+      "std_lower": 0.03,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_20/value_0p03",
+    "output": "stage_2/music_movie_clean/beta_20/value_0p03/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/music_movie_clean/beta_20/value_0p5/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 3,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.1,
+    "parameters": {
+      "latent_std": 0.5,
+      "std_lower": 0.1,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_20/value_0p1",
+    "output": "stage_2/music_movie_clean/beta_20/value_0p1/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/music_movie_clean/beta_20/value_0p5/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 4,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.05,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.05,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_80/value_0p05",
+    "output": "stage_2/music_movie_clean/beta_80/value_0p05/gaussian_learned/beta_80/seed_2020",
+    "reused_from": "stage_1/music_movie_clean/beta_80/value_1/gaussian_learned/beta_80/seed_2020",
+    "previous_output": "stage_1/music_movie_clean/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 5,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.01,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.01,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_80/value_0p01",
+    "output": "stage_2/music_movie_clean/beta_80/value_0p01/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/music_movie_clean/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 6,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.03,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.03,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_80/value_0p03",
+    "output": "stage_2/music_movie_clean/beta_80/value_0p03/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/music_movie_clean/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 7,
+    "round": 2,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.1,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.1,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/music_movie_clean/beta_80/value_0p1",
+    "output": "stage_2/music_movie_clean/beta_80/value_0p1/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/music_movie_clean/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 8,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.05,
+    "parameters": {
+      "latent_std": 0.3,
+      "std_lower": 0.05,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_20/value_0p05",
+    "output": "stage_2/book_movie/beta_20/value_0p05/gaussian_learned/beta_20/seed_2020",
+    "reused_from": "stage_1/book_movie/beta_20/value_0p3/gaussian_learned/beta_20/seed_2020",
+    "previous_output": "stage_1/book_movie/beta_20/value_0p3/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 9,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.01,
+    "parameters": {
+      "latent_std": 0.3,
+      "std_lower": 0.01,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_20/value_0p01",
+    "output": "stage_2/book_movie/beta_20/value_0p01/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_movie/beta_20/value_0p3/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 10,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.03,
+    "parameters": {
+      "latent_std": 0.3,
+      "std_lower": 0.03,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_20/value_0p03",
+    "output": "stage_2/book_movie/beta_20/value_0p03/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_movie/beta_20/value_0p3/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 11,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.1,
+    "parameters": {
+      "latent_std": 0.3,
+      "std_lower": 0.1,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_20/value_0p1",
+    "output": "stage_2/book_movie/beta_20/value_0p1/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_movie/beta_20/value_0p3/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 12,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.05,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.05,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_80/value_0p05",
+    "output": "stage_2/book_movie/beta_80/value_0p05/gaussian_learned/beta_80/seed_2020",
+    "reused_from": "stage_1/book_movie/beta_80/value_1/gaussian_learned/beta_80/seed_2020",
+    "previous_output": "stage_1/book_movie/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 13,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.01,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.01,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_80/value_0p01",
+    "output": "stage_2/book_movie/beta_80/value_0p01/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_movie/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 14,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.03,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.03,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_80/value_0p03",
+    "output": "stage_2/book_movie/beta_80/value_0p03/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_movie/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 15,
+    "round": 2,
+    "task": "book_movie",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.1,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.1,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_movie/beta_80/value_0p1",
+    "output": "stage_2/book_movie/beta_80/value_0p1/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_movie/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 16,
+    "round": 2,
+    "task": "book_music",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.05,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.05,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_20/value_0p05",
+    "output": "stage_2/book_music/beta_20/value_0p05/gaussian_learned/beta_20/seed_2020",
+    "reused_from": "stage_1/book_music/beta_20/value_1/gaussian_learned/beta_20/seed_2020",
+    "previous_output": "stage_1/book_music/beta_20/value_1/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 17,
+    "round": 2,
+    "task": "book_music",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.01,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.01,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_20/value_0p01",
+    "output": "stage_2/book_music/beta_20/value_0p01/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_music/beta_20/value_1/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 18,
+    "round": 2,
+    "task": "book_music",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.03,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.03,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_20/value_0p03",
+    "output": "stage_2/book_music/beta_20/value_0p03/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_music/beta_20/value_1/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 19,
+    "round": 2,
+    "task": "book_music",
+    "beta": 20,
+    "parameter": "std_lower",
+    "value": 0.1,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.1,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_20/value_0p1",
+    "output": "stage_2/book_music/beta_20/value_0p1/gaussian_learned/beta_20/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_music/beta_20/value_1/gaussian_learned/beta_20/seed_2020"
+  },
+  {
+    "case_id": 20,
+    "round": 2,
+    "task": "book_music",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.05,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.05,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_80/value_0p05",
+    "output": "stage_2/book_music/beta_80/value_0p05/gaussian_learned/beta_80/seed_2020",
+    "reused_from": "stage_1/book_music/beta_80/value_1/gaussian_learned/beta_80/seed_2020",
+    "previous_output": "stage_1/book_music/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 21,
+    "round": 2,
+    "task": "book_music",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.01,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.01,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_80/value_0p01",
+    "output": "stage_2/book_music/beta_80/value_0p01/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_music/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 22,
+    "round": 2,
+    "task": "book_music",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.03,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.03,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_80/value_0p03",
+    "output": "stage_2/book_music/beta_80/value_0p03/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_music/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  },
+  {
+    "case_id": 23,
+    "round": 2,
+    "task": "book_music",
+    "beta": 80,
+    "parameter": "std_lower",
+    "value": 0.1,
+    "parameters": {
+      "latent_std": 1.0,
+      "std_lower": 0.1,
+      "std_upper": 2.0
+    },
+    "branch": "stage_2/book_music/beta_80/value_0p1",
+    "output": "stage_2/book_music/beta_80/value_0p1/gaussian_learned/beta_80/seed_2020",
+    "reused_from": null,
+    "previous_output": "stage_1/book_music/beta_80/value_1/gaussian_learned/beta_80/seed_2020"
+  }
+]

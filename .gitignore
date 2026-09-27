@@ -22,10 +22,21 @@ external/
 *.csv
 !results/metrics.csv
 !docs/cdr_effectiveness_results.csv
+# Aggregate LIST metrics only; interaction tables remain ignored.
+!docs/list_*_results.csv
+!docs/list_gaussian_sequential_selected.csv
+!docs/list_langevin_sensitivity_baselines.csv
+!docs/list_langevin_sensitivity_best_single_changes.csv
+!docs/list_langevin_sensitivity_sensitivity.csv
+!docs/list_optimization_overview_3seed.csv
 !runs/**/comparison.csv
 !runs/**/combined_comparison.csv
 !runs/**/main_comparison.csv
 !runs/**/per_seed.csv
+!runs/list_gaussian_sequential_8963/baselines.csv
+!runs/list_langevin_sensitivity_8968/baselines.csv
+!runs/list_langevin_sensitivity_8968/results.csv
+!runs/list_langevin_sensitivity_8968/sensitivity.csv
 # Local runtime links and raw item-ID lists are not publication artifacts.
 runs/**/data
 runs/**/baseline

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "models": {
+    "models/train_steps_10/music_movie_clean/energy_20/beta_20/seed_2020": "e49ffddcebcb20ca036f7d2bceae53668ca7733c6614739fcad4d9e11decd509",
+    "models/train_steps_10/music_movie_clean/energy_20/beta_80/seed_2020": "93cfb27645021d5b9542fa8ded2ef0edc58280d6dcc3b828d2d081d386e0d641",
+    "models/train_steps_10/book_movie/energy_20/beta_20/seed_2020": "e5cbf85299832e073da5579dc9ec3bd2402cadf4eb59259ab05ab68ca03a4c54",
+    "models/train_steps_10/book_movie/energy_20/beta_80/seed_2020": "ebc7161e6e6049fd676d3c11f013178ac6e0eed4ffaee5194472830a79e039d4",
+    "models/train_steps_10/book_music/energy_20/beta_20/seed_2020": "f4953da01d22648e5df6da251135ad90e80f83a44dc303ffdac13e6e923c191a",
+    "models/train_steps_10/book_music/energy_20/beta_80/seed_2020": "f8a739d01b6165e2cd2650cac1e269c37ff4ee5a0200b5d4110178a39b6985f6",
+    "models/train_steps_60/music_movie_clean/energy_20/beta_20/seed_2020": "3eea67f6a29326972c9674c80678d357802a255aef2c90dc9615b91b02363d25",
+    "models/train_steps_60/music_movie_clean/energy_20/beta_80/seed_2020": "49d383d9bbf61cd0ebfad86f9cf28d8d92599d302bb87e006b79603a3c80ff4a",
+    "models/train_steps_60/book_movie/energy_20/beta_20/seed_2020": "04e1ad985170ad7edc7b1b452cf961babe0204c7ab0b42db127092677113351d",
+    "models/train_steps_60/book_movie/energy_20/beta_80/seed_2020": "526637b8e5c18e7ba3662141105940670b4e58b593312a5bb3ee1d40b2070980",
+    "models/train_steps_60/book_music/energy_20/beta_20/seed_2020": "72ced32333c04c1a910954d86fd94aa9250383af9ab4f90f89bd0bf8a3a289e4",
+    "models/train_steps_60/book_music/energy_20/beta_80/seed_2020": "89408cfa605a7d8e4b9f1ad3d6c786f900a5ef67e72ea75a5fc1d952cd205e7c"
+  },
+  "time": 1790443339.3367918
+}

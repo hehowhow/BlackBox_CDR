@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETED",
+  "requested_gpus": 3,
+  "max_concurrent_account_jobs": 1,
+  "max_account_gpus": 2,
+  "jobs": [
+    {
+      "job": 8760,
+      "gpus": 1,
+      "elapsed": "00:12:48",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    },
+    {
+      "job": 8763,
+      "gpus": 2,
+      "elapsed": "00:07:51",
+      "state": "COMPLETED",
+      "exit_code": "0:0"
+    }
+  ],
+  "canceled_before_start": [
+    8761,
+    8762
+  ],
+  "wrapper": "/home/hehao32/BlackBox_CDR/scripts/slurm_list_story_pair.sh",
+  "wrapper_sha256": "066f049fd30303af27aec27776f0e8144591981ecada2d32c109e2ac1eb0c107",
+  "exact_all_models": 48,
+  "combined_verification": "independent_verification.json"
+}

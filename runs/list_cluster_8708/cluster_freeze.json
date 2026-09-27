@@ -1,0 +1,14 @@
+{
+  "clusters/beta_20/seed_2020/select": "b96f0332a060d6a20d90a2964efe4917906deead14217c92264a8e9235597c9f",
+  "clusters/beta_20/seed_2020/refit": "aa23f8be7eac9ba9abc468719bc6b0184e16372778946804c4f01fbfc107620a",
+  "clusters/beta_20/seed_2021/select": "852706731c142052dc5c82db4a92cbf1c446d9df6d6c445afe18527446be9ac5",
+  "clusters/beta_20/seed_2021/refit": "9a86f35aa8f6a7a02319cb15e86bbfd4dd5e242a02027caa8e9623dd8821eda9",
+  "clusters/beta_20/seed_2022/select": "dcaa0fb5503c1e7e7cde28f68bb793a0d6b3f1f2b29dd305eb4868b5fe269fa0",
+  "clusters/beta_20/seed_2022/refit": "d607e871232b0c54432196460f3d0362c128a722c27ccd4c986a6e10012177e4",
+  "clusters/beta_80/seed_2020/select": "eae1cd4e0fe02ccfb25bdf8a11a32903951c7dc12b2f667cab9f6f18d2e6b183",
+  "clusters/beta_80/seed_2020/refit": "24df91881eed475f39b1607fc18898d5f287a810919dfaa8d0dcff96b771dd12",
+  "clusters/beta_80/seed_2021/select": "1c61ebf9d797eb5b5d5ee0c7c72ebd6d7581a4d320eeb53042a19b8626b1d7e2",
+  "clusters/beta_80/seed_2021/refit": "597c6a339bcb9c194b9622cefcb1f2234de11763cc815fae5671b0b12d13a777",
+  "clusters/beta_80/seed_2022/select": "b03ff2fbfa15658cfa6c7baa6a248316bf6f27341d38b9c7eacdbd3572a13cc4",
+  "clusters/beta_80/seed_2022/refit": "0719ef8bbbfcf9b53ff36c2b7fc6219101831fac4bd321f01a98b7bb775ed547"
+}

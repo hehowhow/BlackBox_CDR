@@ -1,0 +1,54 @@
+{
+  "task": "music_movie_clean",
+  "source": "CDs_and_Vinyl",
+  "target": "Movies_and_TV",
+  "overlap_users": 17904,
+  "source_users": 75131,
+  "target_users": 123960,
+  "source_items": 62002,
+  "target_items": 50052,
+  "rows": {
+    "source": 1062711,
+    "train": 1585889,
+    "inner_train": 1494495,
+    "validation": 91394,
+    "test": 111644
+  },
+  "cleanup": {
+    "raw_overlap_users": 18031,
+    "clean_overlap_users": 17904,
+    "lost_overlap_users": 127,
+    "removed_items": 2441,
+    "removed_source_ratings": 34881,
+    "target_ratings_unchanged": 1697533
+  },
+  "cross_domain_raw_item_overlap": 0,
+  "cross_domain_same_user_item_rating_leaks": 0,
+  "hashes": {
+    "data/inner_train.csv": "f6e71f41e12b512eb23c8f887c6c61c20b9780df2b93709fb950976a177959a5",
+    "data/inner_train_users.npy": "9971910966008a565fc29d4545bbd8943bc155d1cce5be0ba233a8f89251a2a0",
+    "data/test.csv": "d1254c7b2c6c4acd375cf7f1358e3565ed0a1c2124efb02861ce3835b2ef3e5e",
+    "data/test_features.npy": "e905fb32efdb92f0aa15b574d1011a5c27c193d705505038b0ab296e686eb340",
+    "data/test_users.npy": "376a31a21a73f8a97ab963d7ad4b4f6918d11af882542a8e9f3c4c1a4b6dfa63",
+    "data/train.csv": "deb666e37c94869d01f209079c98658e172b1760ae8629d4c14fe49b82f80251",
+    "data/train_users.npy": "1922e2391aac3e1c111b6163defd05f69b948690bdec8bec2f3fe6bd36a6a2f1",
+    "data/validation.csv": "d6597b7a624973a753fc3482a7948038df4c9bbb752c04d618a05eb2101b58d5",
+    "data/validation_users.npy": "7a583c7c9f08049050947a4fe14d8a8b101de08c56776a2946576b13cef8fee6",
+    "baseline/audit.json": "f4d75d1b2b898fa806bbdc0a600b6aedb6d93b4014b1c78814c4349ac13a5a77",
+    "baseline/seen.npy": "d3c53c5d446fad8129b14a109907f750aa3049663e1c8e047dda6a65c00c0fce",
+    "baseline/statistics.npz": "20c743f77dec36c659fe942298a0cbf461a990860e7fa8e3a718ccb79588d6b2",
+    "baseline/values.npy": "c8efd66961dca8fc0389644d065f794507d83bb064ded4a973b2d2d3925ea8e9",
+    "inner_baseline/audit.json": "70c0f9d6f24c73cc2eb646f13595df738a7f0a3ffff335db752867fcb90b414b",
+    "inner_baseline/seen.npy": "6186a02f754c6a7aa341358eb57ce7775b58d1240c8942fd6af153e9455cb52b",
+    "inner_baseline/statistics.npz": "d0e4004108c5632229c8e9c4f5b5c63d729071bcfdf078b91abe301aa6bbbb6c",
+    "inner_baseline/values.npy": "8805eae6b7c4f6aed094deca88f28b1adfc143921898a6615347c15749de1850"
+  },
+  "beta": 20,
+  "users": {
+    "outer_train": 14323,
+    "inner_train": 11458,
+    "validation": 2865,
+    "test": 3581,
+    "target_only": 106056
+  }
+}

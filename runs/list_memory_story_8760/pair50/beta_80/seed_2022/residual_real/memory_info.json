@@ -1,0 +1,46 @@
+{
+  "select": {
+    "entries": 8192,
+    "minimum_support": 61,
+    "maximum_support": 1472,
+    "training_users": 2865,
+    "coverage": {
+      "inner_train": {
+        "user_hit_fraction": 0.999650959860384,
+        "mean_matched_pairs": 373.9853403141361
+      },
+      "validation": {
+        "user_hit_fraction": 1.0,
+        "mean_matched_pairs": 362.2946927374302
+      },
+      "test": {
+        "user_hit_fraction": 0.9992320044683376,
+        "mean_matched_pairs": 372.66836556587305
+      }
+    },
+    "construction_seconds": 11.742885295301676,
+    "dictionary_sha256": "b0296db9b636a72eefe83a3364c95010a66d6fc71026a20f237716650cb687c0"
+  },
+  "refit": {
+    "entries": 8192,
+    "minimum_support": 76,
+    "maximum_support": 1848,
+    "training_users": 3581,
+    "coverage": {
+      "inner_train": {
+        "user_hit_fraction": 0.999650959860384,
+        "mean_matched_pairs": 373.60523560209424
+      },
+      "validation": {
+        "user_hit_fraction": 1.0,
+        "mean_matched_pairs": 365.56145251396646
+      },
+      "test": {
+        "user_hit_fraction": 0.9991621866927319,
+        "mean_matched_pairs": 373.076310828737
+      }
+    },
+    "construction_seconds": 4.495415631681681,
+    "dictionary_sha256": "c0282bbfa2e568c2a3499b451092dfaa2f53ad6216c2d09ffcb446b679e3e559"
+  }
+}

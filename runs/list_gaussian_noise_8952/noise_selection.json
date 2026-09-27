@@ -1,0 +1,50 @@
+[
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "noise": 4.0,
+    "epoch": 7,
+    "lambda_value": 0.5,
+    "validation_rmse": 1.071261173837312
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "noise": 1.0,
+    "epoch": 0,
+    "lambda_value": 0.0,
+    "validation_rmse": 1.103384741121966
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "noise": 1.0,
+    "epoch": 6,
+    "lambda_value": 0.75,
+    "validation_rmse": 1.0498720873914658
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "noise": 4.0,
+    "epoch": 10,
+    "lambda_value": 0.25,
+    "validation_rmse": 1.100730646048205
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "noise": 2.0,
+    "epoch": 9,
+    "lambda_value": 0.25,
+    "validation_rmse": 0.9551782860230261
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "noise": 1.0,
+    "epoch": 0,
+    "lambda_value": 0.0,
+    "validation_rmse": 1.0295353488808168
+  }
+]

@@ -1,0 +1,294 @@
+{
+  "status": "PASS",
+  "candidates": 36,
+  "rows": [
+    {
+      "beta": 20,
+      "seed": 2020,
+      "cluster_count": 1,
+      "epoch": 4,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0698427795310272
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "cluster_count": 1,
+      "epoch": 6,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0715472945646107
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "cluster_count": 1,
+      "epoch": 5,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0737255087612352
+    },
+    {
+      "beta": 20,
+      "seed": 2020,
+      "cluster_count": 2,
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0744542564962885
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "cluster_count": 2,
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0736734561960686
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "cluster_count": 2,
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0748252500935302
+    },
+    {
+      "beta": 20,
+      "seed": 2020,
+      "cluster_count": 3,
+      "epoch": 4,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0719700162851116
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "cluster_count": 3,
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0726921216534915
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "cluster_count": 3,
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0766314853585968
+    },
+    {
+      "beta": 20,
+      "seed": 2020,
+      "cluster_count": 4,
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0728408667529357
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "cluster_count": 4,
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0716757045847256
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "cluster_count": 4,
+      "epoch": 5,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0758121977238977
+    },
+    {
+      "beta": 20,
+      "seed": 2020,
+      "cluster_count": 8,
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0703640408431552
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "cluster_count": 8,
+      "epoch": 3,
+      "lambda_value": 0.75,
+      "validation_rmse": 1.0740125565021952
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "cluster_count": 8,
+      "epoch": 5,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0751827837882448
+    },
+    {
+      "beta": 20,
+      "seed": 2020,
+      "cluster_count": 16,
+      "epoch": 4,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.071110818277151
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "cluster_count": 16,
+      "epoch": 3,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0735750712434697
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "cluster_count": 16,
+      "epoch": 3,
+      "lambda_value": 0.5,
+      "validation_rmse": 1.0764378328219237
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "cluster_count": 1,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0930931054791961
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "cluster_count": 1,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.094451930286651
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "cluster_count": 1,
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0979293138352455
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "cluster_count": 2,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.093430456512556
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "cluster_count": 2,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0955066590292963
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "cluster_count": 2,
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0976314909210543
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "cluster_count": 3,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0948673758924632
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "cluster_count": 3,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0948379153964556
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "cluster_count": 3,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0976676945178487
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "cluster_count": 4,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.093218885057765
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "cluster_count": 4,
+      "epoch": 7,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0979167618185737
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "cluster_count": 4,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.097288390080834
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "cluster_count": 8,
+      "epoch": 10,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0945411247998529
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "cluster_count": 8,
+      "epoch": 7,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0978973954946762
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "cluster_count": 8,
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.1014411741852252
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "cluster_count": 16,
+      "epoch": 9,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0951814835685276
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "cluster_count": 16,
+      "epoch": 7,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0967610219535775
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "cluster_count": 16,
+      "epoch": 8,
+      "lambda_value": 0.25,
+      "validation_rmse": 1.0981379173569035
+    }
+  ]
+}

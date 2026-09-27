@@ -1,0 +1,32 @@
+[
+  {
+    "epoch": 1,
+    "objective_surrogate": 1.0939075028067973,
+    "seconds": 2.0677809827029705
+  },
+  {
+    "epoch": 2,
+    "objective_surrogate": 0.9605078852190592,
+    "seconds": 2.3959058113396168
+  },
+  {
+    "epoch": 3,
+    "objective_surrogate": 0.7894565588141028,
+    "seconds": 2.439224436879158
+  },
+  {
+    "epoch": 4,
+    "objective_surrogate": 0.708292514149822,
+    "seconds": 2.431024204939604
+  },
+  {
+    "epoch": 5,
+    "objective_surrogate": 0.6672258406020566,
+    "seconds": 2.4272600561380386
+  },
+  {
+    "epoch": 6,
+    "objective_surrogate": 0.6454403286478294,
+    "seconds": 2.471599142998457
+  }
+]

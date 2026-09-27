@@ -1,0 +1,143 @@
+{
+  "rows": [
+    {
+      "beta": 20,
+      "seed": 2020,
+      "common_item_cluster_ari": 0.06789214680570553,
+      "test_unknown_fraction": 0.0008796425579447082,
+      "all_unknown_test_users": 0,
+      "mean_test_group_sizes": [
+        15.425020943870427,
+        61.28483663781067,
+        23.202178162524433
+      ],
+      "empty_test_group_fraction": [
+        0.1636414409382854,
+        0.0027925160569673277,
+        0.05249930187098576
+      ],
+      "cluster_item_counts": [
+        2149,
+        4621,
+        2267
+      ],
+      "cluster_log_frequency_explained_variance": 0.0009826761702546039
+    },
+    {
+      "beta": 20,
+      "seed": 2021,
+      "common_item_cluster_ari": 0.73194191259051,
+      "test_unknown_fraction": 0.0008908126221725775,
+      "all_unknown_test_users": 0,
+      "mean_test_group_sizes": [
+        51.15330913152751,
+        24.417760402122312,
+        24.339849204132925
+      ],
+      "empty_test_group_fraction": [
+        0.003351019268360793,
+        0.12007819044959508,
+        0.07204691426975705
+      ],
+      "cluster_item_counts": [
+        4393,
+        2047,
+        2225
+      ],
+      "cluster_log_frequency_explained_variance": 0.0006333765748418596
+    },
+    {
+      "beta": 20,
+      "seed": 2022,
+      "common_item_cluster_ari": 0.7800300853453773,
+      "test_unknown_fraction": 0.0009773806199385646,
+      "all_unknown_test_users": 0,
+      "mean_test_group_sizes": [
+        40.0938285395141,
+        26.475565484501537,
+        33.332867913990505
+      ],
+      "empty_test_group_fraction": [
+        0.01005305780508238,
+        0.08237922368053616,
+        0.03434794750069813
+      ],
+      "cluster_item_counts": [
+        5316,
+        2541,
+        2429
+      ],
+      "cluster_log_frequency_explained_variance": 0.004060864301494549
+    },
+    {
+      "beta": 80,
+      "seed": 2020,
+      "common_item_cluster_ari": 0.6014758821805751,
+      "test_unknown_fraction": 0.0038602248132374502,
+      "all_unknown_test_users": 0,
+      "mean_test_group_sizes": [
+        36.21266494449487,
+        26.51190393074077,
+        36.88940864344062
+      ],
+      "empty_test_group_fraction": [
+        0.010193395238427704,
+        0.054108776094393636,
+        0.035607065558891295
+      ],
+      "cluster_item_counts": [
+        3740,
+        1639,
+        1703
+      ],
+      "cluster_log_frequency_explained_variance": 0.02252262225053714
+    },
+    {
+      "beta": 80,
+      "seed": 2021,
+      "common_item_cluster_ari": 0.4310047067465337,
+      "test_unknown_fraction": 0.003779236193534874,
+      "all_unknown_test_users": 0,
+      "mean_test_group_sizes": [
+        53.35516302450604,
+        21.863226977588493,
+        24.403686378551978
+      ],
+      "empty_test_group_fraction": [
+        0.016476995042937932,
+        0.13244432032395448,
+        0.040564127626893806
+      ],
+      "cluster_item_counts": [
+        3622,
+        1569,
+        1550
+      ],
+      "cluster_log_frequency_explained_variance": 0.0052302817616197705
+    },
+    {
+      "beta": 80,
+      "seed": 2022,
+      "common_item_cluster_ari": 0.24784371216810033,
+      "test_unknown_fraction": 0.004333589331843887,
+      "all_unknown_test_users": 0,
+      "mean_test_group_sizes": [
+        35.279480555749494,
+        33.22844376178175,
+        31.05871674928437
+      ],
+      "empty_test_group_fraction": [
+        0.01396355512113384,
+        0.054946589401661666,
+        0.047126998533826715
+      ],
+      "cluster_item_counts": [
+        4330,
+        1878,
+        1788
+      ],
+      "cluster_log_frequency_explained_variance": 0.018086201108991617
+    }
+  ],
+  "note": "descriptive diagnostics only; not used for model selection; ARI compares common items between inner-fit and full-refit clusters"
+}

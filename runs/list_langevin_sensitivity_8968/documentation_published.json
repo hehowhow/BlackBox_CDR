@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "document": "/home/hehao32/BlackBox_CDR/docs/list_langevin_sensitivity_experiment.md",
+  "slurm": "8968|FAILED|1:0|02:48:33",
+  "review_slurm_job": "8974",
+  "recovery_reason": "sequential choice/manifest writes share one filesystem timestamp; allow equality while retaining the frozen content hash and all model timestamp checks",
+  "models": 90,
+  "result_rows": 126
+}

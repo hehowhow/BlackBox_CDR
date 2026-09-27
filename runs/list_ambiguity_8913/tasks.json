@@ -1,0 +1,152 @@
+[
+  {
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "variant": "gaussian_fixed",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "variant": "gaussian_fixed",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "variant": "gaussian_fixed",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "variant": "gaussian_fixed",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "variant": "gaussian_fixed",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "variant": "gaussian_fixed",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "variant": "energy_60",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "variant": "energy_60",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "variant": "energy_60",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "variant": "energy_60",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "variant": "energy_60",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "variant": "energy_60",
+    "beta": 80,
+    "seed": 2022
+  }
+]

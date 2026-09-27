@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "models": 90,
+  "rows": 126,
+  "seed": 2020,
+  "hidden_width": 64,
+  "checks": [
+    "six sequential groups with seven independent axes; no accumulated tuning",
+    "one scalar changes per candidate; all other defaults and architecture fixed",
+    "exact archived-default parity and independent train/inference controls",
+    "same initialization/source lists/cold splits and training-only ordinary means",
+    "validation-only epoch/lambda choices and fresh refit",
+    "all candidates and validation choices frozen before test evaluation",
+    "independently recomputed metrics/deltas/sensitivity and unseen-item fallback"
+  ],
+  "verifier_sha256": "c558c20ce2d26c208e57076691aa252800e3e7e70327a1285e5a2755df572ac9",
+  "original_verifier_sha256": "3189e93a787fc12f2923468a4270565a8d02f359a7fb71fd8251d728d9738951",
+  "recovery_reason": "sequential choice/manifest writes share one filesystem timestamp; allow equality while retaining the frozen content hash and all model timestamp checks",
+  "choice_mtime_ns": 1790447344921217210,
+  "freeze_mtime_ns": 1790447344921217210,
+  "review_slurm_job": "8974",
+  "model_and_prediction_files_changed": false
+}

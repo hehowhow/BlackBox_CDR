@@ -1,0 +1,218 @@
+{
+  "task": "music_movie_clean",
+  "seeds": [
+    2020
+  ],
+  "betas": [
+    20,
+    80
+  ],
+  "backbones": [
+    "MF",
+    "DNN"
+  ],
+  "arms": [
+    "real"
+  ],
+  "seed": 2020,
+  "dim": 32,
+  "hidden": 64,
+  "dropout": 0.1,
+  "k": 100,
+  "epochs": 10,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 2048,
+  "source_dim": 10,
+  "pretrain_epochs": 10,
+  "pretrain_lr": 0.01,
+  "pretrain_weight_decay": 0.0,
+  "source_batch": 512,
+  "target_batch": 256,
+  "source_policy": "DNN source checkpoint and ID lists reused exactly from 8638; fresh matched MF; source batch512 kept for DNN comparability (author task3 uses256)",
+  "inversion_iterations": 300,
+  "inversion_batch": 200,
+  "inversion_lr": 0.0001,
+  "inversion_weight_decay": 0.0001,
+  "inversion_target": 5,
+  "inversion_warmup": 10,
+  "bridge_epochs": 10,
+  "bridge_lr": 0.005,
+  "bridge_batch": 1024,
+  "bridge_weight_decay": 0.0,
+  "primary_k": 70000,
+  "emcdr_epochs": 10,
+  "emcdr_lr": 0.01,
+  "emcdr_batch": 128,
+  "emcdr_weight_decay": 0.0,
+  "residual": "fixed ordinary item mean + source-list interaction only; no learned item bias; zero final encoder layer; same original LIST encoder/dimensions",
+  "lambdas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "residual_training": "fit unscaled correction at lambda1; validation chooses epoch0..10 and lambda; zero ties keep epoch0",
+  "selection": "original validation-only epoch/lambda selection; all candidate values fixed upfront; each axis resets other coordinates to DEFAULTS; no sequential optimization",
+  "shuffle": "fixed user derangement separately within original inner_train,validation,test groups; unchanged during full refit",
+  "baselines": "ordinary item mean only; all models fallback to ordinary mean on unseen target items",
+  "pf_protocol": "author MF and DNN forward, inversion300 and K70000; all target user rows including cold untrained rows vote; no LR/K search",
+  "evaluation": "freeze all90 models and predictions before test labels; report every candidate and paired same-seed deltas; default model shared across all axes; one seed2020, exploratory",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 998,
+  "code_hashes": {
+    "/home/hehao32/BlackBox_CDR/scripts/small_task_comparison.py": "2b301de63982694bfc96e860f355fb21b6ce6b3538305bedfc582f47eb564699",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_small_task_comparison.sh": "821efcc652d155f138d2338236076f87cc042d27f108449f2cbb40e8816152a5",
+    "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+    "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+    "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+    "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+    "/home/hehao32/BlackBox_CDR/scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f",
+    "/home/hehao32/BlackBox_CDR/scripts/list_ambiguity_story.py": "394bba7ff987ed0187470c0ab1ea1cb1d69b897e9afbc141d661519720a66eb1",
+    "/home/hehao32/BlackBox_CDR/scripts/list_ambiguity_model.py": "3e9b6ac37ea46e47d360210d68cfafcc22c5c2f0904d1ae0d58dcb374b501a83",
+    "/home/hehao32/BlackBox_CDR/scripts/verify_list_ambiguity.py": "32af34158f1b57163f457ed1f8e2c38d38fe14c9fb21031e24ce7c5f78cbcba8",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_list_ambiguity.sh": "b7aca7d5c89b739f7552599d28871174e10010edfe1f2acea0fcb76de6da26a8",
+    "/home/hehao32/BlackBox_CDR/scripts/paper_list_dnn.py": "d296a75cc905605b7d0e165eba20d3d2583f54fdb00dbee8dbf32e9c6753a6d8",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_paper_list_dnn.sh": "2e1edbaa79c987c4eb05c7c7229a5beb4a0fb218f22ebcb75c37074c57a9ff32",
+    "/home/hehao32/BlackBox_CDR/scripts/list_source_transfer.py": "81b9be2c70f38f46ae48ce2ee9559e3e86b17a6fe80ecf21a80d4c0b9f016323",
+    "/home/hehao32/BlackBox_CDR/scripts/list_ambiguity_transfer.py": "9777658df810d33238eb0cbd286f573e95b024372a5299c52daa83f7e65eeab3",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_list_ambiguity_transfer.sh": "3a87850b598f76d579a4786bb54be89000623849017000f14d544a014c92fed9",
+    "/home/hehao32/BlackBox_CDR/scripts/verify_list_ambiguity_transfer.py": "e51aaa6d3c0e0a13ea73afd7aebb9bf9a804b39137a43421fcebaea786ba0901",
+    "/home/hehao32/BlackBox_CDR/scripts/list_gaussian_noise.py": "f5f68c4c2ddcad6ca49f5fbedf9c59daee6fac027f87a2f96b0ec7992bd4f04b",
+    "/home/hehao32/BlackBox_CDR/scripts/list_gaussian_noise_model.py": "15111f07fcfdcec298be8ef3cf799cd30d12a7bd4155a480fb6e3651aa0ace1e",
+    "/home/hehao32/BlackBox_CDR/scripts/verify_list_gaussian_noise.py": "526fb5c2424ebe8e86c5c7d5a7c8d4536c2373fe26655e058fe2410ed717a24a",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_list_gaussian_noise.sh": "368798625478fa861592369b625fab67510410c4b438861e95dd9acf957a9815",
+    "/home/hehao32/BlackBox_CDR/scripts/list_langevin_sensitivity.py": "218624ad2da2ed5e7e02ccac258c1837a2eec88bac1c295c7c96792b273cb60c",
+    "/home/hehao32/BlackBox_CDR/scripts/list_langevin_sensitivity_model.py": "ea19022d461f4c84184b3579c32a1891801a6538a4a67f0bd7490318e379b960",
+    "/home/hehao32/BlackBox_CDR/scripts/verify_list_langevin_sensitivity.py": "3189e93a787fc12f2923468a4270565a8d02f359a7fb71fd8251d728d9738951",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_list_langevin_sensitivity.sh": "22b08c70c49e4d714431bdbc271906535160e94f4597dadd5214229ddaaf96cf"
+  },
+  "parent": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650",
+  "parent_protocol_sha256": "41cd9c718db1adb0ce09581a1d819669ef714d682afae44fb866b4e1011ba298",
+  "variants": [
+    "energy_20"
+  ],
+  "user_batch_size": 64,
+  "latent_std": 0.3,
+  "logvar_bounds": [
+    -5.991464547107982,
+    1.3862943611198906
+  ],
+  "energy_bound": 10.0,
+  "train_chains": 32,
+  "eval_chains": 128,
+  "mala_step": 0.25,
+  "eval_user_batch": 128,
+  "observation_variance": 1.0,
+  "unchanged": "archived energy_20; latent init.3/std bounds.05..2; noise variance1; dim32/hidden64/dropout.1; 10 epochs; Adam.001/wd1e-5; 64 users/batch; DNN Top100; ordinary means; original lambda grid and fresh refit",
+  "batching": "64 complete overlap training users per update, every observed rating retained; sum user joint losses / number of ratings in batch; dropout once per user; identical point_matched control",
+  "target_only": "target-only rows contribute to fixed ordinary means; zero residual gives no learned likelihood gradient; excluded from grouped updates in ALL new variants",
+  "conditional_gaussian": "z|h ~ N(original_MLP(h),diag(var(h))); fixed .3 std or learned variance; exact joint observed-rating marginal likelihood; no KL penalty",
+  "conditional_energy": "Gaussian conditional reference times exp(-bounded_MLP(z,h)); Gaussian confinement; joint ML gradient estimated by prior and training-posterior MALA; only observed training ratings enter posterior",
+  "sampling": "MALA with Metropolis correction; train prior/posterior share train step size and chain length; inference has independent step size and chain length",
+  "prediction": "mean latent (analytic Gaussian / sampled EBM) dot target vector + ordinary mean; validation-selected global lambda; no rating clipping or per-user gate",
+  "literature": {
+    "latent_EBM_NeurIPS2020": "https://papers.nips.cc/paper_files/paper/2020/hash/fa3060edb66e6ff4507886f9912e1ab9-Abstract.html"
+  },
+  "tasks": {
+    "music_movie_clean": 17904,
+    "book_movie": 37388,
+    "book_music": 16738
+  },
+  "parent_protocol_hashes": {
+    "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_8913": "0e9a8aeda0a453d05923df62a05be62c9e00266c235172580825974c524fb9b9",
+    "/home/hehao32/BlackBox_CDR/runs/list_ambiguity_transfer_8923": "d0bb8e370b62ae1027020e977bdbceb635c2997da04c2bcdc61e1530c8856175",
+    "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638": "5a47977d2a61ca6cb1735a2a84add859e839507e00786962ad06438490bac5e7"
+  },
+  "changed_parameter": "one scalar only per case; group1 has separate train/eval step-size subscans; six groups, seven axes",
+  "objective": "byte-identical archived conditional energy objective and MALA sampler; only phase-specific controls supplied to archived calls",
+  "train_mala_step": 0.25,
+  "eval_mala_step": 0.25,
+  "train_steps": 20,
+  "eval_steps": 20,
+  "defaults": {
+    "train_mala_step": 0.25,
+    "eval_mala_step": 0.25,
+    "train_steps": 20,
+    "eval_steps": 20,
+    "train_chains": 32,
+    "eval_chains": 128,
+    "energy_bound": 5.0
+  },
+  "axes": {
+    "train_mala_step": {
+      "group": 1,
+      "values": [
+        0.25,
+        0.1,
+        0.5
+      ],
+      "label": "\u8bad\u7ec3\u6b65\u957f"
+    },
+    "eval_mala_step": {
+      "group": 1,
+      "values": [
+        0.25,
+        0.1,
+        0.5
+      ],
+      "label": "\u9884\u6d4b\u6b65\u957f"
+    },
+    "train_steps": {
+      "group": 2,
+      "values": [
+        20,
+        10,
+        60
+      ],
+      "label": "\u8bad\u7ec3\u91c7\u6837\u6b65\u6570"
+    },
+    "eval_steps": {
+      "group": 3,
+      "values": [
+        20,
+        10,
+        60
+      ],
+      "label": "\u9884\u6d4b\u91c7\u6837\u6b65\u6570"
+    },
+    "train_chains": {
+      "group": 4,
+      "values": [
+        32,
+        16,
+        64
+      ],
+      "label": "\u8bad\u7ec3\u94fe\u6570"
+    },
+    "eval_chains": {
+      "group": 5,
+      "values": [
+        128,
+        64,
+        256
+      ],
+      "label": "\u9884\u6d4b\u94fe\u6570"
+    },
+    "energy_bound": {
+      "group": 6,
+      "values": [
+        5.0,
+        1.0,
+        10.0
+      ],
+      "label": "\u80fd\u91cf\u4fee\u6b63\u4e0a\u754c"
+    }
+  },
+  "sensitivity_parent": "/home/hehao32/BlackBox_CDR/runs/list_gaussian_noise_8952",
+  "sensitivity_parent_sha256": "b21f75d1c6e1540fe8ddc699c7379d5a16db8454d97645abc0cfec16301436ca",
+  "gaussian_policy": "Gaussian future bounds .05..1 do NOT change this energy-model control; all energy defaults reproduce the archived energy_20",
+  "hidden_width_fixed": 64
+}

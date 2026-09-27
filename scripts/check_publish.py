@@ -26,9 +26,14 @@ def main():
         path = BASE/rel
         assert not path.is_symlink(), f'Unexpected tracked symlink: {rel}'
         size = path.stat().st_size
-        assert size < 1024**2, f'Unexpected large file: {rel}'
+        is_figure = rel.suffix == '.png' and rel.parts[:2] == ('docs', 'figures')
+        limit = 5 * 1024**2 if is_figure else 1024**2
+        assert size < limit, f'Unexpected large file: {rel}'
         total += size
         largest = max(largest, (size, str(rel)))
+        if is_figure:
+            assert path.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), f'Invalid PNG: {rel}'
+            continue
         text = path.read_text()
         for pattern in token_patterns:
             assert not re.search(pattern, text), f'Possible credential in {rel}'

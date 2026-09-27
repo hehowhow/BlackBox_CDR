@@ -1,0 +1,101 @@
+{
+  "task": "music_movie_clean",
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "betas": [
+    20,
+    80
+  ],
+  "backbones": [
+    "MF",
+    "DNN"
+  ],
+  "arms": [
+    "real"
+  ],
+  "seed": 2020,
+  "dim": 32,
+  "hidden": 64,
+  "dropout": 0.1,
+  "k": 100,
+  "epochs": 10,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "batch_size": 2048,
+  "source_dim": 10,
+  "pretrain_epochs": 10,
+  "pretrain_lr": 0.01,
+  "pretrain_weight_decay": 0.0,
+  "source_batch": 512,
+  "target_batch": 256,
+  "source_policy": "DNN source checkpoint and ID lists reused exactly from 8638; fresh matched MF; source batch512 kept for DNN comparability (author task3 uses256)",
+  "inversion_iterations": 300,
+  "inversion_batch": 200,
+  "inversion_lr": 0.0001,
+  "inversion_weight_decay": 0.0001,
+  "inversion_target": 5,
+  "inversion_warmup": 10,
+  "bridge_epochs": 10,
+  "bridge_lr": 0.005,
+  "bridge_batch": 1024,
+  "bridge_weight_decay": 0.0,
+  "primary_k": 70000,
+  "emcdr_epochs": 10,
+  "emcdr_lr": 0.01,
+  "emcdr_batch": 128,
+  "emcdr_weight_decay": 0.0,
+  "residual": "fixed ordinary item mean + source-list interaction only; no learned item bias; zero final encoder layer; same original LIST encoder/dimensions",
+  "lambdas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "residual_training": "fit unscaled correction at lambda1; validation chooses epoch0..10 and lambda; zero ties keep epoch0",
+  "selection": "inner cold-user validation RMSE; all methods freshly refit full outer train for selected epochs; lambda frozen before refit",
+  "shuffle": "fixed user derangement separately within original inner_train,validation,test groups; unchanged during full refit",
+  "baselines": "ordinary item mean only; all models fallback to ordinary mean on unseen target items",
+  "pf_protocol": "author MF and DNN forward, inversion300 and K70000; all target user rows including cold untrained rows vote; no LR/K search",
+  "evaluation": "all18 frozen before first new evaluation opens test labels; reused historical test, exploratory",
+  "bootstrap_repeats": 2000,
+  "bootstrap_seed": 998,
+  "code_hashes": {
+    "/home/hehao32/BlackBox_CDR/scripts/small_task_comparison.py": "2b301de63982694bfc96e860f355fb21b6ce6b3538305bedfc582f47eb564699",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_small_task_comparison.sh": "821efcc652d155f138d2338236076f87cc042d27f108449f2cbb40e8816152a5",
+    "/home/hehao32/BlackBox_CDR/scripts/pfcdr_backbone_study.py": "05350e29a8b9a922126c9352e871a28a30a70ff5fda031a1e8ec8e3cc061137f",
+    "/home/hehao32/BlackBox_CDR/scripts/list_source_backbones.py": "4b44af49fa212d9dd8e99164ca1fc4c102c7dcfaf204a3475eb6d153ba2e9b75",
+    "/home/hehao32/BlackBox_CDR/scripts/list_target_heads.py": "27a7fa7510b51a943d9398cd3d6bd15ea78645c36a658bf37fcbca13f759e23c",
+    "/home/hehao32/BlackBox_CDR/scripts/book_movie_protocol.py": "2a087ebd1493310e56259fbef15c25e36179e8bfffc461eed4fe28f8bf2731f2",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_experiment.py": "b8eb4fbea1235a7b4aabf6df93c0121b515fc0d1938400dc06202daf2e7d6cac",
+    "/home/hehao32/BlackBox_CDR/scripts/residual_summary.py": "3570f7b1c1d026019359f2f45755260650e7c24330f64acb953d82c2edfe9664",
+    "/home/hehao32/BlackBox_CDR/scripts/run_list_encoder.py": "59396fb86b7a24e61146fdbcd739de38bd2058e56bf92ce3084f11c206a72dc0",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/models.py": "573e496588a5f812eef78ae633a7ba660dd7136cb46da3eb166e816eb50d52d8",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/float_embedding.py": "4df6960000753b3780dd4ae7f2d2257bd7c5471e674d55135d93dca6edabba48",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion.py": "3dd3f01c053653b0a484630ad312d821fd122d7ded5782ad30a3c38ef0056755",
+    "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f",
+    "/home/hehao32/BlackBox_CDR/scripts/list_ib_story.py": "6f335e2031774acacda257d99dad055d837217c7a334eaa03fba797418a35b16",
+    "/home/hehao32/BlackBox_CDR/scripts/slurm_list_ib_story.sh": "323b8b4e1c65429ea9059dad341c3da8710ac1532e958cfa79b4d0e64945b38b",
+    "/home/hehao32/BlackBox_CDR/scripts/verify_list_ib_story.py": "6e300145c8e883efa72b4708c932e1d6c3665c7174e91c854757464ae5300e12"
+  },
+  "parent": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650",
+  "parent_protocol_sha256": "41cd9c718db1adb0ce09581a1d819669ef714d682afae44fb866b4e1011ba298",
+  "variants": {
+    "noise_only": 0.0,
+    "ib_1e4": 0.0001,
+    "ib_1e3": 0.001
+  },
+  "initial_logvar": -6.0,
+  "logvar_bounds": [
+    -12.0,
+    6.0
+  ],
+  "architecture": "unchanged rank pool32 -> original Linear32/64+ReLU as Gaussian mean; new logvar Linear64/64; sample64 -> original dropout0.1 -> original zero Linear64/32 -> target dot",
+  "objective": "interaction-mean rating MSE + eta * interaction-mean KL; KL summed over64 dimensions; no-list rows zero; repeated users weighted by rating count",
+  "inference": "deterministic Gaussian mean; no MC sampling; equivalent original architecture at inference",
+  "fair_control": "three eta values share all initialization, batch permutations and stochastic schedules; original common tensors exactly match8650",
+  "parameter_change": "4160 additional trainable log-variance parameters, used only in training"
+}

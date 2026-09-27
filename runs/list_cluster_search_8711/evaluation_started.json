@@ -1,0 +1,20 @@
+{
+  "final_models": {
+    "c_1/cooccurrence/beta_20/seed_2020/residual_real": "27e9ed2c3996af2ac126780a84e0b06ab4ecf37177cc157a9f10869aa022789b",
+    "c_1/cooccurrence/beta_20/seed_2021/residual_real": "b90f81cbe0860b8033e5d1367139939daea9645d4638390eeb663ba1148d4c8e",
+    "c_1/cooccurrence/beta_20/seed_2022/residual_real": "f6a79d07ad80f0d979742aa74d1cad3f6ee0b566cb6db42a284871b5bbb64e1b",
+    "c_1/cooccurrence/beta_20/seed_2020/residual_shuffled": "1c84de85e407cab76baeaeecac25df198a0b3d3139ce558273c127b0afbd01e9",
+    "c_1/cooccurrence/beta_20/seed_2021/residual_shuffled": "e8991aaffe7cbdafdbe308b64ae140e10936222e27e7f589cd9a9a3cc8404cdd",
+    "c_1/cooccurrence/beta_20/seed_2022/residual_shuffled": "1473892ea67c810f2b036247531930b0bfb1b997cb147491943d9ba51ea7161e",
+    "c_1/cooccurrence/beta_80/seed_2020/residual_real": "839a9ff0c3673974ac821b8af9df341422e9764daf249939aec73f5001f7b864",
+    "c_1/cooccurrence/beta_80/seed_2021/residual_real": "329ec4b5b44113dacba858ab86664cc3b1de7c00f3553d7a743eaec3b5ed84e6",
+    "c_1/cooccurrence/beta_80/seed_2022/residual_real": "a5c747e2ed83012651378932c75946d189509b2caff7be45167f156d66b4a5a1",
+    "c_1/cooccurrence/beta_80/seed_2020/residual_shuffled": "d60e2bee9ff669ce2b6b6db783798e7558fb53989641f91853fce70857150e60",
+    "c_1/cooccurrence/beta_80/seed_2021/residual_shuffled": "a2f209904811084a4d41c80ac2bce28921c113b520774e951c139bbce43b60f3",
+    "c_1/cooccurrence/beta_80/seed_2022/residual_shuffled": "9ecf5d7b21cae7c761fb9b0c5cb09468d23855bf99c3a7c0c2e9a3c8791a48e3"
+  },
+  "choices": {
+    "20": "1f266373be351dcf24d5541a27a207d8c498a86225be3dfb02e5b5f8ba74d998",
+    "80": "ac3f38fd45074adabe612082b47681928d2fe10d4f398a854c6f6e6bfe5bca8f"
+  }
+}

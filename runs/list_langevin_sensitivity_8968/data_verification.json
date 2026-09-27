@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "cases_sha256": "7b61cbce230a95fa2d624341d5723672435a09037e0d8d3e50e48cce1f02b241",
+  "models": 90,
+  "no_test_labels_opened": true,
+  "all_candidates_fixed_upfront": true
+}

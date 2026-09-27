@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "models": 12,
+  "checks": [
+    "hashes and freeze before evaluation",
+    "archived shared initialization",
+    "validation-only epoch/lambda optimum",
+    "identical parameter initialization across memory variants",
+    "selected epoch full refit",
+    "phase-only dictionary users",
+    "dictionary support matches training-user hits",
+    "metric recomputation"
+  ],
+  "verifier_sha256": "65ed983d71a42c4112192c9f7d59328bf90180a03744bb558e776cca900b2c5e",
+  "verified": [
+    "pair20/beta_20/seed_2020/residual_real",
+    "pair20/beta_20/seed_2021/residual_real",
+    "pair20/beta_20/seed_2022/residual_real",
+    "pair50/beta_20/seed_2020/residual_real",
+    "pair50/beta_20/seed_2021/residual_real",
+    "pair50/beta_20/seed_2022/residual_real",
+    "pair20/beta_80/seed_2020/residual_real",
+    "pair20/beta_80/seed_2021/residual_real",
+    "pair20/beta_80/seed_2022/residual_real",
+    "pair50/beta_80/seed_2020/residual_real",
+    "pair50/beta_80/seed_2021/residual_real",
+    "pair50/beta_80/seed_2022/residual_real"
+  ]
+}

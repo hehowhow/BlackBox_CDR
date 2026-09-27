@@ -1,0 +1,296 @@
+[
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "case_id": 6
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "case_id": 24
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "train_steps",
+    "value": 10,
+    "case_id": 30
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "eval_steps",
+    "value": 60,
+    "case_id": 48
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "train_chains",
+    "value": 32,
+    "case_id": 0
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "eval_chains",
+    "value": 64,
+    "case_id": 66
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 20,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "case_id": 84
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "train_mala_step",
+    "value": 0.25,
+    "case_id": 1
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "eval_mala_step",
+    "value": 0.25,
+    "case_id": 1
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "train_steps",
+    "value": 20,
+    "case_id": 1
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "eval_steps",
+    "value": 20,
+    "case_id": 1
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "train_chains",
+    "value": 32,
+    "case_id": 1
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "eval_chains",
+    "value": 128,
+    "case_id": 1
+  },
+  {
+    "task": "music_movie_clean",
+    "beta": 80,
+    "axis": "energy_bound",
+    "value": 5.0,
+    "case_id": 1
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "case_id": 14
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "case_id": 20
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "train_steps",
+    "value": 60,
+    "case_id": 38
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "eval_steps",
+    "value": 10,
+    "case_id": 44
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "train_chains",
+    "value": 64,
+    "case_id": 62
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "eval_chains",
+    "value": 64,
+    "case_id": 68
+  },
+  {
+    "task": "book_movie",
+    "beta": 20,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "case_id": 86
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "case_id": 9
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "case_id": 27
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "train_steps",
+    "value": 10,
+    "case_id": 33
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "eval_steps",
+    "value": 60,
+    "case_id": 51
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "train_chains",
+    "value": 64,
+    "case_id": 63
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "eval_chains",
+    "value": 128,
+    "case_id": 3
+  },
+  {
+    "task": "book_movie",
+    "beta": 80,
+    "axis": "energy_bound",
+    "value": 5.0,
+    "case_id": 3
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "case_id": 10
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "case_id": 28
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "train_steps",
+    "value": 10,
+    "case_id": 34
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "eval_steps",
+    "value": 60,
+    "case_id": 52
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "train_chains",
+    "value": 16,
+    "case_id": 58
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "eval_chains",
+    "value": 64,
+    "case_id": 70
+  },
+  {
+    "task": "book_music",
+    "beta": 20,
+    "axis": "energy_bound",
+    "value": 5.0,
+    "case_id": 4
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "train_mala_step",
+    "value": 0.25,
+    "case_id": 5
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "eval_mala_step",
+    "value": 0.25,
+    "case_id": 5
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "train_steps",
+    "value": 20,
+    "case_id": 5
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "eval_steps",
+    "value": 20,
+    "case_id": 5
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "train_chains",
+    "value": 32,
+    "case_id": 5
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "eval_chains",
+    "value": 128,
+    "case_id": 5
+  },
+  {
+    "task": "book_music",
+    "beta": 80,
+    "axis": "energy_bound",
+    "value": 5.0,
+    "case_id": 5
+  }
+]

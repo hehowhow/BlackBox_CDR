@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "fit_group": "train",
+  "fit_users_sha256": "87b4363a36061792bd8cac7790c58c1c373f6635983621165c806971e532d8ad",
+  "query_sha256": "f47091f421d971f9e765f6c31e74da8a2e5f967f6237e3ef1ff87591ee6d35d2",
+  "groups_sha256": "cb5b04d35a6f2bc239e5e28d869f4bae15cbd348b5bde1b9e0657fcad1f4bb50",
+  "fitted_users": 3581,
+  "observed_items": 6741,
+  "unknown_items": 2211,
+  "diagnostics": {
+    "inner_train": {
+      "users": 2865,
+      "unknown_fraction": 0.0,
+      "all_unknown_users": 0,
+      "mean_group_sizes": [
+        52.294938917975564,
+        22.41326352530541,
+        25.291797556719022
+      ],
+      "empty_group_fraction": [
+        0.018150087260034906,
+        0.11448516579406631,
+        0.04397905759162304
+      ]
+    },
+    "validation": {
+      "users": 716,
+      "unknown_fraction": 0.0,
+      "all_unknown_users": 0,
+      "mean_group_sizes": [
+        54.677374301675975,
+        21.297486033519554,
+        24.02513966480447
+      ],
+      "empty_group_fraction": [
+        0.015363128491620111,
+        0.12569832402234637,
+        0.03910614525139665
+      ]
+    },
+    "train": {
+      "users": 3581,
+      "unknown_fraction": 0.0,
+      "all_unknown_users": 0,
+      "mean_group_sizes": [
+        52.77129293493437,
+        22.190170343479476,
+        25.038536721586148
+      ],
+      "empty_group_fraction": [
+        0.017592851158894165,
+        0.1167271711812343,
+        0.04300474727729684
+      ]
+    },
+    "test": {
+      "users": 14323,
+      "unknown_fraction": 0.003779236193534874,
+      "all_unknown_users": 0,
+      "mean_group_sizes": [
+        53.35516302450604,
+        21.863226977588493,
+        24.403686378551978
+      ],
+      "empty_group_fraction": [
+        0.016476995042937932,
+        0.13244432032395448,
+        0.040564127626893806
+      ]
+    }
+  },
+  "cluster_frequencies": [
+    {
+      "cluster": 0,
+      "items": 3622,
+      "incidences": 188974,
+      "incidence_median": 5.0,
+      "incidence_mean": 52.173937051352844
+    },
+    {
+      "cluster": 1,
+      "items": 1569,
+      "incidences": 79463,
+      "incidence_median": 8.0,
+      "incidence_mean": 50.645634161886555
+    },
+    {
+      "cluster": 2,
+      "items": 1550,
+      "incidences": 89663,
+      "incidence_median": 9.0,
+      "incidence_mean": 57.847096774193545
+    }
+  ],
+  "log_incidence_variance_explained_by_clusters": 0.0052302817616197705,
+  "max_absolute_latent_log_incidence_spearman": 0.7133983134003016,
+  "svd_explained_variance": 0.15241339802742004,
+  "kmeans_iterations": 76,
+  "test_labels_opened": false,
+  "rank_feature": "1/log2(rank+1)",
+  "matched_random_counts": true
+}

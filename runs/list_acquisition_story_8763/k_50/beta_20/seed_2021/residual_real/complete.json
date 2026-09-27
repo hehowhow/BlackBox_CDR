@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "k": 50,
+  "selection_sha256": "fc6efa94b01736adbda5fa2d8f40788b6ef1d7f6f87ee0ba44b0a8ef96ed926b",
+  "final_sha256": "1560cba82570c10b208439d53ea35641ade3bb2b69aece257af8d6f11d9327d3",
+  "test_sha256": "327ab9ec607f72c77b677814a54c207fce0e231796be8a878a0a642bf9f0cf72",
+  "query_sha256": "d6fb356010439e44bcaa08b2c13388c185c081a276340613dd08c07c9e260ae6",
+  "initial_parameters_sha256": "3691e06573076cce7e504526c0e36049bfe1191ac5f0cd3d7e9209210b8c9be5",
+  "original_parameters_sha256": "7829d61507a252086133691508c9dcef2f53f72be0cb80d1c8176ed40d85cfbc",
+  "trainable_parameters": 2044512,
+  "added_parameters": 152160,
+  "full_outer_train_rows": 1585889,
+  "refit_epochs": 6,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "own_k_list_only": true,
+  "shared_old_tensors_preserved": true,
+  "batch_order_sha256": {
+    "select": "cab637594327e1b4c7fad94d2f8dfcc80f2c4f1f47bb3d605f8d7f8e381ba464",
+    "refit": "269cbdb1f938c6421e121ab737ff86ad0e828a0be1f06695c0fb7a99e876ed33"
+  },
+  "logical_requests_per_user": 1,
+  "returned_ids_per_user": 50,
+  "scored_candidates_per_user": 62002,
+  "select_seconds": 8.23994541540742,
+  "refit_seconds": 5.01747877150774
+}

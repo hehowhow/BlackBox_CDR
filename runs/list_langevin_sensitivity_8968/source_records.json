@@ -1,0 +1,14 @@
+{
+  "music_movie_clean": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/music_movie_clean/seed_2020/queries/DNN/topk_ids.npz",
+    "sha256": "edcda1e75f85c363eb641fa98f3b417642004ef24b5e06d298b54bb0486989e6"
+  },
+  "book_movie": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_movie/seed_2020/queries/DNN/topk_ids.npz",
+    "sha256": "0943015d0f11ccfaca989681b988738576df7948684d4b4371698862e581e87d"
+  },
+  "book_music": {
+    "path": "/home/hehao32/BlackBox_CDR/runs/paper_list_dnn_8638/book_music/seed_2020/queries/DNN/topk_ids.npz",
+    "sha256": "40cf1ab1e1479602d7c8bda87f656ee05839bffcd7c60bfc3e3547a8cb6d358d"
+  }
+}

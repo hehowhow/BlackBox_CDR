@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "variant": "pair20",
+  "beta": 20,
+  "seed": 2021,
+  "selection_sha256": "9679e0060f1addf375c7677f316f1ea5bc014121c56fc053823bd7f9643d68a6",
+  "final_sha256": "106b928c0a1a41a1bb0e58c6f6a01ce624aa2e78be97d3a8bc5a1d786aa4bd7d",
+  "test_sha256": "3605baf84d9e861875be71bcf85146b98080c33a41b0e3f01e1fd5f9091ef262",
+  "memory_sha256": "9ddbe86edd1485cc4d85bcc73daa7075dad23ccc9ee741ae1fa7d705785a6734",
+  "initial_parameters_sha256": "46c0d46259de04e7b9affbf77f5fe65276354056efd80008cd77d5e92a4329c8",
+  "shared_initial_parameters_sha256": "7829d61507a252086133691508c9dcef2f53f72be0cb80d1c8176ed40d85cfbc",
+  "trainable_parameters": 2154528,
+  "additional_parameters": 262176,
+  "full_outer_train_rows": 1585889,
+  "refit_epochs": 3,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false
+}

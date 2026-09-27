@@ -1,0 +1,1712 @@
+[
+  {
+    "case_id": 0,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 0,
+    "axis": "default",
+    "value": null,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/default/music_movie_clean",
+    "output": "models/default/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 1,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 0,
+    "axis": "default",
+    "value": null,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/default/music_movie_clean",
+    "output": "models/default/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 2,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 0,
+    "axis": "default",
+    "value": null,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/default/book_movie",
+    "output": "models/default/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 3,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 0,
+    "axis": "default",
+    "value": null,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/default/book_movie",
+    "output": "models/default/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 4,
+    "task": "book_music",
+    "beta": 20,
+    "group": 0,
+    "axis": "default",
+    "value": null,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/default/book_music",
+    "output": "models/default/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 5,
+    "task": "book_music",
+    "beta": 80,
+    "group": 0,
+    "axis": "default",
+    "value": null,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/default/book_music",
+    "output": "models/default/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 6,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.1,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p1/music_movie_clean",
+    "output": "models/train_mala_step_0p1/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 7,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.1,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p1/music_movie_clean",
+    "output": "models/train_mala_step_0p1/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 8,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.1,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p1/book_movie",
+    "output": "models/train_mala_step_0p1/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 9,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.1,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p1/book_movie",
+    "output": "models/train_mala_step_0p1/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 10,
+    "task": "book_music",
+    "beta": 20,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.1,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p1/book_music",
+    "output": "models/train_mala_step_0p1/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 11,
+    "task": "book_music",
+    "beta": 80,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.1,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p1/book_music",
+    "output": "models/train_mala_step_0p1/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 12,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.5,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p5/music_movie_clean",
+    "output": "models/train_mala_step_0p5/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 13,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.5,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p5/music_movie_clean",
+    "output": "models/train_mala_step_0p5/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 14,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.5,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p5/book_movie",
+    "output": "models/train_mala_step_0p5/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 15,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.5,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p5/book_movie",
+    "output": "models/train_mala_step_0p5/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 16,
+    "task": "book_music",
+    "beta": 20,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.5,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p5/book_music",
+    "output": "models/train_mala_step_0p5/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 17,
+    "task": "book_music",
+    "beta": 80,
+    "group": 1,
+    "axis": "train_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.5,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_mala_step_0p5/book_music",
+    "output": "models/train_mala_step_0p5/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 18,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.1,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p1/music_movie_clean",
+    "output": "models/eval_mala_step_0p1/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 19,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.1,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p1/music_movie_clean",
+    "output": "models/eval_mala_step_0p1/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 20,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.1,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p1/book_movie",
+    "output": "models/eval_mala_step_0p1/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 21,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.1,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p1/book_movie",
+    "output": "models/eval_mala_step_0p1/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 22,
+    "task": "book_music",
+    "beta": 20,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.1,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p1/book_music",
+    "output": "models/eval_mala_step_0p1/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 23,
+    "task": "book_music",
+    "beta": 80,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.1,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.1,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p1/book_music",
+    "output": "models/eval_mala_step_0p1/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 24,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.5,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p5/music_movie_clean",
+    "output": "models/eval_mala_step_0p5/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 25,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.5,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p5/music_movie_clean",
+    "output": "models/eval_mala_step_0p5/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 26,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.5,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p5/book_movie",
+    "output": "models/eval_mala_step_0p5/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 27,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.5,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p5/book_movie",
+    "output": "models/eval_mala_step_0p5/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 28,
+    "task": "book_music",
+    "beta": 20,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.5,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p5/book_music",
+    "output": "models/eval_mala_step_0p5/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 29,
+    "task": "book_music",
+    "beta": 80,
+    "group": 1,
+    "axis": "eval_mala_step",
+    "value": 0.5,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.5,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_mala_step_0p5/book_music",
+    "output": "models/eval_mala_step_0p5/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 30,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 10,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_10/music_movie_clean",
+    "output": "models/train_steps_10/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 31,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 10,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_10/music_movie_clean",
+    "output": "models/train_steps_10/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 32,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 10,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_10/book_movie",
+    "output": "models/train_steps_10/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 33,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 10,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_10/book_movie",
+    "output": "models/train_steps_10/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 34,
+    "task": "book_music",
+    "beta": 20,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 10,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_10/book_music",
+    "output": "models/train_steps_10/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 35,
+    "task": "book_music",
+    "beta": 80,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 10,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_10/book_music",
+    "output": "models/train_steps_10/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 36,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 60,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_60/music_movie_clean",
+    "output": "models/train_steps_60/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 37,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 60,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_60/music_movie_clean",
+    "output": "models/train_steps_60/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 38,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 60,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_60/book_movie",
+    "output": "models/train_steps_60/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 39,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 60,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_60/book_movie",
+    "output": "models/train_steps_60/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 40,
+    "task": "book_music",
+    "beta": 20,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 60,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_60/book_music",
+    "output": "models/train_steps_60/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 41,
+    "task": "book_music",
+    "beta": 80,
+    "group": 2,
+    "axis": "train_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 60,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_steps_60/book_music",
+    "output": "models/train_steps_60/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 42,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 10,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_10/music_movie_clean",
+    "output": "models/eval_steps_10/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 43,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 10,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_10/music_movie_clean",
+    "output": "models/eval_steps_10/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 44,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 10,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_10/book_movie",
+    "output": "models/eval_steps_10/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 45,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 10,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_10/book_movie",
+    "output": "models/eval_steps_10/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 46,
+    "task": "book_music",
+    "beta": 20,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 10,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_10/book_music",
+    "output": "models/eval_steps_10/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 47,
+    "task": "book_music",
+    "beta": 80,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 10,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 10,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_10/book_music",
+    "output": "models/eval_steps_10/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 48,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 60,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_60/music_movie_clean",
+    "output": "models/eval_steps_60/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 49,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 60,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_60/music_movie_clean",
+    "output": "models/eval_steps_60/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 50,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 60,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_60/book_movie",
+    "output": "models/eval_steps_60/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 51,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 60,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_60/book_movie",
+    "output": "models/eval_steps_60/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 52,
+    "task": "book_music",
+    "beta": 20,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 60,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_60/book_music",
+    "output": "models/eval_steps_60/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 53,
+    "task": "book_music",
+    "beta": 80,
+    "group": 3,
+    "axis": "eval_steps",
+    "value": 60,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 60,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_steps_60/book_music",
+    "output": "models/eval_steps_60/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 54,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 16,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 16,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_16/music_movie_clean",
+    "output": "models/train_chains_16/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 55,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 16,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 16,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_16/music_movie_clean",
+    "output": "models/train_chains_16/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 56,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 16,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 16,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_16/book_movie",
+    "output": "models/train_chains_16/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 57,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 16,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 16,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_16/book_movie",
+    "output": "models/train_chains_16/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 58,
+    "task": "book_music",
+    "beta": 20,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 16,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 16,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_16/book_music",
+    "output": "models/train_chains_16/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 59,
+    "task": "book_music",
+    "beta": 80,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 16,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 16,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_16/book_music",
+    "output": "models/train_chains_16/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 60,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 64,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_64/music_movie_clean",
+    "output": "models/train_chains_64/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 61,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 64,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_64/music_movie_clean",
+    "output": "models/train_chains_64/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 62,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 64,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_64/book_movie",
+    "output": "models/train_chains_64/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 63,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 64,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_64/book_movie",
+    "output": "models/train_chains_64/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 64,
+    "task": "book_music",
+    "beta": 20,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 64,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_64/book_music",
+    "output": "models/train_chains_64/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 65,
+    "task": "book_music",
+    "beta": 80,
+    "group": 4,
+    "axis": "train_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 64,
+      "eval_chains": 128,
+      "energy_bound": 5.0
+    },
+    "branch": "models/train_chains_64/book_music",
+    "output": "models/train_chains_64/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 66,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 64,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_64/music_movie_clean",
+    "output": "models/eval_chains_64/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 67,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 64,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_64/music_movie_clean",
+    "output": "models/eval_chains_64/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 68,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 64,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_64/book_movie",
+    "output": "models/eval_chains_64/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 69,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 64,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_64/book_movie",
+    "output": "models/eval_chains_64/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 70,
+    "task": "book_music",
+    "beta": 20,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 64,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_64/book_music",
+    "output": "models/eval_chains_64/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 71,
+    "task": "book_music",
+    "beta": 80,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 64,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 64,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_64/book_music",
+    "output": "models/eval_chains_64/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 72,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 256,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 256,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_256/music_movie_clean",
+    "output": "models/eval_chains_256/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 73,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 256,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 256,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_256/music_movie_clean",
+    "output": "models/eval_chains_256/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 74,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 256,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 256,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_256/book_movie",
+    "output": "models/eval_chains_256/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 75,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 256,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 256,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_256/book_movie",
+    "output": "models/eval_chains_256/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 76,
+    "task": "book_music",
+    "beta": 20,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 256,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 256,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_256/book_music",
+    "output": "models/eval_chains_256/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 77,
+    "task": "book_music",
+    "beta": 80,
+    "group": 5,
+    "axis": "eval_chains",
+    "value": 256,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 256,
+      "energy_bound": 5.0
+    },
+    "branch": "models/eval_chains_256/book_music",
+    "output": "models/eval_chains_256/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 78,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 1.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 1.0
+    },
+    "branch": "models/energy_bound_1/music_movie_clean",
+    "output": "models/energy_bound_1/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 79,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 1.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 1.0
+    },
+    "branch": "models/energy_bound_1/music_movie_clean",
+    "output": "models/energy_bound_1/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 80,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 1.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 1.0
+    },
+    "branch": "models/energy_bound_1/book_movie",
+    "output": "models/energy_bound_1/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 81,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 1.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 1.0
+    },
+    "branch": "models/energy_bound_1/book_movie",
+    "output": "models/energy_bound_1/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 82,
+    "task": "book_music",
+    "beta": 20,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 1.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 1.0
+    },
+    "branch": "models/energy_bound_1/book_music",
+    "output": "models/energy_bound_1/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 83,
+    "task": "book_music",
+    "beta": 80,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 1.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 1.0
+    },
+    "branch": "models/energy_bound_1/book_music",
+    "output": "models/energy_bound_1/book_music/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 84,
+    "task": "music_movie_clean",
+    "beta": 20,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 10.0
+    },
+    "branch": "models/energy_bound_10/music_movie_clean",
+    "output": "models/energy_bound_10/music_movie_clean/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 85,
+    "task": "music_movie_clean",
+    "beta": 80,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 10.0
+    },
+    "branch": "models/energy_bound_10/music_movie_clean",
+    "output": "models/energy_bound_10/music_movie_clean/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 86,
+    "task": "book_movie",
+    "beta": 20,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 10.0
+    },
+    "branch": "models/energy_bound_10/book_movie",
+    "output": "models/energy_bound_10/book_movie/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 87,
+    "task": "book_movie",
+    "beta": 80,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 10.0
+    },
+    "branch": "models/energy_bound_10/book_movie",
+    "output": "models/energy_bound_10/book_movie/energy_20/beta_80/seed_2020"
+  },
+  {
+    "case_id": 88,
+    "task": "book_music",
+    "beta": 20,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 10.0
+    },
+    "branch": "models/energy_bound_10/book_music",
+    "output": "models/energy_bound_10/book_music/energy_20/beta_20/seed_2020"
+  },
+  {
+    "case_id": 89,
+    "task": "book_music",
+    "beta": 80,
+    "group": 6,
+    "axis": "energy_bound",
+    "value": 10.0,
+    "controls": {
+      "train_mala_step": 0.25,
+      "eval_mala_step": 0.25,
+      "train_steps": 20,
+      "eval_steps": 20,
+      "train_chains": 32,
+      "eval_chains": 128,
+      "energy_bound": 10.0
+    },
+    "branch": "models/energy_bound_10/book_music",
+    "output": "models/energy_bound_10/book_music/energy_20/beta_80/seed_2020"
+  }
+]

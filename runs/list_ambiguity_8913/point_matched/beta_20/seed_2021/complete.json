@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "variant": "point_matched",
+  "beta": 20,
+  "seed": 2021,
+  "initial_parameters_sha256": "8f3e1c982bfeaaeca921a817e37c0f81573201d1b1008c39f1b7f6ce6328564b",
+  "common_initial_parameters_sha256": "7829d61507a252086133691508c9dcef2f53f72be0cb80d1c8176ed40d85cfbc",
+  "trainable_parameters": 1892352,
+  "full_outer_train_rows": 1585889,
+  "overlap_train_rows": 445017,
+  "grouped_users": 14323,
+  "refit_epochs": 8,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "source_ids_sha256": "f47091f421d971f9e765f6c31e74da8a2e5f967f6237e3ef1ff87591ee6d35d2",
+  "final_sha256": "8803060367aaaa0bf6d439b1c7f129a35f2a2ddd6c998d5a61d4125621cca6b4",
+  "selection_sha256": "12f72207808442a3a1f2e80f1d10d03431b4d105736ea982645fef312cc30a9c",
+  "test_sha256": "598804c406df3984d3b05079215e82dfd473bc1f83b09fe4a9078cf2cfde4a05",
+  "finished": 1790364597.8762074
+}

@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "models": 30,
+  "only_observation_variance_changes": true,
+  "no_test_labels_opened": true
+}

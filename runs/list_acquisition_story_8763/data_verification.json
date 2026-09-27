@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "identical_parent_splits": true,
+  "same_ordinary_item_means": true,
+  "design_fixed_before_training": true
+}

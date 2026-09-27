@@ -1,0 +1,3 @@
+JobID|JobName|State|Elapsed|AllocTRES|ExitCode
+8703|list-segmented|COMPLETED|00:07:57|billing=8,cpu=8,gres/gpu=2,node=1|0:0
+8703.batch|batch|COMPLETED|00:07:57|cpu=8,gres/gpu=2,mem=0,node=1|0:0

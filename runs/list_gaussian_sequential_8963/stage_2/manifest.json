@@ -1,0 +1,15 @@
+{
+  "round": 2,
+  "parameter": "std_lower",
+  "grid": [
+    0.05,
+    0.01,
+    0.03,
+    0.1
+  ],
+  "prerequisite_frozen_sha256": "cd38b6fc233f0eeb7c51ccfc1c1fed6289a43feddf6c48e23b34ab33c6174242",
+  "cases_sha256": "0095d737855fb3216ee98554465d9269daa3d028af7a6a3c534361161b4342a2",
+  "new_fits": 18,
+  "evaluated_configurations": 24,
+  "skipped": []
+}

@@ -3,4 +3,5 @@ torch==2.11.0
 numpy==1.26.4
 pandas==3.0.2
 scipy==1.12.0
+scikit-learn==1.7.2
 tqdm==4.67.3

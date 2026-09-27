@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "beta": 80,
+  "variant": "ib_1e3",
+  "seed": 2020,
+  "eta": 0.001,
+  "selection_sha256": "a88072b53fae37f20e4bf22db1c4a51a6ef212f7051552167bca23defb431c31",
+  "final_sha256": "aaeeead36079617d70b128bc7709f3583ba0acf15353b6f66e6919fe7547d030",
+  "test_sha256": "7e54c215782f2d14db6754e7aa1195a3cd43698ae0f3e5e47e53b213eceef7e4",
+  "assignment_sha256": "a62c1ee518728615649e6a28c8ca9bbdf5b7dd53ea5c72104b9897ffb5557fae",
+  "initial_parameters_sha256": "0ae3895f30065d06a3c90592cbff3a749e63d8c141a67081fcae8d9930eeddd4",
+  "shared_initial_parameters_sha256": "a60d9ae7af3860b55ed72b25256b290ec1ec1caf9e77e9cc8e5a6d9ca38f3d6e",
+  "trainable_parameters": 1908256,
+  "extra_parameters": 4160,
+  "full_outer_train_rows": 1254172,
+  "source_list_interactions": 113300,
+  "refit_epochs": 10,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "source_ids_sha256": "edcda1e75f85c363eb641fa98f3b417642004ef24b5e06d298b54bb0486989e6"
+}

@@ -1,0 +1,290 @@
+[
+  {
+    "task": "book_movie",
+    "variant": "LIST_v1",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "LIST_v1",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "LIST_v1",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "LIST_v1",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "LIST_v1",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "LIST_v1",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "LIST_v1",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "LIST_v1",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "LIST_v1",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "LIST_v1",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "LIST_v1",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "LIST_v1",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "point_matched",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "point_matched",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "gaussian_learned",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "gaussian_learned",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_movie",
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_movie",
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_movie",
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "energy_20",
+    "beta": 20,
+    "seed": 2022
+  },
+  {
+    "task": "book_music",
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2020
+  },
+  {
+    "task": "book_music",
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2021
+  },
+  {
+    "task": "book_music",
+    "variant": "energy_20",
+    "beta": 80,
+    "seed": 2022
+  }
+]

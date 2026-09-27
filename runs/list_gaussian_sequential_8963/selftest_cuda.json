@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "standard_deviation_units": true,
+  "initialization_and_both_bounds_tested": true,
+  "unchanged_shared_initialization": true,
+  "invalid_upper_excluded": true,
+  "combinations": 13
+}

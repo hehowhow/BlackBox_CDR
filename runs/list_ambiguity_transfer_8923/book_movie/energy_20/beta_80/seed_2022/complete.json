@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "variant": "energy_20",
+  "beta": 80,
+  "seed": 2022,
+  "initial_parameters_sha256": "5f49dc4f6d41fbb2dac72b3a26a0b284c6125026ec4766a219866a318b493c5c",
+  "common_initial_parameters_sha256": "869f57bab71972a880f3ab7863efa9d53b6493d911326aa053dedb0fa31f2aee",
+  "trainable_parameters": 2398497,
+  "full_outer_train_rows": 1063353,
+  "overlap_train_rows": 158139,
+  "grouped_users": 7478,
+  "refit_epochs": 10,
+  "refit_reinitialized": true,
+  "restored_predictions": true,
+  "test_labels_opened": false,
+  "source_ids_sha256": "bde53653396a7d257fd829cea26d93ac6610d86af75ed9dd54e96cc5c48b3957",
+  "final_sha256": "3933398fb29f6f589248718a0563cab88a3867268d91f4b58fb02d1cc151f85f",
+  "selection_sha256": "2dbe9ec3a027d934a609ab2aa8ce35b51b15f20ca260eee3c97c5f475bca6728",
+  "test_sha256": "3fac28d59a9d2c574082d8dddf05b8def899105aaa020abcd3a5908441c35854",
+  "finished": 1790391079.6912365
+}

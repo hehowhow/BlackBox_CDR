@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "cluster_fits": 72,
+  "selection_records": 42,
+  "final_models": 12,
+  "candidate_models": 36,
+  "train_only_clustering": true,
+  "validation_only_C_choice": true,
+  "independent_metrics_match": true,
+  "parameter_formula_verified": true,
+  "verifier_sha256": "c4783fa44fd3e5f9c45c76ab7e374a8339562554a8b5c260601272689af354c8"
+}

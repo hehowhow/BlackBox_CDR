@@ -1,0 +1,417 @@
+{
+  "status": "PASS",
+  "new_models": 48,
+  "seeds": [
+    2020,
+    2021,
+    2022
+  ],
+  "betas": [
+    20,
+    80
+  ],
+  "tracks": {
+    "ib": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763",
+    "acquisition": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763",
+    "memory": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760"
+  },
+  "baseline": "/home/hehao32/BlackBox_CDR/runs/small_task_comparison_8650",
+  "verifier_sha256": "41623c8e2b8e1750df85bd82294fa632100ac1027476562a75b71390480dedcd",
+  "checks": [
+    "all tracks completed before combined evaluation",
+    "frozen code and data hashes",
+    "disjoint cold-user splits",
+    "independently recomputed ordinary training means",
+    "prediction/checkpoint/selection hashes and freeze timestamps",
+    "validation-only epoch and lambda argmin",
+    "full refit for selected epochs",
+    "unseen-item fallback",
+    "independently recomputed per-seed MAE/RMSE"
+  ],
+  "models": [
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/noise_only/beta_20/seed_2020/residual_real",
+      "complete_sha256": "5d512c34e07c744e2041422c1090491dc6f076f9316676691d67dc0d722f4efe",
+      "trainable_parameters": 1908256,
+      "epoch": 7,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/noise_only/beta_20/seed_2021/residual_real",
+      "complete_sha256": "5d918c54c1645a9a74b5b10cac1df0b5718a734ab0227e343fea6c0758c3cfc1",
+      "trainable_parameters": 1896512,
+      "epoch": 7,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/noise_only/beta_20/seed_2022/residual_real",
+      "complete_sha256": "f511a3852b441d2bf57e30c1d03a908210d8d6a49f8abc5f328e2101c2eb1010",
+      "trainable_parameters": 1949440,
+      "epoch": 7,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e4/beta_20/seed_2020/residual_real",
+      "complete_sha256": "52be115c3d6e82f66a6514719556a6fb581a68afd380e993d044d328ff02b3ce",
+      "trainable_parameters": 1908256,
+      "epoch": 6,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e4/beta_20/seed_2021/residual_real",
+      "complete_sha256": "33e55dd4972a793163c3825e6d796f9034b57c852d0cb65cf63eaad0c8502dcc",
+      "trainable_parameters": 1896512,
+      "epoch": 6,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e4/beta_20/seed_2022/residual_real",
+      "complete_sha256": "fd5aceb3da03b6303f66c5a48b0e42a36e4c6b1550c17245da715a175f3ef639",
+      "trainable_parameters": 1949440,
+      "epoch": 7,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e3/beta_20/seed_2020/residual_real",
+      "complete_sha256": "a2a94ba4ecccd3c56fd85eeb35657a38c8d68d4d2a301214bfb9bb8e1127f757",
+      "trainable_parameters": 1908256,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e3/beta_20/seed_2021/residual_real",
+      "complete_sha256": "f720c3d72f410c3207d82dc2c4fe9de49e58010f29fd89139e0e6f2e726cc862",
+      "trainable_parameters": 1896512,
+      "epoch": 10,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e3/beta_20/seed_2022/residual_real",
+      "complete_sha256": "7f2b95dd86dd0d49cfd0f6d9435718b79f6ce34051279577316d908e116872d8",
+      "trainable_parameters": 1949440,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/noise_only/beta_80/seed_2020/residual_real",
+      "complete_sha256": "c72a328428200f1d824419319c38555ba806cb3435064d973c56f0403ebd0a42",
+      "trainable_parameters": 1908256,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/noise_only/beta_80/seed_2021/residual_real",
+      "complete_sha256": "d23173230441aa795d99ca19ee1401db61a16a70df666948c312ec737adc93fb",
+      "trainable_parameters": 1896512,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/noise_only/beta_80/seed_2022/residual_real",
+      "complete_sha256": "b61c39d5ac620b5ea730ca9faa0d46cdfb8873edaf53bfc74c2910f6fc02be8c",
+      "trainable_parameters": 1949440,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e4/beta_80/seed_2020/residual_real",
+      "complete_sha256": "50a3c2f2f8fab38a6ec5d30ba8051c24c7f03c2b29cde5e67b7afd7fa0e7479c",
+      "trainable_parameters": 1908256,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e4/beta_80/seed_2021/residual_real",
+      "complete_sha256": "f6d39738b05cef4e64e67a219c06b5f2387c23ebbb678e62f2df95a13d4072a1",
+      "trainable_parameters": 1896512,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e4/beta_80/seed_2022/residual_real",
+      "complete_sha256": "bb436b5732ae9e76d229d27cf7ba0df2b425b5af46ac1605e1015577d6226dc8",
+      "trainable_parameters": 1949440,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e3/beta_80/seed_2020/residual_real",
+      "complete_sha256": "d0be11c38ceff3098613f0d97aebc9ecf474bf6a865a177d86407393bf35092a",
+      "trainable_parameters": 1908256,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e3/beta_80/seed_2021/residual_real",
+      "complete_sha256": "c824612c53a54c8c1c0517cdec8264006815ea7197811e6f48915700e42034d3",
+      "trainable_parameters": 1896512,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "ib",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_ib_story_8763/ib_1e3/beta_80/seed_2022/residual_real",
+      "complete_sha256": "e93104b2b444aa7de0ce5601227a92bd7b9507dcc0efc9748cc9c7ffbdcb5b10",
+      "trainable_parameters": 1949440,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_20/beta_20/seed_2020/residual_real",
+      "complete_sha256": "963e00807883fc75da842c38a8be2f962c9f2cda7e3eb402beb1eb05fa2181c4",
+      "trainable_parameters": 2060832,
+      "epoch": 4,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_20/beta_20/seed_2021/residual_real",
+      "complete_sha256": "9da6695673472de8f7a91527a7b0d690993de01d97f4074c519f844c735b1958",
+      "trainable_parameters": 2044512,
+      "epoch": 5,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_20/beta_20/seed_2022/residual_real",
+      "complete_sha256": "e7dcf037d58750bc77ee7ee1e5e41bd0a73d6afe144f891e670cd036417432a9",
+      "trainable_parameters": 2125632,
+      "epoch": 5,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_50/beta_20/seed_2020/residual_real",
+      "complete_sha256": "6d988f24db8b3141ed092c5d2e65980dde34148c4fc2eebd388beb0e2d62f03e",
+      "trainable_parameters": 2060832,
+      "epoch": 4,
+      "lambda_value": 0.75
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_50/beta_20/seed_2021/residual_real",
+      "complete_sha256": "ffec31e9a99af564dde682c26989aa5ebb5c47d0d460613fbab8cbd4ba76e89b",
+      "trainable_parameters": 2044512,
+      "epoch": 6,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_50/beta_20/seed_2022/residual_real",
+      "complete_sha256": "850e0ec2b8c711e902cc800fc48367241507673f678985724ed1cde43dd67613",
+      "trainable_parameters": 2125632,
+      "epoch": 5,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_200/beta_20/seed_2020/residual_real",
+      "complete_sha256": "247b5c3a8cfdf877882f6c12f431932310b04974abe3a39ade60d93da6164533",
+      "trainable_parameters": 2060832,
+      "epoch": 4,
+      "lambda_value": 0.75
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_200/beta_20/seed_2021/residual_real",
+      "complete_sha256": "005725b5191f2e3518d7ee24f0ceb1b8e68fd4eac6bd40c0683089bb8644f1b4",
+      "trainable_parameters": 2044512,
+      "epoch": 7,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_200/beta_20/seed_2022/residual_real",
+      "complete_sha256": "b5975d07ecddb2e9cb990b6f9a66157102f9ef9a7e06cb8ad7d94f25374c08fe",
+      "trainable_parameters": 2125632,
+      "epoch": 7,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_20/beta_80/seed_2020/residual_real",
+      "complete_sha256": "6d1c27dbeca0f1928195a510428a294ee1f47001acbe417adf7c4d64c8c242e1",
+      "trainable_parameters": 2060832,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_20/beta_80/seed_2021/residual_real",
+      "complete_sha256": "e3805c8424962a23de744c56e49a0991cca80d9e01b949a86d3284eab084dc7e",
+      "trainable_parameters": 2044512,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_20/beta_80/seed_2022/residual_real",
+      "complete_sha256": "915677dcc6e7221224df9976cc19f0812d4c96b3894c4055b8099e4013a0582d",
+      "trainable_parameters": 2125632,
+      "epoch": 8,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_50/beta_80/seed_2020/residual_real",
+      "complete_sha256": "d181f67c2bd97a3a04626812087b5a384c6f3a7491bfd64f4b8466695d0ecca9",
+      "trainable_parameters": 2060832,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_50/beta_80/seed_2021/residual_real",
+      "complete_sha256": "1be0345204b62d393e5e06839395f933426bd1eb9e2bea4289df1250cb730fef",
+      "trainable_parameters": 2044512,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_50/beta_80/seed_2022/residual_real",
+      "complete_sha256": "96ae23a5edb1ee45e1cdcb46db9bc49875337f7f8db1684eff99768b19c9eb69",
+      "trainable_parameters": 2125632,
+      "epoch": 8,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_200/beta_80/seed_2020/residual_real",
+      "complete_sha256": "25f605008537b7f4fb8ef7271999c1d879fdeafed68c2a79767f373d5f6654eb",
+      "trainable_parameters": 2060832,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_200/beta_80/seed_2021/residual_real",
+      "complete_sha256": "d777c202975ffb268e6699533068af93467253527d5691aeb15735abc01d24f7",
+      "trainable_parameters": 2044512,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "acquisition",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_acquisition_story_8763/k_200/beta_80/seed_2022/residual_real",
+      "complete_sha256": "c847d9d1ecae97106c1b53ae9ef5049b6f7279cc32ddabca1546c3fb923d17c3",
+      "trainable_parameters": 2125632,
+      "epoch": 8,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair20/beta_20/seed_2020/residual_real",
+      "complete_sha256": "f1d900286aad625d66b64939452b1073e092527ff234487bedef9f94d96d289d",
+      "trainable_parameters": 2166272,
+      "epoch": 4,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair20/beta_20/seed_2021/residual_real",
+      "complete_sha256": "b39486ef1c00afe9660fde5f063e8f2db776d0c660eb585d2aa33457c95a88fc",
+      "trainable_parameters": 2154528,
+      "epoch": 3,
+      "lambda_value": 0.75
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair20/beta_20/seed_2022/residual_real",
+      "complete_sha256": "918d6f0c689a96998c861ddc97ff57c0cd4bc3fa97e822dfa17ec7c3e48f1dfd",
+      "trainable_parameters": 2207456,
+      "epoch": 4,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair50/beta_20/seed_2020/residual_real",
+      "complete_sha256": "5c4d0465424945b4158a03ad4860dd9b168ba03546bf3afd7f768b4668bb0c7d",
+      "trainable_parameters": 2166272,
+      "epoch": 4,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair50/beta_20/seed_2021/residual_real",
+      "complete_sha256": "70b837378c55a3696f36831f6afbb1fda7cb84154a3061e4ea85697903f8be63",
+      "trainable_parameters": 2154528,
+      "epoch": 3,
+      "lambda_value": 0.75
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair50/beta_20/seed_2022/residual_real",
+      "complete_sha256": "bc4b38c3e5c406bb0e4bc580c2b87fea1eb87d0c7dd08c4e4eaeeb892e06f4b1",
+      "trainable_parameters": 2207456,
+      "epoch": 4,
+      "lambda_value": 0.5
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair20/beta_80/seed_2020/residual_real",
+      "complete_sha256": "b811d6731b8de5b1d340e219fa2ff835ce71d62494621fd0cc3703d6613b6f9f",
+      "trainable_parameters": 2166272,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair20/beta_80/seed_2021/residual_real",
+      "complete_sha256": "bb1fa9c1a15410481f77500dd517ae7276fbca2d1bf75a60f829536e08ca0643",
+      "trainable_parameters": 2154528,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair20/beta_80/seed_2022/residual_real",
+      "complete_sha256": "e7d8dedb6e3e6102ea24cc4a27540189ae277821e489ec4f5bd99720858989db",
+      "trainable_parameters": 2207456,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair50/beta_80/seed_2020/residual_real",
+      "complete_sha256": "110de1435d5f2ad37c8c3f19a0ff958a673a9597e6eb804e7c0c254799cd053d",
+      "trainable_parameters": 2166272,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair50/beta_80/seed_2021/residual_real",
+      "complete_sha256": "c84bb1cde51e7eb3e7e8f92284bb722a45ccd8aea17338da1667c02465b2ba14",
+      "trainable_parameters": 2154528,
+      "epoch": 10,
+      "lambda_value": 0.25
+    },
+    {
+      "track": "memory",
+      "model": "/home/hehao32/BlackBox_CDR/runs/list_memory_story_8760/pair50/beta_80/seed_2022/residual_real",
+      "complete_sha256": "83c61d4c6d8a47acc6ef5a95ace1a5cbcb341bb08052d558dd7ab14075814425",
+      "trainable_parameters": 2207456,
+      "epoch": 8,
+      "lambda_value": 0.25
+    }
+  ]
+}

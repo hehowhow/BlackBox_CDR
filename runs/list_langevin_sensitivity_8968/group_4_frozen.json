@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "models": {
+    "models/train_chains_16/music_movie_clean/energy_20/beta_20/seed_2020": "eccb97082d89a81cf5e778c047968a9c8e9966fc3bdcbd47a78d9e5fcdb0260e",
+    "models/train_chains_16/music_movie_clean/energy_20/beta_80/seed_2020": "30b621e6616901741d19bda037432693c934854b65ccdc449773d4b9ceb87e8c",
+    "models/train_chains_16/book_movie/energy_20/beta_20/seed_2020": "e608bd8e20ff319148f65762d4381b42785064694c55a1025ce786e993ddf7a7",
+    "models/train_chains_16/book_movie/energy_20/beta_80/seed_2020": "007a1168a0890a7a6e3940b9454c54f5ce0d2c088527ffa87799144bf4224650",
+    "models/train_chains_16/book_music/energy_20/beta_20/seed_2020": "8eae00ccf38878fdae21c14274b5192f5bcf501a99b2324be683a8294bed1f18",
+    "models/train_chains_16/book_music/energy_20/beta_80/seed_2020": "2a74c323347f596a6dffdf335e8ebe89796851e33a606a783791898054c2b5f4",
+    "models/train_chains_64/music_movie_clean/energy_20/beta_20/seed_2020": "2d80652de0fb4c0cdcf8ff14844ffb3b142bc3f36a02c917ea2f470d230e5eb8",
+    "models/train_chains_64/music_movie_clean/energy_20/beta_80/seed_2020": "2a48fc1bb7ba2494ec1fd4d66f969616e735b07d83fd0c5c6c7910d3afc4e16d",
+    "models/train_chains_64/book_movie/energy_20/beta_20/seed_2020": "e53e1d699c9e9b3b0ad1d83a1cda6d413418201e7abea79a029318ce286bfbb9",
+    "models/train_chains_64/book_movie/energy_20/beta_80/seed_2020": "072691e41196c14ac3921d53027245dd74edfe087b3c40a6ecd16346cb0af90f",
+    "models/train_chains_64/book_music/energy_20/beta_20/seed_2020": "91edfb0de0a90cb9c48dde2f9a5558b46e2425fa4649106fa1c5f635a63bf141",
+    "models/train_chains_64/book_music/energy_20/beta_80/seed_2020": "63603dfc901844139872e3040d6820d61d3ffd266f6fbf6bcef9d75d6eb77230"
+  },
+  "time": 1790445886.4881878
+}
