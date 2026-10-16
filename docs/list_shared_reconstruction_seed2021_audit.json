@@ -1,0 +1,36 @@
+{
+  "source_run": "list_shared_reconstruction_20261016_seed2021",
+  "original_protocol_sha256": "b130295f8d104fc539fc295b76435ef4aae0571c2dc15a53c264bb8158ba5fde",
+  "verification": {
+    "status": "PASS",
+    "models": 6,
+    "metric_rows": 24,
+    "all_predictions_frozen_before_test": true,
+    "unchanged_baseline_artifacts": true,
+    "seed": 2021
+  },
+  "independent_verification": {
+    "status": "PASS",
+    "models": 6,
+    "metric_rows": 24,
+    "seed": 2021,
+    "maximum_metric_recomputation_error": 0.0,
+    "validation_selection_reproduced": true,
+    "unchanged_training_budgets": true,
+    "declared_auxiliary_objective_verified": true,
+    "added_trainable_parameters": 11584,
+    "baseline_prediction_hashes_verified": true,
+    "all_predictions_frozen_before_test": true,
+    "direct_execution_receipts": true,
+    "gpu_uuids": [
+      "GPU-72af66a3-eddb-2d87-47d4-b8acfa1d1d99",
+      "GPU-ae26dc86-8014-0b00-dd58-e1e9073f7e11"
+    ]
+  },
+  "publication": {
+    "results": "docs/list_shared_reconstruction_seed2021_results.csv",
+    "public_results_sha256": "a73b46a982408cf2dfa39b2b97eb0fe44142b14739fccc911dc97892e47682a9",
+    "original_results_sha256": "3e7fe2aa3a3e40b875fc8d93ef86f88341513d4e346f7a8092d6011ffe5da9ac",
+    "csv_changes": "CRLF normalized to LF as required by .gitattributes; all rows and numeric strings unchanged"
+  }
+}

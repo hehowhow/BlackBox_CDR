@@ -1,9 +1,28 @@
-# BlackBox CDR — LIST 跨域冷用户评分预测
+# BlackBox CDR — LAPT / LIST 跨域冷用户评分预测
 
 源推荐服务只提供 Top-K 物品 ID 和排名时，能否帮助预测另一个域的评分？
 本仓库保存实验代码、固定参数、两卡 Slurm 入口、结果表与审计记录。
 
-**`optimization4metric` 分支：LIST额外优化实验归档（截至2026-09-27）。**
+**`lapt` 分支：LAPT（Limited-Access Preference Transfer），截至 2026-10-16。**
+当前方法接收源域 Top-100 原物品 ID 与排名，通过差异化偏好增强（DPE）提取列表表示，
+再用条件能量驱动的偏好采样（CEPS）预测目标物品普通均值之上的评分修正。
+这一版不使用粗码，也不按物品出现频次直接加权。
+
+[LAPT 实现、参数与运行说明](docs/lapt.md) ·
+[论文 outline](docs/lapt_paper_outline.md) ·
+[最新 MF 54 组结果与分析](docs/lapt_mf_full_seed2020.md) ·
+[PDF](docs/lapt_mf_full_seed2020.pdf) ·
+[LaTeX](docs/lapt_mf_full_seed2020.tex) ·
+[完整指标 CSV](docs/lapt_mf_full_seed2020_results.csv)。
+
+本次 MF 实验覆盖三个任务、β20/50/80、seed2020、六种方法；此前 DNN seed2021
+实验另行保留。两轮结果不能混成多种子均值；LAPT 的改善没有覆盖全部设置。
+新环境可以先运行文档中的 CPU 自检；全量训练仍需重建未公开的数据与历史缓存，
+并调整服务器路径。模型、训练和采样实现保留实验时版本。
+
+## 历史 LIST 与优化归档
+
+**前序 `optimization4metric` 分支：LIST额外优化实验归档（截至2026-09-27）。**
 [全部优化的目的、结论与统一对照表](docs/list_optimization_overview.md) ·
 [逐种子及调参结果CSV](docs/list_optimization_overview_results.csv) ·
 [三种子均值与标准差CSV](docs/list_optimization_overview_3seed.csv)。
@@ -11,7 +30,7 @@
 条件高斯、条件能量/朗之万及其参数扫描。三种子平均与seed2020调参结果分别报告；
 这些是各自独立的变体，没有合并成一个新主模型。
 
-**当前主版本：DNN 源 Top100 → 排名加权聚合 → MLP → 普通目标物品均值上的残差修正。**
+**归档 LIST V1：DNN 源 Top100 → 排名加权聚合 → MLP → 普通目标物品均值上的残差修正。**
 DNN 沿用 PFCDR 作者命名，实际为用户仿射变换后与物品向量内积。
 学生不读取源评分、教师参数或返回分数；需要已知的跨域用户对应与重叠训练用户。
 

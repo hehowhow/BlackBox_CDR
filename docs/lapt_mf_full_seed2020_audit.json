@@ -1,0 +1,378 @@
+{
+  "source_run": "lapt_mf_full_20261016_seed2020",
+  "original_protocol_sha256": "3a8c698c8dbbfc9687314fa0027f90a54b6b4be3d6d1696abbf5944639dab6a2",
+  "completed_execution": {
+    "slurm_job": "11206",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:36:03",
+    "gpus": 2
+  },
+  "verification": {
+    "status": "PASS",
+    "results": 54,
+    "all_frozen_before_evaluation": true,
+    "independent_metric_recalculation": true,
+    "same_MF_teacher_within_task": true,
+    "frozen_sha256": "a9a8bd1b5228c348c4528d2d81923c4b500c12bab4ba8edce19b6312b43f7754",
+    "results_sha256": "6b7d7bb1d52cd267a453221a78d286dcd3c657c555829defcebef1e37ac9bc19"
+  },
+  "independent_verification": {
+    "status": "PASS",
+    "results": 54,
+    "source_backbone": "MF",
+    "same_source_checkpoint_and_ranked_IDs": true,
+    "author_task_specific_batches": true,
+    "all_stage_epoch_counts_checked": true,
+    "validation_choices_recomputed": true,
+    "all_refits_reinitialized": true,
+    "no_target_train_test_user_overlap": true,
+    "matched_energy_initialization": true,
+    "lapt_extra_parameters": 11584,
+    "metric_max_difference": 8.881784197001252e-16,
+    "cells": [
+      {
+        "task": "book_movie",
+        "beta": 20,
+        "train_users": 29910,
+        "test_users": 7478,
+        "test_ratings": 156280
+      },
+      {
+        "task": "book_movie",
+        "beta": 50,
+        "train_users": 18694,
+        "test_users": 18694,
+        "test_ratings": 402762
+      },
+      {
+        "task": "book_movie",
+        "beta": 80,
+        "train_users": 7478,
+        "test_users": 29910,
+        "test_ratings": 634180
+      },
+      {
+        "task": "book_music",
+        "beta": 20,
+        "train_users": 13390,
+        "test_users": 3348,
+        "test_ratings": 74871
+      },
+      {
+        "task": "book_music",
+        "beta": 50,
+        "train_users": 8369,
+        "test_users": 8369,
+        "test_ratings": 195323
+      },
+      {
+        "task": "book_music",
+        "beta": 80,
+        "train_users": 3348,
+        "test_users": 13390,
+        "test_ratings": 306382
+      },
+      {
+        "task": "music_movie_clean",
+        "beta": 20,
+        "train_users": 14323,
+        "test_users": 3581,
+        "test_ratings": 111644
+      },
+      {
+        "task": "music_movie_clean",
+        "beta": 50,
+        "train_users": 8952,
+        "test_users": 8952,
+        "test_ratings": 277916
+      },
+      {
+        "task": "music_movie_clean",
+        "beta": 80,
+        "train_users": 3581,
+        "test_users": 14323,
+        "test_ratings": 443361
+      }
+    ],
+    "verifier_sha256": "9502e52e90952db09d4f9cf8ebbcbc03f16ee5907a8b4a4df8729bd49a9e27f8"
+  },
+  "pdf_verification": {
+    "status": "PASS",
+    "pages": 1,
+    "metric_cells": 108,
+    "all_rounded_metrics_match_csv": true,
+    "text_outside_page": [],
+    "pdf_sha256": "38bd4282f23378b93603270c1d9e57eeb9031c26d75666272577f53c6a359bf9",
+    "tex_sha256": "1c0c9acdf87ea33b79e8ca42d2bffd67cedc10984fee8965eea5bf41137034c8",
+    "original_tex_sha256": "d684392f3fc805fbbc3d97ae58f20d1bdfd749de919c969e375322949ecbbdc6",
+    "original_pdf_sha256": "3c453538aa5f4d749706aa942f9a658885597147ce984be519b08409d0a0626f",
+    "changes": [
+      "End subtitle paragraph before tables",
+      "Start protocol notes in a new paragraph",
+      "Repair possessive apostrophes",
+      "Disclose validation-selected zero-correction cases from the verified CSV"
+    ],
+    "metric_data_unchanged": true,
+    "frozen_training_code_unchanged": true,
+    "postprocessor_sha256": "b3e4c9bf2fb5983e2cd863030a2efe181a2ea4557dd2ad1d5ca276b359f6a413"
+  },
+  "comparison_analysis": {
+    "mae": {
+      "best_counts": {
+        "LAPT": 2,
+        "LIST_V1_Langevin": 4,
+        "LIST_V1": 3
+      },
+      "LAPT_vs_LIST_V1": {
+        "better": 4,
+        "tied": 0,
+        "worse": 5
+      },
+      "LAPT_vs_LIST_V1_Langevin": {
+        "better": 3,
+        "tied": 2,
+        "worse": 4
+      },
+      "LAPT_vs_PFCDR": {
+        "better": 9,
+        "tied": 0,
+        "worse": 0
+      }
+    },
+    "rmse": {
+      "best_counts": {
+        "LIST_V1_Langevin": 2,
+        "LIST_V1": 5,
+        "LAPT": 2
+      },
+      "LAPT_vs_LIST_V1": {
+        "better": 3,
+        "tied": 0,
+        "worse": 6
+      },
+      "LAPT_vs_LIST_V1_Langevin": {
+        "better": 4,
+        "tied": 2,
+        "worse": 3
+      },
+      "LAPT_vs_PFCDR": {
+        "better": 9,
+        "tied": 0,
+        "worse": 0
+      }
+    },
+    "lambda_zero": {
+      "LIST_V1": [],
+      "LIST_V1_Langevin": [
+        {
+          "task": "book_music",
+          "beta": 50
+        },
+        {
+          "task": "music_movie_clean",
+          "beta": 80
+        }
+      ],
+      "LAPT": [
+        {
+          "task": "book_music",
+          "beta": 50
+        },
+        {
+          "task": "book_music",
+          "beta": 80
+        },
+        {
+          "task": "music_movie_clean",
+          "beta": 80
+        }
+      ]
+    }
+  },
+  "dataset_counts": [
+    {
+      "task": "book_movie",
+      "beta": 20,
+      "overlap": 37388,
+      "outer_train": 29910,
+      "inner_train": 23928,
+      "validation": 5982,
+      "test": 7478,
+      "target_only": 86572,
+      "rows": {
+        "source": 8898041,
+        "train": 1541253,
+        "inner_train": 1410842,
+        "validation": 130411,
+        "test": 156280
+      }
+    },
+    {
+      "task": "book_movie",
+      "beta": 50,
+      "overlap": 37388,
+      "outer_train": 18694,
+      "inner_train": 14955,
+      "validation": 3739,
+      "test": 18694,
+      "target_only": 86572,
+      "rows": {
+        "source": 8898041,
+        "train": 1294771,
+        "inner_train": 1213809,
+        "validation": 80962,
+        "test": 402762
+      }
+    },
+    {
+      "task": "book_movie",
+      "beta": 80,
+      "overlap": 37388,
+      "outer_train": 7478,
+      "inner_train": 5982,
+      "validation": 1496,
+      "test": 29910,
+      "target_only": 86572,
+      "rows": {
+        "source": 8898041,
+        "train": 1063353,
+        "inner_train": 1033258,
+        "validation": 30095,
+        "test": 634180
+      }
+    },
+    {
+      "task": "book_music",
+      "beta": 20,
+      "overlap": 16738,
+      "outer_train": 13390,
+      "inner_train": 10712,
+      "validation": 2678,
+      "test": 3348,
+      "target_only": 58520,
+      "rows": {
+        "source": 8898041,
+        "train": 1022721,
+        "inner_train": 962889,
+        "validation": 59832,
+        "test": 74871
+      }
+    },
+    {
+      "task": "book_music",
+      "beta": 50,
+      "overlap": 16738,
+      "outer_train": 8369,
+      "inner_train": 6695,
+      "validation": 1674,
+      "test": 8369,
+      "target_only": 58520,
+      "rows": {
+        "source": 8898041,
+        "train": 902269,
+        "inner_train": 865640,
+        "validation": 36629,
+        "test": 195323
+      }
+    },
+    {
+      "task": "book_music",
+      "beta": 80,
+      "overlap": 16738,
+      "outer_train": 3348,
+      "inner_train": 2678,
+      "validation": 670,
+      "test": 13390,
+      "target_only": 58520,
+      "rows": {
+        "source": 8898041,
+        "train": 791210,
+        "inner_train": 776602,
+        "validation": 14608,
+        "test": 306382
+      }
+    },
+    {
+      "task": "music_movie_clean",
+      "beta": 20,
+      "overlap": 17904,
+      "outer_train": 14323,
+      "inner_train": 11458,
+      "validation": 2865,
+      "test": 3581,
+      "target_only": 106056,
+      "rows": {
+        "source": 1062711,
+        "train": 1585889,
+        "inner_train": 1494495,
+        "validation": 91394,
+        "test": 111644
+      }
+    },
+    {
+      "task": "music_movie_clean",
+      "beta": 50,
+      "overlap": 17904,
+      "outer_train": 8952,
+      "inner_train": 7162,
+      "validation": 1790,
+      "test": 8952,
+      "target_only": 106056,
+      "rows": {
+        "source": 1062711,
+        "train": 1419617,
+        "inner_train": 1365589,
+        "validation": 54028,
+        "test": 277916
+      }
+    },
+    {
+      "task": "music_movie_clean",
+      "beta": 80,
+      "overlap": 17904,
+      "outer_train": 3581,
+      "inner_train": 2865,
+      "validation": 716,
+      "test": 14323,
+      "target_only": 106056,
+      "rows": {
+        "source": 1062711,
+        "train": 1254172,
+        "inner_train": 1228172,
+        "validation": 26000,
+        "test": 443361
+      }
+    }
+  ],
+  "upstream_evidence": {
+    "repository": "https://github.com/walcheng/PFCDR",
+    "commit": "c88e6fe7bd52ea258e686d5850cf5422d2b35a44",
+    "files": {
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/config.json": "08da1cf7e98de8f919a5283c9c49e637c3bb99ea426af496c28132f6b9c8090d",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/inversion_config.json": "0c61eddf734f2b9a8b9b394bbb5449b985a5a342cee4a753539e4089a99e9e6f",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/main.py": "bfe40c77abb4229accc6136a7a0ccaae151118e0f8737792167afa9b93e0b37b",
+      "/home/hehao32/BlackBox_CDR/external/PFCDR/run.py": "f8fb3f59d5e87b6c50fd744fe9ab24d15c9969112a90cb71917308aac477fcaf",
+      "/home/hehao32/3696410.3714580.pdf": "25b7ca30f727ecdc24dc2be582f48e62feb92f95441165c9a29284ffbc40ba06"
+    },
+    "paper_doi": "10.1145/3696410.3714580"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+    "platform": "Linux-6.8.0-101-generic-x86_64-with-glibc2.39",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "numpy": "1.26.4",
+    "pandas": "3.0.2",
+    "scipy": "1.12.0",
+    "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "execution_backend": "Slurm",
+    "job": "11206"
+  },
+  "publication": {
+    "results": "docs/lapt_mf_full_seed2020_results.csv",
+    "public_results_sha256": "3d1a40651efa3a9bf8f8a0fe5bf29c86f6c30d491af0a8ec9c16b2df709c314a",
+    "original_results_sha256": "6b7d7bb1d52cd267a453221a78d286dcd3c657c555829defcebef1e37ac9bc19",
+    "csv_changes": "CRLF normalized to LF as required by .gitattributes; all rows and numeric strings unchanged"
+  }
+}

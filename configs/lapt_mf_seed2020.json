@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "model": "LAPT",
+  "snapshot_date": "2026-10-16",
+  "purpose": "Effective parameter summary; archival runners do not load this JSON",
+  "reference_run": "lapt_mf_full_20261016_seed2020",
+  "frozen_protocol_sha256": "3a8c698c8dbbfc9687314fa0027f90a54b6b4be3d6d1696abbf5944639dab6a2",
+  "input": {
+    "source_backbone": "MF",
+    "top_k": 100,
+    "tokens": "raw item IDs with bijective relabeling; ranks retained",
+    "coarse_codes": false
+  },
+  "tasks": {
+    "book_movie": 37388,
+    "book_music": 16738,
+    "music_movie_clean": 17904
+  },
+  "betas_percent": [
+    20,
+    50,
+    80
+  ],
+  "seeds": [
+    2020
+  ],
+  "methods": [
+    "TGTOnly",
+    "EMCDR",
+    "PFCDR",
+    "LIST_V1",
+    "LIST_V1_Langevin",
+    "LAPT"
+  ],
+  "list": {
+    "dim": 32,
+    "hidden": 64,
+    "dropout": 0.1,
+    "epochs": 10,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "batch_size": 2048,
+    "user_batch_size": 64,
+    "eval_user_batch": 128,
+    "lambdas": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ]
+  },
+  "batch_interpretation": {
+    "LIST_V1": "2048 target training interactions",
+    "LIST_V1_Langevin_and_LAPT": "64 complete overlap users"
+  },
+  "dpe": {
+    "slots": 4,
+    "mask_rate": 0.2,
+    "reconstruction_weight": 0.1,
+    "reconstruction_normalization": "cross_entropy/log(training_ID_count)",
+    "extra_trainable_parameters": 11584,
+    "frequency_weighting": false
+  },
+  "ceps": {
+    "latent_std": 0.5,
+    "logvar_bounds": [
+      -5.991464547107982,
+      0.0
+    ],
+    "observation_variance": 1.0,
+    "train_steps": 20,
+    "eval_steps": 20,
+    "train_mala_step": 0.25,
+    "eval_mala_step": 0.25,
+    "train_chains": 32,
+    "eval_chains": 128,
+    "energy_bound": 5.0
+  },
+  "mf_source_and_target": {
+    "dim": 10,
+    "epochs": 10,
+    "optimizer": "Adam",
+    "lr": 0.01,
+    "weight_decay": 0.0,
+    "batch_by_task": {
+      "book_movie": 512,
+      "book_music": 512,
+      "music_movie_clean": 256
+    }
+  },
+  "emcdr": {
+    "emcdr_epochs": 10,
+    "emcdr_lr": 0.01,
+    "emcdr_batch": 128,
+    "emcdr_weight_decay": 0.0
+  },
+  "pfcdr": {
+    "inversion_iterations": 300,
+    "inversion_batch": 200,
+    "inversion_lr": 0.0001,
+    "inversion_weight_decay": 0.0001,
+    "inversion_target": 5,
+    "inversion_warmup": 10,
+    "bridge_epochs": 10,
+    "bridge_lr": 0.005,
+    "bridge_weight_decay": 0.0,
+    "primary_k": 70000,
+    "bridge_batch_by_task": {
+      "book_movie": 512,
+      "book_music": 512,
+      "music_movie_clean": 1024
+    }
+  },
+  "selection": "Independent inner cold-user validation RMSE; fresh full outer refit; no test-based selection",
+  "baseline_prediction": "Official raw MF forward, no mean fallback, no rating clipping",
+  "list_prediction": "Ordinary training-item mean plus personalized correction; unseen items use global training mean",
+  "paper_differences": [
+    "Source-side duplicate-item removal retained as previously authorized",
+    "Sorted raw-ID maps and fixed seed2020 splits; exact author user identities not claimed",
+    "Validation selection and refit instead of best test epoch",
+    "One requested seed instead of the paper ten-run average; fixed released defaults, no grid search"
+  ],
+  "hyperparameter_search": false,
+  "upstream": {
+    "repository": "https://github.com/walcheng/PFCDR",
+    "commit": "c88e6fe7bd52ea258e686d5850cf5422d2b35a44"
+  }
+}

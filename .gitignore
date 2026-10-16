@@ -29,6 +29,8 @@ external/
 !docs/list_langevin_sensitivity_best_single_changes.csv
 !docs/list_langevin_sensitivity_sensitivity.csv
 !docs/list_optimization_overview_3seed.csv
+!docs/lapt_mf_full_seed2020_results.csv
+!docs/list_shared_reconstruction_seed2021_paired.csv
 !runs/**/comparison.csv
 !runs/**/combined_comparison.csv
 !runs/**/main_comparison.csv

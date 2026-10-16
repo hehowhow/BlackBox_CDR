@@ -27,12 +27,17 @@ def main():
         assert not path.is_symlink(), f'Unexpected tracked symlink: {rel}'
         size = path.stat().st_size
         is_figure = rel.suffix == '.png' and rel.parts[:2] == ('docs', 'figures')
+        is_report_pdf = rel.suffix == '.pdf' and rel.parts[:1] == ('docs',)
         limit = 5 * 1024**2 if is_figure else 1024**2
         assert size < limit, f'Unexpected large file: {rel}'
         total += size
         largest = max(largest, (size, str(rel)))
         if is_figure:
             assert path.read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), f'Invalid PNG: {rel}'
+            continue
+        if is_report_pdf:
+            data = path.read_bytes()
+            assert data.startswith(b'%PDF-') and b'%%EOF' in data[-1024:], f'Invalid PDF: {rel}'
             continue
         text = path.read_text()
         for pattern in token_patterns:
@@ -44,7 +49,8 @@ def main():
     upstream = json.loads((BASE/'upstream_repositories.json').read_text())
     for entry in upstream.values():
         assert re.fullmatch('[0-9a-f]{40}', entry['commit'])
-    for rel in ['README.md', 'docs/experiment_progress.md', 'docs/running.md']:
+    for rel in ['README.md', 'docs/experiment_progress.md', 'docs/running.md',
+                'docs/lapt.md', 'docs/lapt_paper_outline.md', 'docs/lapt_mf_full_seed2020.md']:
         for target in re.findall(r'\]\(([^)]+)\)', (BASE/rel).read_text()):
             if target.startswith(('https://', 'http://', '#')):
                 continue
